@@ -1,38 +1,36 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+import { PasswordPage } from './password/password';
+
 @Component({
   selector: 'page-tipstricks',
   templateUrl: 'tipstricks.html'
 })
 export class TipsTricksPage {
   selectedItem: any;
-  categories: string[];
-  notes: string[];
-  items: Array<{title: string, note: string, icon: string}>;
+
+  //define the subpages
+  pages: Array<{title: string, component: any, notes: string, icon: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
+    this.pages = [
+      { title: 'Password', component: PasswordPage , notes: '', icon: 'arrow-dropright-circle'},
+      { title: 'E-mail', component: PasswordPage , notes: '', icon: 'arrow-dropright-circle'},
+      { title: 'Clean workspace', component: PasswordPage , notes: '', icon: 'arrow-dropright-circle'},
+      { title: 'Web', component: PasswordPage , notes: '', icon: 'arrow-dropright-circle'},
+      { title: 'Waste Management', component: PasswordPage , notes: '', icon: 'arrow-dropright-circle'}
+    ];
 
-    // Let's populate this page with some filler content for funzies
-    this.categories = ['Password', 'E-mail', 'Clean workspace', 'Web', 'Waste Management'];
-    this.notes = ['Manage your password', 'Securely use your emails','','','Destroy properly your informations'];
 
-    this.items = [];
-    for (let i = 0; i < this.categories.length; i++) {
-      this.items.push({
-        title: this.categories[i],
-        note: this.notes[i],
-        icon: 'arrow-dropright-circle'
-      });
-    }
+
   }
 
-  itemTapped(event, item) {
-    // That's right, we're pushing to ourselves!
-    this.navCtrl.push(TipsTricksPage, {
-      item: item
-    });
+  openPage(page) {
+    // Reset the content nav to have just this page
+    // we wouldn't want the back button to show in this scenario
+    this.navCtrl.push(page.component);
   }
 }
