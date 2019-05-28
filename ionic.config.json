@@ -1,5 +1,7 @@
 {
   "name": "CASESapp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
