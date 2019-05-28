@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
 import { VideosPage } from '../pages/videos/videos';
+import { PasswordPage } from '../pages/tipstricks/password/password';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,7 +16,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     TipsTricksPage,
-    VideosPage
+    VideosPage,
+    PasswordPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     TipsTricksPage,
-    VideosPage
+    VideosPage,
+    PasswordPage
   ],
   providers: [
     StatusBar,
