@@ -104,7 +104,7 @@ ionic cordova build android
 ## To emulate android Phone
 Doesn't in guest VM
 
-### Install same [requirements](\README.md#generate-android-sdk) for generation a sdk
+### Install same [requirements](https://github.com/CASES-LU/CASESapp#requirements) for generation a sdk
 
 ### Install android image
 
