@@ -29,4 +29,12 @@ ion-icon {
   &[class*="CASES-logo"] {
     mask-image: url(/assets/icon/favicon.png);
   }
+
+}
+
+.toolbar-background {
+  background-color: #006FBA;
+}
+.toolbar-title {
+  color: #F8F8F8;
 }

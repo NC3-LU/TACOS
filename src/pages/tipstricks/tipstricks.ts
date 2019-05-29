@@ -2,6 +2,11 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { PasswordPage } from './password/password';
+import { EmailPage } from './email/email';
+import { CleanWorkspacePage } from './cleanWorkspace/cleanWorkspace';
+import { WebPage } from './web/web';
+import { WasteManagementPage } from './wasteManagement/wasteManagement';
+
 
 @Component({
   selector: 'page-tipstricks',
@@ -18,10 +23,10 @@ export class TipsTricksPage {
     this.selectedItem = navParams.get('item');
     this.pages = [
       { title: 'Password', component: PasswordPage , notes: '', icon: 'arrow-dropright-circle'},
-      { title: 'E-mail', component: PasswordPage , notes: '', icon: 'arrow-dropright-circle'},
-      { title: 'Clean workspace', component: PasswordPage , notes: '', icon: 'arrow-dropright-circle'},
-      { title: 'Web', component: PasswordPage , notes: '', icon: 'arrow-dropright-circle'},
-      { title: 'Waste Management', component: PasswordPage , notes: '', icon: 'arrow-dropright-circle'}
+      { title: 'E-mail', component: EmailPage , notes: '', icon: 'arrow-dropright-circle'},
+      { title: 'Clean workspace', component: CleanWorkspacePage , notes: '', icon: 'arrow-dropright-circle'},
+      { title: 'Web', component: WebPage , notes: '', icon: 'arrow-dropright-circle'},
+      { title: 'Waste Management', component: WasteManagementPage , notes: '', icon: 'arrow-dropright-circle'}
     ];
 
 

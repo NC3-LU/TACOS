@@ -7,6 +7,10 @@ import { HomePage } from '../pages/home/home';
 import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
 import { VideosPage } from '../pages/videos/videos';
 import { PasswordPage } from '../pages/tipstricks/password/password';
+import { EmailPage } from '../pages/tipstricks/email/email';
+import { CleanWorkspacePage } from '../pages/tipstricks/cleanWorkspace/cleanWorkspace';
+import { WebPage } from '../pages/tipstricks/web/web';
+import { WasteManagementPage } from '../pages/tipstricks/wasteManagement/wasteManagement';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,7 +21,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TipsTricksPage,
     VideosPage,
-    PasswordPage
+    PasswordPage,
+    EmailPage,
+    CleanWorkspacePage,
+    WebPage,
+    WasteManagementPage
+
   ],
   imports: [
     BrowserModule,
@@ -29,7 +38,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TipsTricksPage,
     VideosPage,
-    PasswordPage
+    PasswordPage,
+    EmailPage,
+    CleanWorkspacePage,
+    WebPage,
+    WasteManagementPage
   ],
   providers: [
     StatusBar,
