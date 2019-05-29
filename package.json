@@ -1,8 +1,8 @@
 {
-  "name": "CASESapp",
+  "name": "CASES App",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "CASES Luxembourg",
+  "homepage": "https://www.cases.lu",
   "private": true,
   "scripts": {
     "start": "ionic-app-scripts serve",
@@ -46,7 +46,7 @@
     "cordova-plugin-ionic-webview": "^4.0.0",
     "cordova-plugin-ionic-keyboard": "^2.0.5"
   },
-  "description": "An Ionic project",
+  "description": "CASES Luxembourg app",
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},
