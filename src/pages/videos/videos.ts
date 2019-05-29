@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Loading, LoadingController, NavController } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
-import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'page-videos',
