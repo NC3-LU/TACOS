@@ -46,6 +46,7 @@
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
+        <allow-navigation href="https://*youtube.com/*"/>
         <allow-intent href="itms-apps:*" />
         <icon height="57" src="resources/ios/icon/icon.png" width="57" />
         <icon height="114" src="resources/ios/icon/icon@2x.png" width="114" />
