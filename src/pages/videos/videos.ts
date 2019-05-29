@@ -11,12 +11,11 @@ export class VideosPage {
   videosFiltered: any;
   loading: Loading;
   searchTerm : any="";
-  jsonData : any;
 
     constructor(public navCtrl: NavController,public loadingCtrl: LoadingController, private domSanitizer: DomSanitizer,) {
       this.loadVideos().then(data => {
         this.startIFrameLoadEvent();
-        this.videos = this.jsonData = data;
+        this.videos = data;
         this.cleanJson(this.videos);
         this.handleIFrameLoadEvent();
         this.setFilteredItems();
