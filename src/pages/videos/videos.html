@@ -8,12 +8,15 @@
 </ion-header>
 
 <ion-content>
-    <iframe width="100%"
-            height="315"
-            [src]="trustedVideoUrl ? trustedVideoUrl : null"
-            (load)="trustedVideoUrl ? handleIFrameLoadEvent() : null"
-            frameborder="0"
-            allowfullscreen></iframe>
+  <ion-list>
+    <ion-item *ngFor="let p of videos">
+      <iframe  width="100%"
+              height="315"
+              [src]="p.url ? p.url : null"
+              frameborder="0"
+              allowfullscreen></iframe>
+      <h2>{{p.title}}</h2>
+    </ion-item>
 
-    <h2>{{ video?.title }}</h2>
+  </ion-list>
 </ion-content>
