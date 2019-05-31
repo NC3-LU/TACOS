@@ -12,8 +12,8 @@ import { CleanWorkspacePage } from '../pages/tipstricks/cleanWorkspace/cleanWork
 import { WebPage } from '../pages/tipstricks/web/web';
 import { WasteManagementPage } from '../pages/tipstricks/wasteManagement/wasteManagement';
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 
 @NgModule({
   declarations: [
