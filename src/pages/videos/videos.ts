@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Loading, LoadingController, NavController } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
+import { loadJson } from '../../lib/utils';
 
 @Component({
   selector: 'page-videos',
@@ -13,31 +14,14 @@ export class VideosPage {
   searchTerm : any="";
 
     constructor(public navCtrl: NavController,public loadingCtrl: LoadingController, private domSanitizer: DomSanitizer,) {
-      this.loadVideos().then(data => {
+      loadJson('../../assets/data/videos.json',domSanitizer).then(data => {
         this.startIFrameLoadEvent();
         this.videos = data;
-        this.cleanJson(this.videos);
         this.handleIFrameLoadEvent();
         this.setFilteredItems();
       });
     }
-/*
-* Load the JSON
-*/
-    loadVideos(){
-      let myrequests = new Request('../../assets/data/videos.json');
-      return fetch(myrequests).then(
-        data => {return data.json()}
-      )
-    }
-/*
-* Clean the URL
-*/
-    cleanJson(myData): void {
-        for (let item of myData) {
-            item.url = this.domSanitizer.bypassSecurityTrustResourceUrl(item.url);
-        }
-    }
+
 /*
 * Manage loading
 */
