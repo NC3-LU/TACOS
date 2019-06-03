@@ -28,9 +28,6 @@ export class TipsTricksPage {
       { title: 'Web', component: WebPage , notes: '', icon: 'arrow-dropright-circle'},
       { title: 'Waste Management', component: WasteManagementPage , notes: '', icon: 'arrow-dropright-circle'}
     ];
-
-
-
   }
 
   openPage(page) {
