@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
+import { ErrorHandler, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslatePoHttpLoader } from '@biesbjerg/ngx-translate-po-http-loader';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -14,6 +18,10 @@ import { WasteManagementPage } from '../pages/tipstricks/wasteManagement/wasteMa
 
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+
+export function createTranslateLoader(http: HttpClient) {
+	return new TranslatePoHttpLoader(http, 'assets/i18n', '.po');
+}
 
 @NgModule({
   declarations: [
@@ -30,7 +38,15 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
+    TranslateModule.forRoot({
+			loader: {
+				provide: TranslateLoader,
+				useFactory: createTranslateLoader,
+				deps: [HttpClient]
+			}
+		})
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -48,6 +64,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  ],
+	schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}

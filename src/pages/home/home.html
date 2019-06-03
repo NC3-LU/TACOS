@@ -4,6 +4,13 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>CASES App</ion-title>
+    <ion-item>
+        <ion-select [(ngModel)]='language' (ionChange)='languageChange()'>
+          <ion-option *ngFor="let lang of languages" value="{{ lang }}">
+            {{ lang }}
+          </ion-option>
+        </ion-select>
+      </ion-item>
   </ion-navbar>
 </ion-header>
 
