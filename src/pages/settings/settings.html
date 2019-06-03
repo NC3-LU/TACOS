@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+      <ion-select [(ngModel)]='language' (ionChange)='languageChange()'>
+        <ion-option *ngFor="let lang of languages" value="{{ lang }}">
+          {{ lang }}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+</ion-content>

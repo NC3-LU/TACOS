@@ -15,6 +15,8 @@ import { EmailPage } from '../pages/tipstricks/email/email';
 import { CleanWorkspacePage } from '../pages/tipstricks/cleanWorkspace/cleanWorkspace';
 import { WebPage } from '../pages/tipstricks/web/web';
 import { WasteManagementPage } from '../pages/tipstricks/wasteManagement/wasteManagement';
+import { SettingsPage } from '../pages/settings/settings';
+
 
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -33,7 +35,8 @@ export function createTranslateLoader(http: HttpClient) {
     EmailPage,
     CleanWorkspacePage,
     WebPage,
-    WasteManagementPage
+    WasteManagementPage,
+		SettingsPage
 
   ],
   imports: [
@@ -58,7 +61,8 @@ export function createTranslateLoader(http: HttpClient) {
     EmailPage,
     CleanWorkspacePage,
     WebPage,
-    WasteManagementPage
+    WasteManagementPage,
+		SettingsPage
   ],
   providers: [
     StatusBar,

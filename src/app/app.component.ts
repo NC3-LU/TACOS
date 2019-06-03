@@ -8,6 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { HomePage } from '../pages/home/home';
 import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
 import { VideosPage } from '../pages/videos/videos';
+import { SettingsPage } from '../pages/settings/settings';
 
 @Component({
   templateUrl: 'app.html'
@@ -30,7 +31,9 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Tips and Tricks', component: TipsTricksPage },
-      { title: 'Videos', component: VideosPage }
+      { title: 'Videos', component: VideosPage },
+      { title: 'Settings', component: SettingsPage }
+
     ];
 
   }
