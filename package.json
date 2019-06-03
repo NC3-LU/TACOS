@@ -61,6 +61,6 @@
   },
   "scripts": {
     "extract": "ngx-translate-extract -i ./src -o ./src/assets/i18n/en.po ./src/assets/i18n/fr.po -c -s -f pot"
-  },
-
+  }
+  
 }
