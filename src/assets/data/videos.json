@@ -1,10 +1,12 @@
 [
   {
     "url": "https://www.youtube.com/embed/cRK-u-kuL30",
-    "title": "Virus"
+    "title": "Virus",
+    "language":"fr"
   },
   {
     "url": "https://www.youtube.com/embed/_iqoFbVLUHY",
-    "title": "Phishing"
+    "title": "Phishing",
+    "language":"fr"    
   }
 ]

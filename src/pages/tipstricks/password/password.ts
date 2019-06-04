@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import { loadJson } from '../../../lib/utils';
+import { loadRightLanguage } from '../../../lib/utils';
 
 @Component({
   selector: 'page-password',
@@ -20,7 +21,7 @@ export class PasswordPage {
     console.log(this.translate.currentLang);
     loadJson('../../assets/data/tipstricks/password.json',domSanitizer).then(data => {
       this.article = data;
-      console.log(this.article)
+      this.article = loadRightLanguage(this.article,this.translate.currentLang);
     });
 
   }
