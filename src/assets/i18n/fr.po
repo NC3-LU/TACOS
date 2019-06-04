@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Clean Workspace"
+msgstr "Bureau propre"
+
+msgid "E-mail"
+msgstr "Courrier électronique"
+
+msgid "Home"
+msgstr "Accueil"
+
+msgid "Password"
+msgstr "Mot de passe"
+
+msgid "Settings"
+msgstr "Paramètres"
+
+msgid "Tips and Tricks"
+msgstr "Trucs et astuces"
+
+msgid "Videos"
+msgstr "Vidéos"
+
+msgid "Waste Management"
+msgstr "Mise au rebut"
+
+msgid "Web"
+msgstr "Web"

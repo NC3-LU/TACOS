@@ -6,10 +6,10 @@ import { TranslateService } from '@ngx-translate/core';
   selector: 'page-settings',
   templateUrl: 'settings.html'
 })
+
 export class SettingsPage {
   public language : string;
   public languages : string[];
-
 
   constructor(
     public navCtrl: NavController,
@@ -19,9 +19,7 @@ export class SettingsPage {
       this.languages = ['en','fr','de'];
   }
 
-  public languageChange() : void
-  {
-
+  public languageChange() : void {
     this.translate.use(this.language);
   }
 

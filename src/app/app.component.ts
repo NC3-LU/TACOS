@@ -25,18 +25,17 @@ export class MyApp {
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
     private translate: TranslateService) {
-    this.initializeApp();
-
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Tips and Tricks', component: TipsTricksPage },
-      { title: 'Videos', component: VideosPage },
-      { title: 'Settings', component: SettingsPage }
-
-    ];
-
-  }
+      this.initializeApp();
+      // used for an example of ngFor and navigation
+      this.translate.stream(['Home', 'Tips and Tricks', 'Videos','Settings']).subscribe(translations => {
+        this.pages = [
+          { title: translations['Home'], component: HomePage },
+          { title: translations['Tips and Tricks'], component: TipsTricksPage },
+          { title: translations['Videos'], component: VideosPage },
+          { title: translations['Settings'], component: SettingsPage }
+        ];
+      })
+    }
 
   initializeApp() {
     this.platform.ready().then(() => {
