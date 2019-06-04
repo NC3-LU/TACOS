@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Spam signal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+     <h2>Your incoming calls reported as spam</h2>
+     <ion-list>
+         <ion-item *ngFor="let c of callsFiltered">
+             <h2>{{c.number}} - {{c.duration}} seconds</h2>
+         </ion-item>
+     </ion-list>
+</ion-content>

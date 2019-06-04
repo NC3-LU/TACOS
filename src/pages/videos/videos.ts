@@ -8,10 +8,10 @@ import { loadJson } from '../../lib/utils';
   templateUrl: 'videos.html'
 })
 export class VideosPage {
-  videos: any;
-  videosFiltered: any;
-  loading: Loading;
-  searchTerm : any="";
+    videos: any;
+    videosFiltered: any;
+    loading: Loading;
+    searchTerm : any="";
 
     constructor(public navCtrl: NavController,public loadingCtrl: LoadingController, private domSanitizer: DomSanitizer,) {
       loadJson('../../assets/data/videos.json',domSanitizer).then(data => {
