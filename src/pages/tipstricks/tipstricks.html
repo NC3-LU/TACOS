@@ -8,16 +8,29 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let page of pages" (click)="openPage(page)">
-      <ion-icon [name]="page.icon" item-start></ion-icon>
-      {{page.title}}
-      <div class="item-note" item-end>
-        {{page.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
+  <div *ngIf="!selectedTipsTricks" padding>
+    <ion-list>
+      <button ion-item *ngFor="let page of pages" (click)="openPage($event, page)">
+        <ion-icon [name]="page.icon" item-start></ion-icon>
+        {{page.title}}
+        <div class="item-note" item-end>
+          {{page.note}}
+        </div>
+      </button>
+    </ion-list>
+  </div>
+  <div *ngIf="selectedTipsTricks" padding>
+    <ion-list>
+      <ng-template #recursiveList let-article let-level="level">
+        <ion-item *ngFor="let item of article;">
+          <p [class]="'tipstrick-custom-level-header-'+level">{{item.title}}</p>
+          <p [innerHTML]="item.content"></p>
+          <ion-list *ngIf="item.parts?.length;">
+            <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.parts , level:level+1}"></ng-container>
+          </ion-list>
+        </ion-item>
+      </ng-template>
+      <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: article, level:0}"></ng-container>
+    </ion-list>
   </div>
 </ion-content>
