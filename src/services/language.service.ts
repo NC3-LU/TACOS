@@ -35,9 +35,9 @@ export class LanguageService {
 
   getLanguages() {
     return [
-      { text: 'English', value: 'en', img: 'assets/flags/en.svg' },
-      { text: 'French', value: 'fr', img: 'assets/flags/de.svg' },
-      { text: 'Deutch', value: 'de', img: 'assets/flags/de.svg' },
+      { text: 'English', value: 'en', img: '/assets/flags/en.svg' },
+      { text: 'French', value: 'fr', img: '/assets/flags/fr.svg' },
+      { text: 'Deutch', value: 'de', img: '/assets/flags/de.svg' },
     ];
   }
 
