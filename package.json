@@ -4,10 +4,7 @@
   "author": "CASES Luxembourg",
   "homepage": "https://www.cases.lu",
   "scripts": {
-    "start": "ionic-app-scripts serve",
-    "clean": "ionic-app-scripts clean",
-    "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint"
+    "extract": "ngx-translate-extract -i ./src -o ./src/assets/i18n/en.po ./src/assets/i18n/fr.po -c -s -f pot"
   },
   "private": true,
   "dependencies": {
@@ -39,8 +36,10 @@
     "hammerjs": "^2.0.8",
     "ionic-angular": "3.9.5",
     "ionicons": "^4.5.8",
+    "run": "^1.4.0",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.5.2",
+    "scripts": "^0.1.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

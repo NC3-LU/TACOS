@@ -3,10 +3,13 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 
+import { TranslateService } from '@ngx-translate/core';
+
 import { HomePage } from '../pages/home/home';
 import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
 import { VideosPage } from '../pages/videos/videos';
 import { SpamPage } from '../pages/spam/spam';
+import { SettingsPage } from '../pages/settings/settings';
 
 @Component({
   templateUrl: 'app.html'
@@ -18,18 +21,23 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
-
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Tips and Tricks', component: TipsTricksPage },
-      { title: 'Videos', component: VideosPage },
-      { title: 'Spam signal', component: SpamPage }
-    ];
-
-  }
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    private translate: TranslateService) {
+      this.initializeApp();
+      // used for an example of ngFor and navigation
+      this.translate.stream(['Home', 'Tips and Tricks', 'Videos','Settings']).subscribe(translations => {
+        this.pages = [
+          { title: translations['Home'], component: HomePage },
+          { title: translations['Tips and Tricks'], component: TipsTricksPage },
+          { title: translations['Videos'], component: VideosPage },
+          { title: 'Spam signal', component: SpamPage },
+          { title: translations['Settings'], component: SettingsPage }
+        ];
+      })
+    }
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -37,6 +45,13 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.translate.setDefaultLang('en')
+      let browserLang = this.translate.getBrowserLang();
+      if (browserLang !== undefined) {
+        this.translate.use(browserLang); // default locale
+      }else{
+        this.translate.use('en');
+      }
     });
   }
 

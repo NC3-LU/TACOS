@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Loading, LoadingController, NavController } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
+import { loadJson } from '../../lib/utils';
 
 @Component({
   selector: 'page-videos',
@@ -12,32 +13,15 @@ export class VideosPage {
     loading: Loading;
     searchTerm : any="";
 
-    constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, private domSanitizer: DomSanitizer,) {
-        this.loadVideos().then(data => {
-            this.startIFrameLoadEvent();
-            this.videos = data;
-            this.cleanJson(this.videos);
-            this.handleIFrameLoadEvent();
-            this.setFilteredItems();
-        });
+    constructor(public navCtrl: NavController,public loadingCtrl: LoadingController, private domSanitizer: DomSanitizer,) {
+      loadJson('../../assets/data/videos.json',domSanitizer).then(data => {
+        this.startIFrameLoadEvent();
+        this.videos = data;
+        this.handleIFrameLoadEvent();
+        this.setFilteredItems();
+      });
     }
-/*
-* Load the JSON
-*/
-    loadVideos(){
-      let myrequests = new Request('../../assets/data/videos.json');
-      return fetch(myrequests).then(
-        data => {return data.json()}
-      )
-    }
-/*
-* Clean the URL
-*/
-    cleanJson(myData): void {
-        for (let item of myData) {
-            item.url = this.domSanitizer.bypassSecurityTrustResourceUrl(item.url);
-        }
-    }
+
 /*
 * Manage loading
 */
@@ -59,7 +43,7 @@ export class VideosPage {
         this.videosFiltered = this.filterItems(this.searchTerm);
     }
 
-    filterItems(searchTerm){
+    filterItems(searchTerm:String){
        return this.videos.filter((item) => {
             return item.title.toLowerCase().includes(searchTerm.toLowerCase());
         });

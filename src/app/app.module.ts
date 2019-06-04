@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
+import { ErrorHandler, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslatePoHttpLoader } from '@biesbjerg/ngx-translate-po-http-loader';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -12,10 +16,16 @@ import { CleanWorkspacePage } from '../pages/tipstricks/cleanWorkspace/cleanWork
 import { WebPage } from '../pages/tipstricks/web/web';
 import { WasteManagementPage } from '../pages/tipstricks/wasteManagement/wasteManagement';
 import { SpamPage } from '../pages/spam/spam';
+import { SettingsPage } from '../pages/settings/settings';
+
 
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { CallLog } from '@ionic-native/call-log/ngx';
+
+export function createTranslateLoader(http: HttpClient) {
+	return new TranslatePoHttpLoader(http, 'assets/i18n', '.po');
+}
 
 @NgModule({
   declarations: [
@@ -28,11 +38,21 @@ import { CallLog } from '@ionic-native/call-log/ngx';
     CleanWorkspacePage,
     WebPage,
     WasteManagementPage,
-    SpamPage
+    SpamPage,
+	SettingsPage
+
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
+    TranslateModule.forRoot({
+			loader: {
+				provide: TranslateLoader,
+				useFactory: createTranslateLoader,
+				deps: [HttpClient]
+			}
+		})
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -45,13 +65,15 @@ import { CallLog } from '@ionic-native/call-log/ngx';
     CleanWorkspacePage,
     WebPage,
     WasteManagementPage,
-    SpamPage
+    SpamPage,
+	SettingsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     CallLog,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  ],
+	schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}

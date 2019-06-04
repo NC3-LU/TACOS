@@ -123,6 +123,11 @@ avdmanager create avd --force --name AndroidPhone --abi google_apis/x86_64 --pac
 ionic cordova emulate android
 ```
 
+# Extract translations
+
+```bash
+npm run extract
+```
 # License
 
 ??
