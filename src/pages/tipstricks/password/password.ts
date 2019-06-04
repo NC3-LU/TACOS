@@ -7,15 +7,6 @@ import { loadJson } from '../../../lib/utils';
   selector: 'page-password',
   templateUrl: 'password.html'
 })
-<<<<<<< HEAD
-
-export class PasswordPage {
-  
-  constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams) {
-
-=======
 export class PasswordPage {
   article:any;
 
@@ -25,6 +16,5 @@ export class PasswordPage {
       console.log(this.article)
     });
 
->>>>>>> 3bc91b67919b89ca39db9ac91d6ffff4bc2cadf5
   }
 }
