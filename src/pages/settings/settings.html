@@ -10,8 +10,8 @@
 <ion-content padding>
   <ion-item>
       <ion-select [(ngModel)]='language' (ionChange)='languageChange()'>
-        <ion-option *ngFor="let lang of languages" value="{{ lang }}">
-          {{ lang }}
+        <ion-option *ngFor="let lang of languages" value="{{ lang.value }}">
+          {{ lang.text }}
         </ion-option>
       </ion-select>
     </ion-item>

@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslatePoHttpLoader } from '@biesbjerg/ngx-translate-po-http-loader';
+import { LanguageService } from '../services/language.service';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -36,13 +38,13 @@ export function createTranslateLoader(http: HttpClient) {
     CleanWorkspacePage,
     WebPage,
     WasteManagementPage,
-		SettingsPage
-
+		SettingsPage,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
+		IonicStorageModule.forRoot(),
     TranslateModule.forRoot({
 			loader: {
 				provide: TranslateLoader,
@@ -66,6 +68,7 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   providers: [
     StatusBar,
+    LanguageService,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
