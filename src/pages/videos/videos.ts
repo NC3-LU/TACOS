@@ -43,7 +43,7 @@ export class VideosPage {
         this.videosFiltered = this.filterItems(this.searchTerm);
     }
 
-    filterItems(searchTerm){
+    filterItems(searchTerm:String){
        return this.videos.filter((item) => {
             return item.title.toLowerCase().includes(searchTerm.toLowerCase());
         });
