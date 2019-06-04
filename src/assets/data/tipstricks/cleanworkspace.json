@@ -29,7 +29,7 @@
       },
       {
         "title":"A password must :",
-        "content":"<ul><li>have at least 12 characters.</li><li>be changed regulary.</li><li>be for personal use.</li></ul>"
+        "content":"<ul><li>have At least 12 characters.</li><li>be changed regulary.</li><li>be for personal use.</li></ul>"
       },
       {
         "title":"A password mustn't :",
