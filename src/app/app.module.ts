@@ -11,9 +11,11 @@ import { EmailPage } from '../pages/tipstricks/email/email';
 import { CleanWorkspacePage } from '../pages/tipstricks/cleanWorkspace/cleanWorkspace';
 import { WebPage } from '../pages/tipstricks/web/web';
 import { WasteManagementPage } from '../pages/tipstricks/wasteManagement/wasteManagement';
+import { SpamPage } from '../pages/spam/spam';
 
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { CallLog } from '@ionic-native/call-log/ngx';
 
 @NgModule({
   declarations: [
@@ -25,8 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
     EmailPage,
     CleanWorkspacePage,
     WebPage,
-    WasteManagementPage
-
+    WasteManagementPage,
+    SpamPage
   ],
   imports: [
     BrowserModule,
@@ -42,11 +44,13 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
     EmailPage,
     CleanWorkspacePage,
     WebPage,
-    WasteManagementPage
+    WasteManagementPage,
+    SpamPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    CallLog,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

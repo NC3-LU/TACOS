@@ -7,19 +7,19 @@ import { DomSanitizer } from '@angular/platform-browser';
   templateUrl: 'videos.html'
 })
 export class VideosPage {
-  videos: any;
-  videosFiltered: any;
-  loading: Loading;
-  searchTerm : any="";
+    videos: any;
+    videosFiltered: any;
+    loading: Loading;
+    searchTerm : any="";
 
-    constructor(public navCtrl: NavController,public loadingCtrl: LoadingController, private domSanitizer: DomSanitizer,) {
-      this.loadVideos().then(data => {
-        this.startIFrameLoadEvent();
-        this.videos = data;
-        this.cleanJson(this.videos);
-        this.handleIFrameLoadEvent();
-        this.setFilteredItems();
-      });
+    constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, private domSanitizer: DomSanitizer,) {
+        this.loadVideos().then(data => {
+            this.startIFrameLoadEvent();
+            this.videos = data;
+            this.cleanJson(this.videos);
+            this.handleIFrameLoadEvent();
+            this.setFilteredItems();
+        });
     }
 /*
 * Load the JSON
