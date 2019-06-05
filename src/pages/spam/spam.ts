@@ -63,6 +63,25 @@ export class SpamPage {
         });
     }
 
+    confirmSpam() {
+        let alert = this.alertCtrl.create({
+          title: 'Spam confirmation',
+          subTitle: 'You just confirmed this number is a spam. Thank you for your contribution.',
+          buttons: ['OK', 'CANCEL']
+        });
+        alert.present();
+    }
+
+
+    confirmHam() {
+        let alert = this.alertCtrl.create({
+          title: 'Ham confirmation',
+          subTitle: 'You just confirmed this number is not a spam. Thank you for your contribution.',
+          buttons: ['OK']
+        });
+        alert.present();
+    }
+
 
     showInitialLogAlert() {
         const confirm = this.alertCtrl.create({

@@ -30,8 +30,8 @@
                 <ion-card-content>
                     Reported 5 times.
                     <div>
-                        <button ion-button color="danger">Confirm spam</button>
-                        <button ion-button color="secondary">Not spam</button>
+                        <button ion-button color="danger" (click)="confirmSpam()">Confirm spam</button>
+                        <button ion-button color="secondary" (click)="confirmHam()">Not spam</button>
                     </div>
                 </ion-card-content>
             </ion-card>
