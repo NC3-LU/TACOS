@@ -24,20 +24,17 @@ export class SpamPage {
         this.oldDuration=false;
         this.callsFiltered=[];
 
-        let filters: CallLogObject[] =[
+        // Get list of reported spam number from the server:
+        let spams = []; // example: ["+33651687613","+33675374400"]
+        let filters: CallLogObject[] = [
             // {
             //     name: "number",
-            //     value: ["+33651687613","+33675374400"],
+            //     value: spams,
             //     operator: "=="
-            // },
-            // {
-            //     name:"date",
-            //     value:"1541026800000",
-            //     operator: ">="
             // },
             {
                 name:"type",
-                value:"1",
+                value: ["1", "3"], // INCOMING_TYPE and MISSED_TYPE
                 operator: "=="
             }
         ];
