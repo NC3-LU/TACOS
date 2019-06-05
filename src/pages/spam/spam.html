@@ -8,7 +8,8 @@
 </ion-header>
 
 <ion-content>
-    <ion-segment [(ngModel)]="categories">
+    <ion-toolbar no-border-top color="primary">
+    <ion-segment [(ngModel)]="categories" color="light">
         <ion-segment-button value="reportedSpam">
             Reported spam
         </ion-segment-button>
@@ -16,8 +17,9 @@
             Report
         </ion-segment-button>
     </ion-segment>
+    </ion-toolbar>
 
-    <div [ngSwitch]="categories">
+    <div [ngSwitch]="categories" padding>
         <ion-list *ngSwitchCase="'reportedSpam'">
             <h2>Incoming calls reported as spam</h2>
             <ion-card  *ngFor="let c of callsFiltered">

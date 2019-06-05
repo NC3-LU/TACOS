@@ -7,6 +7,7 @@ import { CallLog, CallLogObject } from '@ionic-native/call-log';
   templateUrl: 'spam.html'
 })
 export class SpamPage {
+    categories:string;
     startDate:string;
     oldStartDate:string;
     oldDuration:boolean;
@@ -19,6 +20,7 @@ export class SpamPage {
         public alertCtrl:AlertController,
         public loadingCtrl: LoadingController) {
 
+        this.categories = "reportedSpam";
         this.startDate="";
         this.oldStartDate="";
         this.oldDuration=false;
