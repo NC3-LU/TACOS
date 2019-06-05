@@ -66,8 +66,28 @@ export class SpamPage {
     confirmSpam() {
         let alert = this.alertCtrl.create({
           title: 'Spam confirmation',
-          subTitle: 'You just confirmed this number is a spam. Thank you for your contribution.',
-          buttons: ['OK', 'CANCEL']
+          subTitle: 'Confirm this number is a spam?',
+          buttons: [
+              {
+                  text: 'OK',
+                  role: 'ok',
+                  handler: data => {
+                      let thank = this.alertCtrl.create({
+                          title: 'Spam confirmation',
+                          subTitle: 'Thank you for your contribution.',
+                          buttons: ['Dismiss']
+                      });
+                      thank.present();
+                    }
+              },
+              {
+                  text: 'Cancel',
+                  role: 'cancel',
+                  handler: data => {
+                      console.log('Cancel clicked');
+                  }
+              },
+          ]
         });
         alert.present();
     }
@@ -76,8 +96,28 @@ export class SpamPage {
     confirmHam() {
         let alert = this.alertCtrl.create({
           title: 'Ham confirmation',
-          subTitle: 'You just confirmed this number is not a spam. Thank you for your contribution.',
-          buttons: ['OK']
+          subTitle: 'Confirm this number is not a spam?',
+          buttons: [
+              {
+                  text: 'OK',
+                  role: 'ok',
+                  handler: data => {
+                      let thank = this.alertCtrl.create({
+                          title: 'Ham confirmation',
+                          subTitle: 'Thank you for your contribution.',
+                          buttons: ['Dismiss']
+                      });
+                      thank.present();
+                    }
+              },
+              {
+                  text: 'Cancel',
+                  role: 'cancel',
+                  handler: data => {
+                      console.log('Cancel clicked');
+                  }
+              },
+          ]
         });
         alert.present();
     }

@@ -22,7 +22,8 @@
     <div [ngSwitch]="categories" padding>
         <ion-list *ngSwitchCase="'reportedSpam'">
             <h2>{{ 'Incoming calls reported as spam' | translate }}</h2>
-            <ion-card  *ngFor="let c of callsFiltered">
+            <div *ngIf="callsFiltered.length == 0"><ion-icon name="checkmark"></ion-icon> {{ 'No spam detected' | translate }}</div>
+            <ion-card *ngFor="let c of callsFiltered">
                 <ion-card-header>
                     <ion-card-title>{{c.number}}</ion-card-title>
                     <ion-card-subtitle>{{c.date | date}}</ion-card-subtitle>
@@ -30,8 +31,8 @@
                 <ion-card-content>
                     {{ 'Reported' | translate }} 5 {{ 'times' | translate }}.
                     <div>
-                        <button ion-button color="danger" (click)="confirmSpam()">Confirm spam</button>
-                        <button ion-button color="secondary" (click)="confirmHam()">Not spam</button>
+                        <button ion-button color="danger" (click)="confirmSpam()"><ion-icon name="thumbs-up"></ion-icon></button>
+                        <button ion-button color="secondary" (click)="confirmHam()"><ion-icon name="thumbs-down"></ion-icon></button>
                     </div>
                 </ion-card-content>
             </ion-card>
