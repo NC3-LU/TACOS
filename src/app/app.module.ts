@@ -12,8 +12,9 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
 import { VideosPage } from '../pages/videos/videos';
-import { SettingsPage } from '../pages/settings/settings';
 import { SpamPage } from '../pages/spam/spam';
+import { SettingsPage } from '../pages/settings/settings';
+import { AboutPage } from '../pages/about/about';
 
 
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -31,7 +32,8 @@ export function createTranslateLoader(http: HttpClient) {
     TipsTricksPage,
     VideosPage,
     SpamPage,
-	SettingsPage
+	SettingsPage,
+    AboutPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,8 @@ export function createTranslateLoader(http: HttpClient) {
     TipsTricksPage,
     VideosPage,
     SpamPage,
-	SettingsPage
+	SettingsPage,
+    AboutPage
   ],
   providers: [
     StatusBar,

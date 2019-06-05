@@ -11,6 +11,7 @@ import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
 import { VideosPage } from '../pages/videos/videos';
 import { SpamPage } from '../pages/spam/spam';
 import { SettingsPage } from '../pages/settings/settings';
+import { AboutPage } from '../pages/about/about';
 
 @Component({
   templateUrl: 'app.html'
@@ -30,13 +31,20 @@ export class MyApp {
     private languageService: LanguageService) {
       this.initializeApp();
       // used for an example of ngFor and navigation
-      this.translate.stream(['Home', 'Tips and Tricks', 'Videos','Settings']).subscribe(translations => {
+      this.translate.stream(['Home',
+                            'Tips and Tricks',
+                            'Videos',
+                            'Spam signal',
+                            'Settings',
+                            'About'])
+                    .subscribe(translations => {
         this.pages = [
           { title: translations['Home'], component: HomePage },
           { title: translations['Tips and Tricks'], component: TipsTricksPage },
           { title: translations['Videos'], component: VideosPage },
-          { title: 'Spam signal', component: SpamPage },
-          { title: translations['Settings'], component: SettingsPage }
+          { title: translations['Spam signal'], component: SpamPage },
+          { title: translations['Settings'], component: SettingsPage },
+          { title: translations['About'], component: AboutPage },
         ];
       })
     }
