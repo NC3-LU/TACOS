@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { Loading, LoadingController, NavController } from 'ionic-angular';
+import { Loading, LoadingController, NavController, NavParams } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
 import { loadJson } from '../../lib/utils';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'page-videos',
@@ -13,11 +14,17 @@ export class VideosPage {
     loading: Loading;
     searchTerm : any="";
 
-    constructor(public navCtrl: NavController,public loadingCtrl: LoadingController, private domSanitizer: DomSanitizer,) {
+    constructor(public navCtrl: NavController,
+                public loadingCtrl: LoadingController,
+                public navParams: NavParams,
+                private domSanitizer: DomSanitizer,
+                private translate: TranslateService,) {
       loadJson('../../assets/data/videos.json',domSanitizer).then(data => {
         this.startIFrameLoadEvent();
         this.videos = data;
         this.handleIFrameLoadEvent();
+        if(navParams.get('searchTerm'))
+          this. searchTerm = navParams.get('searchTerm');
         this.setFilteredItems();
       });
     }
@@ -43,9 +50,11 @@ export class VideosPage {
         this.videosFiltered = this.filterItems(this.searchTerm);
     }
 
-    filterItems(searchTerm:String){
+    filterItems(searchTerm:String,searchLang:String=""){
        return this.videos.filter((item) => {
-            return item.title.toLowerCase().includes(searchTerm.toLowerCase());
+            return (item.language.toLowerCase().includes(searchLang.toLowerCase()) &&
+            (item.keywords.toLowerCase().includes(searchTerm.toLowerCase()) || item.title.toLowerCase().includes(searchTerm.toLowerCase()))
+            );
         });
     }
 
