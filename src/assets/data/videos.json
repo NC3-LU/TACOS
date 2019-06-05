@@ -2,11 +2,13 @@
   {
     "url": "https://www.youtube.com/embed/cRK-u-kuL30",
     "title": "Virus",
-    "language":"fr"
+    "language":"fr",
+    "keywords":"Virus"
   },
   {
     "url": "https://www.youtube.com/embed/_iqoFbVLUHY",
     "title": "Phishing",
-    "language":"fr"    
+    "language":"fr",
+    "keywords":"Phishing hameçonnage"  
   }
 ]

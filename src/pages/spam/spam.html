@@ -8,10 +8,33 @@
 </ion-header>
 
 <ion-content>
-     <h2>Your incoming calls reported as spam</h2>
-     <ion-list>
-         <ion-item *ngFor="let c of callsFiltered">
-             <h2>{{c.number}} - {{c.duration}} seconds</h2>
-         </ion-item>
-     </ion-list>
+    <ion-toolbar no-border-top color="primary">
+    <ion-segment [(ngModel)]="categories" color="light">
+        <ion-segment-button value="reportedSpam">
+            Reported spam
+        </ion-segment-button>
+        <ion-segment-button value="reportSpam">
+            Report
+        </ion-segment-button>
+    </ion-segment>
+    </ion-toolbar>
+
+    <div [ngSwitch]="categories" padding>
+        <ion-list *ngSwitchCase="'reportedSpam'">
+            <h2>Incoming calls reported as spam</h2>
+            <ion-card  *ngFor="let c of callsFiltered">
+                <ion-card-header>
+                    <ion-card-title>{{c.number}}</ion-card-title>
+                    <ion-card-subtitle>{{c.date | date}}</ion-card-subtitle>
+                </ion-card-header>
+                <ion-card-content>
+                    Reported 5 times.
+                </ion-card-content>
+            </ion-card>
+        </ion-list>
+        <ion-list *ngSwitchCase="'reportSpam'">
+            <h2>Report as spam</h2>
+        </ion-list>
+    </div>
+
 </ion-content>

@@ -13,9 +13,6 @@
       <button ion-item *ngFor="let page of pages" (click)="openPage($event, page)">
         <ion-icon [name]="page.icon" item-start></ion-icon>
         {{page.title}}
-        <div class="item-note" item-end>
-          {{page.note}}
-        </div>
       </button>
     </ion-list>
   </div>
@@ -32,5 +29,9 @@
       </ng-template>
       <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: article, level:0}"></ng-container>
     </ion-list>
+    <div *ngIf="article[0].medias && article[0].medias[0].links" padding>
+      <p class="tipstrick-link" *ngFor="let item of article[0].medias[0].links" [innerHTML]="item"></p>
+    </div>
   </div>
+
 </ion-content>

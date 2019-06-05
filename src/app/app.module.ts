@@ -30,9 +30,8 @@ export function createTranslateLoader(http: HttpClient) {
     HomePage,
     TipsTricksPage,
     VideosPage,
-		SpamPage,
-		SettingsPage
-
+    SpamPage,
+	SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -53,8 +52,8 @@ export function createTranslateLoader(http: HttpClient) {
     HomePage,
     TipsTricksPage,
     VideosPage,
-		SpamPage,
-		SettingsPage
+    SpamPage,
+	SettingsPage
   ],
   providers: [
     StatusBar,
