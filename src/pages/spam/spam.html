@@ -11,24 +11,24 @@
     <ion-toolbar no-border-top color="primary">
     <ion-segment [(ngModel)]="categories" color="light">
         <ion-segment-button value="reportedSpam">
-            Reported spam
+            {{ 'Reported spam' | translate }}
         </ion-segment-button>
         <ion-segment-button value="reportSpam">
-            Report
+            {{ 'Report' | translate }}
         </ion-segment-button>
     </ion-segment>
     </ion-toolbar>
 
     <div [ngSwitch]="categories" padding>
         <ion-list *ngSwitchCase="'reportedSpam'">
-            <h2>Incoming calls reported as spam</h2>
+            <h2>{{ 'Incoming calls reported as spam' | translate }}</h2>
             <ion-card  *ngFor="let c of callsFiltered">
                 <ion-card-header>
                     <ion-card-title>{{c.number}}</ion-card-title>
                     <ion-card-subtitle>{{c.date | date}}</ion-card-subtitle>
                 </ion-card-header>
                 <ion-card-content>
-                    Reported 5 times.
+                    {{ 'Reported' | translate }} 5 {{ 'times' | translate }}.
                     <div>
                         <button ion-button color="danger" (click)="confirmSpam()">Confirm spam</button>
                         <button ion-button color="secondary" (click)="confirmHam()">Not spam</button>
@@ -37,7 +37,7 @@
             </ion-card>
         </ion-list>
         <ion-list *ngSwitchCase="'reportSpam'">
-            <h2>Report as spam</h2>
+            <h2>{{ 'Report a spam' | translate }}</h2>
         </ion-list>
     </div>
 

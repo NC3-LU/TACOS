@@ -4,6 +4,9 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgid "About"
+msgstr "À propos"
+
 msgid "Clean Workspace"
 msgstr "Bureau propre"
 
@@ -13,11 +16,32 @@ msgstr "Courrier électronique"
 msgid "Home"
 msgstr "Accueil"
 
+msgid "Incoming calls reported as spam"
+msgstr "Appels entrants signalés comme spam"
+
+msgid "Language"
+msgstr "Langue"
+
 msgid "Password"
 msgstr "Mot de passe"
 
+msgid "Report"
+msgstr "Signaler"
+
+msgid "Report a spam"
+msgstr "Signaler un spam"
+
+msgid "Reported"
+msgstr "Signalé"
+
+msgid "Reported spam"
+msgstr "Spam signalé"
+
 msgid "Settings"
 msgstr "Paramètres"
+
+msgid "Spam signal"
+msgstr "Spam signal"
 
 msgid "Tips and Tricks"
 msgstr "Trucs et astuces"
@@ -30,3 +54,6 @@ msgstr "Mise au rebut"
 
 msgid "Web"
 msgstr "Web"
+
+msgid "times"
+msgstr "fois"
