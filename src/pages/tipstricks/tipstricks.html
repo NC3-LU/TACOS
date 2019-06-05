@@ -29,7 +29,7 @@
       </ng-template>
       <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: article, level:0}"></ng-container>
     </ion-list>
-    <div *ngIf="article[0].medias[0].links" padding>
+    <div *ngIf="article[0].medias && article[0].medias[0].links" padding>
       <p class="tipstrick-link" *ngFor="let item of article[0].medias[0].links" [innerHTML]="item"></p>
     </div>
   </div>
