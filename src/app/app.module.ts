@@ -30,6 +30,7 @@ export function createTranslateLoader(http: HttpClient) {
     HomePage,
     TipsTricksPage,
     VideosPage,
+		SpamPage,
 		SettingsPage
 
   ],
@@ -52,6 +53,7 @@ export function createTranslateLoader(http: HttpClient) {
     HomePage,
     TipsTricksPage,
     VideosPage,
+		SpamPage,
 		SettingsPage
   ],
   providers: [
