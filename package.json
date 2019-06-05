@@ -19,6 +19,7 @@
     "@angular/router": "^7.0.3",
     "@biesbjerg/ngx-translate-extract": "^2.3.4",
     "@biesbjerg/ngx-translate-po-http-loader": "^3.1.0",
+    "@ionic-native/app-version": "^5.7.0",
     "@ionic-native/call-log": "^5.0.0",
     "@ionic-native/core": "^5.0.0",
     "@ionic-native/splash-screen": "^5.0.0",
@@ -26,6 +27,7 @@
     "@ionic/storage": "^2.2.0",
     "@ngx-translate/core": "^11.0.1",
     "cordova-android": "^8.0.0",
+    "cordova-plugin-app-version": "0.1.9",
     "cordova-plugin-calllog": "^1.3.2",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.1.3",
@@ -57,7 +59,8 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-plugin-calllog": {}
+      "cordova-plugin-calllog": {},
+      "cordova-plugin-app-version": {}
     },
     "platforms": [
       "android"

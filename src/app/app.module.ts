@@ -20,6 +20,7 @@ import { AboutPage } from '../pages/about/about';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { CallLog } from '@ionic-native/call-log/ngx';
+import { AppVersion } from '@ionic-native/app-version/ngx';
 
 export function createTranslateLoader(http: HttpClient) {
 	return new TranslatePoHttpLoader(http, 'assets/i18n', '.po');
@@ -63,6 +64,7 @@ export function createTranslateLoader(http: HttpClient) {
     SplashScreen,
     CallLog,
     LanguageService,
+    AppVersion,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA]
