@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { Loading, LoadingController, AlertController } from 'ionic-angular';
+import {
+    Loading,
+    LoadingController,
+    AlertController,
+    ToastController } from 'ionic-angular';
 import { CallLog, CallLogObject } from '@ionic-native/call-log';
 
 @Component({
@@ -14,7 +18,8 @@ export class SpamPage {
 
     constructor(
         public alertCtrl:AlertController,
-        public loadingCtrl: LoadingController) {
+        public loadingCtrl: LoadingController,
+        public toastCtrl: ToastController) {
 
         this.categories = "reportedSpam";
         this.callsFiltered=[];
@@ -58,12 +63,11 @@ export class SpamPage {
                   text: 'OK',
                   role: 'ok',
                   handler: data => {
-                      let thank = this.alertCtrl.create({
-                          title: 'Spam confirmation',
-                          subTitle: 'Thank you for your contribution.',
-                          buttons: ['Dismiss']
+                      const thankingToast = this.toastCtrl.create({
+                          message: 'Thank you for your contribution.',
+                          duration: 3000
                       });
-                      thank.present();
+                      thankingToast.present();
                     }
               },
               {
@@ -88,12 +92,11 @@ export class SpamPage {
                   text: 'OK',
                   role: 'ok',
                   handler: data => {
-                      let thank = this.alertCtrl.create({
-                          title: 'Ham confirmation',
-                          subTitle: 'Thank you for your contribution.',
-                          buttons: ['Dismiss']
+                      const thankingToast = this.toastCtrl.create({
+                          message: 'Thank you for your contribution.',
+                          duration: 3000
                       });
-                      thank.present();
+                      thankingToast.present();
                     }
               },
               {
