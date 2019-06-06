@@ -30,7 +30,7 @@
                 </ion-card-header>
                 <ion-card-content>
                     <ion-grid>
-                        <ion-row>
+                        <ion-row align-items-center>
                             <ion-col>
                                 <div>
                                     {{ 'Reported' | translate }} 5 {{ 'times' | translate }}.
@@ -38,8 +38,8 @@
                             </ion-col>
                             <ion-col class="ion-align-self-end">
                                 <div>
-                                    <button ion-button color="danger" (click)="confirmSpam()"><ion-icon name="thumbs-up"></ion-icon></button>
-                                    <button ion-button color="secondary" (click)="confirmHam()"><ion-icon name="thumbs-down"></ion-icon></button>
+                                    <button ion-button color="secondary" (click)="confirmHam()" float-right><ion-icon name="thumbs-down"></ion-icon></button>
+                                    <button ion-button color="danger" (click)="confirmSpam()" float-right><ion-icon name="thumbs-up"></ion-icon></button>
                                 </div>
                             </ion-col>
                         </ion-row>
