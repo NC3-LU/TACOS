@@ -6,6 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { loadJson } from '../../lib/utils';
 import { loadRightLanguage } from '../../lib/utils';
+import { VideosPage } from '../videos/videos';
 
 
 @Component({
@@ -24,7 +25,8 @@ export class TipsTricksPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     private translate: TranslateService,
-    private domSanitizer: DomSanitizer,) {
+    private domSanitizer: DomSanitizer,
+     ) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedTipsTricks = navParams.get('tipsTricksitem');
     if(this.selectedTipsTricks){
@@ -42,7 +44,7 @@ export class TipsTricksPage {
   }
 
 /*
-* Open a tips trick iten (e.g password)
+* Open a tips trick item (e.g password)
 */
   openPage(event, page) {
     loadJson(page.url,this.domSanitizer).then(data => {
@@ -51,4 +53,11 @@ export class TipsTricksPage {
       this.navCtrl.push(TipsTricksPage, {tipsTricksitem:page});
     });
   }
+
+  /*
+  * Open a tips trick item (e.g password)
+  */
+    goToVideos(event, data:Array<String>) {
+        this.navCtrl.push(VideosPage, {searchTerm:data});
+    }
 }

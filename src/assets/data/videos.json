@@ -3,12 +3,12 @@
     "url": "https://www.youtube.com/embed/cRK-u-kuL30",
     "title": "Virus",
     "language":"fr",
-    "keywords":"Virus"
+    "keywords":["virus", "malware"]
   },
   {
     "url": "https://www.youtube.com/embed/_iqoFbVLUHY",
     "title": "Phishing",
     "language":"fr",
-    "keywords":"Phishing hameçonnage"  
+    "keywords":["phishing","hameçonnage" ]
   }
 ]

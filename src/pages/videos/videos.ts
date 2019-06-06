@@ -13,6 +13,8 @@ export class VideosPage {
     videosFiltered: any;
     loading: Loading;
     searchTerm : any="";
+    searchLang: string="";
+    searchTermForQuery: any=""; //create a var for the query => the trnansformation of inputs is transparent for users
 
     constructor(public navCtrl: NavController,
                 public loadingCtrl: LoadingController,
@@ -25,6 +27,7 @@ export class VideosPage {
         this.handleIFrameLoadEvent();
         if(navParams.get('searchTerm'))
           this. searchTerm = navParams.get('searchTerm');
+        this.searchLang = translate.currentLang;
         this.setFilteredItems();
       });
     }
@@ -44,18 +47,44 @@ export class VideosPage {
       this.loading.present();
     }
 /*
-* Manage search
+* Initialize the research parameters
 */
     setFilteredItems() {
-        this.videosFiltered = this.filterItems(this.searchTerm);
+      this.searchTermForQuery = this.searchTerm;
+      if(typeof this.searchTermForQuery == 'string' && this.searchTermForQuery.indexOf(",") != -1)
+        this.searchTermForQuery = this.searchTermForQuery.toLowerCase().split(",");
+
+      this.videosFiltered = this.filterItems(this.searchTermForQuery,this.searchLang);
     }
 
-    filterItems(searchTerm:String,searchLang:String=""){
-       return this.videos.filter((item) => {
-            return (item.language.toLowerCase().includes(searchLang.toLowerCase()) &&
-            (item.keywords.toLowerCase().includes(searchTerm.toLowerCase()) || item.title.toLowerCase().includes(searchTerm.toLowerCase()))
-            );
-        });
-    }
+/*
+* Research algo, search one or severald word in the title and keywords of json videosFiltered
+* @searchterm: String or Array<String>
+* @searchLang: String the code of the language ("fr", etc.)
+*/
+     filterItems(searchTerm:any,searchLang:String=""){
+       console.log(searchTerm)
+       if(typeof searchTerm == 'string'){
+         return this.videos.filter((item:any) => {
+              return (item.language.toLowerCase().includes(searchLang.toLowerCase()) &&
+              (item.keywords.find(function(element:String) {
+                                  return element.toLowerCase().includes(searchTerm.toLowerCase());
+                                })
+              || item.title.toLowerCase().includes(searchTerm.toLowerCase()))
+              );
+          });
+        }
+      else if (Array.isArray(searchTerm)){
+        return this.videos.filter((item:any) => {
+             return (item.language.toLowerCase().includes(searchLang.toLowerCase()) &&
+             (
+               item.keywords.filter(element => searchTerm.indexOf(element) !== -1).length > 0
+               ||
+               searchTerm.includes(item.title.toLowerCase())
+              )
+             );
+         });
 
+      }
+    }
 }

@@ -32,6 +32,7 @@
     <div *ngIf="article[0].medias && article[0].medias[0].links" padding>
       <p class="tipstrick-link" *ngFor="let item of article[0].medias[0].links" [innerHTML]="item"></p>
     </div>
+    <p (click)="goToVideos($event, article[0].keywords)">see related videos</p>
   </div>
 
 </ion-content>
