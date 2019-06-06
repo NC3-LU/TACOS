@@ -21,7 +21,7 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
 
   constructor(
     public platform: Platform,
@@ -39,12 +39,12 @@ export class MyApp {
                             'About'])
                     .subscribe(translations => {
         this.pages = [
-          { title: translations['Home'], component: HomePage },
-          { title: translations['Tips and Tricks'], component: TipsTricksPage },
-          { title: translations['Videos'], component: VideosPage },
-          { title: translations['Spam signal'], component: SpamPage },
-          { title: translations['Settings'], component: SettingsPage },
-          { title: translations['About'], component: AboutPage },
+          { title: translations['Home'], component: HomePage, icon: 'home'},
+          { title: translations['Tips and Tricks'], component: TipsTricksPage, icon: 'bulb'},
+          { title: translations['Videos'], component: VideosPage, icon: 'videocam'},
+          { title: translations['Spam signal'], component: SpamPage, icon: 'call'},
+          { title: translations['Settings'], component: SettingsPage, icon: 'settings' },
+          { title: translations['About'], component: AboutPage, icon: 'information-circle'},
         ];
       })
     }
