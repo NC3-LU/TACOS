@@ -8,26 +8,19 @@ import { CallLog, CallLogObject } from '@ionic-native/call-log';
 })
 export class SpamPage {
     categories:string;
-    startDate:string;
-    oldStartDate:string;
-    oldDuration:boolean;
     calls: any;
     callsFiltered: any;
     loading: Loading;
-    searchTerm : any="";
 
     constructor(
         public alertCtrl:AlertController,
         public loadingCtrl: LoadingController) {
 
         this.categories = "reportedSpam";
-        this.startDate="";
-        this.oldStartDate="";
-        this.oldDuration=false;
         this.callsFiltered=[];
 
         // Get list of reported spam number from the server:
-        let spams = []; // example: ["+33651687613","+33675374400"]
+        //let spams = []; // example: ["+33651687613","+33675374400"]
         let filters: CallLogObject[] = [
             // {
             //     name: "number",
@@ -45,21 +38,14 @@ export class SpamPage {
         .then(()=>{
             CallLog.getCallLog(filters)
             .then((data)=>{
-                let duration:number = 0;
-                for(let i=0; i<data.length;i++){
-                    duration = duration+data[i].duration;
-                }
-                //alert("duration : "+ duration);
                 this.callsFiltered = data;
-                //  "data : " + JSON.stringify(data));
             })
             .catch((err)=>{
-                alert("error getcallLog");
+                console.log("Error getCallLog");
             });
         })
         .catch((err)=>{
             console.log(err);
-            //alert("error requestcalLog");
         });
     }
 
@@ -123,29 +109,29 @@ export class SpamPage {
     }
 
 
-    showInitialLogAlert() {
-        const confirm = this.alertCtrl.create({
-            title: "Autorisation",
-            message: "Need access to call log",
-            buttons: [
-                {
-                    text: 'Ok',
-                    handler: () => {
-                        console.log('ok clicked');
-                        CallLog.requestReadPermission()
-                        .then(()=>{});
-                    }
-                },
-                {
-                    text: 'Cancel',
-                    handler: () => {
-                        console.log('cancel clicked');
-                    }
-                }
-            ]
-        });
-        confirm.present();
-    }
+    // showInitialLogAlert() {
+    //     const confirm = this.alertCtrl.create({
+    //         title: "Autorisation",
+    //         message: "Need access to call log",
+    //         buttons: [
+    //             {
+    //                 text: 'Ok',
+    //                 handler: () => {
+    //                     console.log('ok clicked');
+    //                     CallLog.requestReadPermission()
+    //                     .then(()=>{});
+    //                 }
+    //             },
+    //             {
+    //                 text: 'Cancel',
+    //                 handler: () => {
+    //                     console.log('cancel clicked');
+    //                 }
+    //             }
+    //         ]
+    //     });
+    //     confirm.present();
+    // }
 
 
     /*
