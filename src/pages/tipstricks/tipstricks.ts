@@ -44,6 +44,28 @@ export class TipsTricksPage {
   }
 
 /*
+* Extract hostname of url
+* based on https://stackoverflow.com/questions/8498592/extract-hostname-name-from-string
+* @var url:string the url containing the hostname to extrat
+*/
+
+extractHostName(url:string){
+  var hostname;
+  if (url.indexOf("//") > -1)
+        hostname = url.split('/')[2];
+    else
+        hostname = url.split('/')[0];
+
+    //find & remove port number
+    hostname = hostname.split(':')[0];
+    //find & remove www
+    hostname = hostname.split('www')[0];
+    //find & remove "?"
+    hostname = hostname.split('?')[0];
+
+    return hostname;
+}
+/*
 * Open a tips trick item (e.g password)
 */
   openPage(event, page) {
