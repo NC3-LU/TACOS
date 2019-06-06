@@ -29,10 +29,15 @@
       </ng-template>
       <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: article, level:0}"></ng-container>
     </ion-list>
-    <div *ngIf="article[0].medias && article[0].medias[0].links" padding>
-      <p class="tipstrick-link" *ngFor="let item of article[0].medias[0].links" [innerHTML]="item"></p>
-    </div>
-    <p (click)="goToVideos($event, article[0].keywords)">see related videos</p>
+    <span padding><ion-icon ios="ios-videocam" md="md-videocam" (click)="goToVideos($event, article[0].keywords)"></ion-icon></span>
+    <span *ngIf="article[0].medias && article[0].medias[0].links" >
+      <span *ngFor="let item of article[0].medias[0].links" padding>
+        <a button [href]="item" clear>
+          <ion-icon ios="ios-link" md="md-link"></ion-icon>
+        </a>
+      </span>
+    </span>
+
   </div>
 
 </ion-content>
