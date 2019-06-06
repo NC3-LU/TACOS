@@ -29,7 +29,18 @@ page-tipstricks {
 		color: #565656;
   }
 
-  ion-icon {
+/*
+* Style for the medias, link and videos (icon at the end)
+*/
+  .media ion-icon {
     font-size: 3.0em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .media{
+    float : left;
+    width : 25%;
+    text-align : center;
   }
 }
