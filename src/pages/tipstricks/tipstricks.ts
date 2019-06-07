@@ -32,7 +32,7 @@ export class TipsTricksPage {
     if(this.selectedTipsTricks){
       this.article = this.selectedTipsTricks.article;
     }
-    this.translate.stream(['Password', 'E-mail', 'Clean Workspace','Web', 'Waste Management']).subscribe(translations => {
+    this.translate.stream(['Password', 'E-mail', 'Physical Security','Web', 'Waste Management']).subscribe(translations => {
       this.pages = [
         { title: translations['Password'], url: '../assets/data/tipstricks/password.json' , article: '', links:'', icon: 'url(../assets/imgs/t&t/1.png)'},
         { title: translations['E-mail'], url: '../assets/data/tipstricks/email.json' , article: '', links:'', icon: 'url(../assets/imgs/t&t/2.png)'},

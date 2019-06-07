@@ -4,14 +4,21 @@ page-tipstricks {
   */
   .tipstrick-custom-level-title-0{
     font-size: 2.0em;
-    text-decoration: underline;
+    color: white ;
+    background-color: #00426D;
+    text-align:center;
   }
 
   .tipstrick-custom-level-title-1{
     font-size: 1.6em;
+    color: black ;
+    background-color: #d9ebfa;
+    background-size: 100%;
+    text-align:left;
   }
 
   .tipstrick-custom-level-title-2{
+    text-decoration: underline;
     font-size: 1.4em;
   }
 
@@ -25,8 +32,6 @@ page-tipstricks {
 
   .tipstrick-custom-level-title-0, .tipstrick-custom-level-title-1, .tipstrick-custom-level-title-2, .tipstrick-custom-level-title-3, .tipstrick-custom-level-title-4{
     font-family: 'Lato', tahoma, sans-serif;
-		font-weight: 400;
-		color: #565656;
   }
 
 /*
