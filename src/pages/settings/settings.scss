@@ -2,6 +2,7 @@
   display: inline-block;
   width: 1.33333333em;
   line-height: 1em;
+  vertical-align:middle;
 }
 
 .alert-radio-group button:nth-child(1) .alert-radio-label:before {
@@ -14,4 +15,22 @@
 
 .alert-radio-group button:nth-child(3) .alert-radio-label:before {
   content: url(../assets/flags/de.svg);
+}
+
+ion-select {
+  &[class*="CASES-"] {
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    width: 6em;
+    height: 1.2em;
+  }
+  &[class*="CASES-flag-en"] {
+    background-image: url(/assets/flags/en.svg);
+  }
+  &[class*="CASES-flag-fr"] {
+    background-image: url(/assets/flags/fr.svg);
+  }
+  &[class*="CASES-flag-de"] {
+    background-image: url(/assets/flags/de.svg);
+  }
 }

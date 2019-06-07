@@ -9,21 +9,20 @@ import { LanguageService } from '../../services/language.service';
 })
 
 export class SettingsPage {
-  public language : string;
-  public languages : Array<{text: string, value: string, img: string}>;
-
+  language : any;
+  languages : any;
 
   constructor(
     public navCtrl: NavController,
     private languageService: LanguageService,
     private translate: TranslateService) {
 
-  this.language = this.translate.currentLang;
   this.languages = this.languageService.getLanguages();
+  this.language =  this.languages.find(lang => lang.value === this.translate.currentLang);
   }
 
   public languageChange() : void {
-    this.languageService.setLanguage(this.language);
+    this.languageService.setLanguage(this.language['value']);
   }
 
 }
