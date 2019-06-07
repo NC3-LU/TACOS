@@ -3,20 +3,15 @@
     "language":"fr",
     "title":"Sécurité physique",
     "keywords":["bureau propre"],
+    "content":"La sécurité physique va de pair avec la sécurité de l’information. L’accès aux bureaux peut représenter une grande menace.",
     "parts":[
       {
-        "title":"En quelques mots",
-        "content":"La sécurité physique va de pair avec la sécurité de l’information. L’accès aux bureaux peut représenter une grande menace.",
-        "parts":[
-          {
-            "title":"Interception à l'imprimante",
-            "content":"Un risque de vol/perte d’information existe également pour les documents qui trainent sur l’imprimante et sont à la portée de tous. Prenez soin de récupérer vos copies directement après l’impression. Il importe de s’habituer à détruire tout papier comportant des informations sensibles dans un broyeur (« shredder »). Dans la mesure du possible, verrouillez les poubelles et bennes à ordures."
-          },
-          {
-            "title":"Dumpster diving",
-            "content":"Ce terme signifie littéralement « plonger dans la benne à ordures ». C’est à- dire fouiller les déchets ! Il s’agit d’un moyen très utilisé par les fraudeurs. Qui d’entre nous ne jette pas parfois du courrier, des photos ou des documents à la poubelle, sans prendre le soin de les broyer au préalable. Les bennes à ordures quant à elles manquent souvent de cadenas et restent sans surveillance jusqu’au passage du camion de ramassage. Ces déchets peuvent livrer des tas d’informations sur une personne ou une société : nom, adresse, compte bancaire, informations professionnelles ou privées, etc."
-          }
-        ]
+        "title":"Interception à l'imprimante",
+        "content":"Un risque de vol/perte d’information existe également pour les documents qui trainent sur l’imprimante et sont à la portée de tous. Prenez soin de récupérer vos copies directement après l’impression. Il importe de s’habituer à détruire tout papier comportant des informations sensibles dans un broyeur (« shredder »). Dans la mesure du possible, verrouillez les poubelles et bennes à ordures."
+      },
+      {
+        "title":"Dumpster diving",
+        "content":"Ce terme signifie littéralement « plonger dans la benne à ordures ». C’est à- dire fouiller les déchets ! Il s’agit d’un moyen très utilisé par les fraudeurs. Qui d’entre nous ne jette pas parfois du courrier, des photos ou des documents à la poubelle, sans prendre le soin de les broyer au préalable. Les bennes à ordures quant à elles manquent souvent de cadenas et restent sans surveillance jusqu’au passage du camion de ramassage. Ces déchets peuvent livrer des tas d’informations sur une personne ou une société : nom, adresse, compte bancaire, informations professionnelles ou privées, etc."
       },
       {
         "title":"Les bons reflexes :",
@@ -33,26 +28,21 @@
   },
   {
     "language":"en",
-    "title":"Sécurité physique",
-    "keywords":["bureau propre"],
+    "title":"Physical security",
+    "content": "Physical security goes hand in hand with information security. Access to offices can pose a large threat.",
+    "keywords":["clean desk"],
     "parts":[
       {
-        "title":"En quelques mots",
-        "content":"La sécurité physique va de pair avec la sécurité de l’information. L’accès aux bureaux peut représenter une grande menace.",
-        "parts":[
-          {
-            "title":"Interception à l'imprimante",
-            "content":"Un risque de vol/perte d’information existe également pour les documents qui trainent sur l’imprimante et sont à la portée de tous. Prenez soin de récupérer vos copies directement après l’impression. Il importe de s’habituer à détruire tout papier comportant des informations sensibles dans un broyeur (« shredder »). Dans la mesure du possible, verrouillez les poubelles et bennes à ordures."
-          },
-          {
-            "title":"Dumpster diving",
-            "content":"Ce terme signifie littéralement « plonger dans la benne à ordures ». C’est à- dire fouiller les déchets ! Il s’agit d’un moyen très utilisé par les fraudeurs. Qui d’entre nous ne jette pas parfois du courrier, des photos ou des documents à la poubelle, sans prendre le soin de les broyer au préalable. Les bennes à ordures quant à elles manquent souvent de cadenas et restent sans surveillance jusqu’au passage du camion de ramassage. Ces déchets peuvent livrer des tas d’informations sur une personne ou une société : nom, adresse, compte bancaire, informations professionnelles ou privées, etc."
-          }
-        ]
+        "title":"Printer interception",
+        "content":"A risk of theft/loss of information also exists for documents lying around by the printer that are within reach of others. Make sure to pick up your copies immediately after printing. Get used to the habit of shredding (preferably using a confetti cut shredder) documents that contain sensitive information which you no longer need before throwing them in the bin."
       },
       {
-        "title":"Les bons reflexes :",
-        "content":"<ul><li>Ranger les documents papier dans une armoire verrouillée.</li><li>Verrouiller, mettre en veille ou éteindre l’outil informatique lorsque l’on quitte le poste de travail, ou quand on laisse son matériel sans surveillance.</li><li>Enregistrer les documents électroniques sur un serveur de fichiers se trouvant dans une salle verrouillée.</li><li>Accompagner un visiteur à l’endroit de sa visite et ne pas le laisser sans surveillance.</li><li>Récupérer ses documents dès l’impression.</li><li>Broyer les documents sensibles avant de les jeter.</li></ul>"
+        "title":"Dumpster diving",
+        "content":"This term literally means sifting through rubbish and is widely used by fraudsters. We all sometimes throw away letters, photos or documents without ensuring that they are destroyed. Rubbish bins often lack a padlock and remain unattended until they are collected. This waste can provide a lot of information about a person or company: names, address, bank accounts, business or private information, etc.<br/> Destroy any documents containing sensitive information using a shredder, preferably with a confetti cut. If possible, lock the rubbish bins and dumpsters."
+      },
+      {
+        "title":"Security tips ",
+        "content":"<ul><li>Store paper documents in a locked cabinet.</li><li>Make sure your computer is locked, switched off or in sleep mode when leaving the workstation or when the computer is unsupervised.</li><li>Save electronic documents on a file server in a locked room.</li><li>Accompany visitors to their destination and do not leave them unattended.</li><li>Retrieve documents from the printer.</li><li>Shred sensitive documents before throwing them away.</li></ul>"
       }
     ],
     "medias":[

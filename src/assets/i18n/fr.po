@@ -35,6 +35,9 @@ msgstr "Aucun spam détecté"
 msgid "Password"
 msgstr "Mot de passe"
 
+msgid "Physical Security"
+msgstr "Sécurité physique"
+
 msgid "Report"
 msgstr "Signaler"
 
