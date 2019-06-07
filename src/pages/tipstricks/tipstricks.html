@@ -11,7 +11,7 @@
   <div *ngIf="!selectedTipsTricks" padding>
     <ion-list>
       <button ion-item *ngFor="let page of pages" (click)="openPage($event, page)">
-        <ion-icon [name]="page.icon" item-start></ion-icon>
+        <ion-icon class="CASES-icon" [style.background-image]="page.icon" item-start></ion-icon>
         {{page.title}}
       </button>
     </ion-list>

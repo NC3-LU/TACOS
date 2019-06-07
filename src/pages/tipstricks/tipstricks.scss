@@ -43,4 +43,15 @@ page-tipstricks {
     width : 25%;
     text-align : center;
   }
+
+  ion-icon {
+    &[class*="CASES-icon"] {
+      background: none;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1.5em;
+      background-position: center;
+
+    }
+  }
 }
