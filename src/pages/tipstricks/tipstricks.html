@@ -17,18 +17,18 @@
     </ion-list>
   </div>
   <div *ngIf="selectedTipsTricks" padding>
-    <ion-list>
+    <div>
       <ng-template #recursiveList let-article let-level="level">
-        <ion-item *ngFor="let item of article;">
+        <span *ngFor="let item of article;">
           <p [class]="'tipstrick-custom-level-title-'+level" text-wrap>{{item.title}}</p>
           <p [class]="'tipstrick-custom-level-content-'+level" [innerHTML]="item.content" text-wrap></p>
-          <ion-list *ngIf="item.parts?.length;">
+          <span *ngIf="item.parts?.length;">
             <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.parts , level:level+1}"></ng-container>
-          </ion-list>
-        </ion-item>
+          </span>
+        </span>
       </ng-template>
       <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: article, level:0}"></ng-container>
-    </ion-list>
+    </div>
     <span padding class="media"><ion-icon ios="ios-videocam" md="md-videocam" (click)="goToVideos($event, article[0].keywords)"></ion-icon></span>
     <span *ngIf="article[0].medias && article[0].medias[0].links" >
       <div *ngFor="let item of article[0].medias[0].links" padding class="media">
