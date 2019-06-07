@@ -1,39 +1,31 @@
 [
   {
     "language":"fr",
-    "title":"Mot de passes",
-    "keywords":"",
+    "title":"Internet",
+    "keywords":["web","toile"],
     "parts":[
       {
-        "title":"En quelques mots",
-        "content":"Le mot de passe, élément de base de la sécurité informatique, permet de s’authentifier et d’accéder à une ressource ou un service personnel. Afin de minimiser les risques d’usurpation, mieux vaut le choisir avec le plus grand soin en respectant quelques règles simples."
+        "title":"Utilisation d'internet",
+        "content":"Internet est souvvent source de logiciels malveillants. Trop nombreux sont les sites licites mal protégés qui sont compromis et ensuite utilisés pour infecter les ordinateurs des visiteurs. L'infection de ces derniers se passe alors le plus souvent via l'exploitation de vulnérabilités techniques des navigateurs."
       },
       {
-        "title":"Les bons reflexes, un mot de passe doit :",
-        "content":"<ul><li>avoir 12 caractères minimums.</li><li>être changé régulièrement.</li><li>être à usage personnel.</li></ul>"
-      },
-      {
-        "title":"Un mot de passe ne doit pas :",
-        "content":"<ul><li>être un mot du dictionnaire ou un prénom.</li><li>être votre login.</li><li>être liée à votre personne (date de naissance, etc.)</li></ul>"
+        "title":"La fraude sur internet",
+        "content":"A l'origine, les attaques de systèmes d'information avaient une vocation ludique. Mais de nos jours, elles sont davantage motivées par un but lucratif.<br/>Certaines données peuvent permettre d'accéder au porte-monnaie de la victime : accès au web-banking, accès à de l'argent virtuel, e-commerce (numéros de carte de crédit).<br/>D'autres données, par exemple les mots de passe, permettent de propager des logiciels malveillants ou des arnaques. Celui qui vole un mot de passe 'Facebook', vole une identité en ligne et par là même la confiance du groupe d'amis."
       }
     ]
   },
   {
     "language":"en",
-    "title":"Passwords",
-    "keywords":"",
+    "title":"Internet",
+    "keywords":["web"],
     "parts":[
       {
-        "title":"In brief",
-        "content":"The password, a basic element of IT security, authenticates and grants access to a resource or staff service. In order to reduce the risk of identity fraud, you should choose your password very carefully and stick to some simple rules."
+        "title":"Utilisation d'internet",
+        "content":"Internet est souvvent source de logiciels malveillants. Trop nombreux sont les sites licites mal protégés qui sont compromis et ensuite utilisés pour infecter les ordinateurs des visiteurs. L'infection de ces derniers se passe alors le plus souvent via l'exploitation de vulnérabilités techniques des navigateurs."
       },
       {
-        "title":"A password must :",
-        "content":"<ul><li>have At least 12 characters.</li><li>be changed regulary.</li><li>be for personal use.</li></ul>"
-      },
-      {
-        "title":"A password mustn't :",
-        "content":"<ul><li>be a name or a word from dictionary.</li><li>be your login.</li><li>be linked to you (birthdate, etc.)</li></ul>"
+        "title":"La fraude sur internet",
+        "content":"A l'origine, les attaques de systèmes d'information avaient une vocation ludique. Mais de nos jours, elles sont davantage motivées par un but lucratif.<br/>Certaines données peuvent permettre d'accéder au porte-monnaie de la victime : accès au web-banking, accès à de l'argent virtuel, e-commerce (numéros de carte de crédit).<br/>D'autres données, par exemple les mots de passe, permettent de propager des logiciels malveillants ou des arnaques. Celui qui vole un mot de passe 'Facebook', vole une identité en ligne et par là même la confiance du groupe d'amis."
       }
     ]
   }

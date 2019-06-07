@@ -36,9 +36,9 @@ export class TipsTricksPage {
       this.pages = [
         { title: translations['Password'], url: '../assets/data/tipstricks/password.json' , article: '', links:'', icon: 'key'},
         { title: translations['E-mail'], url: '../assets/data/tipstricks/email.json' , article: '', links:'', icon: 'mail'},
-        { title: translations['Clean Workspace'], url: '../assets/data/tipstricks/cleanworkspace.json' , article: '', links:'', icon: 'desktop'},
+        { title: translations['Physical Security'], url: '../assets/data/tipstricks/physicalsecurity.json' , article: '', links:'', icon: 'desktop'},
         { title: translations['Web'], url: '../assets/data/tipstricks/web.json' , article: '', links:'', icon: 'globe'},
-        { title: translations['Waste Management'], url: '../assets/data/tipstricks/wastemanagement.json' , article: '', links:'', icon: 'trash'}
+        //{ title: translations['Waste Management'], url: '../assets/data/tipstricks/wastemanagement.json' , article: '', links:'', icon: 'trash'}
       ];
     })
   }
