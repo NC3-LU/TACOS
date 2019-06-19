@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ 'Games and Quiz' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Initial menu -->
+  <h1>{{ 'Quiz' | translate }}</h1>
+  <div *ngIf="!selectedGamesQuiz" padding>
+    <ion-list>
+      <button ion-item *ngFor="let quiz of quizs" (click)="openQuiz($event, quiz)">
+        <ion-icon class="CASES-icon" [style.background-image]="quiz.icon" item-start></ion-icon>
+        {{quiz.title}}
+      </button>
+    </ion-list>
+  </div>
+  <h1>{{ 'Games' | translate }}</h1>
+
+  <!-- Content if something is clicked -->
+
+
+  <div *ngIf="selectedGamesQuiz" padding>
+
+
+  </div>
+
+</ion-content>
