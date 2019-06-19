@@ -10,6 +10,9 @@ msgstr "À propos"
 msgid "E-mail"
 msgstr "Courrier électronique"
 
+msgid "Games and Quiz"
+msgstr "Jeux et Quiz"
+
 msgid "Home"
 msgstr "Accueil"
 
