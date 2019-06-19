@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -17,8 +17,10 @@ export class GamesQuizPage {
   selectedQuiz: any;
   article: any;
 
-  //define the subpages
-  quizs: Array<{title: string, url: any, article: any, links: any,  icon: string}>;
+  //define the quiz stuff
+  quizs: Array<{title: string, url: any, article: any, icon: string}>;
+  quizScore: any;
+  @ViewChild('quizSlides') quizSlides: any;
 
   constructor(
     public navCtrl: NavController,
@@ -33,9 +35,9 @@ export class GamesQuizPage {
        }
        this.translate.stream(['Password', 'Physical Security','Web']).subscribe(translations => {
          this.quizs = [
-           { title: translations['Password'], url: '../assets/data/tipstricks/email.json' , article: '', links:'', icon: 'url(../assets/imgs/t&t/6.png)'},
-           { title: translations['Physical Security'], url: '../assets/data/tipstricks/physicalsecurity.json' , article: '', links:'', icon: 'url(../assets/imgs/t&t/23.png)'},
-           { title: translations['Web'], url: '../assets/data/tipstricks/web.json' , article: '', links:'', icon: 'url(../assets/imgs/t&t/4.png)'},
+           { title: translations['Password'], url: '../assets/data/gamesquiz/password.json' , article: '', icon: 'url(../assets/imgs/t&t/6.png)'},
+           { title: translations['Physical Security'], url: '../assets/data/gamesquiz/physicalsecurity.json' , article: '', icon: 'url(../assets/imgs/t&t/23.png)'},
+           { title: translations['Web'], url: '../assets/data/gamesquiz/web.json' , article: '', icon: 'url(../assets/imgs/t&t/4.png)'},
          ];
        })
   }
@@ -47,8 +49,20 @@ export class GamesQuizPage {
       loadJson(page.url,this.domSanitizer).then(data => {
         page.article = data;
         page.article = loadRightLanguage(page.article,this.translate.currentLang);
-        this.navCtrl.push(GamesQuizPage, {tipsTricksitem:page});
+        console.log(page.article)
+
+        this.navCtrl.push(GamesQuizPage, {quizItem:page});
       });
+    }
+    /*
+    * Action to very an answer to a question
+    */
+    selectAnswer(answer, question){
+      answer.selected = true;
+        if(answer[0]==true){
+            this.quizScore++;
+        }
+        this.quizSlides.slideNext();
     }
 
 }

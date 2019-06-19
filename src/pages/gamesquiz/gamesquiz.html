@@ -11,7 +11,7 @@
 
   <!-- Initial menu -->
   <h1>{{ 'Quiz' | translate }}</h1>
-  <div *ngIf="!selectedGamesQuiz" padding>
+  <div *ngIf="!selectedQuiz" padding>
     <ion-list>
       <button ion-item *ngFor="let quiz of quizs" (click)="openQuiz($event, quiz)">
         <ion-icon class="CASES-icon" [style.background-image]="quiz.icon" item-start></ion-icon>
@@ -22,11 +22,23 @@
   <h1>{{ 'Games' | translate }}</h1>
 
   <!-- Content if something is clicked -->
+  <div *ngIf="selectedQuiz" padding>
+    <ion-slides #quizSlides>
+        <ion-slide *ngFor="let question of article[0].questions; let i = index;">
+            <h3>{{question.title}}</h3>
+            <ion-list radio-group>
+                <ion-item *ngFor="let answer of question.answers; let i = index;">
+                    <ion-radio (click)="selectAnswer(answer, question)" [checked]="answer.selected" [disabled]="hasAnswered"></ion-radio>
+                    <ion-label>{{i+1}}. {{answer[1]}}</ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+        <ion-slide>
+            <h2>Final Score: {{score}}</h2>
+            <button (click)="restartQuiz()" ion-button full color="primary">Start Again</button>
+        </ion-slide>
 
-
-  <div *ngIf="selectedGamesQuiz" padding>
-
-
+    </ion-slides>
   </div>
 
 </ion-content>
