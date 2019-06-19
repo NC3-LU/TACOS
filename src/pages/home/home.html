@@ -8,10 +8,11 @@
 </ion-header>
 
 <ion-content padding>
-
-  <p>
-    The truth is <a href="https://cases.lu/">here</a>.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-grid>
+        <ion-button ion-button text-wrap class="home-button"
+          [style.background-image]="page.img"
+          *ngFor="let page of pages" (click)="goPage(page.component)">
+          {{page.title}}
+        </ion-button>
+  </ion-grid>
 </ion-content>
