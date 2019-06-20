@@ -1,54 +1,10 @@
-page-tipstricks {
-  /*
-  * Style for the title of the different parts
-  */
-  .tipstrick-custom-level-title-0{
+page-gamesquiz {
+  h1{
     font-size: 2.0em;
     color: white ;
     background-color: #00426D;
-    text-align:center;
-  }
-
-  .tipstrick-custom-level-title-1{
-    font-size: 1.6em;
-    color: black ;
-    background-color: #d9ebfa;
-    background-size: 100%;
     text-align:left;
   }
-
-  .tipstrick-custom-level-title-2{
-    text-decoration: underline;
-    font-size: 1.4em;
-  }
-
-  .tipstrick-custom-level-title-3{
-    font-size: 1.2em;
-  }
-
-  .tipstrick-custom-level-title-4{
-    font-size: 1.0em;
-  }
-
-  .tipstrick-custom-level-title-0, .tipstrick-custom-level-title-1, .tipstrick-custom-level-title-2, .tipstrick-custom-level-title-3, .tipstrick-custom-level-title-4{
-    font-family: 'Lato', tahoma, sans-serif;
-  }
-
-/*
-* Style for the medias, link and videos (icon at the end)
-*/
-  .media ion-icon {
-    font-size: 3.0em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .media{
-    float : left;
-    width : 25%;
-    text-align : center;
-  }
-
   ion-icon {
     &[class*="CASES-icon"] {
       background: none;
@@ -56,7 +12,30 @@ page-tipstricks {
       background-repeat: no-repeat;
       width: 1.5em;
       background-position: center;
-
+    }
+    &[class*="perfectScore"] {
+      color:green;
+      background: none;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1.5em;
+      background-position: center;
+    }
+    &[class*="mediumScore"] {
+      color:orange;
+      background: none;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1.5em;
+      background-position: center;
+    }
+    &[class*="badScore"] {
+      color:red;
+      background: none;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1.5em;
+      background-position: center;
     }
   }
 }

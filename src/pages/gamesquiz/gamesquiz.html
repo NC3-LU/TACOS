@@ -15,7 +15,11 @@
     <ion-list>
       <button ion-item *ngFor="let quiz of quizs" (click)="openQuiz($event, quiz)">
         <ion-icon class="CASES-icon" [style.background-image]="quiz.icon" item-start></ion-icon>
-        {{quiz.title}} -- {{quiz.score}}
+        {{quiz.title}} -- <ion-icon *ngIf="quiz.score==1" class="perfectScore" name="checkmark"></ion-icon>
+        <ion-icon *ngIf="quiz.score>=0.5 && quiz.score <1 " class="mediumScore" name="checkmark"></ion-icon>
+        <ion-icon *ngIf="quiz.score<0.5 && quiz.score != -1" class="badScore" name="checkmark"></ion-icon>
+
+        <!-- {{quiz.score == -1?'':quiz.score}} -->
       </button>
     </ion-list>
     <h1>{{ 'Games' | translate }}</h1>
@@ -36,6 +40,7 @@
         </ion-slide>
         <ion-slide>
             <h2>{{'Final Score' | translate}}: {{quizScore}}</h2>
+            <!-- <button (click)="explanation()" ion-button full color="primary">{{'Explanation' | translate}}</button> -->
             <button (click)="restartQuiz()" ion-button full color="primary">{{'Restart' | translate}}</button>
             <button (click)="backToTheMenu()" ion-button full color="primary">{{'Return to the quiz Menu' | translate}}</button>
         </ion-slide>

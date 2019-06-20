@@ -60,10 +60,9 @@ export class GamesQuizPage {
           if(val!=null)
            arrayScore[key[i]] = val
           else
-           arrayScore[key[i]] = 0
+           arrayScore[key[i]] = -1
          });
      }
-     console.log('load value')
      return arrayScore;
     }
 
@@ -80,19 +79,20 @@ export class GamesQuizPage {
       });
     }
     /*
-    * Action to very an answer to a question
+    * Action to verify an answer
     * @answer : array of one answer
     * @question : question
     * @index : index of the question
     */
     choosedAnswer(answer, question, index){
+      this.quizSlides.lockSwipeToPrev(true); //prevent to go back
         if(answer[0]=="true"){ //the right answer
             this.quizScore++;
         }
         if(this.article[0].questions.length -1 == index){ //last question
           console.log('last question')
           console.log(this.quizScore)
-          this.storage.set(this.article[0].storageKey,this.quizScore); // save the global score of the quiz
+          this.storage.set(this.article[0].storageKey,this.quizScore/(index+1)); // save the global score of the quiz
         }
         this.quizSlides.slideNext();
     }
@@ -101,8 +101,9 @@ export class GamesQuizPage {
     */
     restartQuiz() {
         this.quizScore = 0;
-        this.quizSlides.lockSwipes(false);
+        this.quizSlides.lockSwipeToPrev(false)
         this.quizSlides.slideTo(0);
+        this.quizSlides.lockSwipeToPrev(true)
     }
 
     /*
