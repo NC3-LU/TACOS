@@ -3,12 +3,25 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"X-Generator: Poedit 2.0.6\n"
 
 msgid "About"
 msgstr "À propos"
 
+msgid "Article(s) found:"
+msgstr "Article(s) trouvé(s) :"
+
 msgid "E-mail"
 msgstr "Courrier électronique"
+
+msgid "Games"
+msgstr "Jeux"
 
 msgid "Games and Quiz"
 msgstr "Jeux et Quiz"
@@ -31,6 +44,9 @@ msgstr "Mot de passe"
 msgid "Physical Security"
 msgstr "Sécurité physique"
 
+msgid "Quiz"
+msgstr "Quiz"
+
 msgid "Report"
 msgstr "Signaler"
 
@@ -42,6 +58,9 @@ msgstr "Signalé"
 
 msgid "Reported spam"
 msgstr "Spam signalé"
+
+msgid "Search"
+msgstr "Rechercher"
 
 msgid "Settings"
 msgstr "Paramètres"
