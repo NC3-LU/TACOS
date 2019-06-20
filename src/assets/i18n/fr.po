@@ -43,6 +43,9 @@ msgstr "Signalé"
 msgid "Reported spam"
 msgstr "Spam signalé"
 
+msgid "Restart"
+msgstr "Recommencez"
+
 msgid "Settings"
 msgstr "Paramètres"
 

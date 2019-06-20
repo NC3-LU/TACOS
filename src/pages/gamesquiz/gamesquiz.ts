@@ -19,7 +19,7 @@ export class GamesQuizPage {
 
   //define the quiz stuff
   quizs: Array<{title: string, url: any, article: any, icon: string}>;
-  quizScore: any;
+  quizScore=0;
   @ViewChild('quizSlides') quizSlides: any;
 
   constructor(
@@ -57,12 +57,19 @@ export class GamesQuizPage {
     /*
     * Action to very an answer to a question
     */
-    selectAnswer(answer, question){
-      answer.selected = true;
-        if(answer[0]==true){
+    choosedAnswer(answer, question){
+        if(answer[0]=="true"){
             this.quizScore++;
         }
         this.quizSlides.slideNext();
+    }
+    /*
+    * Action for quiz restarting
+    */
+    restartQuiz() {
+        this.quizScore = 0;
+        this.quizSlides.lockSwipes(false);
+        this.quizSlides.slideTo(0);
     }
 
 }
