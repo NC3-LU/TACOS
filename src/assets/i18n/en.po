@@ -10,6 +10,9 @@ msgstr "About"
 msgid "E-mail"
 msgstr "E-mail"
 
+msgid "Final Score"
+msgstr "Final Score"
+
 msgid "Games and Quiz"
 msgstr "Games and Quiz"
 
