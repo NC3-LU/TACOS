@@ -20,8 +20,14 @@ msgstr "Article(s) trouvé(s) :"
 msgid "E-mail"
 msgstr "Courrier électronique"
 
+msgid "Explanation"
+msgstr "Explication"
+
 msgid "Final Score"
 msgstr "Score Final"
+
+msgid "Games"
+msgstr "Jeux"
 
 msgid "Games and Quiz"
 msgstr "Jeux et Quiz"
@@ -64,6 +70,9 @@ msgstr "Recommencez"
 
 msgid "Return to the quiz Menu"
 msgstr "Retourner au menu Jeux et Quiz"
+
+msgid "Search"
+msgstr "Rechercher"
 
 msgid "Settings"
 msgstr "Paramètres"
