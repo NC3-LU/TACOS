@@ -25,11 +25,20 @@ ion-icon {
     width: 1em;
     height: 1em;
   }
+
 //this logo doesn't render well
   &[class*="CASES-logo"] {
     mask-image: url(/assets/icon/favicon.png);
   }
 
+}
+
+ion-navbar{
+  button{
+    ion-icon {
+      color: white;
+    }
+  }
 }
 
 .toolbar-background {
