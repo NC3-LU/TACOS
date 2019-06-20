@@ -72,7 +72,7 @@ msgid "Return to the quiz Menu"
 msgstr "Return to the quiz Menu"
 
 msgid "See the correction"
-msgstr "Voir la correction"
+msgstr "See the correction"
 
 msgid "Search"
 msgstr "Search"
