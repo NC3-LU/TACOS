@@ -49,6 +49,9 @@ msgstr "Reported spam"
 msgid "Restart"
 msgstr "Restart"
 
+msgid "Return to the quiz Menu"
+msgstr "Return to the quiz Menu"
+
 msgid "Settings"
 msgstr "Settings"
 

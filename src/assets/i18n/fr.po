@@ -49,6 +49,9 @@ msgstr "Spam signalé"
 msgid "Restart"
 msgstr "Recommencez"
 
+msgid "Return to the quiz Menu"
+msgstr "Retourner au menu Jeux et Quiz"
+
 msgid "Settings"
 msgstr "Paramètres"
 

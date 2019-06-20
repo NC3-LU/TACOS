@@ -15,7 +15,7 @@
     <ion-list>
       <button ion-item *ngFor="let quiz of quizs" (click)="openQuiz($event, quiz)">
         <ion-icon class="CASES-icon" [style.background-image]="quiz.icon" item-start></ion-icon>
-        {{quiz.title}}
+        {{quiz.title}} -- {{quiz.score}}
       </button>
     </ion-list>
     <h1>{{ 'Games' | translate }}</h1>
@@ -25,11 +25,11 @@
   <!-- Content if something is clicked -->
   <div *ngIf="selectedQuiz" padding>
     <ion-slides #quizSlides>
-        <ion-slide *ngFor="let question of article[0].questions; let i = index;">
+        <ion-slide *ngFor="let question of article[0].questions; let j = index;">
             <h3>{{question.title}}</h3>
             <ion-list radio-group>
                 <ion-item *ngFor="let answer of question.answers; let i = index;">
-                    <ion-radio (click)="choosedAnswer(answer, question)" ></ion-radio>
+                    <ion-radio (click)="choosedAnswer(answer, question, j)" ></ion-radio>
                     <ion-label>{{i+1}}. {{answer[1]}}</ion-label>
                 </ion-item>
             </ion-list>
@@ -37,6 +37,7 @@
         <ion-slide>
             <h2>{{'Final Score' | translate}}: {{quizScore}}</h2>
             <button (click)="restartQuiz()" ion-button full color="primary">{{'Restart' | translate}}</button>
+            <button (click)="backToTheMenu()" ion-button full color="primary">{{'Return to the quiz Menu' | translate}}</button>
         </ion-slide>
 
     </ion-slides>
