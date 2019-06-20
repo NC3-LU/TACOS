@@ -3,16 +3,41 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>CASES Luxembourg</ion-title>
+    <ion-title *ngIf="!isSearchBarOpened">
+      CASES Luxembourg
+    </ion-title>
+    <ion-searchbar placeholder="{{'Search' | translate}}"
+        *ngIf="isSearchBarOpened"
+        showCancelButton
+        (ionCancel)="isSearchBarOpened = false"
+        [(ngModel)] = "searchTerm"
+        (ionInput) = "onSearch()">
+    </ion-searchbar>
+    <ion-buttons end>
+      <button ion-button icon-only *ngIf="!isSearchBarOpened" (click)="isSearchBarOpened = true" >
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-grid>
+  <ion-grid *ngIf="!searching" >
         <ion-button ion-button text-wrap class="home-button"
           [style.background-image]="page.img"
           *ngFor="let page of pages" (click)="goPage(page.component)">
           {{page.title}}
         </ion-button>
   </ion-grid>
+  <ion-list *ngIf="searching">
+    <ion-item-divider>
+      {{searchResult.length}} {{'Article(s) found:'| translate}} 
+    </ion-item-divider>
+    <button
+      ion-item
+      *ngFor="let result of searchResult"
+      (click)="openPage($event,result[0])">
+      {{result[0].title}}
+    </button>
+  </ion-list>
 </ion-content>
