@@ -22,6 +22,7 @@ export class GamesQuizPage {
   quizs: Array<{title: string, url: any, article: any, score: number, icon: string}>; //array which display all available quiz
   quizScore=0; //score of the current quiz
   quizNameArray=['Password', 'Physical Security','Web']; //the name of the quiz
+  quizCorrection : any; //array which store the correction of the quiz
 
   @ViewChild('quizSlides') quizSlides: any;
 
@@ -33,6 +34,7 @@ export class GamesQuizPage {
     private storage: Storage,
      ) {
        // If we navigated to this page, we will have an item available as a nav param
+       this.quizCorrection = [];
        this.selectedQuiz = navParams.get('quizItem');
        if(this.selectedQuiz){
          this.article = this.selectedQuiz.article;
@@ -88,12 +90,16 @@ export class GamesQuizPage {
       this.quizSlides.lockSwipeToPrev(true); //prevent to go back
         if(answer[0]=="true"){ //the right answer
             this.quizScore++;
+            this.quizCorrection.push([question.title,  true, question.explanation]);
+        }else{//false answer
+            this.quizCorrection.push([question.title,  false, question.explanation]);
         }
         if(this.article[0].questions.length -1 == index){ //last question
           console.log('last question')
           console.log(this.quizScore)
           this.storage.set(this.article[0].storageKey,this.quizScore/(index+1)); // save the global score of the quiz
         }
+        console.log(this.quizCorrection);
         this.quizSlides.slideNext();
     }
     /*
@@ -101,9 +107,14 @@ export class GamesQuizPage {
     */
     restartQuiz() {
         this.quizScore = 0;
+        this.quizCorrection = [];
         this.quizSlides.lockSwipeToPrev(false)
         this.quizSlides.slideTo(0);
         this.quizSlides.lockSwipeToPrev(true)
+    }
+
+    explanation(){
+      this.quizSlides.slideNext();
     }
 
     /*

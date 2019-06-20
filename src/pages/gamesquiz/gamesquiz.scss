@@ -5,6 +5,12 @@ page-gamesquiz {
     background-color: #00426D;
     text-align:left;
   }
+  .rightAnswer{
+    color:green;
+  }
+  .badAnswer{
+    color:red;
+  }
   ion-icon {
     &[class*="CASES-icon"] {
       background: none;
