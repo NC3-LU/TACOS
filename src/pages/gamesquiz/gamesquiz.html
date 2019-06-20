@@ -10,23 +10,42 @@
 <ion-content>
 
   <!-- Initial menu -->
-  <h1>{{ 'Quiz' | translate }}</h1>
-  <div *ngIf="!selectedGamesQuiz" padding>
+  <div *ngIf="!selectedQuiz" padding>
+    <h1>{{ 'Quiz' | translate }}</h1>
     <ion-list>
       <button ion-item *ngFor="let quiz of quizs" (click)="openQuiz($event, quiz)">
         <ion-icon class="CASES-icon" [style.background-image]="quiz.icon" item-start></ion-icon>
-        {{quiz.title}}
+        {{quiz.title}} -- <ion-icon *ngIf="quiz.score==1" class="perfectScore" name="checkmark"></ion-icon>
+        <ion-icon *ngIf="quiz.score>=0.5 && quiz.score <1 " class="mediumScore" name="checkmark"></ion-icon>
+        <ion-icon *ngIf="quiz.score<0.5 && quiz.score != -1" class="badScore" name="checkmark"></ion-icon>
+
+        <!-- {{quiz.score == -1?'':quiz.score}} -->
       </button>
     </ion-list>
+    <h1>{{ 'Games' | translate }}</h1>
   </div>
-  <h1>{{ 'Games' | translate }}</h1>
+
 
   <!-- Content if something is clicked -->
+  <div *ngIf="selectedQuiz" padding>
+    <ion-slides #quizSlides>
+        <ion-slide *ngFor="let question of article[0].questions; let j = index;">
+            <h3>{{question.title}}</h3>
+            <ion-list radio-group>
+                <ion-item *ngFor="let answer of question.answers; let i = index;">
+                    <ion-radio (click)="choosedAnswer(answer, question, j)" ></ion-radio>
+                    <ion-label>{{i+1}}. {{answer[1]}}</ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+        <ion-slide>
+            <h2>{{'Final Score' | translate}}: {{quizScore}}</h2>
+            <!-- <button (click)="explanation()" ion-button full color="primary">{{'Explanation' | translate}}</button> -->
+            <button (click)="restartQuiz()" ion-button full color="primary">{{'Restart' | translate}}</button>
+            <button (click)="backToTheMenu()" ion-button full color="primary">{{'Return to the quiz Menu' | translate}}</button>
+        </ion-slide>
 
-
-  <div *ngIf="selectedGamesQuiz" padding>
-
-
+    </ion-slides>
   </div>
 
 </ion-content>

@@ -20,8 +20,8 @@ msgstr "Article(s) found:"
 msgid "E-mail"
 msgstr "E-mail"
 
-msgid "Games"
-msgstr "Games"
+msgid "Final Score"
+msgstr "Final Score"
 
 msgid "Games and Quiz"
 msgstr "Games and Quiz"
@@ -59,8 +59,11 @@ msgstr "Reported"
 msgid "Reported spam"
 msgstr "Reported spam"
 
-msgid "Search"
-msgstr "Search"
+msgid "Restart"
+msgstr "Restart"
+
+msgid "Return to the quiz Menu"
+msgstr "Return to the quiz Menu"
 
 msgid "Settings"
 msgstr "Settings"
