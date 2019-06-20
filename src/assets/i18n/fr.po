@@ -71,6 +71,9 @@ msgstr "Recommencez"
 msgid "Return to the quiz Menu"
 msgstr "Retourner au menu Jeux et Quiz"
 
+msgid "See the correction"
+msgstr "Voir la correction"
+
 msgid "Search"
 msgstr "Rechercher"
 
