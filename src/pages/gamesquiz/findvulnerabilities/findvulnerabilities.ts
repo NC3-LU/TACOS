@@ -31,15 +31,15 @@ export class findVulnerabilitiesPage {
   }
   vulnFound(vuln){
     let alert = this.alertController.create({
-   title: vuln,
-   buttons: [
-     {
-       text: 'Close',
-       role: 'cancel',
-     }
-   ]
- });
- alert.present();
+      title: vuln,
+      buttons: [
+         {
+           text: 'Close',
+           role: 'cancel',
+         }
+       ]
+     });
+  alert.present();
   }
 
 
