@@ -38,14 +38,9 @@ export function createTranslateLoader(http: HttpClient) {
 		GamesQuizPage,
 		PasswordCardPage,
     SpamPage,
-<<<<<<< HEAD
-		SettingsPage,
-    AboutPage
-=======
 	SettingsPage,
     AboutPage,
 		findVulnerabilitiesPage
->>>>>>> ae52fd8711bc413974732338d7eb8ac86d1c96e5
   ],
   imports: [
     BrowserModule,
@@ -69,14 +64,9 @@ export function createTranslateLoader(http: HttpClient) {
 		GamesQuizPage,
 		PasswordCardPage,
     SpamPage,
-<<<<<<< HEAD
-		SettingsPage,
-    AboutPage
-=======
 	SettingsPage,
     AboutPage,
 		findVulnerabilitiesPage
->>>>>>> ae52fd8711bc413974732338d7eb8ac86d1c96e5
   ],
   providers: [
     StatusBar,
