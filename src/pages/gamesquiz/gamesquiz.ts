@@ -8,6 +8,7 @@ import { Storage } from '@ionic/storage';
 
 import { loadJson } from '../../lib/utils';
 import { loadRightLanguage } from '../../lib/utils';
+import { findVulnerabilitiesPage } from './findvulnerabilities/findvulnerabilities';
 
 
 @Component({
@@ -122,6 +123,11 @@ export class GamesQuizPage {
     */
     backToTheMenu(){
       this.navCtrl.setRoot(GamesQuizPage); //set the root and don't pop to refresh and get score
+    }
+
+    openPage(page){
+      if(page=='findVulnerabilitiesPage')
+        this.navCtrl.push(findVulnerabilitiesPage);
     }
 
 }

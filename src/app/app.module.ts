@@ -16,6 +16,7 @@ import { GamesQuizPage } from '../pages/gamesquiz/gamesquiz';
 import { SpamPage } from '../pages/spam/spam';
 import { SettingsPage } from '../pages/settings/settings';
 import { AboutPage } from '../pages/about/about';
+import { findVulnerabilitiesPage } from '../pages/gamesquiz/findvulnerabilities/findvulnerabilities';
 
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -36,7 +37,8 @@ export function createTranslateLoader(http: HttpClient) {
 		GamesQuizPage,
     SpamPage,
 	SettingsPage,
-    AboutPage
+    AboutPage,
+		findVulnerabilitiesPage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,8 @@ export function createTranslateLoader(http: HttpClient) {
 		GamesQuizPage,
     SpamPage,
 	SettingsPage,
-    AboutPage
+    AboutPage,
+		findVulnerabilitiesPage
   ],
   providers: [
     StatusBar,
