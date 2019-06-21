@@ -23,6 +23,13 @@
       </button>
     </ion-list>
     <h1>{{ 'Games' | translate }}</h1>
+    <ion-list>
+      <button ion-item (click)="openPage('findVulnerabilitiesPage')">
+        {{'Find the vulnerabilities' | translate}}
+
+        <!-- {{quiz.score == -1?'':quiz.score}} -->
+      </button>
+    </ion-list>
   </div>
 
 
@@ -48,7 +55,7 @@
           <ion-item *ngFor="let item of quizCorrection">
               <p *ngIf="item[1]" class="rightAnswer">{{item[0]}}</p>
               <p *ngIf="!item[1]" class="badAnswer">{{item[0]}}</p>
-              <p>{{item[2]}}</p>
+              <p [innerHTML]="item[2]" text-wrap></p>
           </ion-item>
             <button (click)="restartQuiz()" ion-button full color="primary">{{'Restart' | translate}}</button>
             <button (click)="backToTheMenu()" ion-button full color="primary">{{'Return to the quiz Menu' | translate}}</button>

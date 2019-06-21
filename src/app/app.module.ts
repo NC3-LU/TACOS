@@ -17,6 +17,7 @@ import { PasswordCardPage } from '../pages/passwordcard/passwordcard';
 import { SpamPage } from '../pages/spam/spam';
 import { SettingsPage } from '../pages/settings/settings';
 import { AboutPage } from '../pages/about/about';
+import { findVulnerabilitiesPage } from '../pages/gamesquiz/findvulnerabilities/findvulnerabilities';
 
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -37,8 +38,14 @@ export function createTranslateLoader(http: HttpClient) {
 		GamesQuizPage,
 		PasswordCardPage,
     SpamPage,
+<<<<<<< HEAD
 		SettingsPage,
     AboutPage
+=======
+	SettingsPage,
+    AboutPage,
+		findVulnerabilitiesPage
+>>>>>>> ae52fd8711bc413974732338d7eb8ac86d1c96e5
   ],
   imports: [
     BrowserModule,
@@ -62,8 +69,14 @@ export function createTranslateLoader(http: HttpClient) {
 		GamesQuizPage,
 		PasswordCardPage,
     SpamPage,
+<<<<<<< HEAD
 		SettingsPage,
     AboutPage
+=======
+	SettingsPage,
+    AboutPage,
+		findVulnerabilitiesPage
+>>>>>>> ae52fd8711bc413974732338d7eb8ac86d1c96e5
   ],
   providers: [
     StatusBar,
