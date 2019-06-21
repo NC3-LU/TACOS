@@ -9,6 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { HomePage } from '../pages/home/home';
 import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
 import { GamesQuizPage } from '../pages/gamesquiz/gamesquiz';
+import { PasswordCardPage } from '../pages/passwordcard/passwordcard';
 import { VideosPage } from '../pages/videos/videos';
 import { SpamPage } from '../pages/spam/spam';
 import { SettingsPage } from '../pages/settings/settings';
@@ -36,6 +37,7 @@ export class MyApp {
                             'Tips and Tricks',
                             'Videos',
                             'Games and Quiz',
+                            'Password Card',
                             'Spam signal',
                             'Settings',
                             'About'])
@@ -45,6 +47,7 @@ export class MyApp {
           { title: translations['Tips and Tricks'], component: TipsTricksPage, icon: 'bulb'},
           { title: translations['Videos'], component: VideosPage, icon: 'videocam'},
           { title: translations['Games and Quiz'], component: GamesQuizPage, icon: 'football'},
+          { title: translations['Password Card'], component: PasswordCardPage, icon: 'card'},
           { title: translations['Spam signal'], component: SpamPage, icon: 'call'},
           { title: translations['Settings'], component: SettingsPage, icon: 'settings' },
           { title: translations['About'], component: AboutPage, icon: 'information-circle'},

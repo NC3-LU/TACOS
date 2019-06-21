@@ -13,6 +13,7 @@ import { HomePage } from '../pages/home/home';
 import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
 import { VideosPage } from '../pages/videos/videos';
 import { GamesQuizPage } from '../pages/gamesquiz/gamesquiz';
+import { PasswordCardPage } from '../pages/passwordcard/passwordcard';
 import { SpamPage } from '../pages/spam/spam';
 import { SettingsPage } from '../pages/settings/settings';
 import { AboutPage } from '../pages/about/about';
@@ -34,8 +35,9 @@ export function createTranslateLoader(http: HttpClient) {
     TipsTricksPage,
     VideosPage,
 		GamesQuizPage,
+		PasswordCardPage,
     SpamPage,
-	SettingsPage,
+		SettingsPage,
     AboutPage
   ],
   imports: [
@@ -58,8 +60,9 @@ export function createTranslateLoader(http: HttpClient) {
     TipsTricksPage,
     VideosPage,
 		GamesQuizPage,
+		PasswordCardPage,
     SpamPage,
-	SettingsPage,
+		SettingsPage,
     AboutPage
   ],
   providers: [
