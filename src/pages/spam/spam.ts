@@ -6,6 +6,8 @@ import {
     ToastController } from 'ionic-angular';
 import { CallLog, CallLogObject } from '@ionic-native/call-log';
 
+import { loadSpamsLight } from './utils';
+
 @Component({
   selector: 'page-spam',
   templateUrl: 'spam.html'
@@ -24,8 +26,13 @@ export class SpamPage {
         this.categories = "reportedSpam";
         this.callsFiltered=[];
 
-        // Get list of reported spam number from the server:
-        //let spams = []; // example: ["+33651687613","+33675374400"]
+        // TESTING - this should not necessary be here
+        let reportedSpams = [];
+        reportedSpams = loadSpamsLight();
+        reportedSpams.map(function(spam) {
+            console.log(spam);
+        })
+
         let filters: CallLogObject[] = [
             // {
             //     name: "number",
@@ -52,6 +59,7 @@ export class SpamPage {
         .catch((err)=>{
             console.log(err);
         });
+
     }
 
     confirmSpam() {
