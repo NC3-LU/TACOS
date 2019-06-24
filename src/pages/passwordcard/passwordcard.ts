@@ -31,7 +31,6 @@ export class PasswordCardPage {
         if (val) {
           this.cards = val;
         }
-        console.log(this.cards);
       });
   }
 
