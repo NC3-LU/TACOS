@@ -14,6 +14,7 @@ export class PasswordCardPage {
   options : any = 1;
   charset : any;
   cards : any = [];
+  steps: any;
   strings : any;
   name: any;
   creatingCard : any = false;
@@ -25,13 +26,18 @@ export class PasswordCardPage {
     public navParams: NavParams,
     private storage: Storage) {
 
-
-
       this.storage.get(PWD_CARDS).then(val => {
         if (val) {
           this.cards = val;
         }
       });
+
+      this.steps = [
+        { title: 'Step 1', description: 'Select a row and a column', img: '../../assets/imgs/PasswordCard/Step1.png'},
+        { title: 'Step 2', description: 'Select direction', img: '../../assets/imgs/PasswordCard/Step2.png'},
+        { title: 'Step 3', description: 'Select at least 8 characters', img: '../../assets/imgs/PasswordCard/Step3.png'},
+        { title: 'Step 4', description: 'Remember your choices', img: '../../assets/imgs/PasswordCard/Step4.png'}
+      ];
   }
 
   newCard(){
