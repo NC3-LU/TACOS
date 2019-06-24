@@ -48,10 +48,8 @@ export class PasswordCardPage {
   }
 
   deleteCard(indexCard){
-    
-    this.cards = this.cards.slice(indexCard,1);
+    this.cards.splice(indexCard,1);
     this.storage.set(PWD_CARDS, this.cards);
-    //console.log(this.cards)
   }
 
   generateCard(){
@@ -71,7 +69,6 @@ export class PasswordCardPage {
       name: this.name,
       strings: this.strings
     });
-    console.log(this.cards)
     this.storage.set(PWD_CARDS, this.cards);
     this.creatingCard = false;
   }
