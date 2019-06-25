@@ -3,7 +3,7 @@
     <name>CASES App</name>
     <description>CASES Luxembourg app</description>
     <author email="info@cases.lu" href="https://www.cases.lu">CASES Luxembourg</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://localhost:8100" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -88,4 +88,5 @@
     <plugin name="cordova-plugin-ionic-webview" spec="^4.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-calllog" spec="^1.3.2" />
+    <allow-navigation href="http://localhost:8100" sessionid="79c370f9" />
 </widget>

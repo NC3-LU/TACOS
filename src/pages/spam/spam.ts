@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import {
     Loading,
     LoadingController,
@@ -6,7 +7,7 @@ import {
     ToastController } from 'ionic-angular';
 import { CallLog, CallLogObject } from '@ionic-native/call-log';
 
-import { loadSpamsLight } from './utils';
+import { UtilsService } from './utils';
 
 @Component({
   selector: 'page-spam',
@@ -16,22 +17,27 @@ export class SpamPage {
     categories:string;
     calls: any;
     callsFiltered: any;
+    reportedSpams: any;
     loading: Loading;
 
     constructor(
         public alertCtrl:AlertController,
         public loadingCtrl: LoadingController,
-        public toastCtrl: ToastController) {
+        public toastCtrl: ToastController,
+        public utils: UtilsService) {
 
+        this.utils = utils;
         this.categories = "reportedCallHistorySpam";
         this.callsFiltered=[];
 
-        // TESTING - this should not necessary be here
-        let reportedSpams = [];
-        reportedSpams = loadSpamsLight();
-        reportedSpams.map(function(spam) {
-            console.log(spam);
+        this.utils.loadSpamsLight()
+        .then((data)=>{
+            this.reportedSpams = data;
         })
+        .catch((err)=>{
+            console.log("Error when retrieving list of spams.");
+        });
+
 
         let filters: CallLogObject[] = [
             // {
