@@ -110,8 +110,7 @@ export class PasswordCardPage {
 
   generateCard(){
     this.charset = 'alphanumeric';
-
-    if (this.options) {
+    if (this.options.value == true) {
       this.charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+@*#%&/(){}[]><=?!$,.-_:"';
     }
 

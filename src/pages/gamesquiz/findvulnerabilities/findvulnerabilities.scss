@@ -1,3 +1,22 @@
 page-findvulnerabilities {
 
+  #game {
+    height: 1118px;
+    width:1686px;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    &::-webkit-scrollbar {
+       display: none;
+    }
+     img{
+       flex: 0 0 auto !important;
+    }
+  }
+  .scroll_content{
+          overflow-x: scroll!important;
+          overflow-y: hidden;
+          word-wrap: break-word;
+  }
+
 }

@@ -61,7 +61,7 @@ export class HomePage {
           for(let json of this.jsonFiles){
             loadJson('../assets/data/tipstricks/' + json.name,this.domSanitizer).then(data => {
               let result = data.filter(
-                post => JSON.stringify(post).includes(this.searchTerm) &&
+                post => JSON.stringify(post).toLowerCase().includes(this.searchTerm.toLowerCase()) &&
                 post.language == this.translate.currentLang
               );
               if (result.length > 0) {
