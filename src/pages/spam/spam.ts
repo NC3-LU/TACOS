@@ -23,7 +23,7 @@ export class SpamPage {
         public loadingCtrl: LoadingController,
         public toastCtrl: ToastController) {
 
-        this.categories = "reportedSpam";
+        this.categories = "reportedCallHistorySpam";
         this.callsFiltered=[];
 
         // TESTING - this should not necessary be here
