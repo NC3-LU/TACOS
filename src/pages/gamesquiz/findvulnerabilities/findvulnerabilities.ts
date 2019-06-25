@@ -7,7 +7,7 @@ import { Storage } from '@ionic/storage';
 import { AlertController } from 'ionic-angular';
 
 import { loadJson } from '../../../lib/utils';
-
+import { loadRightLanguage } from '../../../lib/utils';
 
 
 @Component({
@@ -16,7 +16,7 @@ import { loadJson } from '../../../lib/utils';
 })
 
 export class findVulnerabilitiesPage {
-
+  dataGame : any = null;
 
   constructor(
     public navCtrl: NavController,
@@ -26,15 +26,19 @@ export class findVulnerabilitiesPage {
     private storage: Storage,
     private alertController:AlertController
      ) {
-
-
+       this.dataGame = navParams.get('data');
   }
-  vulnFound(vuln){
+
+  /*
+  * Display a vulberability and its explanation
+  */
+  vulnFound(title,explanation){
     let alert = this.alertController.create({
-      title: vuln,
+      title: title,
+      subTitle:explanation,
       buttons: [
          {
-           text: 'Close',
+           text: 'Ok',
            role: 'cancel',
          }
        ]

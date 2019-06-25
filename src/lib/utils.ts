@@ -6,13 +6,11 @@ import { DomSanitizer } from '@angular/platform-browser';
 * @sanitizer <DomSanitizer>
 * @return : cleaned json
 */
-export function loadJson(url: RequestInfo, sanitizer: DomSanitizer){
+export async function loadJson(url: RequestInfo, sanitizer: DomSanitizer){
   let myrequests = new Request(url);
-  return fetch(myrequests).then(
-    data => {
-        return data.json();
-    }
-  ).then(jsonData => {return cleanJson(jsonData, sanitizer)})
+  const data = await fetch(myrequests);
+  const jsonData = await data.json();
+  return cleanJson(jsonData, sanitizer);
 }
 
 /*

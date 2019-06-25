@@ -8,11 +8,18 @@
 </ion-header>
 
 <ion-content>
-  <img src="../../../assets/data/gamesquiz/findvulnerabilities/desk.png" width="1686" height="1118" alt="" usemap="#findvulnerabilities">
-
-  <map name="findvulnerabilities">
-    <area shape="poly" coords="183,655, 134,717, 263,730, 205,664" (click)="vulnFound('post-it')" alt="" >
-
-  </map>
+    <!-- <div class="map-div" usemap="#findvulnerabilities"></div> -->
+  <ion-grid>
+    <ion-row nowrap class="scroll_content">
+      <ion-col>
+        <div  id="game">
+          <img class="scroll-item" src="../../../assets/data/gamesquiz/findvulnerabilities/desk.png" alt="" usemap="#findvulnerabilities">
+          <map  name="findvulnerabilities">
+            <area  *ngFor="let vulnerability of dataGame[0].vulnerabilities" [shape]="vulnerability.shape" [coords]="vulnerability.coords" (click)="vulnFound(vulnerability.title,vulnerability.explanation)" alt="" >
+          </map>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
