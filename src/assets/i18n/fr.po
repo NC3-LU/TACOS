@@ -23,8 +23,17 @@ msgstr "Article(s) trouvé(s) :"
 msgid "Call history"
 msgstr ""
 
+msgid "Cancel"
+msgstr "Annuler"
+
 msgid "Card Name"
 msgstr "Nom de la carte"
+
+msgid "Confirm delete this password card?"
+msgstr "Confirmez l'effacement de cette carte de mot de passe ?"
+
+msgid "Delete confirmation"
+msgstr "Confirmation de suppression"
 
 msgid "E-mail"
 msgstr "Courrier électronique"
@@ -64,6 +73,9 @@ msgstr "Nouvelle carte"
 
 msgid "No spam detected"
 msgstr "Aucun spam détecté"
+
+msgid "OK"
+msgstr "D'accord"
 
 msgid "Only Alphanumeric"
 msgstr "Uniquement alphanumérique"

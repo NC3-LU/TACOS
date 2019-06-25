@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NavController, NavParams } from 'ionic-angular';
+import {NavController, NavParams, AlertController,ToastController} from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
 import randomstring from 'randomstring';
@@ -30,6 +30,8 @@ export class PasswordCardPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public formbuilder:FormBuilder,
+    public alertCtrl:AlertController,
+    public toastCtrl: ToastController,
     private translate: TranslateService,
     private storage: Storage) {
 
@@ -70,6 +72,35 @@ export class PasswordCardPage {
     this.checkingCard =  true;
     this.strings = card;
 
+  }
+
+  confirmDelete(indexCard) {
+      this.translate.stream(['Delete confirmation',
+                            'Confirm delete this password card?',
+                            'OK',
+                            'Cancel'])
+                    .subscribe(translation => {
+          let alert = this.alertCtrl.create({
+            title:  translation['Delete confirmation'],
+            subTitle: translation['Confirm delete this password card?'],
+            buttons: [
+                {
+                    text: translation['OK'],
+                    role: 'ok',
+                    handler: data => {
+                        this.deleteCard(indexCard);
+                      }
+                },
+                {
+                    text: translation['Cancel'],
+                    role: 'cancel',
+                    handler: data => {
+                    }
+                },
+            ]
+          });
+          alert.present();
+      });
   }
 
   deleteCard(indexCard){

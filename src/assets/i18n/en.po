@@ -23,8 +23,17 @@ msgstr "Article(s) found:"
 msgid "Call history"
 msgstr "Call history"
 
+msgid "Cancel"
+msgstr "Cancel"
+
 msgid "Card Name"
 msgstr "Card Name"
+
+msgid "Confirm delete this password card?"
+msgstr "Confirm delete this password card?"
+
+msgid "Delete confirmation"
+msgstr "Delete confirmation"
 
 msgid "E-mail"
 msgstr "E-mail"
@@ -64,6 +73,9 @@ msgstr "New Card"
 
 msgid "No spam detected"
 msgstr "No spam detected"
+
+msgid "OK"
+msgstr "OK"
 
 msgid "Only Alphanumeric"
 msgstr "Only Alphanumeric"
