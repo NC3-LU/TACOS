@@ -35,11 +35,12 @@
     <ion-item-divider>
       {{searchResult.length}} {{'Article(s) found:'| translate}}
     </ion-item-divider>
-    <button
-      ion-item
-      *ngFor="let result of searchResult"
-      (click)="openPage($event,result[0])">
-      {{result[0].title}}
-    </button>
+      <button ion-item no-lines
+        *ngFor="let result of searchResult"
+        (click)="openPage($event,result[0])">
+        <ion-icon item-left name="search"></ion-icon>
+        {{result[0].title}}
+      </button>
+
   </ion-list>
 </ion-content>
