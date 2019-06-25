@@ -76,7 +76,6 @@ export class GamesQuizPage {
       loadJson(page.url,this.domSanitizer).then(data => {
         page.article = data;
         page.article = loadRightLanguage(page.article,this.translate.currentLang);
-        console.log(page.article)
 
         this.navCtrl.push(GamesQuizPage, {quizItem:page});
       });
@@ -125,9 +124,16 @@ export class GamesQuizPage {
       this.navCtrl.setRoot(GamesQuizPage); //set the root and don't pop to refresh and get score
     }
 
+    /*
+    * Load a page like a game 
+    */
     openPage(page){
-      if(page=='findVulnerabilitiesPage')
-        this.navCtrl.push(findVulnerabilitiesPage);
+      if(page=='findVulnerabilitiesPage'){
+        loadJson('../assets/data/gamesquiz/findvulnerabilities/findvulnerabilities.json',this.domSanitizer).then(data => { //load the data in advance
+          data = loadRightLanguage(data,this.translate.currentLang);
+          this.navCtrl.push(findVulnerabilitiesPage, {data:data});
+        });
+      }
     }
 
 }
