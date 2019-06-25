@@ -3,6 +3,7 @@ import {NavController, NavParams } from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
 import randomstring from 'randomstring';
+import {FormBuilder, FormGroup, Validators, AbstractControl} from '@angular/forms';
 
 const PWD_CARDS = 'PASSWORDS_CARDS';
 
@@ -12,12 +13,15 @@ const PWD_CARDS = 'PASSWORDS_CARDS';
 })
 export class PasswordCardPage {
 
-  options : any = 1;
+  createCard:FormGroup;
+  name:AbstractControl;
+  options:AbstractControl;
+
+  //options : any = 1;
   charset : any;
   cards : any = [];
   steps: any;
   strings : any;
-  name: any;
   creatingCard : any = false;
   checkingCard : any = false;
   headers : any = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N'];
@@ -25,6 +29,7 @@ export class PasswordCardPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
+    public formbuilder:FormBuilder,
     private translate: TranslateService,
     private storage: Storage) {
 
@@ -50,8 +55,14 @@ export class PasswordCardPage {
   }
 
   newCard(){
+    this.createCard = this.formbuilder.group({
+      name:['',Validators.required],
+      options:[true]
+    });
+
+    this.name = this.createCard.controls['name'];
+    this.options = this.createCard.controls['options'];
     this.strings = [];
-    this.name = null;
     this.creatingCard = true;
   }
 
@@ -69,7 +80,7 @@ export class PasswordCardPage {
   generateCard(){
     this.charset = 'alphanumeric';
 
-    if (this.options == 1) {
+    if (this.options) {
       this.charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+@*#%&/(){}[]><=?!$,.-_:"';
     }
 
@@ -79,8 +90,9 @@ export class PasswordCardPage {
         charset: this.charset
       }).split(''));
     }
+    console.log(this.name)
     this.cards.push({
-      name: this.name,
+      name: this.name.value,
       strings: this.strings
     });
     this.storage.set(PWD_CARDS, this.cards);
