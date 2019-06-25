@@ -8,9 +8,6 @@
     </ion-title>
     <ion-searchbar class="search-bar" placeholder="{{'Search' | translate}}"
         *ngIf="isSearchBarOpened"
-        showCancelButton = "true"
-        autocomplete = "true"
-        cancelButtonText="{{'Cancel' | translate}}"
         (ionCancel)="isSearchBarOpened = false"
         [(ngModel)] = "searchTerm"
         (ionInput) = "onSearch()">
