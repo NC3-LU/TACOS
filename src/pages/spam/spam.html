@@ -57,7 +57,7 @@
             <ion-card *ngFor="let c of reportedSpams">
                 <ion-card-header>
                     <ion-card-title><ion-icon name="call"></ion-icon> {{c.number}}</ion-card-title>
-                    <ion-card-subtitle><ion-icon name="calendar"></ion-icon> {{c.created | date:'medium' }}</ion-card-subtitle>
+                    <ion-card-subtitle><ion-icon name="calendar"></ion-icon> {{c.date | date:'medium' }}</ion-card-subtitle>
                 </ion-card-header>
                 <ion-card-content>
                     <ion-grid>

@@ -7,6 +7,7 @@ import {
     ToastController } from 'ionic-angular';
 import { CallLog, CallLogObject } from '@ionic-native/call-log';
 
+import { arrayDistinct } from '../../lib/utils';
 import { UtilsService } from './utils';
 
 @Component({
@@ -30,21 +31,8 @@ export class SpamPage {
         this.categories = "reportedCallHistorySpam";
         this.callsFiltered=[];
 
-        this.utils.loadSpamsLight()
-        .then((data)=>{
-            this.reportedSpams = data;
-        })
-        .catch((err)=>{
-            console.log("Error when retrieving list of spams.");
-        });
-
-
+        // Initialization of the filters
         let filters: CallLogObject[] = [
-            // {
-            //     name: "number",
-            //     value: spams,
-            //     operator: "=="
-            // },
             {
                 name:"type",
                 value: ["1", "3"], // INCOMING_TYPE and MISSED_TYPE
@@ -52,19 +40,45 @@ export class SpamPage {
             }
         ];
 
-        CallLog.requestReadPermission()
-        .then(()=>{
-            CallLog.getCallLog(filters)
-            .then((data)=>{
-                this.callsFiltered = data;
+        // retrive the list of spams from the back-end service
+        this.utils.loadSpamsLight()
+        .then((data)=>{
+            data.sort(function(a, b){
+                return b.date - a.date;
+            });
+            this.reportedSpams = data;
+
+            filters.push({
+                name: "number",
+                value: data.map(spam => {return spam.number}),
+                operator: "=="
+            })
+
+            CallLog.requestReadPermission()
+            .then(()=>{
+                CallLog.getCallLog(filters)
+                .then((data)=> {
+                    // remove duplicates of the call log
+                    this.callsFiltered = arrayDistinct(data, 'number');
+                })
+                .catch((err)=>{
+                    console.log("Error getCallLog");
+                });
             })
             .catch((err)=>{
-                console.log("Error getCallLog");
+                console.log(err);
             });
+
+
+
         })
         .catch((err)=>{
-            console.log(err);
+            console.log("Error when retrieving list of spams.");
         });
+
+
+
+
 
     }
 
