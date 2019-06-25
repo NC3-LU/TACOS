@@ -14,17 +14,26 @@ msgstr ""
 msgid "About"
 msgstr "About"
 
+msgid "Alphanumeric and Special Characters"
+msgstr "Alphanumeric and Special Characters"
+
 msgid "Article(s) found:"
 msgstr "Article(s) found:"
+
+msgid "Call history"
+msgstr "Call history"
+
+msgid "Card Name"
+msgstr "Card Name"
 
 msgid "E-mail"
 msgstr "E-mail"
 
-msgid "Explanation"
-msgstr "Explanation"
-
 msgid "Final Score"
 msgstr "Final Score"
+
+msgid "Find the vulnerabilities"
+msgstr "Find the vulnerabilities"
 
 msgid "Games"
 msgstr "Games"
@@ -32,8 +41,14 @@ msgstr "Games"
 msgid "Games and Quiz"
 msgstr "Games and Quiz"
 
+msgid "Generate Card"
+msgstr "Generate Card"
+
 msgid "Home"
 msgstr "Home"
+
+msgid "How to generate your passwords?"
+msgstr "How to generate your passwords?"
 
 msgid "Incoming calls reported as spam"
 msgstr "Incoming calls reported as spam"
@@ -41,17 +56,35 @@ msgstr "Incoming calls reported as spam"
 msgid "Language"
 msgstr "Language"
 
+msgid "List of Cards"
+msgstr "List of Cards"
+
+msgid "New Card"
+msgstr "New Card"
+
 msgid "No spam detected"
 msgstr "No spam detected"
 
+msgid "Only Alphanumeric"
+msgstr "Only Alphanumeric"
+
 msgid "Password"
 msgstr "Password"
+
+msgid "Password Card"
+msgstr "Password Card"
 
 msgid "Physical Security"
 msgstr "Physical Security"
 
 msgid "Quiz"
 msgstr "Quiz"
+
+msgid "Recently reported"
+msgstr "Recently reported"
+
+msgid "Remember your choices"
+msgstr "Remember your choices"
 
 msgid "Report"
 msgstr "Report"
@@ -62,27 +95,44 @@ msgstr "Report a spam"
 msgid "Reported"
 msgstr "Reported"
 
-msgid "Reported spam"
-msgstr "Reported spam"
-
 msgid "Restart"
 msgstr "Restart"
 
 msgid "Return to the quiz Menu"
 msgstr "Return to the quiz Menu"
 
-msgid "See the correction"
-msgstr "See the correction"
-
 msgid "Search"
 msgstr "Search"
 
+msgid "See the correction"
+msgstr "See the correction"
+
+msgid "Select a row and a column"
+msgstr "Select a row and a column"
+
+msgid "Select at least 8 characters"
+msgstr "Select at least 8 characters"
+
+msgid "Select direction"
+msgstr "Select direction"
 
 msgid "Settings"
 msgstr "Settings"
 
 msgid "Spam signal"
 msgstr "Spam signal"
+
+msgid "Step 1"
+msgstr "Step 1"
+
+msgid "Step 2"
+msgstr "Step 2"
+
+msgid "Step 3"
+msgstr "Step 3"
+
+msgid "Step 4"
+msgstr "Step 4"
 
 msgid "Tips and Tricks"
 msgstr "Tips and Tricks"
