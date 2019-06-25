@@ -43,3 +43,21 @@ export function loadRightLanguage(myData: Array<any>,language: String) {
     }
     return temp;
 }
+
+/*
+* Make an array distinct (with unique elements).
+* @arr <string> : array to make distinct
+* @attr <string> : attr, the attribute to use to make the array distinct
+* @return : array with unique elements
+*/
+export function arrayDistinct(arr, attr) {
+    const result = [];
+    const map = new Map();
+    for (const item of arr) {
+        if(!map.has(item[attr])){
+            map.set(item[attr], true);
+            result.push(item);
+        }
+    }
+    return result;
+}
