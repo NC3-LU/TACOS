@@ -12,7 +12,12 @@ page-home {
       }
     }
   }
-  
+  .search-bar{
+    ion-icon{
+      color: black;
+    }
+  }
+
   .grid {
     display:grid;
     grid-template-columns: 50% 50%;
