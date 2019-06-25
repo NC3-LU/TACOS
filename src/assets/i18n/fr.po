@@ -14,17 +14,26 @@ msgstr ""
 msgid "About"
 msgstr "À propos"
 
+msgid "Alphanumeric and Special Characters"
+msgstr "Caractères alphanumériques et spéciaux"
+
 msgid "Article(s) found:"
 msgstr "Article(s) trouvé(s) :"
+
+msgid "Call history"
+msgstr ""
+
+msgid "Card Name"
+msgstr "Nom de la carte"
 
 msgid "E-mail"
 msgstr "Courrier électronique"
 
-msgid "Explanation"
-msgstr "Explication"
-
 msgid "Final Score"
 msgstr "Score Final"
+
+msgid "Find the vulnerabilities"
+msgstr ""
 
 msgid "Games"
 msgstr "Jeux"
@@ -32,8 +41,14 @@ msgstr "Jeux"
 msgid "Games and Quiz"
 msgstr "Jeux et Quiz"
 
+msgid "Generate Card"
+msgstr "Générer la carte"
+
 msgid "Home"
 msgstr "Accueil"
+
+msgid "How to generate your passwords?"
+msgstr "Comment générer vos mots de passe ?"
 
 msgid "Incoming calls reported as spam"
 msgstr "Appels entrants signalés comme spam"
@@ -41,17 +56,35 @@ msgstr "Appels entrants signalés comme spam"
 msgid "Language"
 msgstr "Langue"
 
+msgid "List of Cards"
+msgstr "Liste des cartes"
+
+msgid "New Card"
+msgstr "Nouvelle carte"
+
 msgid "No spam detected"
 msgstr "Aucun spam détecté"
 
+msgid "Only Alphanumeric"
+msgstr "Uniquement alphanumérique"
+
 msgid "Password"
 msgstr "Mot de passe"
+
+msgid "Password Card"
+msgstr "Carte de mot de passe"
 
 msgid "Physical Security"
 msgstr "Sécurité physique"
 
 msgid "Quiz"
 msgstr "Quiz"
+
+msgid "Recently reported"
+msgstr ""
+
+msgid "Remember your choices"
+msgstr "Souvenez-vous de vos choix"
 
 msgid "Report"
 msgstr "Signaler"
@@ -62,26 +95,44 @@ msgstr "Signaler un spam"
 msgid "Reported"
 msgstr "Signalé"
 
-msgid "Reported spam"
-msgstr "Spam signalé"
-
 msgid "Restart"
 msgstr "Recommencez"
 
 msgid "Return to the quiz Menu"
 msgstr "Retourner au menu Jeux et Quiz"
 
+msgid "Search"
+msgstr "Rechercher"
+
 msgid "See the correction"
 msgstr "Voir la correction"
 
-msgid "Search"
-msgstr "Rechercher"
+msgid "Select a row and a column"
+msgstr "Sélectionnez une ligne et une colonne"
+
+msgid "Select at least 8 characters"
+msgstr "Sélectionnez au moins 8 caractères"
+
+msgid "Select direction"
+msgstr "Sélectionnez une direction"
 
 msgid "Settings"
 msgstr "Paramètres"
 
 msgid "Spam signal"
 msgstr "Spam signal"
+
+msgid "Step 1"
+msgstr "Étape 1"
+
+msgid "Step 2"
+msgstr "Étape 2"
+
+msgid "Step 3"
+msgstr "Étape 3"
+
+msgid "Step 4"
+msgstr "Étape 4"
 
 msgid "Tips and Tricks"
 msgstr "Trucs et astuces"

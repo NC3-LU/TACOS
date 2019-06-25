@@ -6,9 +6,11 @@
     <ion-title *ngIf="!isSearchBarOpened">
       CASES Luxembourg
     </ion-title>
-    <ion-searchbar placeholder="{{'Search' | translate}}"
+    <ion-searchbar class="search-bar" placeholder="{{'Search' | translate}}"
         *ngIf="isSearchBarOpened"
-        showCancelButton
+        showCancelButton = "true"
+        autocomplete = "true"
+        cancelButtonText="{{'Cancel' | translate}}"
         (ionCancel)="isSearchBarOpened = false"
         [(ngModel)] = "searchTerm"
         (ionInput) = "onSearch()">
@@ -31,7 +33,7 @@
   </ion-grid>
   <ion-list *ngIf="searching">
     <ion-item-divider>
-      {{searchResult.length}} {{'Article(s) found:'| translate}} 
+      {{searchResult.length}} {{'Article(s) found:'| translate}}
     </ion-item-divider>
     <button
       ion-item
