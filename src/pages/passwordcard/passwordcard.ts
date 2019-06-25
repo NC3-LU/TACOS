@@ -90,7 +90,7 @@ export class PasswordCardPage {
         charset: this.charset
       }).split(''));
     }
-    console.log(this.name)
+
     this.cards.push({
       name: this.name.value,
       strings: this.strings
