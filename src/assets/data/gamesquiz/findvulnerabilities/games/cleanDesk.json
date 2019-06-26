@@ -1,0 +1,38 @@
+[
+  {
+    "language":"fr",
+    "title":"Trouvez les failles de sécurité !",
+    "storageKey":"gameCleanDesk",
+    "image":"../../../assets/data/gamesquiz/findvulnerabilities/games/cleanDesk.png",
+    "width":"1686px",
+    "height":"1118px",
+    "version":0.1,
+    "keywords":["vulnerabilité"],
+    "vulnerabilities":[
+      {
+        "title":"Post-it",
+        "shape":"poly",
+        "coords":"183,655, 134,717, 263,730, 205,664",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      }
+    ]
+  },
+  {
+    "language":"en",
+    "title":"Trouvez les failles de sécurité !",
+    "storageKey":"gameCleanDesk",
+    "image":"../../../assets/data/gamesquiz/findvulnerabilities/games/cleanDesk.png",
+    "width":"1686px",
+    "height":"1118px",
+    "version":0.1,
+    "keywords":["vulnerabilities"],
+    "vulnerabilities":[
+      {
+        "title":"Post-it",
+        "shape":"poly",
+        "coords":"183,655, 134,717, 263,730, 205,664",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      }
+    ]
+  }
+]
