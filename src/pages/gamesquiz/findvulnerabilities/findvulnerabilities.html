@@ -10,7 +10,7 @@
 
 <ion-content>
 <!-- Part for the menu -->
-  <ion-grid *ngIf="dataMenu != null" >
+  <ion-grid  class="gridMenu" *ngIf="dataMenu != null" >
         <ion-button ion-button text-wrap class="home-button"
           [style.background-image]="game.image"
           *ngFor="let game of dataMenu[0].games" (click)="openGame(game)">

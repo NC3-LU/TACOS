@@ -14,6 +14,24 @@ page-findvulnerabilities {
             flex: 0 0 auto !important;
         }
       }
+
+      ion-button {
+        &[class*="home-button"] {
+          background: none;
+          background-size: 60%;
+          background-repeat: no-repeat;
+          height: 100%;
+          background-position: right 50% bottom 20%;
+          color: black;
+          padding-bottom: 80%;
+        }
+      }
+
+  }
+  .gridMenu {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
   }
 
   .scroll_content{
@@ -22,18 +40,6 @@ page-findvulnerabilities {
         word-wrap: break-word;
   }
 //style for the menu
-  ion-grid {
-    ion-button {
-      &[class*="home-button"] {
-        background: none;
-        background-size: 60%;
-        background-repeat: no-repeat;
-        height: 100%;
-        background-position: right 50% bottom 20%;
-        color: black;
-        padding-bottom: 80%;
-      }
-    }
-  }
+
 
 }
