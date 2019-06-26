@@ -125,13 +125,13 @@ export class GamesQuizPage {
     }
 
     /*
-    * Load a page like a game 
+    * Load a page like a game
     */
     openPage(page){
       if(page=='findVulnerabilitiesPage'){
         loadJson('../assets/data/gamesquiz/findvulnerabilities/findvulnerabilities.json',this.domSanitizer).then(data => { //load the data in advance
           data = loadRightLanguage(data,this.translate.currentLang);
-          this.navCtrl.push(findVulnerabilitiesPage, {data:data});
+          this.navCtrl.push(findVulnerabilitiesPage, {dataMenu:data});
         });
       }
     }
