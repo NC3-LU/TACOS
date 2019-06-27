@@ -7,6 +7,7 @@ import {
     ToastController } from 'ionic-angular';
 import { CallLog, CallLogObject } from '@ionic-native/call-log';
 
+import jsSHA from 'jssha'
 import { arrayDistinct } from '../../lib/utils';
 import { UtilsService } from './utils';
 
@@ -15,7 +16,7 @@ import { UtilsService } from './utils';
   templateUrl: 'spam.html'
 })
 export class SpamPage {
-    categories:string;
+    categories: string;
     calls: any;
     callsFiltered: any;
     reportedSpams: any;
@@ -42,24 +43,42 @@ export class SpamPage {
 
         // retrive the list of spams from the back-end service
         this.utils.loadSpamsLight()
-        .then((data)=>{
-            data.sort(function(a, b){
-                return b.date - a.date;
-            });
-            this.reportedSpams = data;
+        .then((dataSpam)=>{
+            // data.sort(function(a, b){
+            //     return b.date - a.date;
+            // });
+            // this.reportedSpams = dataSpam;
+            // filters.push({
+            //     name: "number",
+            //     value: dataSpam.map(spam => {return spam.number}),
+            //     operator: "=="
+            // })
 
-            filters.push({
-                name: "number",
-                value: data.map(spam => {return spam.number}),
-                operator: "=="
-            })
+            let hashes: string[] = dataSpam.map(spam => {return spam.number_hash});
 
             CallLog.requestReadPermission()
             .then(()=>{
                 CallLog.getCallLog(filters)
-                .then((data)=> {
-                    // remove duplicates of the call log
-                    this.callsFiltered = arrayDistinct(data, 'number');
+                .then((dataLog)=> {
+
+                    // filter the list of calls with the know spam hashes
+                    this.callsFiltered = dataLog.filter(function(log){
+                        let shaObj = new jsSHA("SHA-512", "TEXT");
+                        shaObj.update(log.number);
+                        return hashes.includes(shaObj.getHash("HEX"));
+                    })
+
+                    // make the list unique
+                    this.callsFiltered = arrayDistinct(this.callsFiltered,
+                                                        'number');
+
+                    // count the number of report for each spam number
+                    this.callsFiltered = this.callsFiltered.map(function(log) {
+                        let shaObj = new jsSHA("SHA-512", "TEXT");
+                        shaObj.update(log.number);
+                        log.occurences = hashes.filter(function(item){ return item === shaObj.getHash("HEX"); }).length;
+                        return log;
+                    });
                 })
                 .catch((err)=>{
                     console.log("Error getCallLog");
