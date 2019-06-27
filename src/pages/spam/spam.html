@@ -21,8 +21,13 @@
 
     <div [ngSwitch]="categories" padding>
         <ion-list *ngSwitchCase="'reportedCallHistorySpam'">
-            <h2>{{ 'Incoming calls reported as spam' | translate }}</h2>
-            <div *ngIf="callsFiltered.length == 0"><ion-icon name="checkmark"></ion-icon> {{ 'No spam detected' | translate }}</div>
+            <div *ngIf="callsFiltered.length != 0">
+                <h2>{{ 'Incoming calls reported as spam' | translate }}</h2>
+            </div>
+            <div *ngIf="callsFiltered.length == 0">
+                <h1>{{ 'No spam detected' | translate }} <ion-icon name="happy"></ion-icon></h1>
+            </div>
+
             <ion-card *ngFor="let c of callsFiltered">
                 <ion-card-header>
                     <ion-card-title><ion-icon name="call"></ion-icon> {{c.number}}</ion-card-title>
