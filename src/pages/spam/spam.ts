@@ -19,7 +19,6 @@ export class SpamPage {
     categories: string;
     calls: any;
     callsFiltered: any;
-    reportedSpams: any;
     loading: Loading;
 
     constructor(
@@ -47,7 +46,7 @@ export class SpamPage {
             // data.sort(function(a, b){
             //     return b.date - a.date;
             // });
-            // this.reportedSpams = dataSpam;
+
             // filters.push({
             //     name: "number",
             //     value: dataSpam.map(spam => {return spam.number}),
