@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>News</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-slides pager>
+
+        <ion-slide *ngFor="let set of feeds_sets">
+            <h2>{{set.title}}</h2>
+        </ion-slide>
+
+    </ion-slides>
+
+</ion-content>

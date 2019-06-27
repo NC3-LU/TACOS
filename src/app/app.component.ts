@@ -12,6 +12,7 @@ import { GamesQuizPage } from '../pages/gamesquiz/gamesquiz';
 import { PasswordCardPage } from '../pages/passwordcard/passwordcard';
 import { VideosPage } from '../pages/videos/videos';
 import { SpamPage } from '../pages/spam/spam';
+import { NewsPage } from '../pages/news/news';
 import { SettingsPage } from '../pages/settings/settings';
 import { AboutPage } from '../pages/about/about';
 
@@ -39,6 +40,7 @@ export class MyApp {
                             'Games and Quiz',
                             'Password Card',
                             'Spam signal',
+                            'News',
                             'Settings',
                             'About'])
                     .subscribe(translations => {
@@ -49,6 +51,7 @@ export class MyApp {
           { title: translations['Games and Quiz'], component: GamesQuizPage, icon: 'football'},
           { title: translations['Password Card'], component: PasswordCardPage, icon: 'card'},
           { title: translations['Spam signal'], component: SpamPage, icon: 'call'},
+          { title: translations['News'], component: NewsPage, icon: 'paper'},
           { title: translations['Settings'], component: SettingsPage, icon: 'settings' },
           { title: translations['About'], component: AboutPage, icon: 'information-circle'},
         ];
