@@ -2,30 +2,36 @@
   {
     "language":"fr",
     "title":"Trouvez les failles de sécurité !",
-    "storageKey":"gameFindVulnerabilities",
     "version":0.1,
-    "keywords":["vulnerabilité"],
-    "vulnerabilities":[
+    "keywords":[""],
+    "games":[
       {
-        "title":"Post-it",
-        "shape":"poly",
-        "coords":"183,655, 134,717, 263,730, 205,664",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "title":"Bureau Propre",
+        "image":"url(../../../assets/data/gamesquiz/findvulnerabilities/games/icon/cleanDesk.png)",
+        "game":"../../../assets/data/gamesquiz/findvulnerabilities/games/cleanDesk.json"
+      },
+      {
+        "title":"Sécurité Physique",
+        "image":"url(../../../assets/data/gamesquiz/findvulnerabilities/games/icon/cleanDesk.png)",
+        "game":"../../../assets/data/gamesquiz/findvulnerabilities/games/cleanDesk.json"
       }
     ]
   },
   {
     "language":"en",
     "title":"Trouvez les failles de sécurité !",
-    "storageKey":"gameFindVulnerabilities",
     "version":0.1,
-    "keywords":["vulnerabilities"],
-    "vulnerabilities":[
+    "keywords":[""],
+    "games":[
       {
-        "title":"Post-it",
-        "shape":"poly",
-        "coords":"183,655, 134,717, 263,730, 205,664",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "title":"Cleaned Desk",
+        "image":"url(../../../assets/data/gamesquiz/findvulnerabilities/games/icon/cleanDesk.png)",
+        "game":"../../../assets/data/gamesquiz/findvulnerabilities/games/cleanDesk.json"
+      },
+      {
+        "title":"Physical security",
+        "image":"url(../../../assets/data/gamesquiz/findvulnerabilities/games/icon/cleanDesk.png)",
+        "game":"../../../assets/data/gamesquiz/findvulnerabilities/games/cleanDesk.json"
       }
     ]
   }

@@ -1,9 +1,11 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { DomSanitizer } from '@angular/platform-browser';
 
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
 import { AlertController } from 'ionic-angular';
+import { loadJson, loadRightLanguage } from '../../../lib/utils';
 
 @Component({
   selector: 'page-findvulnerabilities',
@@ -11,7 +13,8 @@ import { AlertController } from 'ionic-angular';
 })
 
 export class findVulnerabilitiesPage {
-  dataGame : any = null;
+  dataGame : any;
+  dataMenu : any;
   answers : any; //answers and if they are found 1=found
   gameScore=0; //score of the current game
 
@@ -20,19 +23,41 @@ export class findVulnerabilitiesPage {
     public navParams: NavParams,
     private translate: TranslateService,
     private storage: Storage,
-    private alertController:AlertController
+    private alertController:AlertController,
+    private domSanitizer: DomSanitizer,
      ) {
-       this.dataGame = null;
-       this.dataGame = navParams.get('data');
+       if (typeof navParams.get('dataMenu') !== 'undefined') { //load the menu
+        this.dataMenu = navParams.get('dataMenu');
+        console.log(this.dataMenu)
+        this.dataGame = null;
+      }
+        if (typeof navParams.get('dataGame') !== 'undefined') { //load the game
+         this.dataGame = navParams.get('dataGame');
+         this.dataMenu = null;
+       }
   }
 
+// init some var, this function is defined by ionic and called just after the constructor
   ionViewWillEnter (){
-    this.answers = [];
-    for (let i = 0; i < this.dataGame[0].vulnerabilities.length; i++) {
-        this.answers[this.dataGame[0].vulnerabilities[i]['title']] = 0;
+    if(this.dataGame !=null){
+      this.answers = [];
+      for (let i = 0; i < this.dataGame[0].vulnerabilities.length; i++) {
+          this.answers[this.dataGame[0].vulnerabilities[i]['title']] = 0;
+      }
+      console.log(this.answers)
     }
-    console.log(this.answers)
   }
+
+  /*
+  * Open a quiz (e.g password)
+  */
+    openGame(game) {
+      loadJson(game.game,this.domSanitizer).then(data => {
+        game = data;
+        game = loadRightLanguage(game,this.translate.currentLang);
+        this.navCtrl.push(findVulnerabilitiesPage, {dataGame:game});
+      });
+    }
 
   /*
   * Display a vulberability and its explanation

@@ -3,17 +3,26 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{ 'Score' | translate }} {{this.gameScore}}/{{dataGame[0].vulnerabilities.length}} - {{ 'Find the vulnerabilities' | translate }} </ion-title>
+    <ion-title *ngIf="dataGame !=null">{{ 'Score' | translate }} {{this.gameScore}}/{{dataGame[0].vulnerabilities.length}} - {{ 'Find the vulnerabilities' | translate }} </ion-title>
+    <ion-title *ngIf="dataMenu !=null">{{ 'Find the vulnerabilities' | translate }} </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-    <!-- <div class="map-div" usemap="#findvulnerabilities"></div> -->
-  <ion-grid>
+<!-- Part for the menu -->
+  <ion-grid  class="gridMenu" *ngIf="dataMenu != null" >
+        <ion-button ion-button text-wrap class="home-button"
+          [style.background-image]="game.image"
+          *ngFor="let game of dataMenu[0].games" (click)="openGame(game)">
+          {{game.title}}
+        </ion-button>
+  </ion-grid>
+<!-- Part for the game -->
+  <ion-grid *ngIf="dataGame !=null">
     <ion-row nowrap class="scroll_content">
       <ion-col>
-        <div  id="game">
-          <img class="scroll-item" src="../../../assets/data/gamesquiz/findvulnerabilities/desk.png" alt="" usemap="#findvulnerabilities">
+        <div  class="game" [style.width]="dataGame[0].width" [style.height]="dataGame[0].height" >
+          <img class="scroll-item" [src]="dataGame[0].image" alt="" usemap="#findvulnerabilities">
           <map  name="findvulnerabilities">
             <area  *ngFor="let vulnerability of dataGame[0].vulnerabilities" [shape]="vulnerability.shape" [coords]="vulnerability.coords" (click)="vulnFound(vulnerability.title,vulnerability.explanation)" alt="" >
           </map>
@@ -21,5 +30,4 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
 </ion-content>
