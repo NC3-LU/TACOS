@@ -18,18 +18,18 @@ import { UtilsService } from './utils';
 export class SpamPage {
     categories: string;
     calls: any;
-    callsFiltered: any;
+    callsFiltered: any[];
     loading: Loading;
 
     constructor(
-        public alertCtrl:AlertController,
+        public alertCtrl: AlertController,
         public loadingCtrl: LoadingController,
         public toastCtrl: ToastController,
         public utils: UtilsService) {
 
         this.utils = utils;
         this.categories = "reportedCallHistorySpam";
-        this.callsFiltered=[];
+        this.callsFiltered = [];
 
         // Initialization of the filters
         let filters: CallLogObject[] = [
@@ -59,7 +59,6 @@ export class SpamPage {
             .then(()=>{
                 CallLog.getCallLog(filters)
                 .then((dataLog)=> {
-
                     // filter the list of calls with the know spam hashes
                     this.callsFiltered = dataLog.filter(function(log){
                         let shaObj = new jsSHA("SHA-512", "TEXT");
@@ -87,17 +86,10 @@ export class SpamPage {
                 console.log(err);
             });
 
-
-
         })
         .catch((err)=>{
             console.log("Error when retrieving list of spams.");
         });
-
-
-
-
-
     }
 
     confirmSpam() {
@@ -129,57 +121,32 @@ export class SpamPage {
     }
 
 
-    confirmHam() {
-        let alert = this.alertCtrl.create({
-          title: 'Ham confirmation',
-          subTitle: 'Confirm this number is not a spam?',
-          buttons: [
-              {
-                  text: 'OK',
-                  role: 'ok',
-                  handler: data => {
-                      const thankingToast = this.toastCtrl.create({
-                          message: 'Thank you for your contribution.',
-                          duration: 3000
-                      });
-                      thankingToast.present();
-                    }
-              },
-              {
-                  text: 'Cancel',
-                  role: 'cancel',
-                  handler: data => {
-                      console.log('Cancel clicked');
-                  }
-              },
-          ]
-        });
-        alert.present();
-    }
-
-
-    // showInitialLogAlert() {
-    //     const confirm = this.alertCtrl.create({
-    //         title: "Autorisation",
-    //         message: "Need access to call log",
-    //         buttons: [
-    //             {
-    //                 text: 'Ok',
-    //                 handler: () => {
-    //                     console.log('ok clicked');
-    //                     CallLog.requestReadPermission()
-    //                     .then(()=>{});
+    // confirmHam() {
+    //     let alert = this.alertCtrl.create({
+    //       title: 'Ham confirmation',
+    //       subTitle: 'Confirm this number is not a spam?',
+    //       buttons: [
+    //           {
+    //               text: 'OK',
+    //               role: 'ok',
+    //               handler: data => {
+    //                   const thankingToast = this.toastCtrl.create({
+    //                       message: 'Thank you for your contribution.',
+    //                       duration: 3000
+    //                   });
+    //                   thankingToast.present();
     //                 }
-    //             },
-    //             {
-    //                 text: 'Cancel',
-    //                 handler: () => {
-    //                     console.log('cancel clicked');
-    //                 }
-    //             }
-    //         ]
+    //           },
+    //           {
+    //               text: 'Cancel',
+    //               role: 'cancel',
+    //               handler: data => {
+    //                   console.log('Cancel clicked');
+    //               }
+    //           },
+    //       ]
     //     });
-    //     confirm.present();
+    //     alert.present();
     // }
 
 
