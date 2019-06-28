@@ -1,31 +1,73 @@
 [
   {
     "language":"fr",
-    "title":"Internet",
-    "keywords":["web","toile"],
-    "parts":[
+    "title":"Mot de passes",
+    "storageKey":"quizPhysicalSecurity",
+    "version":0.1,
+    "keywords":["Sécurité Physique"],
+    "questions":[
       {
-        "title":"Utilisation d'internet",
-        "content":"Internet est souvvent source de logiciels malveillants. Trop nombreux sont les sites licites mal protégés qui sont compromis et ensuite utilisés pour infecter les ordinateurs des visiteurs. L'infection de ces derniers se passe alors le plus souvent via l'exploitation de vulnérabilités techniques des navigateurs."
+        "title":"J'achète sur internet, je fais attention à ce que l'adresse du site commence par HTTPS :",
+        "answers":[
+          ["false", "No"],
+          ["true", "Yes"]
+        ],
+        "explanation":"De nos jours l'utilisation de HTTPS est obligatoire, cela vous permet de vérifier l'identité du site web"
       },
       {
-        "title":"La fraude sur internet",
-        "content":"A l'origine, les attaques de systèmes d'information avaient une vocation ludique. Mais de nos jours, elles sont davantage motivées par un but lucratif.<br/>Certaines données peuvent permettre d'accéder au porte-monnaie de la victime : accès au web-banking, accès à de l'argent virtuel, e-commerce (numéros de carte de crédit).<br/>D'autres données, par exemple les mots de passe, permettent de propager des logiciels malveillants ou des arnaques. Celui qui vole un mot de passe 'Facebook', vole une identité en ligne et par là même la confiance du groupe d'amis."
+        "title":"Est-ce que vous télécharger des médias ?",
+        "answers":[
+          ["false", "Oui, je me moque de la provenance du moment que c'est gratuit et que ça fonctionne"],
+          ["false", "Oui, j'ai déjà installé ou utilisé des logiciels spéciaux pour voir ou utiliser ces médias"],
+          ["true", "Oui, mais seulement sur les boutiques officielles"]
+        ],
+        "explanation":"Gardez à l'esprit les limites de copyright et de licence des fichiers téléchargés depuis Internet. Il y a des licences qui permettent l'utilisation libre du contenu, comme d'autres qui ont des restrictions et enfin celles qui sont payantes. De plus, méfiez-vous des sites Web qui offrent des téléchargements gratuits. Ils sont généralement utilisés pour répandre un type de malware."
+      },
+      {
+        "title":"Je poste les choses suivantes sur les réeaux sociaux :",
+        "answers":[
+          ["true", "des images et des vidéos d'amis uniquement avec leur consentement explicite (lorsqu'ils ne sont pas en état d'ébriété)"],
+          ["false", "Je poste des photos ou des vidéos d'autres personnes, mais je ne veux pas que cela me soit fait."],
+          ["false", "Je n'ai rien d'autre à cacher mais je demande le consentement avant d'afficher de l'information d'une autre personne"],
+          ["false", "Je poste tout et je n'ai rien à cacher"]
+        ],
+        "explanation":"Sachez que si vous publiez des images ou des vidéos d'une personne sans son consentement, vous pourriez enfreindre la loi. Par exemple, l'atteinte à la vie privée, la diffamation ou le droit à la publicité. Par conséquent, demandez le consentement préalable d'autres personnes, surtout si elles sont mineures."
       }
     ]
   },
   {
     "language":"en",
-    "title":"Internet",
-    "keywords":["web"],
-    "parts":[
+    "title":"Passwords",
+    "storageKey":"quizPhysicalSecurity",
+    "version":0.1,
+    "keywords":["physical security"],
+    "questions":[
       {
-        "title":"Using the internet",
-        "content":"The internet is often a source of malware. There are too many legitimate but poorly protected websites that become compromised, and are then used to infect visitors' computers. The latter generally get infected by exploiting the technical vulnerabilities of web browsers."
+        "title":"If i buy something on internet, i pay attention that the site is with HTTPS:",
+        "answers":[
+          ["false", "No"],
+          ["true", "Yes"]
+        ],
+        "explanation":"Nowadays the use of HTTPS is mandatory, it allows you to verify the identity of the website."
       },
       {
-        "title":"La fraude sur internet",
-        "content":"Originally, attacks on IT sytems were mainly done for fun. Nowadays, thy are mostly motivated by profit.<br/>Access to data may allow access to the victim's 'wallet' through access to web-banking, virtual money and e-commerce (credit card numbers).<br/>Others data, such as passwords, may be used to spread malware or scams. For example: those who steal Facebook passwords are stealing online identities, and thereby the confidence of the victim's group of friends."
+        "title":"Do you ever download media ?",
+        "answers":[
+          ["false", "Yes, I don’t care from where only that it works and is free"],
+          ["false", "Yes, I even installed special software and cracks to use/watch/listen to that media"],
+          ["true", "Yes, but only from official stores"]
+        ],
+        "explanation":"Keep in mind the copyright and licensing limits of files downloaded from the Internet. There are licenses that allow the free use of the content, like others that have restrictions and finally those that are paid. In addition to this, be wary of websites that offer free downloads. It is generally used to spread a type of malware."
+      },
+      {
+        "title":"I post the following on social media:",
+        "answers":[
+          ["true", "images and video of friends only with their explicit consent (when they are not intoxicated)"],
+          ["false", "I post pictures or videos of others but do not want it done to me"],
+          ["false", "I have nothing to hide but ask for consent before posting information from anyone else"],
+          ["false", "I post everything and I have nothing to hide"]
+        ],
+        "explanation":"Know that if you publish images or videos of a person without their consent, you may be violating the law. For example, invasion of privacy, defamation or right of publicity. Therefore, seek the prior consent of others, especially if they are minors."
       }
     ]
   }

@@ -41,7 +41,7 @@
             <ion-list radio-group>
                 <ion-item *ngFor="let answer of question.answers; let i = index;">
                     <ion-radio (click)="choosedAnswer(answer, question, j)" ></ion-radio>
-                    <ion-label>{{i+1}}. {{answer[1]}}</ion-label>
+                    <ion-label text-wrap>{{i+1}}. {{answer[1]}}</ion-label>
                 </ion-item>
             </ion-list>
         </ion-slide>
