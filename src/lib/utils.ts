@@ -1,4 +1,5 @@
 import { DomSanitizer } from '@angular/platform-browser';
+import { HTTP } from '@ionic-native/http/ngx';
 
 /*
 * Load a json and clean it
@@ -58,4 +59,24 @@ export function arrayDistinct(arr, attr) {
         }
     }
     return result;
+}
+
+/*
+* Fetch the content at url.
+* @url <string> : the url to retrieve
+* @return : the data at the url
+*/
+export function fetch(url): Promise<any> {
+    let http = new HTTP();
+    return new Promise<any>(resolve => {
+        http.get(url, {}, {}).then((data : any) => {
+            resolve(data.data);
+        }).catch((error : any) => {
+            console.log(error);
+            console.log(error.status);
+            console.log(error.error); // error message as string
+            console.log(error.headers);
+            resolve(error.error);
+        });
+    });
 }
