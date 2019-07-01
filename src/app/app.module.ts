@@ -25,6 +25,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { CallLog } from '@ionic-native/call-log/ngx';
 import { AppVersion } from '@ionic-native/app-version/ngx';
 import { File } from '@ionic-native/file/ngx';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 export function createTranslateLoader(http: HttpClient) {
 	return new TranslatePoHttpLoader(http, 'assets/i18n', '.po');
@@ -78,6 +79,7 @@ export function createTranslateLoader(http: HttpClient) {
 	File,
     LanguageService,
     AppVersion,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA]

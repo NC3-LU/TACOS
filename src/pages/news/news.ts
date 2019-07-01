@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import {
     Loading,
     LoadingController,
@@ -24,7 +25,8 @@ export class NewsPage {
         public alertCtrl: AlertController,
         public loadingCtrl: LoadingController,
         public toastCtrl: ToastController,
-        public utils: UtilsService) {
+        public utils: UtilsService,
+        private iab: InAppBrowser) {
 
         this.feeds_sets = [];
         this.items = [];
@@ -79,7 +81,7 @@ export class NewsPage {
     }
 
     itemSelected(item) {
-        console.log(item.link);
+        this.iab.create(item.link);
     }
 
     /*
