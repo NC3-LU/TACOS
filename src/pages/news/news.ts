@@ -57,48 +57,30 @@ export class NewsPage {
     }
 
     /*
-    * Load the slide at the specified index.
+    * Load the feeds of slide at the specified index.
     */
     async loadSlide(index) {
         this.items = [];
         let tmpItems = [];
         let parser = new Parser();
-
-
-
         this.feeds_sets[index].feeds.map(function(feed) {
-
             fetch(feed.link).then((response) => {
-                    console.log(feed.link);
-
                     parser.parseString(response).then((val)=>{
-
-                        console.log(val.title);
                         val.items.forEach(item => {
-                             console.log(item.title)
                              tmpItems.push(item);
                         });
-
                     });
-
-
-
             })
             .catch((err)=>{
-                console.log("Error when parsing feed.");
+                console.log("Error when retrieving feed.");
             });
         });
-
         this.items = tmpItems;
-
-
-
     }
 
-    itemSelected(event) {
-        console.log(event);
+    itemSelected(item) {
+        console.log(item.link);
     }
-
 
     /*
     * Manage loading
