@@ -76,7 +76,7 @@ export function fetch(url): Promise<any> {
             console.log(error.status);
             console.log(error.error); // error message as string
             console.log(error.headers);
-            resolve(error.error);
+            resolve({});
         });
     });
 }
