@@ -33,6 +33,9 @@ export class NewsPage {
 
         this.utils.loadNews()
         .then((result)=>{
+            result.sort(function(set1, set2){
+                return set1.ui_position - set2.ui_position;
+            });
             this.feeds_sets = result;
             this.loadSlide(0);
         })
