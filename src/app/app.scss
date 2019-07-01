@@ -47,3 +47,13 @@ ion-navbar{
 .toolbar-title {
   color: #F8F8F8;
 }
+
+
+.swiper-slide{
+    overflow-y: scroll;
+    display: block;
+}
+
+ion-slide{
+    height: auto;
+}
