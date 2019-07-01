@@ -10,11 +10,11 @@
 <ion-content>
     <ion-slides pager='true' effect='slide' initialSlide='0' (ionSlideDidChange)="onSlideDidChange($event)">
         <ion-slide *ngFor="let set of feeds_sets">
-            <h2>{{set.title}}</h2>
+            <h2>{{ set.title }}</h2>
             <ion-list>
               <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
                 <h2>{{ item.title }}</h2>
-                <h3>An article from {{ item.creator }}</h3>
+                <h3 *ngIf="item.creator">An article from {{ item.creator }}</h3>
                 <p>{{ item.pubDate | date:'medium' }}</p>
               </button>
             </ion-list>
