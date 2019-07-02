@@ -27,6 +27,8 @@ import { AppVersion } from '@ionic-native/app-version/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
+import { ExtractHostname } from './pipes/extract-hostname';
+
 export function createTranslateLoader(http: HttpClient) {
 	return new TranslatePoHttpLoader(http, 'assets/i18n', '.po');
 }
@@ -43,7 +45,8 @@ export function createTranslateLoader(http: HttpClient) {
     NewsPage,
 	SettingsPage,
     AboutPage,
-		findVulnerabilitiesPage
+	findVulnerabilitiesPage,
+    ExtractHostname
   ],
   imports: [
     BrowserModule,
