@@ -66,7 +66,7 @@ export function arrayDistinct(arr, attr) {
 * @url <string> : the url to retrieve
 * @return : the data at the url
 */
-export function fetch(url): Promise<any> {
+export function fetchURL(url): Promise<any> {
     let http = new HTTP();
     return new Promise<any>(resolve => {
         http.get(url, {}, {}).then((data : any) => {

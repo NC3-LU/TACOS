@@ -9,7 +9,7 @@ import {
 
 import * as Parser from 'rss-parser';
 
-import { fetch } from '../../lib/utils';
+import { fetchURL } from '../../lib/utils';
 import { UtilsService } from './utils';
 
 @Component({
@@ -69,7 +69,7 @@ export class NewsPage {
         let tmpItems = [];
         let parser = new Parser();
         this.feeds_sets[index].feeds.map(function(feed) {
-            fetch(feed.link).then((response) => {
+            fetchURL(feed.link).then((response) => {
                     parser.parseString(response).then((val)=>{
                         val.items.forEach(item => {
                              tmpItems.push(item);
