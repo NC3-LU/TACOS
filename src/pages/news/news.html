@@ -14,7 +14,7 @@
             <ion-list>
               <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
                 <h2>{{ item.title }}</h2>
-                <h3 *ngIf="item.creator">Article from {{ item.creator }} ({{ item.link | extractHostname }})</h3>
+                <h3><span *ngIf="item.creator">Article from {{ item.creator }} </span>({{ item.link | extractHostname }})</h3>
                 <p>{{ item.pubDate | date:'medium' }}</p>
               </button>
             </ion-list>
