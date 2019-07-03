@@ -25,7 +25,6 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { CallLog } from '@ionic-native/call-log/ngx';
 import { AppVersion } from '@ionic-native/app-version/ngx';
 import { File } from '@ionic-native/file/ngx';
-import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 import { ExtractHostname } from './pipes/extract-hostname';
 
@@ -82,7 +81,6 @@ export function createTranslateLoader(http: HttpClient) {
 	File,
     LanguageService,
     AppVersion,
-    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA]
