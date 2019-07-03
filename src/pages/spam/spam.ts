@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 import {
     Loading,
     LoadingController,
@@ -20,16 +20,25 @@ export class SpamPage {
     calls: any;
     callsFiltered: any[];
     loading: Loading;
+    formPhoneNumber: FormGroup;
 
     constructor(
         public alertCtrl: AlertController,
         public loadingCtrl: LoadingController,
         public toastCtrl: ToastController,
-        public utils: UtilsService) {
+        public utils: UtilsService,
+        private formBuilder: FormBuilder) {
 
         this.utils = utils;
         this.categories = "reportedCallHistorySpam";
         this.callsFiltered = [];
+
+        this.formPhoneNumber = this.formBuilder.group({
+            phoneNumber: ['', Validators.required],
+            spamType: ['', Validators.required]
+        });
+
+
 
         // Initialization of the filters
         let filters: CallLogObject[] = [
@@ -90,6 +99,34 @@ export class SpamPage {
         .catch((err)=>{
             console.log("Error when retrieving list of spams.");
         });
+    }
+
+    onSpamSubmit() {
+        let alert = this.alertCtrl.create({
+          title: 'Spam confirmation',
+          subTitle: 'Report this number as a spam?',
+          buttons: [
+              {
+                  text: 'OK',
+                  role: 'ok',
+                  handler: data => {
+                      const thankingToast = this.toastCtrl.create({
+                          message: 'Thank you for your contribution.',
+                          duration: 3000
+                      });
+                      thankingToast.present();
+                    }
+              },
+              {
+                  text: 'Cancel',
+                  role: 'cancel',
+                  handler: data => {
+                      console.log('Cancel clicked');
+                  }
+              },
+          ]
+        });
+        alert.present();
     }
 
     confirmSpam() {
