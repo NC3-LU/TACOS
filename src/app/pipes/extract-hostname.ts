@@ -1,4 +1,5 @@
 import {Pipe, Injectable} from '@angular/core';
+import { extractDomain } from '../../lib/utils';
 
 @Pipe({
   name: 'extractHostname'
@@ -6,26 +7,6 @@ import {Pipe, Injectable} from '@angular/core';
 @Injectable()
 export class ExtractHostname {
     transform(value, args) {
-        return this.extractDomain(value);
+        return extractDomain(value);
     }
-
-    extractDomain(url) {
-      let domain = '';
-      // find & remove protocol (http, ftp, etc.) and get domain
-      if (url.indexOf("://") > -1) {
-        domain = url.split('/')[2];
-      } else {
-        domain = url.split('/')[0];
-      }
-
-      // find & remove www
-      if (domain.indexOf("www.") > -1) {
-        domain = domain.split('www.')[1];
-      }
-
-      domain = domain.split(':')[0]; //find & remove port number
-      domain = domain.split('?')[0]; //find & remove url params
-
-      return domain;
-  }
 }
