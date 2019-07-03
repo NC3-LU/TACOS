@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
-
-import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { NavController, NavParams } from 'ionic-angular';
 import {
     Loading,
-    LoadingController,
-    AlertController,
-    ToastController } from 'ionic-angular';
+    AlertController } from 'ionic-angular';
 
 import * as Parser from 'rss-parser';
 
@@ -20,29 +17,31 @@ export class NewsPage {
     loading: Loading;
     feeds_sets: any[];
     items: any[];
+    selectedNews: any;
 
     constructor(
+        public navCtrl: NavController,
+        public navParams: NavParams,
         public alertCtrl: AlertController,
-        public loadingCtrl: LoadingController,
-        public toastCtrl: ToastController,
-        public utils: UtilsService,
-        private iab: InAppBrowser) {
+        public utils: UtilsService) {
 
         this.feeds_sets = [];
         this.items = [];
 
-        this.utils.loadNews()
-        .then((result)=>{
-            result.sort(function(set1, set2){
-                return set1.ui_position - set2.ui_position;
+        this.selectedNews = navParams.get('newsItem');
+        if (!this.selectedNews){
+            this.utils.loadNews()
+            .then((result)=>{
+                result.sort(function(set1, set2){
+                    return set1.ui_position - set2.ui_position;
+                });
+                this.feeds_sets = result;
+                this.loadSlide(0);
+            })
+            .catch((err)=>{
+                console.log("Error when retrieving list of news.");
             });
-            this.feeds_sets = result;
-            this.loadSlide(0);
-        })
-        .catch((err)=>{
-            console.log("Error when retrieving list of news.");
-        });
-
+        }
     }
 
 
@@ -60,6 +59,7 @@ export class NewsPage {
         // this.loadSlide(slidesIndex);
         this.loadSlide(slidesIndex);
     }
+
 
     /*
     * Load the feeds of slide at the specified index.
@@ -83,22 +83,10 @@ export class NewsPage {
         this.items = tmpItems;
     }
 
-    itemSelected(item) {
-        this.iab.create(item.link);
-    }
-
     /*
-    * Manage loading
+    * Display the selected news.
     */
-    handleIFrameLoadEvent(): void {
-        this.loading.dismiss();
-    }
-
-
-    startIFrameLoadEvent(): void {
-      this.loading = this.loadingCtrl.create({
-          content: 'Please wait...'
-      });
-      this.loading.present();
+    itemSelected(item) {
+        this.navCtrl.push(NewsPage, {newsItem:item});
     }
 }

@@ -8,16 +8,37 @@
 </ion-header>
 
 <ion-content>
-    <ion-slides pager='true' effect='slide' initialSlide='0' (ionSlideDidChange)="onSlideDidChange($event)">
-        <ion-slide *ngFor="let set of feeds_sets">
-            <h2>{{ set.title }}</h2>
-            <ion-list>
-              <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-                <h2>{{ item.title }}</h2>
-                <h3><span *ngIf="item.creator">Article from {{ item.creator }} </span>({{ item.link | extractHostname }})</h3>
-                <p>{{ item.pubDate | date:'medium' }}</p>
-              </button>
-            </ion-list>
-        </ion-slide>
-    </ion-slides>
+        <ion-slides *ngIf="!selectedNews" pager='true' effect='slide' initialSlide='0' (ionSlideDidChange)="onSlideDidChange($event)">
+            <ion-slide *ngFor="let set of feeds_sets">
+                <h2>{{ set.title }}</h2>
+                <ion-list>
+                  <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+                    <h2>{{ item.title }}</h2>
+                    <h3><span *ngIf="item.creator">Article from {{ item.creator }} </span>({{ item.link | extractHostname }})</h3>
+                    <p>{{ item.pubDate | date:'medium' }}</p>
+                  </button>
+                </ion-list>
+            </ion-slide>
+        </ion-slides>
+        <ion-grid  *ngIf="selectedNews">
+            <ion-row>
+                <ion-col>
+                    <h3 class="item-text-wrap" [innerHTML]="selectedNews.title"></h3>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="ion-text-justify">
+                    <div class="ion-text-justify" [innerHTML]="selectedNews.content"></div>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <hr />
+                    <a button [href]="selectedNews.link" class="text-on-bottom">
+                        <ion-icon ios="ios-globe" md="md-globe"></ion-icon><br/>
+                        <label>{{ selectedNews.link | extractHostname }}</label>
+                    </a>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
 </ion-content>
