@@ -34,7 +34,7 @@
       <div *ngFor="let item of article[0].medias[0].links" padding class="media">
         <a button [href]="item" class="text-on-bottom">
             <ion-icon ios="ios-globe" md="md-globe"></ion-icon><br/>
-            <label>{{extractHostName(item)}}</label>
+            <label>{{ item | extractHostname }}</label>
         </a>
       </div>
     </span>
