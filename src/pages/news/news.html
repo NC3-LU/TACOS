@@ -20,15 +20,17 @@
                 </ion-list>
             </ion-slide>
         </ion-slides>
-        <ion-grid  *ngIf="selectedNews">
+        <ion-grid *ngIf="selectedNews">
             <ion-row>
                 <ion-col>
                     <h3 class="item-text-wrap" [innerHTML]="selectedNews.title"></h3>
                 </ion-col>
             </ion-row>
             <ion-row>
-                <ion-col class="ion-text-justify">
-                    <div class="ion-text-justify" [innerHTML]="selectedNews.content"></div>
+                <ion-col>
+                    <div class="ion-text-justify">
+                        <span [innerHTML]="selectedNews.content"></span>
+                    </div>
                 </ion-col>
             </ion-row>
             <ion-row>
