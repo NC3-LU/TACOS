@@ -64,10 +64,11 @@ export class NewsPage {
     /*
     * Load the feeds of slide at the specified index.
     */
-    async loadSlide(index) {
+    loadSlide(index) {
         this.items = [];
         let tmpItems = [];
         let parser = new Parser();
+        // Retrieves the RSS/ATOM feeds from the selected set
         this.feeds_sets[index].feeds.map(function(feed) {
             fetchURL(feed.link).then((response) => {
                     parser.parseString(response).then((val)=>{
@@ -80,7 +81,12 @@ export class NewsPage {
                 console.log("Error when retrieving feed.");
             });
         });
+        // Update the list of news
         this.items = tmpItems;
+        // Sort articles per pubDate
+        // tmpItems.sort(function(item1, item2){
+        //     return item1.pubDate - item2.pubDate;
+        // });
     }
 
     /*
