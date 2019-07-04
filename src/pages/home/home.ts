@@ -11,6 +11,7 @@ import { VideosPage } from '../videos/videos';
 import { SpamPage } from '../spam/spam';
 import { GamesQuizPage } from '../gamesquiz/gamesquiz';
 import { PasswordCardPage } from '../passwordcard/passwordcard';
+import { NewsPage } from '../news/news';
 import { SettingsPage } from '../settings/settings';
 
 @Component({
@@ -37,6 +38,7 @@ export class HomePage {
                             'Spam signal',
                             'Games and Quiz',
                             'Password Card',
+                            'News',
                             'Settings'])
                     .subscribe(translations => {
         this.pages = [
@@ -45,6 +47,7 @@ export class HomePage {
           { title: translations['Games and Quiz'], component: GamesQuizPage, img: 'url(../assets/imgs/t&t/11.png)'},
           { title: translations['Password Card'], component: PasswordCardPage, img: 'url(../assets/imgs/t&t/12.png)'},
           { title: translations['Spam signal'], component: SpamPage, img: 'url(../assets/imgs/t&t/14.png)'},
+          { title: translations['News'], component: NewsPage, img: 'url(../assets/imgs/t&t/16.png)'},
           { title: translations['Settings'], component: SettingsPage, img: 'url(../assets/imgs/t&t/9.png)' }
         ];
       })
