@@ -1,18 +1,13 @@
 
-ion-select {
-  &[class*="CASES-"] {
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    width: 6em;
-    height: 1.2em;
-  }
-  &[class*="CASES-flag-en"] {
-    background-image: white;
-  }
-  &[class*="CASES-flag-fr"] {
-    background-image: white;
-  }
-  &[class*="CASES-flag-de"] {
-    background-image: white;
-  }
+
+.alert-radio-group button:nth-child(1) .alert-radio-label:before {
+    content: none !important;
+}
+
+.alert-radio-group button:nth-child(2) .alert-radio-label:before {
+    content: none !important;
+}
+
+.alert-radio-group button:nth-child(3) .alert-radio-label:before {
+    content: none !important;
 }
