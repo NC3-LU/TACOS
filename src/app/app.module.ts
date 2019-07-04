@@ -27,6 +27,8 @@ import { AppVersion } from '@ionic-native/app-version/ngx';
 import { File } from '@ionic-native/file/ngx';
 
 import { ExtractHostname } from './pipes/extract-hostname';
+import { FormatPhoneNumber } from './pipes/format-phone-number';
+
 
 export function createTranslateLoader(http: HttpClient) {
 	return new TranslatePoHttpLoader(http, 'assets/i18n', '.po');
@@ -45,7 +47,8 @@ export function createTranslateLoader(http: HttpClient) {
 	SettingsPage,
     AboutPage,
 	findVulnerabilitiesPage,
-    ExtractHostname
+    ExtractHostname,
+    FormatPhoneNumber
   ],
   imports: [
     BrowserModule,
