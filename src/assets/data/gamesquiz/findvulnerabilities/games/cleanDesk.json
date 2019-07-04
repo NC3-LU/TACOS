@@ -4,15 +4,57 @@
     "title":"Trouvez les failles de sécurité !",
     "storageKey":"gameCleanDesk",
     "image":"../../../assets/data/gamesquiz/findvulnerabilities/games/cleanDesk.png",
-    "width":"1686px",
-    "height":"1118px",
+    "width":"1200px",
+    "height":"800px",
     "version":0.1,
     "keywords":["vulnerabilité"],
     "vulnerabilities":[
       {
         "title":"Post-it",
         "shape":"poly",
-        "coords":"183,655, 134,717, 263,730, 205,664",
+        "coords":"133,470, 221,478, 191,523, 102,514",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      },
+      {
+        "title":"PC non vérouillé",
+        "shape":"poly",
+        "coords":"209,91, 619,107, 612,340, 213,317",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      },
+      {
+        "title":"Carte de crédit",
+        "shape":"poly",
+        "coords":"538,591, 643,612, 615,647, 511,623",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      },
+      {
+        "title":"Portefeuille",
+        "shape":"poly",
+        "coords":"261,555, 381,567, 520,567, 506,679, 363,692, 318,684, 208,670",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      },
+      {
+        "title":"Clé USB",
+        "shape":"poly",
+        "coords":"567,511, 611,507, 614,513, 613,519, 567,521",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      },
+      {
+        "title":"Document confidentiel",
+        "shape":"poly",
+        "coords":"823,487, 1054,594, 935,686, 820,680, 820,699, 911,706, 808,786, 557,668, 566,659, 555,653, 573,641, 621,651, 647,611, 635,607",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      },
+      {
+        "title":"Clés et badge",
+        "shape":"poly",
+        "coords":"825,435, 831,423, 845,424, 875,408, 879,412, 854,431, 854,438, 890,443, 898,452, 890,461, 897,476, 891,473, 861,459, 850,459, 824,476, 821,471, 839,440",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      },
+      {
+        "title":"Feuille de sécurité sociale",
+        "shape":"poly",
+        "coords":"750,455, 935,338, 1141,393, 971,530",
         "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
       }
     ]
@@ -22,15 +64,57 @@
     "title":"Trouvez les failles de sécurité !",
     "storageKey":"gameCleanDesk",
     "image":"../../../assets/data/gamesquiz/findvulnerabilities/games/cleanDesk.png",
-    "width":"1686px",
-    "height":"1118px",
+    "width":"1200px",
+    "height":"800px",
     "version":0.1,
     "keywords":["vulnerabilities"],
     "vulnerabilities":[
       {
         "title":"Post-it",
         "shape":"poly",
-        "coords":"183,655, 134,717, 263,730, 205,664",
+        "coords":"133,470, 221,478, 191,523, 102,514",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      },
+      {
+        "title":"PC non vérouillé",
+        "shape":"poly",
+        "coords":"209,91, 619,107, 612,340, 213,317",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      },
+      {
+        "title":"Carte de crédit",
+        "shape":"poly",
+        "coords":"538,591, 643,612, 615,647, 511,623",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      },
+      {
+        "title":"Portefeuille",
+        "shape":"poly",
+        "coords":"261,555, 381,567, 520,567, 506,679, 363,692, 318,684, 208,670",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      },
+      {
+        "title":"Clé USB",
+        "shape":"poly",
+        "coords":"567,511, 611,507, 614,513, 613,519, 567,521",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      },
+      {
+        "title":"Document confidentiel",
+        "shape":"poly",
+        "coords":"823,487, 1054,594, 935,686, 820,680, 820,699, 911,706, 808,786, 557,668, 566,659, 555,653, 573,641, 621,651, 647,611, 635,607",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      },
+      {
+        "title":"Clés et badge",
+        "shape":"poly",
+        "coords":"825,435, 831,423, 845,424, 875,408, 879,412, 854,431, 854,438, 890,443, 898,452, 890,461, 897,476, 891,473, 861,459, 850,459, 824,476, 821,471, 839,440",
+        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+      },
+      {
+        "title":"Feuille de sécurité sociale",
+        "shape":"poly",
+        "coords":"750,455, 935,338, 1141,393, 971,530",
         "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
       }
     ]
