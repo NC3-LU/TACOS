@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Validators, FormBuilder, FormGroup } from '@angular/forms';
+import {Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import {
     Loading,
     LoadingController,
@@ -10,6 +10,7 @@ import { CallLog, CallLogObject } from '@ionic-native/call-log';
 import jsSHA from 'jssha'
 import { arrayDistinct } from '../../lib/utils';
 import { UtilsService } from './utils';
+import { PhoneValidator } from '../../validators/phone.validator';
 
 @Component({
   selector: 'page-spam',
@@ -21,6 +22,7 @@ export class SpamPage {
     callsFiltered: any[];
     loading: Loading;
     formPhoneNumber: FormGroup;
+    country: FormControl;
 
     constructor(
         public alertCtrl: AlertController,
@@ -33,9 +35,16 @@ export class SpamPage {
         this.categories = "reportedCallHistorySpam";
         this.callsFiltered = [];
 
+        this.country = new FormControl('LU', Validators.required);
+
         this.formPhoneNumber = this.formBuilder.group({
-            phoneNumber: ['', Validators.required],
-            spamType: ['', Validators.required]
+            country: this.country,
+            phoneNumber: new FormControl('', Validators.compose([
+                      PhoneValidator.validCountryPhone(this.country),
+                      // Validators.pattern('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$'),
+                      Validators.required
+                ])),
+            spamType: new FormControl('', Validators.required)
         });
 
 
