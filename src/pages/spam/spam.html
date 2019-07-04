@@ -30,8 +30,8 @@
 
             <ion-card *ngFor="let c of callsFiltered">
                 <ion-card-header>
-                    <ion-card-title><ion-icon name="call"></ion-icon> {{c.number}}</ion-card-title>
-                    <ion-card-subtitle><ion-icon name="calendar"></ion-icon> {{c.date | date:'medium' }}</ion-card-subtitle>
+                    <ion-card-title><ion-icon name="call"></ion-icon> {{ c.number | formatPhoneNumber}}</ion-card-title>
+                    <ion-card-subtitle><ion-icon name="calendar"></ion-icon> {{ c.date | date:'medium' }}</ion-card-subtitle>
                 </ion-card-header>
                 <ion-card-content>
                     <ion-grid>
@@ -56,12 +56,17 @@
         <ion-list *ngSwitchCase="'reportSpam'">
             <h2>{{ 'Report a spam' | translate }}</h2>
             <form [formGroup]="formPhoneNumber" (ngSubmit)="onSpamSubmit()">
-                <ion-input formControlName="phoneNumber" type="text" placeholder="Phone number with country code."></ion-input>
-                <ion-select formControlName="spamType" placeholder="Type of spam">
-                    <ion-option class="" value="financial">Financial fraud</ion-option>
-                    <ion-option class="" value="person">Person</ion-option>
-                    <ion-option class="" value="other">Other</ion-option>
-                </ion-select>
+                <ion-item>
+                    <ion-input formControlName="phoneNumber" type="text" placeholder="Phone number with country code."></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-select formControlName="spamType" placeholder="Type of spam">
+                        <ion-option value="financial">Financial fraud</ion-option>
+                        <ion-option value="person">Person</ion-option>
+                        <ion-option value="other">Other</ion-option>
+                        <ion-option value="test">Test</ion-option>
+                    </ion-select>
+                </ion-item>
                 <ion-item>
                     <button ion-button>submit</button>
                 </ion-item>
