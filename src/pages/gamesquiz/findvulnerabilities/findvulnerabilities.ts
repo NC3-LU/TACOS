@@ -81,5 +81,10 @@ export class findVulnerabilitiesPage {
   alert.present();
   }
 
+// for debug to get the position of the point
+  getCoordinates(event)
+  {
+      console.log(event.layerX+','+event.layerY);
+  }
 
 }

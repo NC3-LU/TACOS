@@ -21,7 +21,7 @@
   <ion-grid *ngIf="dataGame !=null">
     <ion-row nowrap class="scroll_content">
       <ion-col>
-        <div  class="game" [style.width]="dataGame[0].width" [style.height]="dataGame[0].height" >
+        <div  class="game" [style.width]="dataGame[0].width" [style.height]="dataGame[0].height"  (click)="getCoordinates($event)">
           <img class="scroll-item" [src]="dataGame[0].image" alt="" usemap="#findvulnerabilities">
           <map  name="findvulnerabilities">
             <area  *ngFor="let vulnerability of dataGame[0].vulnerabilities" [shape]="vulnerability.shape" [coords]="vulnerability.coords" (click)="vulnFound(vulnerability.title,vulnerability.explanation)" alt="" >
