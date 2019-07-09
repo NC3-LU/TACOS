@@ -39,17 +39,24 @@ export class UtilsService {
         // console.log(shaObj.getHash("HEX"));
         // HTTP post request
 
-        // return new Promise<any>(resolve => {
-        //     http.post(environment.backendServicesURL + 'spams', {}, {}).then((data : any) => {
-        //         // let jsonData = JSON.parse(data.data);
-        //         resolve(data);
-        //     }).catch((error : any) => {
-        //         console.log(error);
-        //         console.log(error.status);
-        //         console.log(error.error); // error message as string
-        //         console.log(error.headers);
-        //         resolve("ServiceError");
-        //     });
-        // });
+        let data = {
+            'number_hash': shaObj.getHash("HEX"),
+            'category': spamType,
+            'source': 'TACOS-Android-App'
+        }
+
+        return new Promise<any>(resolve => {
+            let http = new HTTP();
+            http.post(environment.backendServicesURL + 'spams', data, {}).then((result : any) => {
+                console.log(result);
+                resolve(result);
+            }).catch((error : any) => {
+                console.log(error);
+                console.log(error.status);
+                console.log(error.error); // error message as string
+                console.log(error.headers);
+                resolve("ServiceError");
+            });
+        });
     }
 }
