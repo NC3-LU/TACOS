@@ -4,11 +4,20 @@
 ![Contributors](https://img.shields.io/github/contributors/CASES-LU/CASESapp.svg?style=flat-square)
 ![Stars](https://img.shields.io/github/stars/CASES-LU/CASESapp.svg?style=flat-square)
 
-(The next two sections could be used for the descritpion of the app in the
-Android/Apple stores)
+(**The next two sections could be used for the descritpion of the app in the
+Android/Apple stores. this is just some ideas... this will better for the
+release... ;-)**)
 
 
 ## Presentation
+
+TACOS is the mobile application by [CASES](https://www.cases.lu).  
+Our intention simple. We want to put a little more security in your smartphone
+(**or pocket ?**).
+
+TACOS is primarily a awareness app for cybersecurity. We also included some
+tools like a password cards generator and a spam signal functionality.
+And some little games for the fun.
 
 
 ## Features
