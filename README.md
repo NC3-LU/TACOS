@@ -15,7 +15,7 @@ TACOS is the mobile application by [CASES](https://www.cases.lu).
 Our intention simple. We want to put a little more security in your smartphone
 (**or pocket ?**).
 
-TACOS is primarily an awareness app for cybersecurity. We also included some
+TACOS is primarily an awareness app for cybersecurity. But we also included some
 tools like a password cards generator and a spam signal functionality.
 And some little games for the fun.
 
