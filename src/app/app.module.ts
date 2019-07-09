@@ -7,6 +7,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslatePoHttpLoader } from '@biesbjerg/ngx-translate-po-http-loader';
 import { LanguageService } from '../services/language.service';
 import { IonicStorageModule } from '@ionic/storage';
+import { SettingsProvider } from './../providers/settings/settings';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -82,6 +83,7 @@ export function createTranslateLoader(http: HttpClient) {
     SplashScreen,
     CallLog,
 	File,
+    SettingsProvider,
     LanguageService,
     AppVersion,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

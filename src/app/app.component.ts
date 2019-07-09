@@ -6,6 +6,8 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { LanguageService } from '../services/language.service';
 import { TranslateService } from '@ngx-translate/core';
 
+import { SettingsProvider } from './../providers/settings/settings';
+
 import { HomePage } from '../pages/home/home';
 import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
 import { GamesQuizPage } from '../pages/gamesquiz/gamesquiz';
@@ -26,13 +28,18 @@ export class MyApp {
 
   pages: Array<{title: string, component: any, icon: string}>;
 
+  selectedTheme: String;
+
   constructor(
     public platform: Platform,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
     private translate: TranslateService,
-    private languageService: LanguageService) {
+    private languageService: LanguageService,
+    private settings: SettingsProvider) {
+
       this.initializeApp();
+
       // used for an example of ngFor and navigation
       this.translate.stream(['Home',
                             'Tips and Tricks',
@@ -65,6 +72,8 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.languageService.setInitialAppLanguage();
+
+      this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
 
     });
   }
