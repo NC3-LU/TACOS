@@ -1,5 +1,9 @@
 # TACOS - Security in your smartphone !
 
+![License](https://img.shields.io/github/license/CASES-LU/CASESapp.svg?style=flat-square)
+![Contributors](https://img.shields.io/github/contributors/CASES-LU/CASESapp.svg?style=flat-square)
+![Stars](https://img.shields.io/github/stars/CASES-LU/CASESapp.svg?style=flat-square)
+
 (The next to sections could be used for the descritpion of the app in the
 Android/Apple stores)
 
