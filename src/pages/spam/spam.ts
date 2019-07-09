@@ -21,8 +21,11 @@ export class SpamPage {
     calls: any;
     callsFiltered: any[];
     loading: Loading;
-    formPhoneNumber: FormGroup;
+    formSpam: FormGroup;
     country: FormControl;
+
+    phoneNumber: any;
+    spamType: any;
 
     constructor(
         public alertCtrl: AlertController,
@@ -37,7 +40,7 @@ export class SpamPage {
 
         this.country = new FormControl('LU', Validators.required);
 
-        this.formPhoneNumber = this.formBuilder.group({
+        this.formSpam = this.formBuilder.group({
             country: this.country,
             phoneNumber: new FormControl('', Validators.compose([
                       PhoneValidator.validCountryPhone(this.country),
@@ -111,9 +114,12 @@ export class SpamPage {
     }
 
     onSpamSubmit() {
+        let phoneNumber = this.formSpam.get('phoneNumber').value;
+        let spamType = this.formSpam.get('spamType').value;
+
         let alert = this.alertCtrl.create({
           title: 'Spam confirmation',
-          subTitle: 'Report this number as a spam?',
+          subTitle: `Report this number as a spam (${this.formSpam.get('spamType').value}) ?`,
           buttons: [
               {
                   text: 'OK',
@@ -124,6 +130,8 @@ export class SpamPage {
                           duration: 3000
                       });
                       thankingToast.present();
+
+                      this.utils.reportSpam(phoneNumber, spamType);
                     }
               },
               {

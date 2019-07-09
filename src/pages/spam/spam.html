@@ -55,7 +55,7 @@
 
         <ion-list *ngSwitchCase="'reportSpam'">
             <h2>{{ 'Report a spam' | translate }}</h2>
-            <form [formGroup]="formPhoneNumber" (ngSubmit)="onSpamSubmit()">
+            <form [formGroup]="formSpam" (ngSubmit)="onSpamSubmit()">
                 <ion-item>
                     <ion-input formControlName="phoneNumber" type="text" placeholder="Phone number with country code"></ion-input>
                 </ion-item>
