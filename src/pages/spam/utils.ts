@@ -35,6 +35,7 @@ export class UtilsService {
 
     reportSpam(phoneNumber: string, spamType: string) {
         let shaObj = new jsSHA("SHA-512", "TEXT");
+        phoneNumber = phoneNumber.replace(/\s/g, '');
         shaObj.update(phoneNumber);
         // console.log(shaObj.getHash("HEX"));
         // HTTP post request
