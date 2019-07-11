@@ -146,7 +146,7 @@ export class SpamPage {
         alert.present();
     }
 
-    confirmSpam() {
+    confirmSpam(phoneNumber: string) {
         let alert = this.alertCtrl.create({
           title: 'Spam confirmation',
           subTitle: 'Confirm this number is a spam?',
@@ -161,7 +161,7 @@ export class SpamPage {
                       });
                       thankingToast.present();
 
-                      //this.utils.reportSpam(phoneNumber, spamType);
+                      this.utils.reportSpam(phoneNumber, 'Other');
                     }
               },
               {
