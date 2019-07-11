@@ -160,6 +160,8 @@ export class SpamPage {
                           duration: 3000
                       });
                       thankingToast.present();
+
+                      //this.utils.reportSpam(phoneNumber, spamType);
                     }
               },
               {
