@@ -47,7 +47,6 @@ export class UtilsService {
         return new Promise<any>(resolve => {
             let http = new HTTP();
             http.post(environment.backendServicesURL + 'spams', data, {}).then((result : any) => {
-                console.log(result);
                 resolve(result);
             }).catch((error : any) => {
                 console.log(error);
