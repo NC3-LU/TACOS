@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { DomSanitizer } from '@angular/platform-browser';
 
 import { LanguageService } from '../services/language.service';
 import { TranslateService } from '@ngx-translate/core';
@@ -15,6 +16,7 @@ import { SpamPage } from '../pages/spam/spam';
 import { NewsPage } from '../pages/news/news';
 import { SettingsPage } from '../pages/settings/settings';
 import { AboutPage } from '../pages/about/about';
+import { loadJson, loadRightLanguage } from '../lib/utils';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,13 +26,14 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any, icon: string}>;
+  pages: any;
 
   constructor(
     public platform: Platform,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
     private translate: TranslateService,
+    private domSanitizer : DomSanitizer,
     private languageService: LanguageService) {
       this.initializeApp();
       // used for an example of ngFor and navigation
@@ -48,7 +51,7 @@ export class MyApp {
           { title: translations['Home'], component: HomePage, icon: 'home'},
           { title: translations['Tips and Tricks'], component: TipsTricksPage, icon: 'bulb'},
           { title: translations['Videos'], component: VideosPage, icon: 'videocam'},
-          { title: translations['Games and Quiz'], component: GamesQuizPage, icon: 'football'},
+          { title: translations['Games and Quiz'], component: GamesQuizPage, icon: 'football', data:'../assets/data/gamesquiz/gamesquiz.json'},
           { title: translations['Password Card'], component: PasswordCardPage, icon: 'card'},
           { title: translations['Spam signal'], component: SpamPage, icon: 'call'},
           { title: translations['News'], component: NewsPage, icon: 'paper'},
@@ -72,6 +75,13 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    if(page.data!=null){
+      loadJson(page.data,this.domSanitizer).then(data => { //load the data in advance
+        data = loadRightLanguage(data,this.translate.currentLang);
+        this.nav.setRoot(page.component, {data:data});
+      });
+    }
+    else
+      this.nav.setRoot(page.component);
   }
 }

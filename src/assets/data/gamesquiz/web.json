@@ -1,10 +1,7 @@
 [
   {
     "language":"fr",
-    "title":"Mot de passes",
-    "storageKey":"quizPhysicalSecurity",
     "version":0.1,
-    "keywords":["Sécurité Physique"],
     "questions":[
       {
         "title":"J'achète sur internet, je fais attention à ce que l'adresse du site commence par HTTPS :",
@@ -26,7 +23,7 @@
       {
         "title":"Je poste les choses suivantes sur les réeaux sociaux :",
         "answers":[
-          ["true", "des images et des vidéos d'amis uniquement avec leur consentement explicite (lorsqu'ils ne sont pas en état d'ébriété)"],
+          ["true", "Des images et des vidéos d'amis uniquement avec leur consentement explicite (lorsqu'ils ne sont pas en état d'ébriété)"],
           ["false", "Je poste des photos ou des vidéos d'autres personnes, mais je ne veux pas que cela me soit fait."],
           ["false", "Je n'ai rien d'autre à cacher mais je demande le consentement avant d'afficher de l'information d'une autre personne"],
           ["false", "Je poste tout et je n'ai rien à cacher"]
@@ -37,10 +34,7 @@
   },
   {
     "language":"en",
-    "title":"Passwords",
-    "storageKey":"quizPhysicalSecurity",
     "version":0.1,
-    "keywords":["physical security"],
     "questions":[
       {
         "title":"If i buy something on internet, i pay attention that the site is with HTTPS:",
@@ -62,7 +56,7 @@
       {
         "title":"I post the following on social media:",
         "answers":[
-          ["true", "images and video of friends only with their explicit consent (when they are not intoxicated)"],
+          ["true", "Images and video of friends only with their explicit consent (when they are not intoxicated)"],
           ["false", "I post pictures or videos of others but do not want it done to me"],
           ["false", "I have nothing to hide but ask for consent before posting information from anyone else"],
           ["false", "I post everything and I have nothing to hide"]

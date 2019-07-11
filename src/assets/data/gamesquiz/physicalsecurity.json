@@ -1,10 +1,7 @@
 [
   {
     "language":"fr",
-    "title":"Mot de passes",
-    "storageKey":"quizPhysicalSecurity",
     "version":0.1,
-    "keywords":["Sécurité Physique"],
     "questions":[
       {
         "title":"Je stock mes documents confidentiels :",
@@ -48,10 +45,7 @@
   },
   {
     "language":"en",
-    "title":"Passwords",
-    "storageKey":"quizPhysicalSecurity",
     "version":0.1,
-    "keywords":["physical security"],
     "questions":[
       {
         "title":"I stored my documents:",

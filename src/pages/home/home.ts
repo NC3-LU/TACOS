@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
 
 import { DomSanitizer } from '@angular/platform-browser';
-import { loadJson } from '../../lib/utils';
+import { loadJson, loadRightLanguage } from '../../lib/utils';
 import { File } from '@ionic-native/file/ngx';
 
 import { TipsTricksPage } from '../tipstricks/tipstricks';
@@ -44,7 +44,7 @@ export class HomePage {
         this.pages = [
           { title: translations['Tips and Tricks'], component: TipsTricksPage, img: 'url(../assets/imgs/t&t/17.png)'},
           { title: translations['Videos'], component: VideosPage, img: 'url(../assets/imgs/t&t/7.png)'},
-          { title: translations['Games and Quiz'], component: GamesQuizPage, img: 'url(../assets/imgs/t&t/11.png)'},
+          { title: translations['Games and Quiz'], component: GamesQuizPage, img: 'url(../assets/imgs/t&t/11.png)', data:'../assets/data/gamesquiz/gamesquiz.json'},
           { title: translations['Password Card'], component: PasswordCardPage, img: 'url(../assets/imgs/t&t/12.png)'},
           { title: translations['Spam signal'], component: SpamPage, img: 'url(../assets/imgs/t&t/14.png)'},
           { title: translations['News'], component: NewsPage, img: 'url(../assets/imgs/t&t/16.png)'},
@@ -86,6 +86,13 @@ export class HomePage {
   }
 
   goPage(page){
-    this.navCtrl.setRoot(page);
+    if(page.data!=null){
+      loadJson(page.data,this.domSanitizer).then(data => { //load the data in advance
+        data = loadRightLanguage(data,this.translate.currentLang);
+        this.navCtrl.setRoot(page.component, {data:data});
+      });
+    }
+    else
+      this.navCtrl.setRoot(page.component);
   }
 }

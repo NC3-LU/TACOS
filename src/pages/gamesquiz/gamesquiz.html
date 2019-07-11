@@ -13,7 +13,7 @@
   <div *ngIf="!selectedQuiz" padding>
     <h1>{{ 'Quiz' | translate }}</h1>
     <ion-list>
-      <button ion-item *ngFor="let quiz of quizs" (click)="openQuiz($event, quiz)">
+      <button ion-item *ngFor="let quiz of data[0].quizs" (click)="openQuiz($event, quiz)">
         <ion-icon class="CASES-icon" [style.background-image]="quiz.icon" item-start></ion-icon>
         {{quiz.title}} -- <ion-icon *ngIf="quiz.score==1" class="perfectScore" name="checkmark"></ion-icon>
         <ion-icon *ngIf="quiz.score>=0.5 && quiz.score <1 " class="mediumScore" name="checkmark"></ion-icon>
@@ -36,7 +36,7 @@
   <!-- Content if something is clicked -->
   <div *ngIf="selectedQuiz" padding>
     <ion-slides #quizSlides>
-        <ion-slide *ngFor="let question of article[0].questions; let j = index;">
+        <ion-slide *ngFor="let question of selectedQuiz.article[0].questions; let j = index;">
             <h3>{{question.title}}</h3>
             <ion-list radio-group>
                 <ion-item *ngFor="let answer of question.answers; let i = index;">
