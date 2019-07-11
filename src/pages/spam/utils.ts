@@ -37,8 +37,6 @@ export class UtilsService {
         let shaObj = new jsSHA("SHA-512", "TEXT");
         phoneNumber = phoneNumber.replace(/\s/g, '');
         shaObj.update(phoneNumber);
-        // console.log(shaObj.getHash("HEX"));
-        // HTTP post request
 
         let data = {
             'number_hash': shaObj.getHash("HEX"),
