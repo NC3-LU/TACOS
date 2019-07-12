@@ -12,12 +12,12 @@
         <ion-card-header>
             <ion-img src="assets/imgs/logo_full.png"></ion-img>
             <ion-card-title>CASES Luxembourg</ion-card-title>
-            <ion-card-subtitle>TrustApp Cases for Obvious Security - TACOS<br />Version {{ appVersion }}</ion-card-subtitle>
+            <ion-card-subtitle>TACOS - Spam detection<br />Version {{ appVersion }}</ion-card-subtitle>
         </ion-card-header>
         <ion-card-content>
             <p>You are welcome to copy, modify or redistribute the
             <a href="https://github.com/CASES-LU/TACOS">source code</a>
-            according to the XXX license.</p><br />
+            according to the GPL version 3 license.</p><br />
             <p>Copyright (C) 2019 <a href="https://www.cases.lu">CASES</a> Luxembourg.</p>
         </ion-card-content>
     </ion-card>
@@ -26,7 +26,7 @@
         <ion-row align-items-center>
             <ion-col>
                 <h1>Privacy policy</h1>
-                <p class="text-justify">Security made in Lëtzebuerg g.i.e. built the TACOS app as a open source app. This SERVICE is provided by Security made in Lëtzebuerg g.i.e. at no cost and is intended
+                <p class="text-justify">Security made in Lëtzebuerg g.i.e. built the TACOS app as a open source app. This service is provided by Security made in Lëtzebuerg g.i.e. at no cost and is intended
                     for use as is.</p>
                 <p class="text-justify">This page is used to inform website visitors regarding our policies with the collection, use, and
                     disclosure of Personal Information if anyone decided to use our Service.</p>
@@ -36,10 +36,15 @@
                     in this Privacy Policy.</p>
                 <p class="text-justify">The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions,
                     which is accessible at TACOS, unless otherwise defined in this Privacy Policy.</p>
+                <p class="text-justify">This privacy policy is also available <a href="https://tacos.cases.lu">online</a></p>
 
                 <h3>Information Collection and Use</h3>
-                <p class="text-justify">This service is not collecting any personally identifiable information. The application provides a feature to
-                report spam phone numbers. Phone numbers reported as spam by a user are first hashed (with the algorithm SHA-512) then stored in a server controlled by Security made in Lëtzebuerg g.i.e.</p>
+                <p class="text-justify">This service <b>is not collecting any personally identifiable information</b>. The application allows the user to
+                    <b>detect spam phone numbers</b>. Incoming phone numbers from your smartphone are filtered, hashed (with the algorithm SHA-512), then
+                    compared to already reported spam from our database.
+                    For the filtering of the call logs the application requires the permission to read the call logs (android.permission.READ_CALL_LOG).
+                    The source code of the back-end service is licensed under Affero GPL version 3 and available <a href="https://github.com/CASES-LU/TACOS-server/">here</a>.
+                    </p>
 
                 <h3>Log Data</h3>
                 <p class="text-justify">We want to inform you that whenever you use our Service, in case of an error in the app We collect
@@ -51,7 +56,7 @@
                 <h3>Cookies</h3>
                 <p class="text-justify">Our application and back-end services are not using cookies.</p>
 
-                <h3>Service Providers</h3> <!-- This part need seem like it's not needed, but if you use any Google services, or any other third party libraries, chances are, you need this. -->
+                <h3>Service Providers</h3>
                 <p class="text-justify">Security made in Lëtzebuerg g.i.e. is not relying on third-party companies and individuals.</p>
 
                 <h3>Security</h3>
@@ -81,7 +86,7 @@
 
                 <h3>Contact Us</h3>
                 <p class="text-justify">If you have any questions or suggestions about our Privacy Policy, do not hesitate to
-                    <a href="mailto:info@cases.lu">info@cases.lu</a>.</p>
+                    <a href="mailto:info@cases.lu">contact us</a>.</p>
             </ion-col>
         </ion-row>
     </ion-grid>
