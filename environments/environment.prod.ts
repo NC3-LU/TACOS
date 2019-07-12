@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  backendServicesURL: 'https://tacos-backend.herokuapp.com/api/v1/',
+  backendServicesURL: 'https://tacos.cases.lu/api/v1/',
 };
