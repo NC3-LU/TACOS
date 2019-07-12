@@ -67,11 +67,11 @@ export function createTranslateLoader(http: HttpClient) {
   entryComponents: [
     MyApp,
     HomePage,
+    SpamPage,
     TipsTricksPage,
     VideosPage,
 	GamesQuizPage,
 	PasswordCardPage,
-    SpamPage,
     NewsPage,
 	SettingsPage,
     AboutPage,
