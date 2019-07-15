@@ -14,7 +14,7 @@
     "@angular/compiler": "^7.0.3",
     "@angular/core": "^7.0.3",
     "@angular/forms": "^7.0.3",
-    "@angular/http": "^7.0.3",
+    "@angular/http": "^7.2.15",
     "@angular/platform-browser": "^7.0.3",
     "@angular/platform-browser-dynamic": "^7.0.3",
     "@angular/router": "^7.0.3",
@@ -51,7 +51,7 @@
     "readable-stream": "^2.3.6",
     "rss-parser": "git+https://github.com/tofra/rss-parser.git",
     "run": "^1.4.0",
-    "rxjs": "^6.0.0",
+    "rxjs": "^6.5.2",
     "rxjs-compat": "^6.5.2",
     "scripts": "^0.1.0",
     "zone.js": "^0.8.26"
@@ -59,7 +59,7 @@
   "devDependencies": {
     "@ionic/app-scripts": "3.2.4",
     "@types/jssha": "^2.0.0",
-    "typescript": "3.4.5"
+    "typescript": "3.5.3"
   },
   "description": "An Ionic project",
   "cordova": {
