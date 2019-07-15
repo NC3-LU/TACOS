@@ -57,7 +57,7 @@
             <h2>{{ 'Report a spam' | translate }}</h2>
             <form [formGroup]="formSpam" (ngSubmit)="onSpamSubmit()">
                 <ion-item>
-                    <ion-input formControlName="phoneNumber" type="text" placeholder="Phone number with country code"></ion-input>
+                    <ion-input inputmode="tel" formControlName="phoneNumber" type="text" placeholder="Phone number with country code"></ion-input>
                 </ion-item>
                 <br />
                 <ion-item>
