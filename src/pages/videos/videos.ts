@@ -21,16 +21,21 @@ export class VideosPage {
                 public navParams: NavParams,
                 private domSanitizer: DomSanitizer,
                 private translate: TranslateService,) {
-      loadJson('../../assets/data/videos.json',domSanitizer).then(data => {
-        this.startIFrameLoadEvent();
-        this.videos = data;
-        this.handleIFrameLoadEvent();
-        if(navParams.get('searchTerm'))
-          this. searchTerm = navParams.get('searchTerm');
-        this.searchLang = translate.currentLang;
-        this.setFilteredItems();
-      });
     }
+/*
+* Load the data
+*/
+ionViewWillEnter(){
+  loadJson('../../assets/data/videos.json',this.domSanitizer).then(data => {
+    this.startIFrameLoadEvent();
+    this.videos = data;
+    this.handleIFrameLoadEvent();
+    if(this.navParams.get('searchTerm'))
+      this. searchTerm = this.navParams.get('searchTerm');
+    this.searchLang = this.translate.currentLang;
+    this.setFilteredItems();
+  });
+}
 
 /*
 * Manage loading
