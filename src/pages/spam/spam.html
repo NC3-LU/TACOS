@@ -62,8 +62,11 @@
                 <br />
                 <ion-item>
                     <ion-label>{{ 'Type of spam' | translate }}</ion-label>
-                    <ion-select formControlName="spamType" required >
+                    <ion-select formControlName="spamType" required>
                         <ion-option value="financial">Financial fraud</ion-option>
+                        <ion-option value="scam">Scam</ion-option>
+                        <ion-option value="telemarketer">Telemarketer</ion-option>
+                        <ion-option value="survey">Survey</ion-option>
                         <ion-option value="person">Person</ion-option>
                         <ion-option value="other">Other</ion-option>
                     </ion-select>
