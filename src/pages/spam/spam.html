@@ -9,14 +9,14 @@
 
 <ion-content>
     <ion-toolbar no-border-top color="primary">
-    <ion-segment [(ngModel)]="categories" color="light">
-        <ion-segment-button value="reportedCallHistorySpam">
-            {{ 'Call history' | translate }}
-        </ion-segment-button>
-        <ion-segment-button value="reportSpam">
-            {{ 'Report' | translate }}
-        </ion-segment-button>
-    </ion-segment>
+        <ion-segment [(ngModel)]="categories" color="light">
+            <ion-segment-button value="reportedCallHistorySpam" (ionSelect)="refreshSpamList()">
+                {{ 'Call history' | translate }}
+            </ion-segment-button>
+            <ion-segment-button value="reportSpam">
+                {{ 'Report' | translate }}
+            </ion-segment-button>
+        </ion-segment>
     </ion-toolbar>
 
     <div [ngSwitch]="categories" padding>

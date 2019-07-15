@@ -50,7 +50,15 @@ export class SpamPage {
             spamType: new FormControl('', Validators.required)
         });
 
+        this.refreshSpamList();
+    }
 
+
+    /*
+    * Refresh the list of spams
+    */
+    refreshSpamList() {
+        // retrive the list of spams from the back-end service
 
         // Initialization of the filters
         let filters: CallLogObject[] = [
@@ -61,7 +69,6 @@ export class SpamPage {
             }
         ];
 
-        // retrive the list of spams from the back-end service
         this.utils.loadSpamsLight()
         .then((dataSpam)=>{
             // data.sort(function(a, b){
@@ -106,13 +113,16 @@ export class SpamPage {
             .catch((err)=>{
                 console.log(err);
             });
-
         })
         .catch((err)=>{
             console.log("Error when retrieving list of spams.");
         });
     }
 
+
+    /*
+    * Fired by the form to submit new spam.
+    */
     onSpamSubmit() {
         let phoneNumber = this.formSpam.get('phoneNumber').value;
         let spamType = this.formSpam.get('spamType').value;
@@ -130,7 +140,6 @@ export class SpamPage {
                           duration: 3000
                       });
                       thankingToast.present();
-
                       this.utils.reportSpam(phoneNumber, spamType);
                     }
               },
@@ -138,7 +147,7 @@ export class SpamPage {
                   text: 'Cancel',
                   role: 'cancel',
                   handler: data => {
-                      console.log('Cancel clicked');
+                      //console.log('Cancel clicked');
                   }
               },
           ]
@@ -146,6 +155,10 @@ export class SpamPage {
         alert.present();
     }
 
+
+    /*
+    * Confirm a spam.
+    */
     confirmSpam(phoneNumber: string) {
         let alert = this.alertCtrl.create({
           title: 'Spam confirmation',
@@ -160,8 +173,8 @@ export class SpamPage {
                           duration: 3000
                       });
                       thankingToast.present();
-
                       this.utils.reportSpam(phoneNumber, 'Other');
+                      this.refreshSpamList();
                     }
               },
               {
@@ -175,35 +188,6 @@ export class SpamPage {
         });
         alert.present();
     }
-
-
-    // confirmHam() {
-    //     let alert = this.alertCtrl.create({
-    //       title: 'Ham confirmation',
-    //       subTitle: 'Confirm this number is not a spam?',
-    //       buttons: [
-    //           {
-    //               text: 'OK',
-    //               role: 'ok',
-    //               handler: data => {
-    //                   const thankingToast = this.toastCtrl.create({
-    //                       message: 'Thank you for your contribution.',
-    //                       duration: 3000
-    //                   });
-    //                   thankingToast.present();
-    //                 }
-    //           },
-    //           {
-    //               text: 'Cancel',
-    //               role: 'cancel',
-    //               handler: data => {
-    //                   console.log('Cancel clicked');
-    //               }
-    //           },
-    //       ]
-    //     });
-    //     alert.present();
-    // }
 
 
     /*
