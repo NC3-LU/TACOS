@@ -57,19 +57,19 @@
             <h2>{{ 'Report a spam' | translate }}</h2>
             <form [formGroup]="formSpam" (ngSubmit)="onSpamSubmit()">
                 <ion-item>
-                    <ion-input inputmode="tel" formControlName="phoneNumber" type="text" placeholder="Phone number with country code"></ion-input>
+                    <ion-input inputmode="tel" formControlName="phoneNumber" type="text" placeholder="Phone number with country code" required></ion-input>
                 </ion-item>
                 <br />
                 <ion-item>
                     <ion-label>{{ 'Type of spam' | translate }}</ion-label>
-                    <ion-select formControlName="spamType">
+                    <ion-select formControlName="spamType" required >
                         <ion-option value="financial">Financial fraud</ion-option>
                         <ion-option value="person">Person</ion-option>
                         <ion-option value="other">Other</ion-option>
                     </ion-select>
                 </ion-item>
                 <ion-item>
-                    <button ion-button>Report</button>
+                    <button ion-button type="submit" [disabled]="!formSpam.valid" block>Report</button>
                 </ion-item>
             </form>
 

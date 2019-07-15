@@ -119,7 +119,7 @@ export class SpamPage {
 
         let alert = this.alertCtrl.create({
           title: 'Spam confirmation',
-          subTitle: `Report this number as a spam (${this.formSpam.get('spamType').value}) ?`,
+          subTitle: 'Report this number as a spam ?',
           buttons: [
               {
                   text: 'OK',
