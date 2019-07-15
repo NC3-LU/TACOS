@@ -31,7 +31,7 @@ And some little games for the fun.
   Our database of spam is feeded thanks to
   [MISP](https://github.com/MISP/MISP). You can also contribute
   to our database by reporting spam phone numbers;
-- security news feeds currated by the CASES team.
+- security news feeds curated by the CASES team.
 
 
 ## License
