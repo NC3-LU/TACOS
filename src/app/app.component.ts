@@ -50,7 +50,7 @@ export class MyApp {
         this.pages = [
           { title: translations['Home'], component: HomePage, icon: 'home'},
           { title: translations['Spam signal'], component: SpamPage, icon: 'call'},
-          { title: translations['Tips and Tricks'], component: TipsTricksPage, icon: 'bulb'},
+          { title: translations['Tips and Tricks'], component: TipsTricksPage, icon: 'bulb', data:'../assets/data/tipstricks/tipstricks.json'},
           { title: translations['Videos'], component: VideosPage, icon: 'videocam'},
           { title: translations['Games and Quiz'], component: GamesQuizPage, icon: 'football', data:'../assets/data/gamesquiz/gamesquiz.json'},
           { title: translations['Password Card'], component: PasswordCardPage, icon: 'card'},

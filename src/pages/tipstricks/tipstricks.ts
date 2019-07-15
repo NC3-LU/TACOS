@@ -17,6 +17,7 @@ import { VideosPage } from '../videos/videos';
 export class TipsTricksPage {
   selectedTipsTricks: any;
   article: any;
+  data: any;
 
   //define the subpages
   pages: Array<{title: string, url: any, article: any, links: any,  icon: string}>;
@@ -32,15 +33,12 @@ export class TipsTricksPage {
     if(this.selectedTipsTricks){
       this.article = this.selectedTipsTricks.article;
     }
-    this.translate.stream(['Password', 'E-mail', 'Physical Security','Web', 'Waste Management']).subscribe(translations => {
-      this.pages = [
-        { title: translations['Password'], url: '../assets/data/tipstricks/password.json' , article: '', links:'', icon: 'url(../assets/imgs/t&t/8.png)'},
-        { title: translations['E-mail'], url: '../assets/data/tipstricks/email.json' , article: '', links:'', icon: 'url(../assets/imgs/t&t/6.png)'},
-        { title: translations['Physical Security'], url: '../assets/data/tipstricks/physicalsecurity.json' , article: '', links:'', icon: 'url(../assets/imgs/t&t/23.png)'},
-        { title: translations['Web'], url: '../assets/data/tipstricks/web.json' , article: '', links:'', icon: 'url(../assets/imgs/t&t/4.png)'},
-        //{ title: translations['Waste Management'], url: '../assets/data/tipstricks/wastemanagement.json' , article: '', links:'', icon: 'trash'}
-      ];
-    })
+
+    if (typeof navParams.get('data') !== 'undefined') { //load the menu
+     this.data = navParams.get('data');
+     this.pages = this.data[0].tipstricks;
+     console.log(this.data);
+   }
   }
 
 
