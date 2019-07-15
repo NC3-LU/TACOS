@@ -58,8 +58,6 @@ export class SpamPage {
     * Refresh the list of spams
     */
     refreshSpamList() {
-        // retrive the list of spams from the back-end service
-
         // Initialization of the filters
         let filters: CallLogObject[] = [
             {
