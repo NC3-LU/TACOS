@@ -1,0 +1,66 @@
+[
+  {
+    "language":"fr",
+    "title":"Trucs et astuces",
+    "version":0.1,
+    "keywords":["Trucs et astuces"],
+    "tipstricks":[
+      {
+        "title":"Mot de Passe",
+        "keywords":["mot de passe"],
+        "icon":"url(../assets/imgs/t&t/8.png)",
+        "url":"../assets/data/tipstricks/password.json"
+      },
+      {
+        "title":"Courrier électronique",
+        "keywords":["sécurité physique"],
+        "icon":"url(../assets/imgs/t&t/6.png)",
+        "url":"../assets/data/tipstricks/email.json"
+      },
+      {
+        "title":"Sécurité physique",
+        "keywords":["internet"],
+        "icon":"url(../assets/imgs/t&t/23.png)",
+        "url":"../assets/data/tipstricks/physicalsecurity.json"
+      },
+      {
+        "title":"Web",
+        "keywords":["internet"],
+        "icon":"url(../assets/imgs/t&t/4.png)",
+        "url":"../assets/data/tipstricks/web.json"
+      }
+    ]
+  },
+  {
+    "language":"en",
+    "title":"Tips and tricks !",
+    "version":0.1,
+    "keywords":["Tips and tricks"],
+    "tipstricks":[
+      {
+        "title":"Password",
+        "keywords":["Password"],
+        "icon":"url(../assets/imgs/t&t/8.png)",
+        "url":"../assets/data/tipstricks/password.json"
+      },
+      {
+        "title":"Email",
+        "keywords":["Email"],
+        "icon":"url(../assets/imgs/t&t/6.png)",
+        "url":"../assets/data/tipstricks/email.json"
+      },
+      {
+        "title":"Physical Security",
+        "keywords":["Physical Security"],
+        "icon":"url(../assets/imgs/t&t/23.png)",
+        "url":"../assets/data/tipstricks/physicalsecurity.json"
+      },
+      {
+        "title":"Web",
+        "keywords":["internet"],
+        "icon":"url(../assets/imgs/t&t/4.png)",
+        "url":"../assets/data/tipstricks/web.json"
+      }
+    ]
+  }
+]
