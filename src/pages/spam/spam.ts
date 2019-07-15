@@ -172,9 +172,10 @@ export class SpamPage {
                           message: 'Thank you for your contribution.',
                           duration: 3000
                       });
-                      thankingToast.present();
-                      this.utils.reportSpam(phoneNumber, 'Other');
-                      this.refreshSpamList();
+                      this.utils.reportSpam(phoneNumber, 'other').then(()=>{
+                          thankingToast.present();
+                          this.refreshSpamList();
+                      });
                     }
               },
               {
