@@ -1,4 +1,4 @@
-# TACOS - Security in your smartphone!
+# 📱 🌮 TACOS - Security in your smartphone 📱 🌮
 
 ![License](https://img.shields.io/github/license/CASES-LU/CASESapp.svg?style=flat-square)
 ![Contributors](https://img.shields.io/github/contributors/CASES-LU/CASESapp.svg?style=flat-square)
@@ -16,8 +16,10 @@ Of course you can also contribute to our database by reporting spam phone number
 via this TACOS.
 
 Besides that, TACOS is also an awareness application for cybersecurity.
-We also included some tools like a password cards generator, some security and
+We included some tools like a password cards generator, some security and
 privacy awareness games.
+
+Check out the [website of TACOS](https://tacos.cases.lu).
 
 ### Features
 
