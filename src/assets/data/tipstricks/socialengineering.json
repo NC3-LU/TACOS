@@ -3,7 +3,7 @@
     "language":"fr",
     "title":"L'ingénierie sociale",
     "content":"On parle d’ingénierie sociale lorsqu’un individu se sert d’une fausse identité ou de techniques de manipulation, pour inciter une personne à livrer des informations qu’elle n’aurait habituellement pas données, ou à accomplir une action qu’elle n’aurait pas effectuée.",
-    "keywords":["malware","virus"],
+    "keywords":["ingéniérie sociale","Social engineering"],
     "parts":[
       {
         "title":"Les bons réflexes :",

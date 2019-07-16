@@ -2,7 +2,7 @@
   {
     "language":"fr",
     "title":"Sécurité physique",
-    "keywords":["bureau propre"],
+    "keywords":["bureau propre", "sécurité physique"],
     "content":"La sécurité physique va de pair avec la sécurité de l’information. L’accès aux bureaux peut représenter une grande menace.",
     "parts":[
       {
@@ -30,7 +30,7 @@
     "language":"en",
     "title":"Physical security",
     "content": "Physical security goes hand in hand with information security. Access to offices can pose a large threat.",
-    "keywords":["clean desk"],
+    "keywords":["clean desk","physical security"],
     "parts":[
       {
         "title":"Printer interception",

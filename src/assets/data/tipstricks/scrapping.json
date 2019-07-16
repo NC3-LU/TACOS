@@ -2,6 +2,7 @@
   {
     "language":"fr",
     "title":"Mise au rebut",
+    "keywords":["Mise au rebut"],
     "content":"En utilisant un ordinateur, de nombreuses données sensibles s’accumulent. Si l’ordinateur, voire le disque dur, est mis au rebut, vendu, donné en cadeau ou envoyé en réparation, ces données sensibles sont rarement effacées correctement.<br><br>Si l’on supprime des fichiers sur l’ordinateur, ils sont d’abord envoyés dans la corbeille (« recycle bin ») d’où ils restent accessibles et peuvent être récupérés facilement.<br><br>De même, lorsque l’on vide la corbeille, les données ne sont pas véritablement supprimées du disque dur. Ce qui est effacé, c’est leur référence dans l’index des fichiers, libérant l’espace préalablement occupé pour d’autres fichiers. Tant que de nouveaux fichiers ne viennent pas écraser l’espace ainsi libéré, les données restent intactes sur le disque dur et peuvent être reconstituées avec l’aide d’outils informatiques spécifiques.<br><br>Pour effacer de façon efficace les données de son disque dur, il est nécessaire d‘écrire sur toute la surface du disque. Certains logiciels spécialisés permettent de le faire, mais l’opération peut être longue. Il est plus rapide de détruire le disque physiquement.",
     "keywords":["Mise au rebut"],
     "medias":[
@@ -15,6 +16,7 @@
   {
     "language":"en",
     "title":"Scrapping",
+    "keywords":["Scrapping"],
     "content":"Computers accumulate sensitive data during normal use. Sensitive data is rarely disposed of properly if the computer or hard disk is scrapped, sold, given away or sent for repair.<br><br> If files are deleted from the computer, they are first sent to the recycle bin, where they remain accessible and can be recovered easily.<br><br> Similarly, when the recycle bin is emptied, the data is not actually deleted from the hard drive. What is erased is their reference in the index files, freeing up previously occupied space for other files. As long as new files are not able to take up the freed space, the data remains intact on the hard drive and can be restored with the help of specific IT tools.<br><br> To efficiently clear data from the hard drive, you must write over the entire disk surface. Certain specialised software can do so, but the operation can be long. It is quicker to destroy the disk physically.",
     "keywords":["Scrapping"],
     "medias":[
