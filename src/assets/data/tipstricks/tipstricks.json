@@ -28,6 +28,24 @@
         "keywords":["internet"],
         "icon":"url(../assets/imgs/t&t/4.png)",
         "url":"../assets/data/tipstricks/web.json"
+      },
+      {
+        "title":"Logiciel malveillant",
+        "keywords":["malware"],
+        "icon":"url(../assets/imgs/t&t/3.png)",
+        "url":"../assets/data/tipstricks/malware.json"
+      },
+      {
+        "title":"Ingéniérie sociale",
+        "keywords":["Ingéniérie sociale"],
+        "icon":"url(../assets/imgs/t&t/7.png)",
+        "url":"../assets/data/tipstricks/socialengineering.json"
+      },
+      {
+        "title":"Mise au rebut",
+        "keywords":["Mise au rebut"],
+        "icon":"url(../assets/imgs/t&t/9.png)",
+        "url":"../assets/data/tipstricks/scrapping.json"
       }
     ]
   },
@@ -60,6 +78,24 @@
         "keywords":["internet"],
         "icon":"url(../assets/imgs/t&t/4.png)",
         "url":"../assets/data/tipstricks/web.json"
+      },
+      {
+        "title":"Malware",
+        "keywords":["malware"],
+        "icon":"url(../assets/imgs/t&t/3.png)",
+        "url":"../assets/data/tipstricks/malware.json"
+      },
+      {
+        "title":"Social engineering",
+        "keywords":["Ingéniérie sociale"],
+        "icon":"url(../assets/imgs/t&t/7.png)",
+        "url":"../assets/data/tipstricks/socialengineering.json"
+      },
+      {
+        "title":"Scrapping",
+        "keywords":["Scrapping"],
+        "icon":"url(../assets/imgs/t&t/9.png)",
+        "url":"../assets/data/tipstricks/scrapping.json"
       }
     ]
   }

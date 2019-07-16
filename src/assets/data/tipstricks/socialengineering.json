@@ -1,0 +1,40 @@
+[
+  {
+    "language":"fr",
+    "title":"L'ingénierie sociale",
+    "content":"On parle d’ingénierie sociale lorsqu’un individu se sert d’une fausse identité ou de techniques de manipulation, pour inciter une personne à livrer des informations qu’elle n’aurait habituellement pas données, ou à accomplir une action qu’elle n’aurait pas effectuée.",
+    "keywords":["malware","virus"],
+    "parts":[
+      {
+        "title":"Les bons réflexes :",
+        "content":"<ul><li>Vérifier l’identité du demandeur et le bien-fondé de la requête, avant de partager des informations personnelles ou professionnelles en direct, par téléphone, e-mail ou via Internet. En cas de doute, répondre ultérieurement et procéder entretemps à une vérification. </li><li>Ne pas céder aux demandes « urgentes » ou menaçantes (par exemple d’un prétendu prestataire informatique qui doit « absolument » accéder à votre serveur). </li><li>Ne pas écouter un inconnu qui prétend vouloir vous aider. </li></ul>"
+      }
+    ],
+    "medias":[
+      {
+        "links":[
+          "https://cases.lu/knowhow/glossary/SocialEngineering_fr.html"
+        ]
+      }
+    ]
+  },
+  {
+    "language":"en",
+    "title":"Social engineering",
+    "content":"Social engineering is when an individual use a false identity or manipulation techniques to make another person provide information it would otherwise not provide, or perform an action that it would otherwise not have done.",
+    "keywords":["Social engineering"],
+    "parts":[
+      {
+        "title":"Security tips ",
+        "content":"<ul><li>Verify the identity of the person requesting the information and the merits of the request before sharing personal or business information online, by phone, e-mail or via the Internet. If in doubt, do not respond immediately and carry out verification in the meantime. </li><li>Do not give in to “urgent” or threatening demands (i.e. an alleged IT provider that must “absolutely” have access to your server). </li><li>Do not listen to any stranger who claims to want to help you. </li></ul>"
+      }
+    ],
+    "medias":[
+      {
+        "links":[
+          "https://cases.lu/knowhow/glossary/SocialEngineering.html"
+        ]
+      }
+    ]
+  }
+]
