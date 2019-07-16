@@ -1,8 +1,8 @@
 # 📱 🌮 TACOS - Security in your smartphone 📱 🌮
 
-![License](https://img.shields.io/github/license/CASES-LU/CASESapp.svg?style=flat-square)
-![Contributors](https://img.shields.io/github/contributors/CASES-LU/CASESapp.svg?style=flat-square)
-![Stars](https://img.shields.io/github/stars/CASES-LU/CASESapp.svg?style=flat-square)
+![License](https://img.shields.io/github/license/CASES-LU/TACOS.svg?style=flat-square)
+![Contributors](https://img.shields.io/github/contributors/CASES-LU/TACOS.svg?style=flat-square)
+![Stars](https://img.shields.io/github/stars/CASES-LU/TACOS.svg?style=flat-square)
 
 
 ## Presentation
