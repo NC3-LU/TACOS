@@ -22,6 +22,7 @@ export class SpamPage {
     callsFiltered: any[];
     loading: Loading;
     formSpam: FormGroup;
+    formSearchSpam: FormGroup;
     country: FormControl;
 
     phoneNumber: any;
@@ -48,6 +49,15 @@ export class SpamPage {
                       Validators.required
                 ])),
             spamType: new FormControl('', Validators.required)
+        });
+
+        this.formSearchSpam = this.formBuilder.group({
+            country: this.country,
+            phoneNumber: new FormControl('', Validators.compose([
+                      PhoneValidator.validCountryPhone(this.country),
+                      // Validators.pattern('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$'),
+                      Validators.required
+                ]))
         });
 
         this.refreshSpamList();
@@ -151,6 +161,16 @@ export class SpamPage {
           ]
         });
         alert.present();
+    }
+
+
+    /*
+    * If the user want to search for a spam manually.
+    */
+    onSearchSpamSubmit() {
+        let phoneNumber = this.formSearchSpam.get('phoneNumber').value;
+        console.log(phoneNumber);
+        this.utils.searchSpam(phoneNumber);
     }
 
 
