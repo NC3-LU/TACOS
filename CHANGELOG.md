@@ -2,6 +2,6 @@ TACOS Changelog
 ===============
 
 
-## 0.0.N (2019-mm-dd)
+## 0.0.15 (2019-07-16)
 
-- first release of TACOS.
+- first public alpha release of TACOS.
