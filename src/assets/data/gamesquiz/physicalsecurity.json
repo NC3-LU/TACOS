@@ -4,14 +4,14 @@
     "version":0.1,
     "questions":[
       {
-        "title":"Je stock mes documents confidentiels :",
+        "title":"Je stocke mes documents confidentiels :",
         "answers":[
           ["false", "Sur mon bureau pour ne pas perdre de temps lorsque je travaille, de toute façon mes collègues ont également accès à l'information"],
           ["true", "Dans une armoire fermée à clé"],
-          ["false", "Sur mon bureau mais dans une pochette"],
+          ["false", "Sur mon bureau, mais dans une pochette"],
           ["false", "Dans le tiroir de mon bureau"]
         ],
-        "explanation":"Les documents confidentiels doivent toujours être stockés de manière à ce qu'ils soient innacessible aux personnes non autorisées sans oublier les stagiaires, les fournisseurs etc."
+        "explanation":"Les documents confidentiels doivent toujours être stockés de manière à ce qu'ils soient innacessibles aux personnes non autorisées sans oublier les stagiaires, les fournisseurs, etc."
       },
       {
         "title":"Est-ce que vos appareils se verrouillent automatiquement en cas d'inactivité ?",
@@ -39,7 +39,7 @@
           ["false", "Je peux travailler en mode 'dégradé' car j'ai un PC portable mais je n'ai plus accès au serveur"],
           ["true", "Mon onduleur fonctionne, je peux continuer à travailler"]
         ],
-        "explanation":"Le matériel doit être protéger des coupures de courant pour que l'activité puisse continuer"
+        "explanation":"Le matériel doit être protégé des coupures de courant pour que l'activité puisse continuer"
       }
     ]
   },
@@ -58,12 +58,12 @@
         "explanation":"Confidential documents must always be stored in such a way that they are inaccessible to unauthorised persons, including trainees, suppliers, etc."
       },
       {
-        "title":"Do your devices (smartphone, tablet, laptop etc) lock automatically in case of extended inactivity (lock screen)?",
+        "title":"Do your devices (smartphone, tablet, laptop, etc.) lock automatically in case of extended inactivity (lock screen)?",
         "answers":[
           ["false", "No"],
           ["true", "Yes"]
         ],
-        "explanation":"All the devices offers, now, the possibility to lock automatically in case of inactivity. This functionality must be used to prevent the leak of information from your device or unauthorized use of the device."
+        "explanation":"All the devices offer, now, the possibility to lock automatically in case of inactivity. This functionality must be used to prevent the leak of information from your device or unauthorised use of the device."
       },
       {
         "title":"As soon as I no longer need my confidential information on paper?",
@@ -73,7 +73,7 @@
           ["false", "I keep them"],
           ["false", "I keep them, but they're still undecipherable because I'm a bad writer"]
         ],
-        "explanation":"Confidential information must be destroyed to prevent it from falling into the hands of unauthorized persons"
+        "explanation":"Confidential information must be destroyed to prevent it from falling into the hands of unauthorised persons"
       },
       {
         "title":"A power outage occurs:",

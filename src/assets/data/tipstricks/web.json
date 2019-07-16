@@ -6,7 +6,7 @@
     "parts":[
       {
         "title":"Utilisation d'internet",
-        "content":"Internet est souvvent source de logiciels malveillants. Trop nombreux sont les sites licites mal protégés qui sont compromis et ensuite utilisés pour infecter les ordinateurs des visiteurs. L'infection de ces derniers se passe alors le plus souvent via l'exploitation de vulnérabilités techniques des navigateurs."
+        "content":"Internet est souvent source de logiciels malveillants. Trop nombreux sont les sites licites mal protégés qui sont compromis et ensuite utilisés pour infecter les ordinateurs des visiteurs. L'infection de ces derniers se passe alors le plus souvent via l'exploitation de vulnérabilités techniques des navigateurs."
       },
       {
         "title":"La fraude sur internet",
@@ -25,7 +25,7 @@
       },
       {
         "title":"La fraude sur internet",
-        "content":"Originally, attacks on IT sytems were mainly done for fun. Nowadays, thy are mostly motivated by profit.<br/>Access to data may allow access to the victim's 'wallet' through access to web-banking, virtual money and e-commerce (credit card numbers).<br/>Others data, such as passwords, may be used to spread malware or scams. For example: those who steal Facebook passwords are stealing online identities, and thereby the confidence of the victim's group of friends."
+        "content":"Originally, attacks on IT systems were mainly done for fun. Nowadays, they are mostly motivated by profit.<br/>Access to data may allow access to the victim's 'wallet' through access to web-banking, virtual money and e-commerce (credit card numbers).<br/>Other data, such as passwords, may be used to spread malware or scams. For example: those who steal Facebook passwords are stealing online identities, and thereby the confidence of the victim's group of friends."
       }
     ]
   }

@@ -18,14 +18,14 @@
           ["false", "Oui, j'ai déjà installé ou utilisé des logiciels spéciaux pour voir ou utiliser ces médias"],
           ["true", "Oui, mais seulement sur les boutiques officielles"]
         ],
-        "explanation":"Gardez à l'esprit les limites de copyright et de licence des fichiers téléchargés depuis Internet. Il y a des licences qui permettent l'utilisation libre du contenu, comme d'autres qui ont des restrictions et enfin celles qui sont payantes. De plus, méfiez-vous des sites Web qui offrent des téléchargements gratuits. Ils sont généralement utilisés pour répandre un type de malware."
+        "explanation":"Gardez à l'esprit les limites de copyright et de licence des fichiers téléchargés depuis internet. Il y a des licences qui permettent l'utilisation libre du contenu, comme d'autres qui ont des restrictions et enfin celles qui sont payantes. De plus, méfiez-vous des sites Web qui offrent des téléchargements gratuits. Ils sont généralement utilisés pour répandre un type de malware."
       },
       {
-        "title":"Je poste les choses suivantes sur les réeaux sociaux :",
+        "title":"Je poste les choses suivantes sur les réseaux sociaux :",
         "answers":[
           ["true", "Des images et des vidéos d'amis uniquement avec leur consentement explicite (lorsqu'ils ne sont pas en état d'ébriété)"],
           ["false", "Je poste des photos ou des vidéos d'autres personnes, mais je ne veux pas que cela me soit fait."],
-          ["false", "Je n'ai rien d'autre à cacher mais je demande le consentement avant d'afficher de l'information d'une autre personne"],
+          ["false", "Je n'ai rien d'autre à cacher, mais je demande le consentement avant d'afficher de l'information d'une autre personne"],
           ["false", "Je poste tout et je n'ai rien à cacher"]
         ],
         "explanation":"Sachez que si vous publiez des images ou des vidéos d'une personne sans son consentement, vous pourriez enfreindre la loi. Par exemple, l'atteinte à la vie privée, la diffamation ou le droit à la publicité. Par conséquent, demandez le consentement préalable d'autres personnes, surtout si elles sont mineures."
@@ -37,7 +37,7 @@
     "version":0.1,
     "questions":[
       {
-        "title":"If i buy something on internet, i pay attention that the site is with HTTPS:",
+        "title":"If i buy something on the internet, i pay attention that the site is with HTTPS:",
         "answers":[
           ["false", "No"],
           ["true", "Yes"]
@@ -51,7 +51,7 @@
           ["false", "Yes, I even installed special software and cracks to use/watch/listen to that media"],
           ["true", "Yes, but only from official stores"]
         ],
-        "explanation":"Keep in mind the copyright and licensing limits of files downloaded from the Internet. There are licenses that allow the free use of the content, like others that have restrictions and finally those that are paid. In addition to this, be wary of websites that offer free downloads. It is generally used to spread a type of malware."
+        "explanation":"Keep in mind the copyright and licensing limits of files downloaded from the Internet. There are licences that allow the free use of the content, like others that have restrictions and finally those that are paid. In addition to this, be wary of websites that offer free downloads. It is generally used to spread a type of malware."
       },
       {
         "title":"I post the following on social media:",
