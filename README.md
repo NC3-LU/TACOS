@@ -12,8 +12,8 @@ TACOS is the mobile application by [CASES](https://www.cases.lu).
 TACOS provides a spam detection feature. It allows you to check for spam phone
 numbers from your incoming calls. Our database of spam is built among other
 thanks to the [MISP](https://github.com/MISP/MISP) project.
-Of course you can also contribute to our database by reporting spam phone numbers
-via this TACOS.
+Of course you can also contribute to our database by reporting spam phone
+numbers.
 
 Besides that, TACOS is also an awareness application for cybersecurity.
 We included some tools like a password cards generator, some security and
