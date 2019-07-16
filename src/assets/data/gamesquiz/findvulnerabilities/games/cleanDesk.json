@@ -2,67 +2,67 @@
   {
     "language":"fr",
     "title":"Trouvez les failles de sécurité !",
-    "storageKey":"gameCleanDesk",
+    "storageKey":"gameFindVulnerabilitiesCleanDesk",
     "image":"../../../assets/data/gamesquiz/findvulnerabilities/games/desk.png",
     "width":"1200px",
     "height":"800px",
     "version":0.1,
-    "keywords":["vulnerabilité"],
+    "keywords":["vulnerabilités"],
     "vulnerabilities":[
       {
         "title":"Post-it",
         "shape":"poly",
         "coords":"133,470, 221,478, 191,523, 102,514",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"Ecrire un mot passe sur un papier accessible à tous, c'est comme laissé les clés de son logement sur le paillasson."
       },
       {
         "title":"PC non vérouillé",
         "shape":"poly",
         "coords":"209,91, 619,107, 612,340, 213,317",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"Un PC non verrouillé peut permettre d'accéder aux e-mails et aux autres applications du PC ce qui peut conduire à une fuite d'informations."
       },
       {
         "title":"Carte de crédit",
         "shape":"poly",
         "coords":"538,591, 643,612, 615,647, 511,623",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"Si vous voulez éviter les fraudes à la carte de crédit, elle ne doit jamais rester sans surveillance."
       },
       {
         "title":"Portefeuille",
         "shape":"poly",
         "coords":"261,555, 381,567, 520,567, 506,679, 363,692, 318,684, 208,670",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"Pour éviter les vols et autres arnaques, un sac ou un portefeuille avec du contenu sensible ou de valeurs ne doivent jamais rester sans surveillance."
       },
       {
         "title":"Clé USB",
         "shape":"poly",
         "coords":"567,511, 611,507, 614,513, 613,519, 567,521",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"Les clés USB doivent être protégées des accès non autorisés pour éviter la perte d'information ou des personnes malintentionnées qui pourraient mettre un malware sur la clé."
       },
       {
         "title":"Document confidentiel",
         "shape":"poly",
         "coords":"823,487, 1054,594, 935,686, 820,680, 820,699, 911,706, 808,786, 557,668, 566,659, 555,653, 573,641, 621,651, 647,611, 635,607",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"Le document est marqué 'confidentiel', il doit être protégé des personnes non autorisées à y accéder."
       },
       {
         "title":"Clés et badge",
         "shape":"poly",
         "coords":"825,435, 831,423, 845,424, 875,408, 879,412, 854,431, 854,438, 890,443, 898,452, 890,461, 897,476, 891,473, 861,459, 850,459, 824,476, 821,471, 839,440",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"Des moyens d'accès laisser sans surveillance permettent à des inconnus d'accéder facilement aux locaux."
       },
       {
         "title":"Feuille de sécurité sociale",
         "shape":"poly",
         "coords":"750,455, 935,338, 1141,393, 971,530",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"Des données à caractères très personnelles se trouvent sur ce document, il doit être protégé."
       }
     ]
   },
   {
     "language":"en",
-    "title":"Trouvez les failles de sécurité !",
-    "storageKey":"gameCleanDesk",
+    "title":"Find the security holes!",
+    "storageKey":"gameFindVulnerabilitiesCleanDesk",
     "image":"../../../assets/data/gamesquiz/findvulnerabilities/games/desk.png",
     "width":"1200px",
     "height":"800px",
@@ -73,49 +73,49 @@
         "title":"Post-it",
         "shape":"poly",
         "coords":"133,470, 221,478, 191,523, 102,514",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"Writing a password on paper that is accessible to everyone is like leaving the keys to your home on the mat."
       },
       {
-        "title":"PC non vérouillé",
+        "title":"Unlocked Computer",
         "shape":"poly",
         "coords":"209,91, 619,107, 612,340, 213,317",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"An unlocked PC can provide access to e-mails and other PC applications, which can lead to information leakage."
       },
       {
-        "title":"Carte de crédit",
+        "title":"Credit card",
         "shape":"poly",
         "coords":"538,591, 643,612, 615,647, 511,623",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"If you want to avoid credit card fraud, it should never be left unattended."
       },
       {
-        "title":"Portefeuille",
+        "title":"Wallet",
         "shape":"poly",
         "coords":"261,555, 381,567, 520,567, 506,679, 363,692, 318,684, 208,670",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"To avoid theft and other scams, a bag or wallet with sensitive content or valuables should never be left unattended."
       },
       {
-        "title":"Clé USB",
+        "title":"USB stick",
         "shape":"poly",
         "coords":"567,511, 611,507, 614,513, 613,519, 567,521",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"USB sticks must be protected from unauthorised access to prevent the loss of information or malicious people who could put malware on the stick."
       },
       {
-        "title":"Document confidentiel",
+        "title":"Confidential document",
         "shape":"poly",
         "coords":"823,487, 1054,594, 935,686, 820,680, 820,699, 911,706, 808,786, 557,668, 566,659, 555,653, 573,641, 621,651, 647,611, 635,607",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"The document is marked 'confidential', it must be protected from unauthorised persons to access it."
       },
       {
-        "title":"Clés et badge",
+        "title":"Keys and badge",
         "shape":"poly",
         "coords":"825,435, 831,423, 845,424, 875,408, 879,412, 854,431, 854,438, 890,443, 898,452, 890,461, 897,476, 891,473, 861,459, 850,459, 824,476, 821,471, 839,440",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"Unattended access means allow strangers to easily access the premises."
       },
       {
-        "title":"Feuille de sécurité sociale",
+        "title":"Social security sheet",
         "shape":"poly",
         "coords":"750,455, 935,338, 1141,393, 971,530",
-        "explanation":"Un bon mot de passe a un minimum de 12 caractères avec des lettres majuscules et minuscules, des caractères spéciaux et des chiffres."
+        "explanation":"This document contains very personal data and must be protected."
       }
     ]
   }
