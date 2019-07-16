@@ -170,7 +170,17 @@ export class SpamPage {
     onSearchSpamSubmit() {
         let phoneNumber = this.formSearchSpam.get('phoneNumber').value;
         console.log(phoneNumber);
-        this.utils.searchSpam(phoneNumber);
+
+        this.utils.searchSpam(phoneNumber)
+        .then((occurences)=>{
+            if (occurences != 0) {
+                this.callsFiltered = [{
+                    'number': phoneNumber,
+                    'date': '',
+                    'occurences': occurences
+                }];
+            }
+        })
     }
 
 

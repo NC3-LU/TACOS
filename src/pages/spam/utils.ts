@@ -72,8 +72,8 @@ export class UtilsService {
         return new Promise<any>(resolve => {
             let http = new HTTP();
             http.get(environment.backendServicesURL + 'spams', data, {}).then((result : any) => {
-                console.log(result);
-                resolve(result);
+                let jsonData = JSON.parse(result.data);
+                resolve(jsonData.nb_results);
             }).catch((error : any) => {
                 console.log(error);
                 console.log(error.status);
