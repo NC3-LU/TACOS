@@ -59,7 +59,7 @@ export class HomePage {
       (data) => {
         this.jsonFiles = data;
         // Plugin cordova File doesn't work in browser. For testing, comment out below line and comment 3 above lines
-        //this.jsonFiles = [{name:'email.json'},{name:'password.json'},{name:'physicalsecurity.json'},{name:'web.json'} ];
+        //this.jsonFiles = [{name:'email.json'},{name:'password.json'},{name:'physicalsecurity.json'},{name:'web.json'},{name:'malware.json'},{name:'scrapping.json'},{name:'physicalsecurity.json'} ];
         if (this.searchTerm) {
           for(let json of this.jsonFiles){
             loadJson('../assets/data/tipstricks/' + json.name,this.domSanitizer).then(data => {

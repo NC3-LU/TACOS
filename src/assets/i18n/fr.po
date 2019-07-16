@@ -42,7 +42,7 @@ msgid "Final Score"
 msgstr "Score Final"
 
 msgid "Find the vulnerabilities"
-msgstr ""
+msgstr "Trouver les vulnérabilités"
 
 msgid "Games"
 msgstr "Jeux"

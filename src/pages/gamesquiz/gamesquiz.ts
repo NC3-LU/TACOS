@@ -24,6 +24,9 @@ export class GamesQuizPage {
   //define the quiz stuff
   quizScore=0; //score of the current quiz
   quizCorrection : any; //array which store the correction of the quiz
+  //define the game stuf
+
+  gamesList = []; //list of the games and their respectives pages;
 
   @ViewChild('quizSlides') quizSlides: any;
   data: any;
@@ -45,6 +48,8 @@ export class GamesQuizPage {
   }
   // init some var, this function is defined by ionic and called just after the constructor
     ionViewDidLoad (){
+    this.gamesList['findVulnerabilitiesPage'] = findVulnerabilitiesPage; //init the list of the games
+
     if (typeof this.navParams.get('data') !== 'undefined'){
         for (let i = 0; i < this.data[0].quizs.length; i++) {
             this.getQuizScore(this.data[0].quizs[i].storageKey).then(val => {
@@ -125,13 +130,13 @@ export class GamesQuizPage {
     }
 
     /*
-    * Load a page like a game
+    * Load a game
     */
-    openPage(page){
-      if(page=='findVulnerabilitiesPage'){
-        loadJson('../assets/data/gamesquiz/findvulnerabilities/findvulnerabilities.json',this.domSanitizer).then(data => { //load the data in advance
+    openGame($event, game){
+      if(game.page!=null && game.game !=null ){
+        loadJson(game.game,this.domSanitizer).then(data => { //load the data in advance
           data = loadRightLanguage(data,this.translate.currentLang);
-          this.navCtrl.push(findVulnerabilitiesPage, {dataMenu:data});
+          this.navCtrl.push(this.gamesList[game.page], {dataMenu:data});
         });
       }
     }

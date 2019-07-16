@@ -2,7 +2,7 @@
   {
     "language":"fr",
     "title":"Internet",
-    "keywords":["web","toile"],
+    "keywords":["web","toile","internet"],
     "parts":[
       {
         "title":"Utilisation d'internet",
@@ -17,7 +17,7 @@
   {
     "language":"en",
     "title":"Internet",
-    "keywords":["web"],
+    "keywords":["web","internet"],
     "parts":[
       {
         "title":"Using the internet",
