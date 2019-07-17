@@ -2,19 +2,22 @@
 
 * Getting Node and NPM
 * Install Ionic and cordova
+
 ```bash
 npm install -g ionic cordova
 ```
+
 * Clone the repository
 
 ```bash
-git clone https://github.com/CASES-LU/CASESapp.git
+git clone https://github.com/CASES-LU/TACOS.git
 ```
 * Go to the folder
 
 ```bash
-cd ./CASESapp
+cd TACOS/
 ```
+
 * Launch the serve
 ```bash
 ionic serve
@@ -99,9 +102,10 @@ ionic cordova build android
 ```
 
 ## To emulate android Phone
+
 Doesn't in guest VM
 
-### Install same [requirements](https://github.com/CASES-LU/CASESapp#requirements) for generation a sdk
+### Install same requirements for the generation a sdk
 
 ### Install android image
 
@@ -130,12 +134,5 @@ npm run extract
 # Generate a production ready APK
 
 ```bash
-rm -Rf node_modules/ www/ platforms/android/
-npm install
-
-ionic cordova platforms add android
-ionic cordova build android --release --prod
-
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ~/<your-file>.keystore ~/git/TACOS/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk AliasKey
-zipalign -v 4 ~/git/TACOS/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk ~/git/TACOS/platforms/android/app/build/outputs/apk/release/TACOS.apk
+./build.sh
 ```
