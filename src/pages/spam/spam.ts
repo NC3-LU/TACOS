@@ -179,6 +179,8 @@ export class SpamPage {
                     'date': '',
                     'occurences': occurences
                 }];
+            } else {
+                this.callsFiltered = [];
             }
         })
     }
