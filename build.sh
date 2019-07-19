@@ -6,7 +6,7 @@ key_alias=$2
 final_apk=./platforms/android/app/build/outputs/apk/release/TACOS.apk
 
 
-rm -Rf node_modules/ www/ platforms/android/
+rm -Rf node_modules/ www/ plugins/ platforms/android/
 npm install
 ionic cordova platforms add android
 ionic cordova build android --release
