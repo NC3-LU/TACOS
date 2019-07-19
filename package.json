@@ -1,8 +1,9 @@
 {
   "name": "TACOS",
   "version": "0.0.15",
-  "author": "CASES Luxembourg",
+  "description": "TACOS by CASES.LU",
   "homepage": "https://www.cases.lu",
+  "author": "CASES Luxembourg",
   "scripts": {
     "build": "BUILD_ENV=${BUILD_ENV:-local} ng build --configuration=$BUILD_ENV",
     "extract": "ngx-translate-extract -i ./src -o ./src/assets/i18n/en.po ./src/assets/i18n/fr.po -c -s -f pot"
@@ -66,7 +67,6 @@
     "@types/jssha": "^2.0.0",
     "typescript": "3.4.5"
   },
-  "description": "TACOS by CASES.LU",
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},
