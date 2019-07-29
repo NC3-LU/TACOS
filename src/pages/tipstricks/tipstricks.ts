@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 import { TranslateService } from '@ngx-translate/core';
 
@@ -27,6 +28,7 @@ export class TipsTricksPage {
     public navParams: NavParams,
     private translate: TranslateService,
     private domSanitizer: DomSanitizer,
+    private iab: InAppBrowser
      ) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedTipsTricks = navParams.get('tipsTricksitem');
@@ -53,6 +55,12 @@ export class TipsTricksPage {
     });
   }
 
+  /*
+  * Open an external link
+  */
+  openExternalLink(item){
+    this.iab.create(item,'_blank','yes');
+  }
 
   /*
   * Open a tips trick item (e.g password)

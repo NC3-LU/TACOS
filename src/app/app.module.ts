@@ -7,6 +7,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslatePoHttpLoader } from '@biesbjerg/ngx-translate-po-http-loader';
 import { LanguageService } from '../services/language.service';
 import { IonicStorageModule } from '@ionic/storage';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -72,11 +73,11 @@ export function createTranslateLoader(http: HttpClient) {
     SpamPage,
     TipsTricksPage,
     VideosPage,
-	GamesQuizPage,
-	PasswordCardPage,
+		GamesQuizPage,
+		PasswordCardPage,
     NewsPage,
-	SettingsPage,
-	CSWLPage,
+		SettingsPage,
+		CSWLPage,
     AboutPage,
 		findVulnerabilitiesPage
   ],
@@ -84,7 +85,8 @@ export function createTranslateLoader(http: HttpClient) {
     StatusBar,
     SplashScreen,
     CallLog,
-	File,
+		InAppBrowser,
+		File,
     LanguageService,
     AppVersion,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

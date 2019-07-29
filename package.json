@@ -82,7 +82,8 @@
       "cordova-plugin-file": {},
       "cordova-plugin-advanced-http": {
         "OKHTTP_VERSION": "3.10.0"
-      }
+      },
+      "cordova-plugin-inappbrowser": {}
     },
     "platforms": [
       "browser",
