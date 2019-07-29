@@ -12,6 +12,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
 import { VideosPage } from '../pages/videos/videos';
+import { CSWLPage } from '../pages/cswl/cswl';
 import { GamesQuizPage } from '../pages/gamesquiz/gamesquiz';
 import { PasswordCardPage } from '../pages/passwordcard/passwordcard';
 import { SpamPage } from '../pages/spam/spam';
@@ -47,6 +48,7 @@ export function createTranslateLoader(http: HttpClient) {
 	SettingsPage,
     AboutPage,
 	findVulnerabilitiesPage,
+	CSWLPage,
     ExtractHostname,
     FormatPhoneNumber
   ],
@@ -74,6 +76,7 @@ export function createTranslateLoader(http: HttpClient) {
 	PasswordCardPage,
     NewsPage,
 	SettingsPage,
+	CSWLPage,
     AboutPage,
 		findVulnerabilitiesPage
   ],

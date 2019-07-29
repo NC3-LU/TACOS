@@ -12,6 +12,7 @@ import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
 import { GamesQuizPage } from '../pages/gamesquiz/gamesquiz';
 import { PasswordCardPage } from '../pages/passwordcard/passwordcard';
 import { VideosPage } from '../pages/videos/videos';
+import { CSWLPage } from '../pages/cswl/cswl';
 import { SpamPage } from '../pages/spam/spam';
 import { NewsPage } from '../pages/news/news';
 import { SettingsPage } from '../pages/settings/settings';
@@ -45,6 +46,7 @@ export class MyApp {
                             'Password Card',
                             'News',
                             'Settings',
+                            'CSWL',
                             'About'])
                     .subscribe(translations => {
         this.pages = [
@@ -57,6 +59,7 @@ export class MyApp {
           { title: translations['News'], component: NewsPage, icon: 'paper'},
           { title: translations['Settings'], component: SettingsPage, icon: 'settings' },
           { title: translations['About'], component: AboutPage, icon: 'information-circle'},
+          { title: translations['CSWL'], component: CSWLPage, icon: 'information-circle'},
         ];
       })
     }

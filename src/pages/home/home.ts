@@ -8,6 +8,7 @@ import { File } from '@ionic-native/file/ngx';
 
 import { TipsTricksPage } from '../tipstricks/tipstricks';
 import { VideosPage } from '../videos/videos';
+import { CSWLPage } from '../cswl/cswl';
 import { SpamPage } from '../spam/spam';
 import { GamesQuizPage } from '../gamesquiz/gamesquiz';
 import { PasswordCardPage } from '../passwordcard/passwordcard';
@@ -39,7 +40,8 @@ export class HomePage {
                             'Games and Quiz',
                             'Password Card',
                             'News',
-                            'Settings'])
+                            'Settings',
+                            'Calendar'])
                     .subscribe(translations => {
         this.pages = [
           { title: translations['Spam signal'], component: SpamPage, img: 'url(../assets/imgs/t&t/14.png)'},
@@ -48,7 +50,8 @@ export class HomePage {
           { title: translations['Games and Quiz'], component: GamesQuizPage, img: 'url(../assets/imgs/t&t/11.png)', data:'../assets/data/gamesquiz/gamesquiz.json'},
           { title: translations['Password Card'], component: PasswordCardPage, img: 'url(../assets/imgs/t&t/12.png)'},
           { title: translations['News'], component: NewsPage, img: 'url(../assets/imgs/t&t/16.png)'},
-          { title: translations['Settings'], component: SettingsPage, img: 'url(../assets/imgs/t&t/9.png)' }
+          { title: translations['Settings'], component: SettingsPage, img: 'url(../assets/imgs/t&t/9.png)' },
+          { title: translations['CSWL'], component: CSWLPage, img: 'url(../assets/imgs/t&t/16.png)'}
         ];
       })
   }
