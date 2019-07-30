@@ -3,11 +3,31 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title *ngIf="dataGame !=null">{{ 'Score' | translate }} {{this.gameScore}}/{{dataGame[0].vulnerabilities.length}} - {{ 'Find the vulnerabilities' | translate }} </ion-title>
-    <ion-title *ngIf="dataMenu !=null">{{ 'Find the vulnerabilities' | translate }} </ion-title>
+    <ion-title> {{ 'Phish or not ?' | translate }} </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-slides #gameSlides>
+    <ng-container *ngFor="let item of dataGame[0].items; let j = index;" >
+      <ion-slide>
+          <p [class]="item.type" [innerHTML] ="item.initial"><p>
+          <p>
+            <button ion-button round color="secondary" (click)="choosedAnswer(1,j)">{{ 'Legitimate' | translate}}</button>
+            <button ion-button round color="danger" (click)="choosedAnswer(0,j)">{{ 'Phishing' | translate}}</button>
+          </p>
+      </ion-slide>
+      <ion-slide>
+          <p [class]="item.type" [innerHTML] ="item.explanation"><p>
+          <p>
+            <button ion-button round color="primary" (click)="nextSlide()">{{ 'Next' | translate}}</button>
+          </p>
+      </ion-slide>
+    </ng-container>
+      <ion-slide>
+          <h2>{{'Final Score' | translate}}: {{gameScore}} / {{dataGame[0].items.length}}</h2>
+          <button (click)="restartGame()" ion-button full color="primary">{{'Restart' | translate}}</button>
+          <button (click)="backToTheMenu()" ion-button full color="primary">{{'Return to the quiz Menu' | translate}}</button>
+      </ion-slide>
+  </ion-slides>
 </ion-content>

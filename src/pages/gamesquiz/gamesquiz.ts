@@ -51,12 +51,20 @@ export class GamesQuizPage {
     ionViewDidLoad (){
     this.gamesList['findVulnerabilitiesPage'] = findVulnerabilitiesPage; //init the list of the games
     this.gamesList['phishOrNotPage'] = phishOrNotPage;
-    
+
     if (typeof this.navParams.get('data') !== 'undefined'){
         for (let i = 0; i < this.data[0].quizs.length; i++) {
             this.getQuizScore(this.data[0].quizs[i].storageKey).then(val => {
               this.data[0].quizs[i].score = val;
             });
+        }
+        for (let i = 0; i < this.data[0].games.length; i++) {
+          if(this.data[0].games[i].storageKey!=null)
+            this.getQuizScore(this.data[0].games[i].storageKey).then(val => {
+              this.data[0].games[i].score = val;
+            });
+          else
+            this.data[0].games[i].score = -1;            
         }
       }
     }
@@ -135,12 +143,17 @@ export class GamesQuizPage {
     * Load a game
     */
     openGame($event, game){
-      if(game.page!=null && game.game !=null ){
-        loadJson(game.game,this.domSanitizer).then(data => { //load the data in advance
+      if(game.page!=null && game.dataMenu !=null ){
+        loadJson(game.dataMenu,this.domSanitizer).then(data => { //load the data in advance
           data = loadRightLanguage(data,this.translate.currentLang);
           this.navCtrl.push(this.gamesList[game.page], {dataMenu:data});
         });
-      }
+      }else if (game.page!=null && game.dataGame !=null ){
+        loadJson(game.dataGame,this.domSanitizer).then(data => { //load the data in advance
+          data = loadRightLanguage(data,this.translate.currentLang);
+          this.navCtrl.push(this.gamesList[game.page], {dataGame:data});
+        });
     }
+  }
 
 }

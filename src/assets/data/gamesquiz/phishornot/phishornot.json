@@ -1,3 +1,37 @@
 [
-  
+  {
+    "language":"fr",
+    "version":0.1,
+    "storageKey":"gamePhishOrNot",
+    "items":[
+      {
+        "title":"Besoin d'aide",
+        "type":"email",
+        "initial":"<p><strong>from : </strong>Rémy Cases '&lt;r***@cases.lu&gt;'<br><strong>to : </strong>Tous les contacts<br><strong>Sujet : </strong>Help !!</p><br><p>Je vous écrit ce mail pour vous dire que je me suis blessé pendant mes vacances à Londres et ai besoin d'aide pour payer l'hôpital.</p><p>Svp, envoyez-moi 500$ au western union le plus proche de Big ben.</p><p>Je vous promets que je vous rembourserai avec intérêts dès que je serai rentré.</p><br>Rémi",
+        "explanation":"",
+        "legit":0
+      },
+      {
+        "title":"Besoin d'aide",
+        "type":"email",
+        "initial":"<p><strong>from : </strong>Rémy Cases '&lt;r***@cases.lu&gt;'<br><strong>to : </strong>Tous les contacts<br><strong>Sujet : </strong>Help !!</p><br><p>Je vous écrit ce mail pour vous dire que je me suis blessé pendant mes vacances à Londres et ai besoin d'aide pour payer l'hôpital.</p><p>Svp, envoyez-moi 500$ au western union le plus proche de Big ben.</p><p>Je vous promets que je vous rembourserai avec intérêts dès que je serai rentré.</p><br>Rémi",
+        "explanation":"",
+        "legit":0
+      }
+    ]
+  },
+  {
+    "language":"en",
+    "version":0.1,
+    "storageKey":"gamePhishOrNot",
+    "items":[
+      {
+        "title":"Need Help",
+        "type":"email",
+        "storageKey":"gameFindVulnerabilitiesCleanDesk",
+        "image":"url(../../../assets/data/gamesquiz/findvulnerabilities/games/icon/cleanDesk.png)",
+        "game":"../../../assets/data/gamesquiz/findvulnerabilities/games/cleanDesk.json"
+      }
+    ]
+  }
 ]

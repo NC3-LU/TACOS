@@ -26,7 +26,9 @@
     <ion-list>
       <button ion-item *ngFor="let game of data[0].games" (click)="openGame($event, game)">
         <ion-icon class="CASES-icon" [style.background-image]="game.icon" item-start></ion-icon>
-        {{game.title}}
+        {{game.title}}-- <ion-icon *ngIf="game.score==1" class="perfectScore" name="checkmark"></ion-icon>
+        <ion-icon *ngIf="game.score>=0.5 && game.score <1 " class="mediumScore" name="checkmark"></ion-icon>
+        <ion-icon *ngIf="game.score<0.5 && game.score != -1" class="badScore" name="checkmark"></ion-icon>
 
         <!-- {{quiz.score == -1?'':quiz.score}} -->
       </button>

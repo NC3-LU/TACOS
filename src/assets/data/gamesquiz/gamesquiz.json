@@ -32,15 +32,16 @@
         "title":"Trouver les vulnérabilités",
         "keywords":["vulnerabilities"],
         "icon":"url(../assets/imgs/t&t/12.png)",
-        "game":"../assets/data/gamesquiz/findvulnerabilities/findvulnerabilities.json",
+        "dataMenu":"../assets/data/gamesquiz/findvulnerabilities/findvulnerabilities.json",
         "page":"findVulnerabilitiesPage"
       },
       {
         "title":"Phishing ?",
         "keywords":["phishing"],
         "icon":"url(../assets/imgs/t&t/12.png)",
-        "game":"../assets/data/gamesquiz/phishornot/phishornot.json",
-        "page":"phishOrNotPage"
+        "dataGame":"../assets/data/gamesquiz/phishornot/phishornot.json",
+        "page":"phishOrNotPage",
+        "storageKey":"gamePhishOrNot"
       }
     ]
   },
