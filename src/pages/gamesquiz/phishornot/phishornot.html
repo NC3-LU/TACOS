@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title *ngIf="dataGame !=null">{{ 'Score' | translate }} {{this.gameScore}}/{{dataGame[0].vulnerabilities.length}} - {{ 'Find the vulnerabilities' | translate }} </ion-title>
+    <ion-title *ngIf="dataMenu !=null">{{ 'Find the vulnerabilities' | translate }} </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>

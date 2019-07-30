@@ -21,6 +21,8 @@ import { NewsPage } from '../pages/news/news';
 import { SettingsPage } from '../pages/settings/settings';
 import { AboutPage } from '../pages/about/about';
 import { findVulnerabilitiesPage } from '../pages/gamesquiz/findvulnerabilities/findvulnerabilities';
+import { phishOrNotPage } from '../pages/gamesquiz/phishornot/phishornot';
+
 
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -42,14 +44,15 @@ export function createTranslateLoader(http: HttpClient) {
     HomePage,
     TipsTricksPage,
     VideosPage,
-	GamesQuizPage,
-	PasswordCardPage,
+		GamesQuizPage,
+		PasswordCardPage,
     SpamPage,
     NewsPage,
-	SettingsPage,
+		SettingsPage,
     AboutPage,
-	findVulnerabilitiesPage,
-	CSWLPage,
+		findVulnerabilitiesPage,
+		phishOrNotPage,
+		CSWLPage,
     ExtractHostname,
     FormatPhoneNumber
   ],
@@ -79,7 +82,8 @@ export function createTranslateLoader(http: HttpClient) {
 		SettingsPage,
 		CSWLPage,
     AboutPage,
-		findVulnerabilitiesPage
+		findVulnerabilitiesPage,
+		phishOrNotPage
   ],
   providers: [
     StatusBar,

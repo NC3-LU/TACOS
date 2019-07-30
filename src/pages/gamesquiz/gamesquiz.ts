@@ -9,6 +9,7 @@ import { Storage } from '@ionic/storage';
 import { loadJson } from '../../lib/utils';
 import { loadRightLanguage } from '../../lib/utils';
 import { findVulnerabilitiesPage } from './findvulnerabilities/findvulnerabilities';
+import { phishOrNotPage } from './phishornot/phishornot';
 
 
 @Component({
@@ -49,7 +50,8 @@ export class GamesQuizPage {
   // init some var, this function is defined by ionic and called just after the constructor
     ionViewDidLoad (){
     this.gamesList['findVulnerabilitiesPage'] = findVulnerabilitiesPage; //init the list of the games
-
+    this.gamesList['phishOrNotPage'] = phishOrNotPage;
+    
     if (typeof this.navParams.get('data') !== 'undefined'){
         for (let i = 0; i < this.data[0].quizs.length; i++) {
             this.getQuizScore(this.data[0].quizs[i].storageKey).then(val => {
