@@ -5,6 +5,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
 import { loadJson, loadRightLanguage } from '../../../lib/utils';
+import { ToastController } from 'ionic-angular';
 
 import { GamesQuizPage } from './../gamesquiz';
 
@@ -15,7 +16,7 @@ import { GamesQuizPage } from './../gamesquiz';
 
 export class phishOrNotPage {
   dataGame : any;
-  answers : any; //answers and if they are found 1=found
+  answerCorrect : boolean;
   gameScore=0; //score of the current game
 
   @ViewChild('gameSlides') gameSlides: any;
@@ -27,6 +28,7 @@ export class phishOrNotPage {
     private translate: TranslateService,
     private storage: Storage,
     private domSanitizer: DomSanitizer,
+    private toastCtrl: ToastController
      ) {
         if (typeof navParams.get('dataGame') !== 'undefined') { //load the game
          this.dataGame = navParams.get('dataGame');
@@ -46,13 +48,14 @@ export class phishOrNotPage {
     */
     choosedAnswer(answer, index){
       this.gameSlides.lockSwipeToPrev(true); //prevent to go back
+      this.answerCorrect = false;
       if(this.dataGame[0].items[index].legit==answer){
         this.gameScore++;
+        this.answerCorrect = true;
       }
       if(this.dataGame[0].items.length -1 ==index){
-        this.storage.set(this.dataGame[0].storageKey,this.gameScore/(index+1)); // save the global score of the quiz
+        this.storage.set(this.dataGame[0].storageKey,this.gameScore/(index+1)); // save the global score of the quiz (last slide)
       }
-
         this.gameSlides.slideNext();
     }
 
@@ -61,6 +64,28 @@ export class phishOrNotPage {
     */
     nextSlide(){
       this.gameSlides.slideNext();
+    }
+
+    /*
+    * Show the explanation
+    * $event : the click prevent
+    * index : index of the slide
+    */
+    showExplanation($event,index){
+      console.log($event)
+      if($event.target.className.indexOf("explanation")==0){
+        if (this.dataGame[0].items[index].explanations[$event.target.className] !=null )
+          {
+            let toast = this.toastCtrl.create({
+            message: this.dataGame[0].items[index].explanations[$event.target.className],
+            duration: 10000, //10 seconds of display
+            position: 'top',
+            showCloseButton : true,
+            closeButtonText : 'ok'
+          });
+          toast.present();
+        }
+      }
     }
 
     /*

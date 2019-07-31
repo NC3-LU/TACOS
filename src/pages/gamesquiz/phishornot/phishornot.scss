@@ -4,4 +4,21 @@ page-phishornot {
     text-align: left;
   }
 
+  .email [class^="explanation"]{ //class starting by explanation
+    color : red;
+  }
+
+  .correctAnswer{
+    background-color:#bdeb34;
+  }
+
+  .badAnswer{
+    background-color:#eb3434;
+  }
+
+  .correctAnswer, .badAnswer{
+    padding: 10px;
+    border-radius: 25px;
+  }
+
 }
