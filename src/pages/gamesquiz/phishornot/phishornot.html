@@ -8,10 +8,13 @@
 </ion-header>
 
 <ion-content>
-  <ion-slides #gameSlides>
+  <ion-slides #gameSlides zoom>
     <ng-container *ngFor="let item of dataGame[0].items; let j = index;" >
       <ion-slide>
-          <p [class]="item.type" [innerHTML] ="item.initial"><p>
+          <p *ngIf="item.type=='email'" [class]="item.type" [innerHTML] ="item.initial"><p>
+
+          <div *ngIf="item.type=='image'" class="swiper-zoom-container">
+            <img [src]="item.initial"> </div>
           <p>
             <button ion-button round color="secondary" (click)="choosedAnswer(1,j)">{{ 'Legitimate' | translate}}</button>
             <button ion-button round color="danger" (click)="choosedAnswer(0,j)">{{ 'Phishing' | translate}}</button>
@@ -20,7 +23,21 @@
       <ion-slide *ngIf="item.legit==0"> <!-- Display solution if it's a phish-->
           <p class="correctAnswer" *ngIf="answerCorrect">{{ 'Yes, it s a phish'| translate }} - {{'click on the red text to see the suspisious elements'| translate }}</p>
           <p class="badAnswer" *ngIf="!answerCorrect">{{ 'Unfortunately, it s a phish'| translate }} - {{'click on the red text to see the suspisious elements'| translate }}</p>
-          <p [class]="item.type" [innerHTML] ="item.explanation" (click)=showExplanation($event,j) >
+
+          <p *ngIf="item.type=='email'" [class]="item.type" [innerHTML] ="item.explanation" (click)="showExplanation($event,j)" ></p>
+
+          <div *ngIf="item.type=='image'" class="swiper-zoom-container">
+            <ion-list no-lines>
+              <ion-item *ngFor="let expl of item.explanations">
+                <button ion-button round color="danger" (click)="showExplanationForImage($event,expl[1])" > {{ expl[0] }}</button>
+              </ion-item>
+            </ion-list>
+            <img [src]="item.explanation" >
+          </div>
+
+
+
+
           <p>
             <button ion-button round color="primary" (click)="nextSlide()">{{ 'Next' | translate}}</button>
           </p>

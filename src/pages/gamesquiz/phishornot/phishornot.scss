@@ -21,4 +21,17 @@ page-phishornot {
     border-radius: 25px;
   }
 
+  ion-list{
+    z-index: 2;
+    position: absolute;
+    left: 0%;
+    top: 30%;
+    margin: auto;
+    ion-item {
+
+      button{
+
+      }
+    }
+  }
 }

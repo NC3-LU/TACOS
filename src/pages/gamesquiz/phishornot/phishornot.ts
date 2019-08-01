@@ -89,6 +89,22 @@ export class phishOrNotPage {
     }
 
     /*
+    * Show the explanation for image
+    * $event : the click prevent
+    * index : index of the slide
+    */
+    showExplanationForImage($event,message){
+      let toast = this.toastCtrl.create({
+      message: message,
+      duration: 10000, //10 seconds of display
+      position: 'top',
+      showCloseButton : true,
+      closeButtonText : 'ok'
+      });
+      toast.present();
+    }
+
+    /*
     * Restart the game
     */
     restartGame() {
@@ -107,5 +123,12 @@ export class phishOrNotPage {
         this.navCtrl.setRoot(GamesQuizPage, {data:data});
       });
     }
+
+    // for debug to get the position of the point
+      getCoordinates(event)
+      {
+        console.log(event);
+        console.log(event.layerX+','+event.layerY);
+      }
 
 }

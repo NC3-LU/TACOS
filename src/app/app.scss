@@ -57,3 +57,7 @@ ion-navbar{
 ion-slide{
     height: auto;
 }
+
+.menu-inner, ion-item{
+  background-color: transparent !important;
+}

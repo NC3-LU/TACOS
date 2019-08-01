@@ -5,6 +5,19 @@
     "storageKey":"gamePhishOrNot",
     "items":[
       {
+        "title":"Google log-in",
+        "type":"image",
+        "initial":"../../../assets/data/gamesquiz/phishornot/google_fr.png",
+        "explanation":"../../../assets/data/gamesquiz/phishornot/google_fr_explanation.png",
+        "explanations":[
+          ["1", "Le site n'a pas de https, il n'est donc pas sécurisé."],
+          ["2", "Le nom de domaine n'est pas le bon 'gooogle'."],
+          ["3", "Le logo n'est pas celui actuellement utilisé par Google."],
+          ["4", "Une faute d'orthographe s'est glisée dans la page."]
+        ],
+        "legit":0
+      },
+      {
         "title":"Besoin d'aide",
         "type":"email",
         "initial":"<p><strong>from : </strong>Rémy Cases '&lt;r***@cases.lu&gt;'<br><strong>to : </strong>Tous les contacts<br><strong>Sujet : </strong>Help !!</p><br><p>Je vous écrit ce mail pour vous dire que je me suis blessé pendant mes vacances à Londres et ai besoin d'aide pour payer l'hôpital.</p><p>Svp, envoyez-moi 500$ au western union le plus proche de Big ben.</p><p>Je vous promets que je vous rembourserai avec intérêts dès que je serai rentré.</p><br>Rémi",
@@ -24,6 +37,19 @@
     "version":0.1,
     "storageKey":"gamePhishOrNot",
     "items":[
+      {
+        "title":"Google log-in",
+        "type":"image",
+        "initial":"../../../assets/data/gamesquiz/phishornot/google_fr.png",
+        "explanation":"../../../assets/data/gamesquiz/phishornot/google_fr_explanation.png",
+        "explanations":[
+          ["1", "No HTTPS on website, no security."],
+          ["2", "The domain name is not the right 'gooogle'."],
+          ["3", "The logo is not the one actually uses by Google."],
+          ["4", "A misspelling is in the page."]
+        ],
+        "legit":0
+      },
       {
       	"title": "Need help",
       	"type": "email",
