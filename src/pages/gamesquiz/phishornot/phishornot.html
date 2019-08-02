@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-slides #gameSlides zoom>
+  <ion-slides #gameSlides zoom [options]="{onlyExternal: false}">
     <ng-container *ngFor="let item of dataGame[0].items; let j = index;" >
       <ion-slide>
           <p *ngIf="item.type=='email'" [class]="item.type" [innerHTML] ="item.initial"><p>

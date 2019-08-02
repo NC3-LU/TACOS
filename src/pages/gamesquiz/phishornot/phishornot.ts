@@ -32,13 +32,14 @@ export class phishOrNotPage {
      ) {
         if (typeof navParams.get('dataGame') !== 'undefined') { //load the game
          this.dataGame = navParams.get('dataGame');
-         console.log(this.dataGame)
        }
+
   }
 
 // init some var, this function is defined by ionic and called just after the constructor
   ionViewWillEnter (){
-
+  this.gameSlides.lockSwipeToNext(true);
+  this.gameSlides.lockSwipeToPrev(true); //prevent to go back
   }
 
     /*
@@ -48,6 +49,7 @@ export class phishOrNotPage {
     */
     choosedAnswer(answer, index){
       this.gameSlides.lockSwipeToPrev(true); //prevent to go back
+      this.gameSlides.lockSwipeToNext(false);
       this.answerCorrect = false;
       if(this.dataGame[0].items[index].legit==answer){
         this.gameScore++;
@@ -57,13 +59,16 @@ export class phishOrNotPage {
         this.storage.set(this.dataGame[0].storageKey,this.gameScore/(index+1)); // save the global score of the quiz (last slide)
       }
         this.gameSlides.slideNext();
+        this.gameSlides.lockSwipeToNext(true);
     }
 
     /*
     * Go to next slide
     */
     nextSlide(){
+      this.gameSlides.lockSwipeToNext(false);
       this.gameSlides.slideNext();
+      this.gameSlides.lockSwipeToNext(true);
     }
 
     /*
