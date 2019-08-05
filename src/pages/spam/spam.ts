@@ -58,17 +58,6 @@ export class SpamPage {
                       Validators.required
                 ]))
         });
-
-        //this.refreshSpamList();
-    }
-
-
-    /*
-    * Refresh the list of spams
-    */
-    refreshSpamList() {
-        // Initialization of the filters
-
     }
 
 
@@ -114,18 +103,21 @@ export class SpamPage {
     onSearchSpamSubmit() {
         let phoneNumber = this.formSearchSpam.get('phoneNumber').value;
 
-        this.utils.searchSpam(phoneNumber)
-        .then((occurences)=>{
-            if (occurences != 0) {
-                this.spamNumbers = [{
-                    'number': phoneNumber,
-                    'date': '',
-                    'occurences': occurences
-                }];
-            } else {
-                this.spamNumbers = [];
-            }
-        })
+        if (phoneNumber != '') {
+            this.utils.searchSpam(phoneNumber)
+            .then((occurences)=>{
+                if (occurences != 0) {
+                    this.spamNumbers = [{
+                        'number': phoneNumber,
+                        'date': '',
+                        'occurences': occurences
+                    }];
+                } else {
+                    this.spamNumbers = [];
+                }
+            })
+        }
+
     }
 
 
@@ -147,7 +139,7 @@ export class SpamPage {
                       });
                       this.utils.reportSpam(phoneNumber, 'other').then(()=>{
                           thankingToast.present();
-                          //this.refreshSpamList();
+                          this.onSearchSpamSubmit();
                       });
                     }
               },
@@ -164,15 +156,15 @@ export class SpamPage {
     }
 
     /*
-    *
+    * Display a help box in order to explain how to format a phone number.
     */
     onAskHelp() {
         let alert = this.alertCtrl.create({
           title: 'Help',
-          subTitle: 'International phone number formatting:<hr />' +
-                    '[+][country code][area code][local phone number]<hr />' +
+          subTitle: 'International phone number formatting (E.164):<hr />' +
+                    '<code>[+][country code][area code][local phone number]</code><hr />' +
                     'Example:<hr />' +
-                    '+352 6x1 xxx xxx',
+                    '<code>+352 6x1 xxx xxx</code>',
           buttons: [
               {
                   text: 'OK',
