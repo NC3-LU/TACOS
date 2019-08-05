@@ -48,7 +48,7 @@
                 </ion-card>
                 <hr />
             </div>
-            <h4>{{ 'Check a phone number' | translate }}</h4>
+            <h2>{{ 'Check a phone number' | translate }}</h2>
             <form [formGroup]="formSearchSpam" (ngSubmit)="onSearchSpamSubmit()">
                 <ion-item>
                     <ion-input inputmode="tel" formControlName="phoneNumber" type="text" placeholder="{{ 'Phone number with country code' | translate }}" required></ion-input>
@@ -57,6 +57,12 @@
                     <button ion-button type="submit" [disabled]="!formSearchSpam.valid" block>{{ 'Search' | translate }}</button>
                 </ion-item>
             </form>
+            <!-- <button ion-button icon-start (click)="onAskHelp()">
+                <ion-icon name="help"></ion-icon>
+            </button> -->
+            <ion-item (click)="onAskHelp()">
+                <button ion-button><ion-icon name="help"></ion-icon></button>
+            </ion-item>
         </ion-list>
 
         <ion-list *ngSwitchCase="'reportSpam'">

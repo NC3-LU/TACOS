@@ -163,6 +163,26 @@ export class SpamPage {
         alert.present();
     }
 
+    /*
+    *
+    */
+    onAskHelp() {
+        let alert = this.alertCtrl.create({
+          title: 'Help',
+          subTitle: 'International phone number formatting:<hr />' +
+                    '[+][country code][area code][local phone number]<hr />' +
+                    'Example:<hr />' +
+                    '+352 6x1 xxx xxx',
+          buttons: [
+              {
+                  text: 'OK',
+                  role: 'ok'
+              }
+          ]
+        });
+        alert.present();
+    }
+
 
     /*
     * Manage loading
