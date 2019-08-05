@@ -94,6 +94,9 @@ msgstr ""
 msgid "Phishing"
 msgstr ""
 
+msgid "Phone number with country code"
+msgstr ""
+
 msgid "Quiz"
 msgstr "Quiz"
 

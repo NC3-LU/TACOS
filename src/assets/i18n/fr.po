@@ -84,7 +84,7 @@ msgid "Next"
 msgstr ""
 
 msgid "Numbers reported as spam"
-msgstr "Nméros signalés comme spam"
+msgstr "Numéros signalés comme spam"
 
 msgid "OK"
 msgstr "D'accord"
@@ -100,6 +100,9 @@ msgstr ""
 
 msgid "Phishing"
 msgstr ""
+
+msgid "Phone number with country code"
+msgstr "Numéro de téléphone avec code pays"
 
 msgid "Quiz"
 msgstr "Quiz"
