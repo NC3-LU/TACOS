@@ -39,11 +39,11 @@ export class MyApp {
       this.initializeApp();
       // used for an example of ngFor and navigation
       this.translate.stream(['Home',
-                            'Spam signal',
                             'Tips and Tricks',
                             'Videos',
                             'Games and Quiz',
                             'Password Card',
+                            'Spam signal',
                             'News',
                             'Settings',
                             'CSWL',
@@ -51,13 +51,13 @@ export class MyApp {
                     .subscribe(translations => {
         this.pages = [
           { title: translations['Home'], component: HomePage, icon: 'home'},
-          { title: translations['Spam signal'], component: SpamPage, icon: 'call'},
           { title: translations['Tips and Tricks'], component: TipsTricksPage, icon: 'bulb', data:'../assets/data/tipstricks/tipstricks.json'},
           { title: translations['Videos'], component: VideosPage, icon: 'videocam'},
           { title: translations['Games and Quiz'], component: GamesQuizPage, icon: 'football', data:'../assets/data/gamesquiz/gamesquiz.json'},
           { title: translations['Password Card'], component: PasswordCardPage, icon: 'card'},
+          { title: translations['Spam signal'], component: SpamPage, icon: 'call'},
           { title: translations['News'], component: NewsPage, icon: 'paper'},
-          { title: translations['Settings'], component: SettingsPage, icon: 'settings' },
+          { title: translations['Settings'], component: SettingsPage, icon: 'settings'},
           { title: translations['About'], component: AboutPage, icon: 'information-circle'},
           { title: translations['CSWL'], component: CSWLPage, icon: 'information-circle'},
         ];

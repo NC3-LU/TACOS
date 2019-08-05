@@ -51,10 +51,10 @@
             <h4>{{ 'Check a phone number' | translate }}</h4>
             <form [formGroup]="formSearchSpam" (ngSubmit)="onSearchSpamSubmit()">
                 <ion-item>
-                    <ion-input inputmode="tel" formControlName="phoneNumber" type="text" placeholder="Phone number with country code" required></ion-input>
+                    <ion-input inputmode="tel" formControlName="phoneNumber" type="text" placeholder="{{ 'Phone number with country code' | translate }}" required></ion-input>
                 </ion-item>
                 <ion-item>
-                    <button ion-button type="submit" [disabled]="!formSearchSpam.valid" block>Search</button>
+                    <button ion-button type="submit" [disabled]="!formSearchSpam.valid" block>{{ 'Search' | translate }}</button>
                 </ion-item>
             </form>
         </ion-list>
@@ -63,7 +63,7 @@
             <h2>{{ 'Report a spam' | translate }}</h2>
             <form [formGroup]="formSpam" (ngSubmit)="onSpamSubmit()">
                 <ion-item>
-                    <ion-input inputmode="tel" formControlName="phoneNumber" type="text" placeholder="Phone number with country code" required></ion-input>
+                    <ion-input inputmode="tel" formControlName="phoneNumber" type="text" placeholder="{{ 'Phone number with country code' | translate }}" required></ion-input>
                 </ion-item>
                 <br />
                 <ion-item>
@@ -78,7 +78,7 @@
                     </ion-select>
                 </ion-item>
                 <ion-item>
-                    <button ion-button type="submit" [disabled]="!formSpam.valid" block>Report</button>
+                    <button ion-button type="submit" [disabled]="!formSpam.valid" block>{{ 'Report' | translate }}</button>
                 </ion-item>
             </form>
 
