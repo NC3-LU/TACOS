@@ -3,13 +3,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: en\n"
-"X-Generator: Poedit 2.0.6\n"
 
 msgid "About"
 msgstr "About"
@@ -20,8 +13,11 @@ msgstr "Alphanumeric and Special Characters"
 msgid "Article(s) found:"
 msgstr "Article(s) found:"
 
-msgid "Call history"
-msgstr "Call history"
+msgid "CSWL"
+msgstr ""
+
+msgid "Calendar"
+msgstr ""
 
 msgid "Cancel"
 msgstr "Cancel"
@@ -29,14 +25,17 @@ msgstr "Cancel"
 msgid "Card Name"
 msgstr "Card Name"
 
+msgid "Check"
+msgstr ""
+
+msgid "Check a phone number"
+msgstr ""
+
 msgid "Confirm delete this password card?"
 msgstr "Confirm delete this password card?"
 
 msgid "Delete confirmation"
 msgstr "Delete confirmation"
-
-msgid "E-mail"
-msgstr "E-mail"
 
 msgid "Final Score"
 msgstr "Final Score"
@@ -59,11 +58,11 @@ msgstr "Home"
 msgid "How to generate your passwords?"
 msgstr "How to generate your passwords?"
 
-msgid "Incoming calls reported as spam"
-msgstr "Incoming calls reported as spam"
-
 msgid "Language"
 msgstr "Language"
+
+msgid "Legitimate"
+msgstr ""
 
 msgid "List of Cards"
 msgstr "List of Cards"
@@ -71,8 +70,14 @@ msgstr "List of Cards"
 msgid "New Card"
 msgstr "New Card"
 
-msgid "No spam detected"
-msgstr "No spam detected"
+msgid "News"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Numbers reported as spam"
+msgstr ""
 
 msgid "OK"
 msgstr "OK"
@@ -80,20 +85,17 @@ msgstr "OK"
 msgid "Only Alphanumeric"
 msgstr "Only Alphanumeric"
 
-msgid "Password"
-msgstr "Password"
-
 msgid "Password Card"
 msgstr "Password Card"
 
-msgid "Physical Security"
-msgstr "Physical Security"
+msgid "Phish or not ?"
+msgstr ""
+
+msgid "Phishing"
+msgstr ""
 
 msgid "Quiz"
 msgstr "Quiz"
-
-msgid "Recently reported"
-msgstr "Recently reported"
 
 msgid "Remember your choices"
 msgstr "Remember your choices"
@@ -113,6 +115,9 @@ msgstr "Restart"
 msgid "Return to the quiz Menu"
 msgstr "Return to the quiz Menu"
 
+msgid "Score"
+msgstr ""
+
 msgid "Search"
 msgstr "Search"
 
@@ -130,6 +135,9 @@ msgstr "Select direction"
 
 msgid "Settings"
 msgstr "Settings"
+
+msgid "Sorry, but it s legitimate"
+msgstr ""
 
 msgid "Spam signal"
 msgstr "Spam signal"
@@ -149,14 +157,23 @@ msgstr "Step 4"
 msgid "Tips and Tricks"
 msgstr "Tips and Tricks"
 
+msgid "Type of spam"
+msgstr ""
+
+msgid "Unfortunately, it s a phish"
+msgstr ""
+
 msgid "Videos"
 msgstr "Videos"
 
-msgid "Waste Management"
-msgstr "Waste Management"
+msgid "Yes, it s a phish"
+msgstr ""
 
-msgid "Web"
-msgstr "Web"
+msgid "Yes, it s legitimate"
+msgstr ""
+
+msgid "click on the red text to see the suspisious elements"
+msgstr ""
 
 msgid "times"
 msgstr "times"
