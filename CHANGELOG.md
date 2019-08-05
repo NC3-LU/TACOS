@@ -6,6 +6,8 @@ TACOS Changelog
 ### New
 
 - [games-and-quiz] a new  game, 'Phishing ?', has been added;
+- [spam-signal] the permission READ_CALL_LOG for Android is no more required
+  since the dependency to cordova-plugin-calllog has been removed;
 
 ### Enhancement
 
