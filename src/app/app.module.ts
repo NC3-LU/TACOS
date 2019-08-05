@@ -26,7 +26,6 @@ import { phishOrNotPage } from '../pages/gamesquiz/phishornot/phishornot';
 
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { CallLog } from '@ionic-native/call-log/ngx';
 import { AppVersion } from '@ionic-native/app-version/ngx';
 import { File } from '@ionic-native/file/ngx';
 
@@ -88,7 +87,6 @@ export function createTranslateLoader(http: HttpClient) {
   providers: [
     StatusBar,
     SplashScreen,
-    CallLog,
 		InAppBrowser,
 		File,
     LanguageService,
