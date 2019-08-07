@@ -36,22 +36,22 @@ export class HomePage {
     private domSanitizer: DomSanitizer,
     private file: File) {
       this.translate.stream(['Home',
-                            'Spam signal',
                             'Tips and Tricks',
                             'Videos',
                             'Games and Quiz',
                             'Password Card',
+                            'Spam signal',
                             'News',
                             'Settings',
                             'Cybersecurity Week 2019',
                             'Calendar'])
                     .subscribe(translations => {
         this.pages = [
-          { title: translations['Spam signal'], component: SpamPage, img: 'url(../assets/imgs/t&t/14.png)'},
           { title: translations['Tips and Tricks'], component: TipsTricksPage, img: 'url(../assets/imgs/t&t/17.png)', data:'../assets/data/tipstricks/tipstricks.json'},
           { title: translations['Videos'], component: VideosPage, img: 'url(../assets/imgs/t&t/7.png)'},
           { title: translations['Games and Quiz'], component: GamesQuizPage, img: 'url(../assets/imgs/t&t/11.png)', data:'../assets/data/gamesquiz/gamesquiz.json'},
           { title: translations['Password Card'], component: PasswordCardPage, img: 'url(../assets/imgs/t&t/12.png)'},
+          { title: translations['Spam signal'], component: SpamPage, img: 'url(../assets/imgs/t&t/14.png)'},
           { title: translations['News'], component: NewsPage, img: 'url(../assets/imgs/t&t/16.png)'},
           { title: translations['Settings'], component: SettingsPage, img: 'url(../assets/imgs/t&t/9.png)' }
         ];

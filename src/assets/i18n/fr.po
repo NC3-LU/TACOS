@@ -9,7 +9,7 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.1.1\n"
 
 msgid "About"
 msgstr "À propos"
@@ -70,9 +70,6 @@ msgstr "Accueil"
 
 msgid "How to generate your passwords?"
 msgstr "Comment générer vos mots de passe ?"
-
-msgid "Incoming calls reported as spam"
-msgstr "Appels entrants signalés comme spam"
 
 msgid "Language"
 msgstr "Langue"
