@@ -27,6 +27,8 @@ export class HomePage {
   jsonFiles : any = null;
   searchResult : any = [];
   searching : any = false;
+  today:any = new Date();
+  dateEndCSWL: any = new Date(2019, 10, 26);
 
   constructor(
     public navCtrl: NavController,
@@ -41,6 +43,7 @@ export class HomePage {
                             'Password Card',
                             'News',
                             'Settings',
+                            'Cybersecurity Week 2019',
                             'Calendar'])
                     .subscribe(translations => {
         this.pages = [
@@ -50,9 +53,12 @@ export class HomePage {
           { title: translations['Games and Quiz'], component: GamesQuizPage, img: 'url(../assets/imgs/t&t/11.png)', data:'../assets/data/gamesquiz/gamesquiz.json'},
           { title: translations['Password Card'], component: PasswordCardPage, img: 'url(../assets/imgs/t&t/12.png)'},
           { title: translations['News'], component: NewsPage, img: 'url(../assets/imgs/t&t/16.png)'},
-          { title: translations['Settings'], component: SettingsPage, img: 'url(../assets/imgs/t&t/9.png)' },
-          { title: translations['CSWL'], component: CSWLPage, img: 'url(../assets/imgs/t&t/16.png)'}
+          { title: translations['Settings'], component: SettingsPage, img: 'url(../assets/imgs/t&t/9.png)' }
         ];
+
+        if (this.today.getTime() < this.dateEndCSWL.getTime()) {
+            this.pages.splice(5,0,{ title: translations['Cybersecurity Week 2019'], component: CSWLPage, img: 'url(../assets/imgs/t&t/20.png)'});
+        }
       })
   }
 

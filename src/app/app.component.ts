@@ -26,8 +26,9 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
-
   pages: any;
+  today:any = new Date();
+  dateEndCSWL: any = new Date(2019,11,26);
 
   constructor(
     public platform: Platform,
@@ -46,7 +47,7 @@ export class MyApp {
                             'Password Card',
                             'News',
                             'Settings',
-                            'CSWL',
+                            'Cybersecurity Week 2019',
                             'About'])
                     .subscribe(translations => {
         this.pages = [
@@ -58,9 +59,12 @@ export class MyApp {
           { title: translations['Password Card'], component: PasswordCardPage, icon: 'card'},
           { title: translations['News'], component: NewsPage, icon: 'paper'},
           { title: translations['Settings'], component: SettingsPage, icon: 'settings' },
-          { title: translations['About'], component: AboutPage, icon: 'information-circle'},
-          { title: translations['CSWL'], component: CSWLPage, icon: 'information-circle'},
+          { title: translations['About'], component: AboutPage, icon: 'information-circle'}
         ];
+
+        if (this.today.getTime() < this.dateEndCSWL.getTime()) {
+            this.pages.splice(6,0,{ title: translations['Cybersecurity Week 2019'], component: CSWLPage, icon: 'calendar'});
+        }
       })
     }
 
