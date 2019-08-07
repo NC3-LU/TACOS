@@ -39,24 +39,31 @@ export class CSWLPage {
                         difference: 0
                     };
 
+
+                    if (eventData.timeStart == "0:00" && eventData.timeEnd == "0:00") {
+                      eventData.allDay= true;
+                      eventData.end.setDate(ev.end.getDate() - 1);
+                    }
+
                     if (ev.end.getDate() - ev.start.getDate() > 0){
                       eventData.difference = ev.end.getDate() - ev.start.getDate();
                     }
-                    if (eventData.timeStart == "0:00" && eventData.timeEnd == "0:00") {
-                      eventData.allDay= true;
-                    }
+
                   if (list[eventData.date] === undefined) {
                       list[eventData.date] = [];
                   }
-                  if (eventData.difference > 0 && eventData.allDay == false ) {
+                  if (eventData.difference > 0) {
+                  // if (eventData.difference > 0 && eventData.allDay == false ) {
                     for (let i = 0; i <= eventData.difference ; i++) {
                       if (list[eventData.date + i] === undefined) {
                         list[eventData.date + i] = [];
                       }
                       let copyEvent = Object.assign({},eventData);
-                      copyEvent.timeEnd  = (i < eventData.difference ? ">>" : eventData.timeEnd);
-                      copyEvent.timeStart  = (i == 0 ? eventData.timeStart : ">>");
-                      copyEvent.allDay = (copyEvent.timeStart == ">>" && copyEvent.timeEnd  == ">>" ? true : false);
+                      if (!eventData.allDay) {
+                        copyEvent.timeEnd  = (i < eventData.difference ? ">>" : eventData.timeEnd);
+                        copyEvent.timeStart  = (i == 0 ? eventData.timeStart : ">>");
+                        copyEvent.allDay = (copyEvent.timeStart == ">>" && copyEvent.timeEnd  == ">>" ? true : false);
+                      }
                       list[eventData.date + i].push(copyEvent);
                     }
                   }else{
