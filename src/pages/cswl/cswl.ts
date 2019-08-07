@@ -29,7 +29,7 @@ export class CSWLPage {
                   let eventData = {
                         summary: (ev.summary),
                         location: (ev.location),
-                        url:(ev.url),
+                        url:'https://www.cybersecurityweek.lu/events/',
                         date: ev.start.getDate(),
                         start: ev.start,
                         end: ev.end,
