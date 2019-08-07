@@ -28,6 +28,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { AppVersion } from '@ionic-native/app-version/ngx';
 import { File } from '@ionic-native/file/ngx';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 import { ExtractHostname } from './pipes/extract-hostname';
 import { FormatPhoneNumber } from './pipes/format-phone-number';
@@ -91,6 +92,7 @@ export function createTranslateLoader(http: HttpClient) {
 		File,
     LanguageService,
     AppVersion,
+    SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA]
