@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import ical from 'ical';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'page-cswl',
@@ -10,10 +11,9 @@ export class CSWLPage {
     events:any;
     shownGroup:any = null;
 
-    constructor() {
-
-
-
+    constructor(
+      private iab: InAppBrowser
+    ) {
       getEvents().then((data)=> {
         this.events = data;
       });
@@ -92,4 +92,8 @@ export class CSWLPage {
     isGroupShown(group) {
       return this.shownGroup === group;
     };
+
+    openExternalLink(item){
+      this.iab.create(item,'_blank','yes');
+    }
 }
