@@ -14,14 +14,23 @@ msgstr ""
 msgid "About"
 msgstr "À propos"
 
+msgid "All day"
+msgstr "Toute la journée"
+
 msgid "Alphanumeric and Special Characters"
 msgstr "Caractères alphanumériques et spéciaux"
 
 msgid "Article(s) found:"
 msgstr "Article(s) trouvé(s) :"
 
+msgid "CSWL 2019 Agenda"
+msgstr "CSWL 2019 Agenda"
+
+msgid "Calendar"
+msgstr "Calendrier"
+
 msgid "Call history"
-msgstr ""
+msgstr "Historique des appels"
 
 msgid "Cancel"
 msgstr "Annuler"
@@ -29,14 +38,17 @@ msgstr "Annuler"
 msgid "Card Name"
 msgstr "Nom de la carte"
 
+msgid "Check a phone number"
+msgstr "Vérifier un numéro de téléphone"
+
 msgid "Confirm delete this password card?"
 msgstr "Confirmez l'effacement de cette carte de mot de passe ?"
 
+msgid "Cybersecurity Week 2019"
+msgstr "Cybersecurity Week 2019"
+
 msgid "Delete confirmation"
 msgstr "Confirmation de suppression"
-
-msgid "E-mail"
-msgstr "Courrier électronique"
 
 msgid "Final Score"
 msgstr "Score Final"
@@ -65,14 +77,23 @@ msgstr "Appels entrants signalés comme spam"
 msgid "Language"
 msgstr "Langue"
 
+msgid "Legitimate"
+msgstr ""
+
 msgid "List of Cards"
 msgstr "Liste des cartes"
 
 msgid "New Card"
 msgstr "Nouvelle carte"
 
-msgid "No spam detected"
-msgstr "Aucun spam détecté"
+msgid "News"
+msgstr "Actualités"
+
+msgid "Next"
+msgstr "Suivant"
+
+msgid "No spam detected in your call log"
+msgstr ""
 
 msgid "OK"
 msgstr "D'accord"
@@ -80,20 +101,17 @@ msgstr "D'accord"
 msgid "Only Alphanumeric"
 msgstr "Uniquement alphanumérique"
 
-msgid "Password"
-msgstr "Mot de passe"
-
 msgid "Password Card"
 msgstr "Carte de mot de passe"
 
-msgid "Physical Security"
-msgstr "Sécurité physique"
+msgid "Phish or not ?"
+msgstr ""
+
+msgid "Phishing"
+msgstr ""
 
 msgid "Quiz"
 msgstr "Quiz"
-
-msgid "Recently reported"
-msgstr ""
 
 msgid "Remember your choices"
 msgstr "Souvenez-vous de vos choix"
@@ -113,6 +131,9 @@ msgstr "Recommencez"
 msgid "Return to the quiz Menu"
 msgstr "Retourner au menu Jeux et Quiz"
 
+msgid "Score"
+msgstr ""
+
 msgid "Search"
 msgstr "Rechercher"
 
@@ -130,6 +151,9 @@ msgstr "Sélectionnez une direction"
 
 msgid "Settings"
 msgstr "Paramètres"
+
+msgid "Sorry, but it s legitimate"
+msgstr ""
 
 msgid "Spam signal"
 msgstr "Spam signal"
@@ -149,14 +173,23 @@ msgstr "Étape 4"
 msgid "Tips and Tricks"
 msgstr "Trucs et astuces"
 
+msgid "Type of spam"
+msgstr ""
+
+msgid "Unfortunately, it s a phish"
+msgstr ""
+
 msgid "Videos"
 msgstr "Vidéos"
 
-msgid "Waste Management"
-msgstr "Mise au rebut"
+msgid "Yes, it s a phish"
+msgstr ""
 
-msgid "Web"
-msgstr "Web"
+msgid "Yes, it s legitimate"
+msgstr ""
+
+msgid "click on the red text to see the suspisious elements"
+msgstr ""
 
 msgid "times"
 msgstr "fois"
