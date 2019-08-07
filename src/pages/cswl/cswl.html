@@ -3,11 +3,28 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>CSWL</ion-title>
+    <ion-title>{{'CSWL 2019 Agenda' | translate}}</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-
-
+<ion-content padding>
+  <ion-list >
+      <ion-item lines="none" *ngFor="let event of events | keyvalue; let i=index" (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+      <h2 class="day"><ion-icon color="success" item-left [name]="isGroupShown(i) ? 'remove' : 'add'"></ion-icon>{{event.key }} Oct 2019 </h2>
+      <div *ngIf="isGroupShown(i)">
+          <ion-grid *ngFor="let ev of event.value">
+            <ion-row >
+              <ion-col text-wrap> {{ ev.allDay  ?  ('All day' | translate) : ev.timeStart}}</ion-col>
+              <ion-col class="summary" text-wrap>{{ ev.summary }}</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="timeEnd"> {{ ev.allDay  ?  '' : ev.timeEnd }}</ion-col>
+              <ion-col class="location" text-wrap>
+                {{ ev.location }} {{today}}
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </ion-item>
+  </ion-list>
 </ion-content>

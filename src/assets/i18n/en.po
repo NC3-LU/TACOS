@@ -7,17 +7,23 @@ msgstr ""
 msgid "About"
 msgstr "About"
 
+msgid "All day"
+msgstr "All day"
+
 msgid "Alphanumeric and Special Characters"
 msgstr "Alphanumeric and Special Characters"
 
 msgid "Article(s) found:"
 msgstr "Article(s) found:"
 
-msgid "CSWL"
-msgstr ""
+msgid "CSWL 2019 Agenda"
+msgstr "CSWL 2019 Agenda"
 
 msgid "Calendar"
-msgstr ""
+msgstr "Calendar"
+
+msgid "Call history"
+msgstr "Call history"
 
 msgid "Cancel"
 msgstr "Cancel"
@@ -25,14 +31,14 @@ msgstr "Cancel"
 msgid "Card Name"
 msgstr "Card Name"
 
-msgid "Check"
-msgstr ""
-
 msgid "Check a phone number"
-msgstr ""
+msgstr "Check a phone number"
 
 msgid "Confirm delete this password card?"
 msgstr "Confirm delete this password card?"
+
+msgid "Cybersecurity Week 2019"
+msgstr "Cybersecurity Week 2019"
 
 msgid "Delete confirmation"
 msgstr "Delete confirmation"
@@ -62,7 +68,7 @@ msgid "Language"
 msgstr "Language"
 
 msgid "Legitimate"
-msgstr ""
+msgstr "Legitimate"
 
 msgid "List of Cards"
 msgstr "List of Cards"
@@ -71,13 +77,13 @@ msgid "New Card"
 msgstr "New Card"
 
 msgid "News"
-msgstr ""
+msgstr "News"
 
 msgid "Next"
-msgstr ""
+msgstr "Next"
 
-msgid "Numbers reported as spam"
-msgstr ""
+msgid "No spam detected in your call log"
+msgstr "No spam detected in your call log"
 
 msgid "OK"
 msgstr "OK"
@@ -89,13 +95,10 @@ msgid "Password Card"
 msgstr "Password Card"
 
 msgid "Phish or not ?"
-msgstr ""
+msgstr "Phish or not ?"
 
 msgid "Phishing"
-msgstr ""
-
-msgid "Phone number with country code"
-msgstr ""
+msgstr "Phishing"
 
 msgid "Quiz"
 msgstr "Quiz"
@@ -119,7 +122,7 @@ msgid "Return to the quiz Menu"
 msgstr "Return to the quiz Menu"
 
 msgid "Score"
-msgstr ""
+msgstr "Score"
 
 msgid "Search"
 msgstr "Search"
@@ -140,7 +143,7 @@ msgid "Settings"
 msgstr "Settings"
 
 msgid "Sorry, but it s legitimate"
-msgstr ""
+msgstr "Sorry, but it s legitimate"
 
 msgid "Spam signal"
 msgstr "Spam signal"
@@ -161,22 +164,22 @@ msgid "Tips and Tricks"
 msgstr "Tips and Tricks"
 
 msgid "Type of spam"
-msgstr ""
+msgstr "Type of spam"
 
 msgid "Unfortunately, it s a phish"
-msgstr ""
+msgstr "Unfortunately, it s a phish"
 
 msgid "Videos"
 msgstr "Videos"
 
 msgid "Yes, it s a phish"
-msgstr ""
+msgstr "Yes, it s a phish"
 
 msgid "Yes, it s legitimate"
-msgstr ""
+msgstr "Yes, it s legitimate"
 
 msgid "click on the red text to see the suspisious elements"
-msgstr ""
+msgstr "click on the red text to see the suspisious elements"
 
 msgid "times"
 msgstr "times"

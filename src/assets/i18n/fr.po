@@ -14,17 +14,23 @@ msgstr ""
 msgid "About"
 msgstr "À propos"
 
+msgid "All day"
+msgstr "Toute la journée"
+
 msgid "Alphanumeric and Special Characters"
 msgstr "Caractères alphanumériques et spéciaux"
 
 msgid "Article(s) found:"
 msgstr "Article(s) trouvé(s) :"
 
-msgid "CSWL"
-msgstr "CSWL"
+msgid "CSWL 2019 Agenda"
+msgstr "CSWL 2019 Agenda"
 
 msgid "Calendar"
-msgstr ""
+msgstr "Calendrier"
+
+msgid "Call history"
+msgstr "Historique des appels"
 
 msgid "Cancel"
 msgstr "Annuler"
@@ -32,14 +38,14 @@ msgstr "Annuler"
 msgid "Card Name"
 msgstr "Nom de la carte"
 
-msgid "Check"
-msgstr "Vérifier"
-
 msgid "Check a phone number"
 msgstr "Vérifier un numéro de téléphone"
 
 msgid "Confirm delete this password card?"
 msgstr "Confirmez l'effacement de cette carte de mot de passe ?"
+
+msgid "Cybersecurity Week 2019"
+msgstr "Cybersecurity Week 2019"
 
 msgid "Delete confirmation"
 msgstr "Confirmation de suppression"
@@ -78,13 +84,13 @@ msgid "New Card"
 msgstr "Nouvelle carte"
 
 msgid "News"
-msgstr ""
+msgstr "Actualités"
 
 msgid "Next"
-msgstr ""
+msgstr "Suivant"
 
-msgid "Numbers reported as spam"
-msgstr "Numéros signalés comme spam"
+msgid "No spam detected in your call log"
+msgstr ""
 
 msgid "OK"
 msgstr "D'accord"
@@ -100,9 +106,6 @@ msgstr ""
 
 msgid "Phishing"
 msgstr ""
-
-msgid "Phone number with country code"
-msgstr "Numéro de téléphone avec code pays"
 
 msgid "Quiz"
 msgstr "Quiz"
@@ -168,7 +171,7 @@ msgid "Tips and Tricks"
 msgstr "Trucs et astuces"
 
 msgid "Type of spam"
-msgstr "Type de spam"
+msgstr ""
 
 msgid "Unfortunately, it s a phish"
 msgstr ""
