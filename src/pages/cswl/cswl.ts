@@ -78,13 +78,11 @@ export class CSWLPage {
       if (this.isGroupShown(group)) {
           this.shownGroup = null;
       } else {
-          console.log(this.shownGroup);
           this.shownGroup = group;
       }
     };
 
     isGroupShown(group) {
-
       return this.shownGroup === group;
     };
 }
