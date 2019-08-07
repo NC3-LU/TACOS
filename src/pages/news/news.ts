@@ -4,6 +4,7 @@ import {
     Loading,
     AlertController } from 'ionic-angular';
 
+import { SocialSharing } from '@ionic-native/social-sharing';
 import * as Parser from 'rss-parser';
 
 import { fetchURL } from '../../lib/utils';
@@ -23,6 +24,7 @@ export class NewsPage {
         public navCtrl: NavController,
         public navParams: NavParams,
         public alertCtrl: AlertController,
+
         public utils: UtilsService) {
 
         this.feeds_sets = [];
@@ -88,6 +90,17 @@ export class NewsPage {
         //     return item1.pubDate - item2.pubDate;
         // });
     }
+
+
+    /*
+    * Share a news with the system capacity (social networks, emails, SMS, etc.).
+    */
+    regularShare(item){
+        let msg = 'I found an interesting article with the CASES mobile application (https://tacos.cases.lu):\n'
+                    + item.link;
+        SocialSharing.share(msg, null, null, null);
+    }
+
 
     /*
     * Display the selected news.

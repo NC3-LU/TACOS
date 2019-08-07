@@ -36,10 +36,18 @@
             <ion-row>
                 <ion-col>
                     <hr />
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <hr />
+                <ion-col>
                     <a button [href]="selectedNews.link" class="text-on-bottom">
                         <ion-icon ios="ios-globe" md="md-globe"></ion-icon><br/>
                         <label>{{ selectedNews.link | extractHostname }}</label>
                     </a>
+                </ion-col>
+                <ion-col>
+                    <button ion-button clear item-end (click)="regularShare(selectedNews)"><ion-icon name="share"></ion-icon></button>
                 </ion-col>
             </ion-row>
         </ion-grid>
