@@ -14,7 +14,7 @@
       <div *ngIf="isGroupShown(i)">
           <ion-grid *ngFor="let ev of event.value">
             <ion-row >
-              <ion-col> {{ ev.allDay  ?  ('All day' | translate) : ev.timeStart}}</ion-col>
+              <ion-col text-wrap> {{ ev.allDay  ?  ('All day' | translate) : ev.timeStart}}</ion-col>
               <ion-col class="summary" text-wrap>{{ ev.summary }}</ion-col>
             </ion-row>
             <ion-row>
