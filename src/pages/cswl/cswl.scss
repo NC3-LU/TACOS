@@ -1,13 +1,11 @@
 page-cswl {
-  .item-md{
-    padding-right: 16px;
-  }
-  .item-md.item-block .item-inner{
+  .item.item-block .item-inner{
     padding:0;
     border-bottom-color: #006FBA;
   }
+
   ion-item{
-    .label-md{
+    .label{
       margin: 0;
     }
 

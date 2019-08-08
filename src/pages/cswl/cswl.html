@@ -7,9 +7,9 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-list >
-      <ion-item lines="none" *ngFor="let event of events | keyvalue; let i=index" >
+<ion-content no-padding>
+  <ion-list>
+      <ion-item no-padding *ngFor="let event of events | keyvalue; let i=index" >
       <h2 class="day" (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}"><ion-icon color="success" item-left [name]="isGroupShown(i) ? 'remove' : 'add'"></ion-icon>{{event.key }} Oct 2019 </h2>
       <div *ngIf="isGroupShown(i)">
           <ion-grid *ngFor="let ev of event.value">
