@@ -1,7 +1,21 @@
 TACOS Changelog
 ===============
 
-## 0.0.16 (not yet released)
+## 0.0.17 (2019-08-05)
+
+### New
+
+- we added an agenda for the Cyber Security Week Luxembourg 2019.
+
+### Enhancement
+
+- [core] improvements to the user interface (for Android and iOS);
+- [news] it is now possible to share a news via different social networks or
+  applications from the device;
+- [core] translations were updated.
+
+
+## 0.0.16 (2019-08-05)
 
 ### New
 
