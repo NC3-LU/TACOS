@@ -60,7 +60,6 @@ export class MyApp {
           { title: translations['News'], component: NewsPage, icon: 'paper'},
           { title: translations['Settings'], component: SettingsPage, icon: 'settings'},
           { title: translations['About'], component: AboutPage, icon: 'information-circle'},
-          { title: translations['CSWL'], component: CSWLPage, icon: 'information-circle'},
         ];
 
         if (this.today.getTime() < this.dateEndCSWL.getTime()) {
