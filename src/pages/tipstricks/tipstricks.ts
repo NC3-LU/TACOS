@@ -59,7 +59,7 @@ export class TipsTricksPage {
   * Open an external link
   */
   openExternalLink(item){
-    this.iab.create(item,'_blank','yes');
+    this.iab.create(item,'_blank','location=yes');
   }
 
   /*
