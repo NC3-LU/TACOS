@@ -38,16 +38,18 @@
                     <hr />
                 </ion-col>
             </ion-row>
-            <ion-row>
-                <hr />
+            <ion-row justify-content-between>
                 <ion-col>
-                    <a button [href]="selectedNews.link" class="text-on-bottom">
-                        <ion-icon ios="ios-globe" md="md-globe"></ion-icon><br/>
-                        <label>{{ selectedNews.link | extractHostname }}</label>
-                    </a>
+                    <button ion-button (click)="goToItem(selectedNews)">
+                        <ion-icon ios="ios-globe" md="md-globe"></ion-icon>&nbsp;
+                        <label>{{ selectedNews.link | extractHostname | uppercase }}</label>
+                    </button>
                 </ion-col>
                 <ion-col>
-                    <button ion-button clear item-end (click)="regularShare(selectedNews)"><ion-icon name="share"></ion-icon></button>
+                    <button ion-button (click)="regularShare(selectedNews)">
+                        <ion-icon name="share"></ion-icon>&nbsp;
+                        <label>{{ 'Share' | extractHostname }}</label>
+                    </button>
                 </ion-col>
             </ion-row>
         </ion-grid>
