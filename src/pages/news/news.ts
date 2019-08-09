@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {
-    Loading,
-    AlertController } from 'ionic-angular';
+import { Loading, AlertController } from 'ionic-angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { TranslateService } from '@ngx-translate/core';
 
 import { SocialSharing } from '@ionic-native/social-sharing';
 import * as Parser from 'rss-parser';
@@ -24,6 +24,8 @@ export class NewsPage {
         public navCtrl: NavController,
         public navParams: NavParams,
         public alertCtrl: AlertController,
+        private iab: InAppBrowser,
+        private translate: TranslateService,
 
         public utils: UtilsService) {
 
@@ -95,10 +97,21 @@ export class NewsPage {
     /*
     * Share a news with the system capacity (social networks, emails, SMS, etc.).
     */
-    regularShare(item){
-        let msg = 'I found an interesting article with the CASES mobile application (https://tacos.cases.lu):\n'
-                    + item.link;
-        SocialSharing.share(msg, null, null, null);
+    regularShare(item) {
+        this.translate.stream(['I found an interesting article with the CASES mobile application (https://tacos.cases.lu):'])
+        .subscribe(translations => {
+            let msg = translations['I found an interesting article with the CASES mobile application (https://tacos.cases.lu):']
+                        + '\n\n' + item.link;
+            SocialSharing.share(msg, null, null, null);
+        });
+    }
+
+
+    /*
+    * Open the article in the default web browser of the device.
+    */
+    goToItem(item) {
+        this.iab.create(item.link, '_blank', 'location=yes');
     }
 
 

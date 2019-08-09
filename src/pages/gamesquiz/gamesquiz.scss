@@ -4,7 +4,14 @@ page-gamesquiz {
     color: white ;
     background-color: #00426D;
     text-align:left;
+    padding : 0.2em;
+    margin:0px;
   }
+
+  .list{
+    margin-bottom: 0px;
+  }
+
   .rightAnswer{
     color:green;
   }

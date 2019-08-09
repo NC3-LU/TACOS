@@ -22,14 +22,14 @@ msgstr "CSWL 2019 Agenda"
 msgid "Calendar"
 msgstr "Calendar"
 
-msgid "Call history"
-msgstr "Call history"
-
 msgid "Cancel"
 msgstr "Cancel"
 
 msgid "Card Name"
 msgstr "Card Name"
+
+msgid "Check"
+msgstr ""
 
 msgid "Check a phone number"
 msgstr "Check a phone number"
@@ -64,6 +64,11 @@ msgstr "Home"
 msgid "How to generate your passwords?"
 msgstr "How to generate your passwords?"
 
+msgid ""
+"I found an interesting article with the CASES mobile application "
+"(https://tacos.cases.lu):"
+msgstr ""
+
 msgid "Language"
 msgstr "Language"
 
@@ -82,8 +87,8 @@ msgstr "News"
 msgid "Next"
 msgstr "Next"
 
-msgid "No spam detected in your call log"
-msgstr "No spam detected in your call log"
+msgid "Numbers reported as spam"
+msgstr ""
 
 msgid "OK"
 msgstr "OK"
@@ -99,6 +104,9 @@ msgstr "Phish or not ?"
 
 msgid "Phishing"
 msgstr "Phishing"
+
+msgid "Phone number with country code"
+msgstr ""
 
 msgid "Quiz"
 msgstr "Quiz"
@@ -126,6 +134,9 @@ msgstr "Score"
 
 msgid "Search"
 msgstr "Search"
+
+msgid "Security in your smartphone"
+msgstr ""
 
 msgid "See the correction"
 msgstr "See the correction"
