@@ -3,6 +3,7 @@ import { Loading, LoadingController, NavController, NavParams } from 'ionic-angu
 import { DomSanitizer } from '@angular/platform-browser';
 import { loadJson } from '../../lib/utils';
 import { TranslateService } from '@ngx-translate/core';
+import { CacheService } from "ionic-cache";
 
 @Component({
   selector: 'page-videos',
@@ -15,17 +16,25 @@ export class VideosPage {
     searchTerm : any="";
     searchLang: string="";
     searchTermForQuery: any=""; //create a var for the query => the trnansformation of inputs is transparent for users
+    offline:any = false;
+
 
     constructor(public navCtrl: NavController,
                 public loadingCtrl: LoadingController,
                 public navParams: NavParams,
                 private domSanitizer: DomSanitizer,
-                private translate: TranslateService,) {
+                private translate: TranslateService,
+                private cache : CacheService) {
     }
 /*
 * Load the data
 */
 ionViewWillEnter(){
+
+  if (!this.cache.isOnline()){
+    this.offline = true;
+  }
+
   loadJson('../../assets/data/videos.json',this.domSanitizer).then(data => {
     this.startIFrameLoadEvent();
     this.videos = data;
