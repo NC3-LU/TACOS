@@ -116,6 +116,6 @@ export class CSWLPage {
     };
 
     openExternalLink(item){
-      this.iab.create(item,'_blank','yes');
+      this.iab.create(item,'_blank','location=yes');
     }
 }
