@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{ 'Tips and Tricks' | translate }}</ion-title>
+    <ion-title>{{ !selectedTipsTricks ?  ('Tips and Tricks' | translate ) : article[0].title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -20,7 +20,7 @@
     <div>
       <ng-template #recursiveList let-article let-level="level">
         <span *ngFor="let item of article;">
-          <p [class]="'tipstrick-custom-level-title-'+level" text-wrap>{{item.title}}</p>
+          <p *ngIf="level > 0" [class]="'tipstrick-custom-level-title-'+level" text-wrap>{{item.title}}</p>
           <p [class]="'tipstrick-custom-level-content-'+level" [innerHTML]="item.content" text-wrap></p>
           <span *ngIf="item.parts?.length;">
             <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.parts , level:level+1}"></ng-container>

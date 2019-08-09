@@ -39,7 +39,6 @@ export class TipsTricksPage {
     if (typeof navParams.get('data') !== 'undefined') { //load the menu
      this.data = navParams.get('data');
      this.pages = this.data[0].tipstricks;
-     console.log(this.data);
    }
   }
 
