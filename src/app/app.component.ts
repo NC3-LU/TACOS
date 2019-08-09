@@ -6,6 +6,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 import { LanguageService } from '../services/language.service';
 import { TranslateService } from '@ngx-translate/core';
+import { CacheService } from "ionic-cache";
 
 import { HomePage } from '../pages/home/home';
 import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
@@ -36,9 +37,12 @@ export class MyApp {
     public splashScreen: SplashScreen,
     private translate: TranslateService,
     private domSanitizer : DomSanitizer,
-    private languageService: LanguageService) {
+    private languageService: LanguageService,
+    private cache: CacheService) {
       this.initializeApp();
-      // used for an example of ngFor and navigation
+
+      this.cache.setDefaultTTL(60 * 60); //set default cache TTL for 1 hour
+
       this.translate.stream(['Home',
                             'Tips and Tricks',
                             'Videos',

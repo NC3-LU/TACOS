@@ -29,10 +29,10 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { AppVersion } from '@ionic-native/app-version/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { CacheModule } from "ionic-cache";
 
 import { ExtractHostname } from './pipes/extract-hostname';
 import { FormatPhoneNumber } from './pipes/format-phone-number';
-
 
 export function createTranslateLoader(http: HttpClient) {
 	return new TranslatePoHttpLoader(http, 'assets/i18n', '.po');
@@ -59,6 +59,7 @@ export function createTranslateLoader(http: HttpClient) {
   imports: [
     BrowserModule,
     HttpClientModule,
+		CacheModule.forRoot(),
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
     TranslateModule.forRoot({

@@ -4,6 +4,15 @@ page-cswl {
     border-bottom-color: #006FBA;
   }
 
+  .offline{
+    display: block;
+    padding-top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    max-width: 50%;
+  }
+
   ion-item{
     .label{
       margin: 0;
