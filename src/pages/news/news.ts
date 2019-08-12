@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { Loading, AlertController } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { TranslateService } from '@ngx-translate/core';
+import { CacheService } from "ionic-cache";
 
 import { SocialSharing } from '@ionic-native/social-sharing';
 import * as Parser from 'rss-parser';
@@ -19,6 +20,7 @@ export class NewsPage {
     feeds_sets: any[];
     items: any[];
     selectedNews: any;
+    offline:any = false;
 
     constructor(
         public navCtrl: NavController,
@@ -26,11 +28,13 @@ export class NewsPage {
         public alertCtrl: AlertController,
         private iab: InAppBrowser,
         private translate: TranslateService,
-
+        private cache : CacheService,
         public utils: UtilsService) {
 
         this.feeds_sets = [];
         this.items = [];
+
+        this.offline = !(this.cache.isOnline());
 
         this.selectedNews = navParams.get('newsItem');
         if (!this.selectedNews){
@@ -46,6 +50,11 @@ export class NewsPage {
                 console.log("Error when retrieving list of news.");
             });
         }
+    }
+
+
+    ionViewWillEnter() {
+        this.offline = !(this.cache.isOnline());
     }
 
 
@@ -70,6 +79,9 @@ export class NewsPage {
     */
     loadSlide(index) {
         this.items = [];
+        if (this.offline) {
+            return;
+        }
         let tmpItems = [];
         let parser = new Parser();
         // Retrieves the RSS/ATOM feeds from the selected set
