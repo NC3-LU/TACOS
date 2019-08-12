@@ -3,7 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { Loading, AlertController } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { TranslateService } from '@ngx-translate/core';
-import { CacheService } from "ionic-cache";
+import { Storage } from '@ionic/storage';
 
 import { SocialSharing } from '@ionic-native/social-sharing';
 import * as Parser from 'rss-parser';
@@ -28,13 +28,15 @@ export class NewsPage {
         public alertCtrl: AlertController,
         private iab: InAppBrowser,
         private translate: TranslateService,
-        private cache : CacheService,
+        private storage: Storage,
         public utils: UtilsService) {
 
         this.feeds_sets = [];
         this.items = [];
 
-        this.offline = !(this.cache.isOnline());
+        this.storage.get('offline').then((val) => {
+            this.offline = val;
+        });
 
         this.selectedNews = navParams.get('newsItem');
         if (!this.selectedNews){
@@ -50,11 +52,6 @@ export class NewsPage {
                 console.log("Error when retrieving list of news.");
             });
         }
-    }
-
-
-    ionViewWillEnter() {
-        this.offline = !(this.cache.isOnline());
     }
 
 

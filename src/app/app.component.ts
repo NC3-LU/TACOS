@@ -6,7 +6,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 import { LanguageService } from '../services/language.service';
 import { TranslateService } from '@ngx-translate/core';
+import { Storage } from '@ionic/storage';
 import { CacheService } from "ionic-cache";
+import { Network } from '@ionic-native/network/ngx';
 
 import { HomePage } from '../pages/home/home';
 import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
@@ -38,10 +40,21 @@ export class MyApp {
     private translate: TranslateService,
     private domSanitizer : DomSanitizer,
     private languageService: LanguageService,
-    private cache: CacheService) {
+    private storage: Storage,
+    private cache: CacheService,
+    private network: Network) {
       this.initializeApp();
 
       this.cache.setDefaultTTL(60 * 60); //set default cache TTL for 1 hour
+
+      // watch network for a disconnection
+      let disconnectSubscription = this.network.onDisconnect().subscribe(() => {
+          this.storage.set('offline', true);
+      });
+      // watch network for a connection
+      let connectSubscription = this.network.onConnect().subscribe(() => {
+          this.storage.set('offline', false);
+      });
 
       this.translate.stream(['Home',
                             'Tips and Tricks',

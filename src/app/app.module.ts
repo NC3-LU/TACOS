@@ -30,6 +30,7 @@ import { AppVersion } from '@ionic-native/app-version/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { CacheModule } from "ionic-cache";
+import { Network } from '@ionic-native/network/ngx';
 
 import { ExtractHostname } from './pipes/extract-hostname';
 import { FormatPhoneNumber } from './pipes/format-phone-number';
@@ -94,6 +95,7 @@ export function createTranslateLoader(http: HttpClient) {
     LanguageService,
     AppVersion,
     SocialSharing,
+    Network,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA]
