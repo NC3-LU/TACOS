@@ -22,7 +22,6 @@ export class TipsTricksPage {
 
   //define the subpages
   pages: Array<{title: string, url: any, article: any, links: any,  icon: string}>;
-  videoExist : any;
   videosList: any;
 
   constructor(
@@ -32,7 +31,6 @@ export class TipsTricksPage {
     private domSanitizer: DomSanitizer,
     private iab: InAppBrowser
      ) {
-    this.videoExist = false;
     if (typeof navParams.get('data') !== 'undefined') { //load the menu
      this.data = navParams.get('data');
      this.pages = this.data[0].tipstricks;
@@ -41,7 +39,6 @@ export class TipsTricksPage {
 
 //init some variables
   ionViewWillEnter   (){
-  this.videoExist = false;
   var list = [];
   var langue = this.translate.currentLang;
   // If we navigated to this page, we will have an item available as a nav param
