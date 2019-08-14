@@ -22,6 +22,8 @@ export class TipsTricksPage {
 
   //define the subpages
   pages: Array<{title: string, url: any, article: any, links: any,  icon: string}>;
+  videoExist : any;
+  videosList: any;
 
   constructor(
     public navCtrl: NavController,
@@ -30,16 +32,52 @@ export class TipsTricksPage {
     private domSanitizer: DomSanitizer,
     private iab: InAppBrowser
      ) {
-    // If we navigated to this page, we will have an item available as a nav param
-    this.selectedTipsTricks = navParams.get('tipsTricksitem');
-    if(this.selectedTipsTricks){
-      this.article = this.selectedTipsTricks.article;
-    }
-
+    this.videoExist = false;
     if (typeof navParams.get('data') !== 'undefined') { //load the menu
      this.data = navParams.get('data');
      this.pages = this.data[0].tipstricks;
    }
+  }
+
+//init some variables
+  ionViewWillEnter   (){
+  this.videoExist = false;
+  var list = [];
+  var langue = this.translate.currentLang;
+  // If we navigated to this page, we will have an item available as a nav param
+  if(typeof this.navParams.get('videosList') == 'undefined'){
+    loadJson('../../assets/data/videos.json',this.domSanitizer).then(data => {
+    data.forEach(function(video){
+      if(video.language == langue){
+        list.push(video.title.toLowerCase());
+        video.keywords.forEach(function(keyword){
+          list.push(keyword.toLowerCase());
+          });
+        }
+      });
+      this.videosList = list;
+    });
+  }else{
+    this.videosList = this.navParams.get('videosList');
+  }
+  if(typeof this.navParams.get('tipsTricksitem') !== 'undefined'){
+    this.selectedTipsTricks = this.navParams.get('tipsTricksitem');
+    this.article = this.selectedTipsTricks.article;
+   }
+  }
+
+/*
+* Check if a video exist (search title and keywords in the list of videos)
+*/
+  checkVideo(haystack:Array<String>,keywords: Array<String>,title : String){
+    var find = false;
+    if(haystack.indexOf(title.toLowerCase())>-1)
+      find= true;
+    keywords.forEach(function (st){
+       if(haystack.indexOf(st.toLowerCase())>-1)
+         find= true;
+     });
+    return find;
   }
 
 
@@ -50,7 +88,7 @@ export class TipsTricksPage {
     loadJson(page.url,this.domSanitizer).then(data => {
       page.article = data;
       page.article = loadRightLanguage(page.article,this.translate.currentLang);
-      this.navCtrl.push(TipsTricksPage, {tipsTricksitem:page});
+      this.navCtrl.push(TipsTricksPage, {tipsTricksitem:page, videosList:this.videosList});
     });
   }
 
