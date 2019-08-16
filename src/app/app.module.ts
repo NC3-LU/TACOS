@@ -31,6 +31,7 @@ import { File } from '@ionic-native/file/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { CacheModule } from "ionic-cache";
 import { Network } from '@ionic-native/network/ngx';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { ExtractHostname } from './pipes/extract-hostname';
 import { FormatPhoneNumber } from './pipes/format-phone-number';
@@ -59,6 +60,7 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   imports: [
     BrowserModule,
+		NgxPaginationModule,
     HttpClientModule,
 		CacheModule.forRoot(),
     IonicModule.forRoot(MyApp),

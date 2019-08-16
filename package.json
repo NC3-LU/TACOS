@@ -59,6 +59,7 @@
     "ionic-cache": "^4.0.1",
     "ionicons": "^4.6.1",
     "jssha": "^2.3.1",
+    "ngx-pagination": "^4.1.0",
     "randomstring": "^1.1.5",
     "readable-stream": "^2.3.6",
     "rss-parser": "git+https://github.com/tofra/rss-parser.git",

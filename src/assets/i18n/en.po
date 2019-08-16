@@ -108,6 +108,9 @@ msgstr "Phishing"
 msgid "Phone number with country code"
 msgstr ""
 
+msgid "Previous"
+msgstr "Previous"
+
 msgid "Quiz"
 msgstr "Quiz"
 
