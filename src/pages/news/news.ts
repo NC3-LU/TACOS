@@ -36,22 +36,22 @@ export class NewsPage {
 
         this.storage.get('offline').then((val) => {
             this.offline = val;
-        });
 
-        this.selectedNews = navParams.get('newsItem');
-        if (!this.selectedNews){
-            this.utils.loadNews()
-            .then((result)=>{
-                result.sort(function(set1, set2){
-                    return set1.ui_position - set2.ui_position;
+            this.selectedNews = navParams.get('newsItem');
+            if (!this.offline && !this.selectedNews){
+                this.utils.loadNews()
+                .then((result)=>{
+                    result.sort(function(set1, set2){
+                        return set1.ui_position - set2.ui_position;
+                    });
+                    this.feeds_sets = result;
+                    this.loadSlide(0);
+                })
+                .catch((err)=>{
+                    console.log("Error when retrieving list of news.");
                 });
-                this.feeds_sets = result;
-                this.loadSlide(0);
-            })
-            .catch((err)=>{
-                console.log("Error when retrieving list of news.");
-            });
-        }
+            }
+        });
     }
 
 
