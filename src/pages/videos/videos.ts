@@ -10,6 +10,7 @@ import { CacheService } from "ionic-cache";
   templateUrl: 'videos.html'
 })
 export class VideosPage {
+    page: number = 1;
     videos: any;
     videosFiltered: any;
     loading: Loading;

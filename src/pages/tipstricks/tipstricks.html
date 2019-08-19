@@ -29,7 +29,7 @@
       </ng-template>
       <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: article, level:0}"></ng-container>
     </div>
-    <span padding class="media"><ion-icon ios="ios-videocam" md="md-videocam" (click)="goToVideos($event, article[0].keywords)"></ion-icon></span>
+    <span *ngIf="checkVideo(videosList,article[0].keywords,article[0].title)" padding class="media"><ion-icon ios="ios-videocam" md="md-videocam" (click)="goToVideos($event, article[0].keywords)"></ion-icon></span>
     <span *ngIf="article[0].medias && article[0].medias[0].links" >
       <div *ngFor="let item of article[0].medias[0].links" padding class="media">
         <a button (click)=openExternalLink(item) class="text-on-bottom">

@@ -110,6 +110,9 @@ msgstr ""
 msgid "Phone number with country code"
 msgstr ""
 
+msgid "Previous"
+msgstr "Précédent"
+
 msgid "Quiz"
 msgstr "Quiz"
 
