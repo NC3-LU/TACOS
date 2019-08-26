@@ -43,18 +43,10 @@ export class MyApp {
     private storage: Storage,
     private cache: CacheService,
     private network: Network) {
+
       this.initializeApp();
 
       this.cache.setDefaultTTL(60 * 60); //set default cache TTL for 1 hour
-
-      // watch network for a disconnection
-      let disconnectSubscription = this.network.onDisconnect().subscribe(() => {
-          this.storage.set('offline', true);
-      });
-      // watch network for a connection
-      let connectSubscription = this.network.onConnect().subscribe(() => {
-          this.storage.set('offline', false);
-      });
 
       this.translate.stream(['Home',
                             'Tips and Tricks',
@@ -67,31 +59,42 @@ export class MyApp {
                             'Cybersecurity Week 2019',
                             'About'])
                     .subscribe(translations => {
-        this.pages = [
-          { title: translations['Home'], component: HomePage, icon: 'home'},
-          { title: translations['Tips and Tricks'], component: TipsTricksPage, icon: 'bulb', data:'../assets/data/tipstricks/tipstricks.json'},
-          { title: translations['Videos'], component: VideosPage, icon: 'videocam'},
-          { title: translations['Games and Quiz'], component: GamesQuizPage, icon: 'football', data:'../assets/data/gamesquiz/gamesquiz.json'},
-          { title: translations['Password Card'], component: PasswordCardPage, icon: 'card'},
-          { title: translations['Spam signal'], component: SpamPage, icon: 'call'},
-          { title: translations['News'], component: NewsPage, icon: 'paper'},
-          { title: translations['Settings'], component: SettingsPage, icon: 'settings'},
-          { title: translations['About'], component: AboutPage, icon: 'information-circle'},
-        ];
+            this.pages = [
+                { title: translations['Home'], component: HomePage, icon: 'home'},
+                { title: translations['Tips and Tricks'], component: TipsTricksPage, icon: 'bulb', data:'../assets/data/tipstricks/tipstricks.json'},
+                { title: translations['Videos'], component: VideosPage, icon: 'videocam'},
+                { title: translations['Games and Quiz'], component: GamesQuizPage, icon: 'football', data:'../assets/data/gamesquiz/gamesquiz.json'},
+                { title: translations['Password Card'], component: PasswordCardPage, icon: 'card'},
+                { title: translations['Spam signal'], component: SpamPage, icon: 'call'},
+                { title: translations['News'], component: NewsPage, icon: 'paper'},
+                { title: translations['Settings'], component: SettingsPage, icon: 'settings'},
+                { title: translations['About'], component: AboutPage, icon: 'information-circle'},
+            ];
 
-        if (this.today.getTime() < this.dateEndCSWL.getTime()) {
-            this.pages.splice(6,0,{ title: translations['Cybersecurity Week 2019'], component: CSWLPage, icon: 'calendar'});
-        }
-      })
+            if (this.today.getTime() < this.dateEndCSWL.getTime()) {
+                this.pages.splice(6,0,{ title: translations['Cybersecurity Week 2019'], component: CSWLPage, icon: 'calendar'});
+            }
+        })
     }
+
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
+      // The platform is ready and plugins are available.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.languageService.setInitialAppLanguage();
+
+      // watch network for a disconnection
+      this.network.onDisconnect().subscribe(() => {
+          this.storage.set('offline', true);
+          console.log('offline');
+      });
+      // watch network for a connection
+      this.network.onConnect().subscribe(() => {
+          this.storage.set('offline', false);
+          console.log('online');
+      });
 
     });
   }
