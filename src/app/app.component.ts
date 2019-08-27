@@ -25,7 +25,7 @@ import { loadJson, loadRightLanguage } from '../lib/utils';
 @Component({
   templateUrl: 'app.html'
 })
-export class MyApp {
+export class TACOSApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
@@ -44,21 +44,22 @@ export class MyApp {
     private cache: CacheService,
     private network: Network) {
 
-      this.initializeApp();
+        this.initializeApp();
 
-      this.cache.setDefaultTTL(60 * 60); //set default cache TTL for 1 hour
+        this.cache.setDefaultTTL(60 * 60); //set default cache TTL for 1 hour
 
-      this.translate.stream(['Home',
-                            'Tips and Tricks',
-                            'Videos',
-                            'Games and Quiz',
-                            'Password Card',
-                            'Spam signal',
-                            'News',
-                            'Settings',
-                            'Cybersecurity Week 2019',
-                            'About'])
-                    .subscribe(translations => {
+        this.translate
+        .stream(['Home',
+                'Tips and Tricks',
+                'Videos',
+                'Games and Quiz',
+                'Password Card',
+                'Spam signal',
+                'News',
+                'Settings',
+                'Cybersecurity Week 2019',
+                'About'])
+        .subscribe(translations => {
             this.pages = [
                 { title: translations['Home'], component: HomePage, icon: 'home'},
                 { title: translations['Tips and Tricks'], component: TipsTricksPage, icon: 'bulb', data:'../assets/data/tipstricks/tipstricks.json'},
@@ -74,41 +75,42 @@ export class MyApp {
             if (this.today.getTime() < this.dateEndCSWL.getTime()) {
                 this.pages.splice(6,0,{ title: translations['Cybersecurity Week 2019'], component: CSWLPage, icon: 'calendar'});
             }
-        })
+        });
     }
 
 
-  initializeApp() {
-    this.platform.ready().then(() => {
-      // The platform is ready and plugins are available.
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
-      this.languageService.setInitialAppLanguage();
+    initializeApp() {
+        this.platform.ready().then(() => {
+            // The platform is ready and plugins are available.
+            this.statusBar.styleDefault();
+            this.splashScreen.hide();
+            this.languageService.setInitialAppLanguage();
 
-      // watch network for a disconnection
-      this.network.onDisconnect().subscribe(() => {
-          this.storage.set('offline', true);
-          console.log('offline');
-      });
-      // watch network for a connection
-      this.network.onConnect().subscribe(() => {
-          this.storage.set('offline', false);
-          console.log('online');
-      });
+            // watch network for a disconnection
+            this.network.onDisconnect().subscribe(() => {
+                this.storage.set('offline', true);
+                console.log('offline');
+            });
+            // watch network for a connection
+            this.network.onConnect().subscribe(() => {
+                this.storage.set('offline', false);
+                console.log('online');
+            });
 
-    });
-  }
-
-  openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    if(page.data!=null){
-      loadJson(page.data,this.domSanitizer).then(data => { //load the data in advance
-        data = loadRightLanguage(data,this.translate.currentLang);
-        this.nav.setRoot(page.component, {data:data});
-      });
+        });
     }
-    else
-      this.nav.setRoot(page.component);
-  }
+
+
+    openPage(page) {
+        // Reset the content nav to have just this page
+        // we wouldn't want the back button to show in this scenario
+        if (page.data!=null) {
+            loadJson(page.data,this.domSanitizer).then(data => { //load the data in advance
+                data = loadRightLanguage(data,this.translate.currentLang);
+                this.nav.setRoot(page.component, {data:data});
+            });
+        } else {
+            this.nav.setRoot(page.component);
+        }
+    }
 }

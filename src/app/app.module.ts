@@ -9,7 +9,7 @@ import { LanguageService } from '../services/language.service';
 import { IonicStorageModule } from '@ionic/storage';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
-import { MyApp } from './app.component';
+import { TACOSApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
 import { VideosPage } from '../pages/videos/videos';
@@ -42,7 +42,7 @@ export function createTranslateLoader(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    MyApp,
+    TACOSApp,
     HomePage,
     TipsTricksPage,
     VideosPage,
@@ -63,7 +63,7 @@ export function createTranslateLoader(http: HttpClient) {
 		NgxPaginationModule,
     HttpClientModule,
 		CacheModule.forRoot(),
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(TACOSApp),
     IonicStorageModule.forRoot(),
     TranslateModule.forRoot({
 			loader: {
@@ -75,7 +75,7 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
+    TACOSApp,
     HomePage,
     SpamPage,
     TipsTricksPage,
