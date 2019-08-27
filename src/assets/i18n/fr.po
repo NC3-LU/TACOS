@@ -36,13 +36,16 @@ msgid "Card Name"
 msgstr "Nom de la carte"
 
 msgid "Check"
-msgstr ""
+msgstr "Vérifier"
 
 msgid "Check a phone number"
 msgstr "Vérifier un numéro de téléphone"
 
 msgid "Confirm delete this password card?"
 msgstr "Confirmez l'effacement de cette carte de mot de passe ?"
+
+msgid "Confirm this number is a spam?"
+msgstr "Confirmer que ce numéro est un spam ?"
 
 msgid "Cybersecurity Week 2019"
 msgstr "Cybersecurity Week 2019"
@@ -71,6 +74,9 @@ msgstr "Jeux et Quiz"
 msgid "Generate Card"
 msgstr "Générer la carte"
 
+msgid "Help"
+msgstr "Aide"
+
 msgid "Home"
 msgstr "Accueil"
 
@@ -88,13 +94,15 @@ msgid "Language"
 msgstr "Langue"
 
 msgid "Legitimate"
-msgstr ""
+msgstr "Légitime"
 
 msgid "List of Cards"
 msgstr "Liste des cartes"
 
 msgid "Make sure that Wi-Fi or mobile data is turned on that try again"
 msgstr ""
+"Assurez-vous que le Wi-Fi ou les données mobiles sont activés et "
+"réessayez"
 
 msgid "New Card"
 msgstr "Nouvelle carte"
@@ -109,10 +117,10 @@ msgid "No"
 msgstr "Non"
 
 msgid "No Internet connection"
-msgstr ""
+msgstr "Pas de connexion Internet"
 
 msgid "Numbers reported as spam"
-msgstr ""
+msgstr "Numéros signalés comme spam"
 
 msgid "OK"
 msgstr "D'accord"
@@ -130,7 +138,10 @@ msgid "Phishing"
 msgstr ""
 
 msgid "Phone number with country code"
-msgstr ""
+msgstr "Numéro de téléphone avec indicatif de pays"
+
+msgid "Please wait..."
+msgstr "Veuillez patienter...."
 
 msgid "Previous"
 msgstr "Précédent"
@@ -146,6 +157,9 @@ msgstr "Signaler"
 
 msgid "Report a spam"
 msgstr "Signaler un spam"
+
+msgid "Report this number as a spam ?"
+msgstr "Signaler ce numéro comme spam ?"
 
 msgid "Reported"
 msgstr "Signalé"
@@ -183,6 +197,9 @@ msgstr "Paramètres"
 msgid "Sorry, but it s legitimate"
 msgstr ""
 
+msgid "Spam confirmation"
+msgstr ""
+
 msgid "Spam signal"
 msgstr "Spam signal"
 
@@ -198,11 +215,14 @@ msgstr "Étape 3"
 msgid "Step 4"
 msgstr "Étape 4"
 
+msgid "Thank you for your contribution."
+msgstr ""
+
 msgid "Tips and Tricks"
 msgstr "Trucs et astuces"
 
 msgid "Type of spam"
-msgstr ""
+msgstr "Type de spam"
 
 msgid "Unfortunately, it s a phish"
 msgstr ""
