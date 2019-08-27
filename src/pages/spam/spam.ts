@@ -7,6 +7,7 @@ import {
     ToastController } from 'ionic-angular';
 
 import { UtilsService } from './utils';
+import { TranslateService } from '@ngx-translate/core';
 import { PhoneValidator } from '../../validators/phone.validator';
 
 
@@ -33,6 +34,7 @@ export class SpamPage {
         public loadingCtrl: LoadingController,
         public toastCtrl: ToastController,
         public utils: UtilsService,
+        private translate: TranslateService,
         private formBuilder: FormBuilder) {
 
         this.utils = utils;
@@ -70,15 +72,15 @@ export class SpamPage {
         let spamType = this.formSpam.get('spamType').value;
 
         let alert = this.alertCtrl.create({
-          title: 'Spam confirmation',
-          subTitle: 'Report this number as a spam ?',
+          title: this.translate.instant('Spam confirmation'),
+          subTitle: this.translate.instant('Report this number as a spam ?'),
           buttons: [
               {
                   text: 'OK',
                   role: 'ok',
-                  handler: data => {
+                  handler: () => {
                       const thankingToast = this.toastCtrl.create({
-                          message: 'Thank you for your contribution.',
+                          message: this.translate.instant('Thank you for your contribution.'),
                           duration: 3000
                       });
                       thankingToast.present();
@@ -86,11 +88,9 @@ export class SpamPage {
                     }
               },
               {
-                  text: 'Cancel',
+                  text: this.translate.instant('Cancel'),
                   role: 'cancel',
-                  handler: data => {
-                      //console.log('Cancel clicked');
-                  }
+                  handler: () => {}
               },
           ]
         });
@@ -127,15 +127,15 @@ export class SpamPage {
     */
     confirmSpam(phoneNumber: string) {
         let alert = this.alertCtrl.create({
-          title: 'Spam confirmation',
-          subTitle: 'Confirm this number is a spam?',
+          title: this.translate.instant('Spam confirmation'),
+          subTitle: this.translate.instant('Confirm this number is a spam?'),
           buttons: [
               {
-                  text: 'OK',
+                  text: this.translate.instant('OK'),
                   role: 'ok',
-                  handler: data => {
+                  handler: () => {
                       const thankingToast = this.toastCtrl.create({
-                          message: 'Thank you for your contribution.',
+                          message: this.translate.instant('Thank you for your contribution.'),
                           duration: 3000
                       });
                       this.utils.reportSpam(phoneNumber, 'other').then(()=>{
@@ -145,11 +145,9 @@ export class SpamPage {
                     }
               },
               {
-                  text: 'Cancel',
+                  text: this.translate.instant('Cancel'),
                   role: 'cancel',
-                  handler: data => {
-                      console.log('Cancel clicked');
-                  }
+                  handler: () => {}
               },
           ]
         });
@@ -161,14 +159,14 @@ export class SpamPage {
     */
     onAskHelp() {
         let alert = this.alertCtrl.create({
-          title: 'Help',
+          title: this.translate.instant('Help'),
           subTitle: 'International phone number formatting (E.164):<hr />' +
                     '<code>[+][country code][area code][local phone number]</code><hr />' +
                     'Example:<hr />' +
                     '<code>+352 6x1 xxx xxx</code>',
           buttons: [
               {
-                  text: 'OK',
+                  text: this.translate.instant('OK'),
                   role: 'ok'
               }
           ]
@@ -187,7 +185,7 @@ export class SpamPage {
 
     startIFrameLoadEvent(): void {
       this.loading = this.loadingCtrl.create({
-          content: 'Please wait...'
+          content: this.translate.instant('Please wait...')
       });
       this.loading.present();
     }
