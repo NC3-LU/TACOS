@@ -8,8 +8,9 @@ import { Storage } from '@ionic/storage';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import * as Parser from 'rss-parser';
 
-import { fetchURL } from '../../lib/utils';
 import { UtilsService } from './utils';
+import { fetchURL } from '../../lib/utils';
+
 
 @Component({
   selector: 'page-news',
@@ -21,6 +22,7 @@ export class NewsPage {
     items: any[];
     selectedNews: any;
     offline:any = false;
+
 
     constructor(
         public navCtrl: NavController,
