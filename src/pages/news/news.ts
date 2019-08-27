@@ -66,7 +66,6 @@ export class NewsPage {
         } catch {
             slidesIndex = 0;
         }
-        // this.loadSlide(slidesIndex);
         this.loadSlide(slidesIndex);
     }
 
