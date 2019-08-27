@@ -3,6 +3,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"X-Generator: Poedit 2.0.6\n"
 
 msgid "About"
 msgstr "À propos"
@@ -43,6 +50,12 @@ msgstr "Cybersecurity Week 2019"
 msgid "Delete confirmation"
 msgstr "Confirmation de suppression"
 
+msgid "Do you want to exit the app?"
+msgstr "Voulez-vous quitter l'app ?"
+
+msgid "Exit confirmation"
+msgstr "Confirmation de sortie"
+
 msgid "Final Score"
 msgstr "Score Final"
 
@@ -80,6 +93,9 @@ msgstr ""
 msgid "List of Cards"
 msgstr "Liste des cartes"
 
+msgid "Make sure that Wi-Fi or mobile data is turned on that try again"
+msgstr ""
+
 msgid "New Card"
 msgstr "Nouvelle carte"
 
@@ -88,6 +104,12 @@ msgstr "Actualités"
 
 msgid "Next"
 msgstr "Suivant"
+
+msgid "No"
+msgstr "Non"
+
+msgid "No Internet connection"
+msgstr ""
 
 msgid "Numbers reported as spam"
 msgstr ""
@@ -187,6 +209,9 @@ msgstr ""
 
 msgid "Videos"
 msgstr "Vidéos"
+
+msgid "Yes"
+msgstr "Oui"
 
 msgid "Yes, it s a phish"
 msgstr ""

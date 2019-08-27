@@ -3,6 +3,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"X-Generator: Poedit 2.0.6\n"
 
 msgid "About"
 msgstr "About"
@@ -29,7 +36,7 @@ msgid "Card Name"
 msgstr "Card Name"
 
 msgid "Check"
-msgstr ""
+msgstr "Check"
 
 msgid "Check a phone number"
 msgstr "Check a phone number"
@@ -42,6 +49,12 @@ msgstr "Cybersecurity Week 2019"
 
 msgid "Delete confirmation"
 msgstr "Delete confirmation"
+
+msgid "Do you want to exit the app?"
+msgstr "Do you want to exit the app?"
+
+msgid "Exit confirmation"
+msgstr "Exit confirmation"
 
 msgid "Final Score"
 msgstr "Final Score"
@@ -68,6 +81,8 @@ msgid ""
 "I found an interesting article with the CASES mobile application "
 "(https://tacos.cases.lu):"
 msgstr ""
+"I found an interesting article with the CASES mobile application "
+"(https://tacos.cases.lu):"
 
 msgid "Language"
 msgstr "Language"
@@ -78,6 +93,10 @@ msgstr "Legitimate"
 msgid "List of Cards"
 msgstr "List of Cards"
 
+msgid "Make sure that Wi-Fi or mobile data is turned on that try again"
+msgstr ""
+"Make sure that Wi-Fi or mobile data is turned on that try again"
+
 msgid "New Card"
 msgstr "New Card"
 
@@ -87,8 +106,14 @@ msgstr "News"
 msgid "Next"
 msgstr "Next"
 
+msgid "No"
+msgstr "No"
+
+msgid "No Internet connection"
+msgstr "No Internet connection"
+
 msgid "Numbers reported as spam"
-msgstr ""
+msgstr "Numbers reported as spam"
 
 msgid "OK"
 msgstr "OK"
@@ -106,7 +131,7 @@ msgid "Phishing"
 msgstr "Phishing"
 
 msgid "Phone number with country code"
-msgstr ""
+msgstr "Phone number with country code"
 
 msgid "Previous"
 msgstr "Previous"
@@ -139,7 +164,7 @@ msgid "Search"
 msgstr "Search"
 
 msgid "Security in your smartphone"
-msgstr ""
+msgstr "Security in your smartphone"
 
 msgid "See the correction"
 msgstr "See the correction"
@@ -185,6 +210,9 @@ msgstr "Unfortunately, it s a phish"
 
 msgid "Videos"
 msgstr "Videos"
+
+msgid "Yes"
+msgstr "Yes"
 
 msgid "Yes, it s a phish"
 msgstr "Yes, it s a phish"
