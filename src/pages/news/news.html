@@ -1,26 +1,26 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>News</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>News</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content>
-    <div *ngIf="offline" text-center text-wrap padding>
-          <h2>{{'No Internet connection' | translate}}</h2>
-          <ion-label>{{'Make sure that Wi-Fi or mobile data is turned on that try again' | translate}}</ion-label>
+    <div text-center text-wrap padding *ngIf="offline">
+        <h2>{{'No Internet connection' | translate}}</h2>
+        <ion-label>{{'Make sure that Wi-Fi or mobile data is turned on that try again' | translate}}</ion-label>
     </div>
     <ion-slides *ngIf="!selectedNews && !offline" pager='true' effect='slide' initialSlide='0' (ionSlideDidChange)="onSlideDidChange($event)">
         <ion-slide *ngFor="let set of feeds_sets">
             <h2>{{ set.title }}</h2>
             <ion-list>
-              <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-                <h2>{{ item.title }}</h2>
-                <h3><span *ngIf="item.creator">Article from {{ item.creator }} </span>({{ item.link | extractHostname }})</h3>
-                <p>{{ item.pubDate | date:'medium' }}</p>
-              </button>
+                <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+                    <h2>{{ item.title }}</h2>
+                    <h3><span *ngIf="item.creator">Article from {{ item.creator }} </span>({{ item.link | extractHostname }})</h3>
+                    <p>{{ item.pubDate | date:'medium' }}</p>
+                </button>
             </ion-list>
         </ion-slide>
     </ion-slides>

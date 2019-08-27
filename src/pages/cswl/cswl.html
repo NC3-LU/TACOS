@@ -1,37 +1,36 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>{{'CSWL 2019 Agenda' | translate}}</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{'CSWL 2019 Agenda' | translate}}</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content no-padding>
-  <div text-center text-wrap padding *ngIf="offline">
-    <ion-img class="offline" src='../../assets/imgs/t&t/1.png'></ion-img>
-    <h2>{{'No Internet connection' | translate}}</h2>
-    <ion-label>{{'Make sure that Wi-Fi or mobile data is turned on that try again' | translate}}</ion-label>
-  </div>
-  <ion-list *ngIf="!offline">
-      <div *ngFor="let event of events | keyvalue; let i=index">
-        <ion-item no-padding *ngIf="event.value != null">
-          <h2 class="day" (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}"><ion-icon color="success" item-left [name]="isGroupShown(i) ? 'remove' : 'add'"></ion-icon>{{event.key }} Oct 2019 </h2>
-          <div *ngIf="isGroupShown(i)">
-            <ion-grid *ngFor="let ev of event.value">
-              <ion-row >
-                <ion-col text-wrap> {{ ev.allDay  ?  ('All day' | translate) : ev.timeStart}}</ion-col>
-                <ion-col class="summary" text-wrap><a button (click)=openExternalLink(ev.url) class="text-on-bottom">{{ ev.summary }}</a></ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col class="timeEnd"> {{ ev.allDay  ?  '' : ev.timeEnd }}</ion-col>
-                <ion-col class="location" text-wrap>
-                  {{ ev.location }} {{today}}
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-          </div>
-        </ion-item>
-      </div>
-  </ion-list>
+    <div text-center text-wrap padding *ngIf="offline">
+        <h2>{{'No Internet connection' | translate}}</h2>
+        <ion-label>{{'Make sure that Wi-Fi or mobile data is turned on that try again' | translate}}</ion-label>
+    </div>
+    <ion-list *ngIf="!offline">
+        <div *ngFor="let event of events | keyvalue; let i=index">
+            <ion-item no-padding *ngIf="event.value != null">
+                <h2 class="day" (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}"><ion-icon color="success" item-left [name]="isGroupShown(i) ? 'remove' : 'add'"></ion-icon>{{event.key }} Oct 2019 </h2>
+                <div *ngIf="isGroupShown(i)">
+                    <ion-grid *ngFor="let ev of event.value">
+                        <ion-row >
+                            <ion-col text-wrap> {{ ev.allDay  ?  ('All day' | translate) : ev.timeStart}}</ion-col>
+                            <ion-col class="summary" text-wrap><a button (click)=openExternalLink(ev.url) class="text-on-bottom">{{ ev.summary }}</a></ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col class="timeEnd"> {{ ev.allDay  ?  '' : ev.timeEnd }}</ion-col>
+                            <ion-col class="location" text-wrap>
+                                {{ ev.location }} {{today}}
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+            </ion-item>
+        </div>
+    </ion-list>
 </ion-content>
