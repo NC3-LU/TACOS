@@ -9,6 +9,7 @@ import {
 import { UtilsService } from './utils';
 import { PhoneValidator } from '../../validators/phone.validator';
 
+
 @Component({
   selector: 'page-spam',
   templateUrl: 'spam.html'

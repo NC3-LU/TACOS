@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { Loading, LoadingController, NavController, NavParams } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
-import { loadJson } from '../../lib/utils';
 import { TranslateService } from '@ngx-translate/core';
-import { CacheService } from "ionic-cache";
+import { Storage } from '@ionic/storage';
+import { loadJson } from '../../lib/utils';
+
 
 @Component({
-  selector: 'page-videos',
-  templateUrl: 'videos.html'
+    selector: 'page-videos',
+    templateUrl: 'videos.html'
 })
 export class VideosPage {
     page: number = 1;
@@ -21,85 +22,86 @@ export class VideosPage {
 
 
     constructor(public navCtrl: NavController,
-                public loadingCtrl: LoadingController,
-                public navParams: NavParams,
-                private domSanitizer: DomSanitizer,
-                private translate: TranslateService,
-                private cache : CacheService) {
-    }
-/*
-* Load the data
-*/
-ionViewWillEnter(){
+        public loadingCtrl: LoadingController,
+        public navParams: NavParams,
+        private domSanitizer: DomSanitizer,
+        private translate: TranslateService,
+        private storage: Storage) {}
 
-  if (!this.cache.isOnline()){
-    this.offline = true;
-  }
+    /*
+    * Load the data
+    */
+    ionViewWillEnter() {
+        this.storage.get('offline').then((val) => {
+            this.offline = val;
 
-  loadJson('../../assets/data/videos.json',this.domSanitizer).then(data => {
-    this.startIFrameLoadEvent();
-    this.videos = data;
-    this.handleIFrameLoadEvent();
-    if(this.navParams.get('searchTerm'))
-      this. searchTerm = this.navParams.get('searchTerm');
-    this.searchLang = this.translate.currentLang;
-    this.setFilteredItems();
-  });
-}
+            loadJson('../../assets/data/videos.json',this.domSanitizer).then(data => {
+                this.startIFrameLoadEvent();
+                this.videos = data;
+                this.handleIFrameLoadEvent();
+                if(this.navParams.get('searchTerm'))
+                this. searchTerm = this.navParams.get('searchTerm');
+                this.searchLang = this.translate.currentLang;
+                this.setFilteredItems();
+            });
+        });
+    };
 
-/*
-* Manage loading
-*/
+
+    /*
+    * Manage loading
+    */
     handleIFrameLoadEvent(): void {
         this.loading.dismiss();
     }
 
+
     startIFrameLoadEvent(): void {
-      this.loading = this.loadingCtrl.create({
-          content: 'Please wait...'
-      });
+        this.loading = this.loadingCtrl.create({
+            content: 'Please wait...'
+        });
 
-      this.loading.present();
+        this.loading.present();
     }
-/*
-* Initialize the research parameters
-*/
+
+
+    /*
+    * Initialize the research parameters
+    */
     setFilteredItems() {
-      this.searchTermForQuery = this.searchTerm;
-      if(typeof this.searchTermForQuery == 'string' && this.searchTermForQuery.indexOf(",") != -1)
+        this.searchTermForQuery = this.searchTerm;
+        if(typeof this.searchTermForQuery == 'string' && this.searchTermForQuery.indexOf(",") != -1)
         this.searchTermForQuery = this.searchTermForQuery.toLowerCase().split(",");
-
-      this.videosFiltered = this.filterItems(this.searchTermForQuery,this.searchLang);
+        this.videosFiltered = this.filterItems(this.searchTermForQuery,this.searchLang);
     }
 
-/*
-* Research algo, search one or severald word in the title and keywords of json videosFiltered
-* @searchterm: String or Array<String>
-* @searchLang: String the code of the language ("fr", etc.)
-*/
-     filterItems(searchTerm:any,searchLang:String=""){
-       console.log(searchTerm)
-       if(typeof searchTerm == 'string'){
-         return this.videos.filter((item:any) => {
-              return (item.language.toLowerCase().includes(searchLang.toLowerCase()) &&
-              (item.keywords.find(function(element:String) {
-                                  return element.toLowerCase().includes(searchTerm.toLowerCase());
-                                })
-              || item.title.toLowerCase().includes(searchTerm.toLowerCase()))
-              );
-          });
-        }
-      else if (Array.isArray(searchTerm)){
-        return this.videos.filter((item:any) => {
-             return (item.language.toLowerCase().includes(searchLang.toLowerCase()) &&
-             (
-               item.keywords.filter(element => searchTerm.indexOf(element) !== -1).length > 0
-               ||
-               searchTerm.includes(item.title.toLowerCase())
-              )
-             );
-         });
 
-      }
+    /*
+    * Research algo, search one or severald word in the title and keywords of json videosFiltered
+    * @searchterm: String or Array<String>
+    * @searchLang: String the code of the language ("fr", etc.)
+    */
+    filterItems(searchTerm:any,searchLang:String=""){
+        console.log(searchTerm)
+        if(typeof searchTerm == 'string') {
+            return this.videos.filter((item:any) => {
+                return (item.language.toLowerCase().includes(searchLang.toLowerCase()) &&
+                (item.keywords.find(function(element:String) {
+                    return element.toLowerCase().includes(searchTerm.toLowerCase());
+                })
+                || item.title.toLowerCase().includes(searchTerm.toLowerCase()))
+            );
+        });
+        } else if (Array.isArray(searchTerm)){
+            return this.videos.filter((item:any) => {
+                return (
+                    item.language.toLowerCase().includes(searchLang.toLowerCase()) &&
+                    (
+                        item.keywords.filter(element => searchTerm.indexOf(element) !== -1).length > 0 ||
+                        searchTerm.includes(item.title.toLowerCase())
+                    )
+                );
+            });
+        }
     }
 }
