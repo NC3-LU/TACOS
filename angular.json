@@ -32,9 +32,12 @@
               }
             ],
             "styles": [
-              {
-                "input": "src/theme/variables.scss"
-              },
+                {
+                  "input": "src/theme/variables.scss"
+                },
+                {
+                  "input": "src/theme/theme.dark"
+                },
               {
                 "input": "src/global.scss"
               }

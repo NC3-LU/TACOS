@@ -6,10 +6,10 @@ import { Storage } from '@ionic/storage';
 
 const LNG_KEY = 'SELECTED_LANGUAGE';
 
+
 @Injectable({
   providedIn: 'root'
 })
-
 export class LanguageService {
   constructor(
     public platform: Platform,

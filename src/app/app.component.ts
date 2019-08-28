@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { DomSanitizer } from '@angular/platform-browser';
 
 import { LanguageService } from '../services/language.service';
+import { ThemeService } from '../services/theme.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
 import { CacheService } from "ionic-cache";
@@ -23,6 +24,7 @@ import { NewsPage } from '../pages/news/news';
 import { SettingsPage } from '../pages/settings/settings';
 import { AboutPage } from '../pages/about/about';
 import { loadJson, loadRightLanguage } from '../lib/utils';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -45,6 +47,7 @@ export class TACOSApp {
     private translate: TranslateService,
     private domSanitizer : DomSanitizer,
     private languageService: LanguageService,
+    private themeService: ThemeService,
     private storage: Storage,
     private cache: CacheService,
     private network: Network) {
@@ -90,6 +93,7 @@ export class TACOSApp {
             this.statusBar.styleDefault();
             this.splashScreen.hide();
             this.languageService.setInitialAppLanguage();
+            this.themeService.setInitialAppTheme();
 
             // watch network for a disconnection
             this.network.onDisconnect().subscribe(() => {
