@@ -11,7 +11,7 @@
   <ion-slides #gameSlides zoom [options]="{onlyExternal: false}">
     <ng-container *ngFor="let item of dataGame[0].items; let j = index;" >
       <ion-slide>
-          <p *ngIf="item.type=='email'" [class]="item.type" [innerHTML] ="item.initial"><p>
+          <p *ngIf="item.type=='email'" [class]="item.type" [innerHTML] ="item.initial" (click)="showURL($event,j)"><p>
 
           <div *ngIf="item.type=='image'" class="swiper-zoom-container">
             <img [src]="item.initial"> </div>
@@ -34,10 +34,6 @@
             </ion-list>
             <img [src]="item.explanation" >
           </div>
-
-
-
-
           <p>
             <button ion-button round color="primary" (click)="nextSlide()">{{ 'Next' | translate}}</button>
           </p>
