@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, AlertController } from 'ionic-angular';
+import { Nav, Platform, AlertController, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -38,12 +38,14 @@ export class TACOSApp {
   dateEndCSWL: any = new Date(2019,11,26);
 
   selectedTheme: String;
+  theme:String = 'cases-theme';
 
   constructor(
     public platform: Platform,
     public alert: AlertController,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
+    public event: Events,
     private translate: TranslateService,
     private domSanitizer : DomSanitizer,
     private languageService: LanguageService,
@@ -55,6 +57,7 @@ export class TACOSApp {
         this.initializeApp();
 
         this.cache.setDefaultTTL(60 * 60); //set default cache TTL for 1 hour
+
 
         this.translate
         .stream(['Home',
@@ -105,38 +108,47 @@ export class TACOSApp {
                 this.storage.set('offline', false);
                 console.log('online');
             });
+            // subscribes to theme changing
+            this.event.subscribe('theme:change', () => {
+                this.changeTheme();
+            });
 
             // watch system back button
             this.platform.registerBackButtonAction(() => {
-              if (this.nav && this.nav.canGoBack()) {
-                this.nav.pop();
-              } else if (this.nav.getActive().component === HomePage) {
-                  let alert = this.alert.create({
-                  title: this.translate.instant('Exit confirmation'),
-                  subTitle: this.translate.instant('Do you want to exit the app?'),
-                  buttons: [
-                      {
-                          text: this.translate.instant('No'),
-                          role: 'cancel',
-                          handler: () => {}
-                      },
-                      {
-                          text: this.translate.instant('Yes'),
-                          role: 'ok',
-                          handler: () => {
-                              this.platform.exitApp();
-                              }
-                      }
-
-                  ]
-                });
-                alert.present();
-              }else{
-                this.nav.setRoot(HomePage);
-              }
+                if (this.nav && this.nav.canGoBack()) {
+                    this.nav.pop();
+                } else if (this.nav.getActive().component === HomePage) {
+                    let alert = this.alert.create({
+                        title: this.translate.instant('Exit confirmation'),
+                        subTitle: this.translate.instant('Do you want to exit the app?'),
+                        buttons: [
+                            {
+                                text: this.translate.instant('No'),
+                                role: 'cancel',
+                                handler: () => {}
+                            },
+                            {
+                                text: this.translate.instant('Yes'),
+                                role: 'ok',
+                                handler: () => {
+                                    this.platform.exitApp();
+                                }
+                            }
+                        ]
+                    });
+                    alert.present();
+                } else {
+                    this.nav.setRoot(HomePage);
+                }
             });
-          });
-  }
+        });
+    }
+
+    changeTheme() {
+        this.storage.get('SELECTED_THEME').then(val => {
+            this.theme = val;
+        });
+    }
 
     openPage(page) {
         // Reset the content nav to have just this page

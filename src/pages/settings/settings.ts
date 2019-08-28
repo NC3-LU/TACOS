@@ -33,7 +33,7 @@ export class SettingsPage {
             if (val) {
                 this.theme =  this.themes.find(theme => theme.value === val);
             } else {
-                this.theme = 'light';
+                this.theme = 'cases-theme';
             }
         });
 
@@ -46,6 +46,7 @@ export class SettingsPage {
 
 
     public themeChange() : void {
+        console.log(this.theme);
         this.themeService.setTheme(this.theme);
     }
 }

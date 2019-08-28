@@ -72,7 +72,9 @@ $colors: (
 // default are overridden.
 
 @import "ionic.theme.default";
-@import "ionic.theme.dark";
+// @import "ionic.theme.dark";
+
+@import "./dark-theme";
 
 // Ionicons
 // --------------------------------------------------
@@ -87,6 +89,3 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
-
-
-@import "theme.dark";
