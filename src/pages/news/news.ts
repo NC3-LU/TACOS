@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {
-    Loading,
-    AlertController } from 'ionic-angular';
+import { Loading, AlertController } from 'ionic-angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { TranslateService } from '@ngx-translate/core';
+import { Storage } from '@ionic/storage';
 
+import { SocialSharing } from '@ionic-native/social-sharing';
 import * as Parser from 'rss-parser';
 
-import { fetchURL } from '../../lib/utils';
 import { UtilsService } from './utils';
+import { fetchURL } from '../../lib/utils';
+
 
 @Component({
   selector: 'page-news',
@@ -18,30 +21,39 @@ export class NewsPage {
     feeds_sets: any[];
     items: any[];
     selectedNews: any;
+    offline:any = false;
+
 
     constructor(
         public navCtrl: NavController,
         public navParams: NavParams,
         public alertCtrl: AlertController,
+        private iab: InAppBrowser,
+        private translate: TranslateService,
+        private storage: Storage,
         public utils: UtilsService) {
 
         this.feeds_sets = [];
         this.items = [];
 
-        this.selectedNews = navParams.get('newsItem');
-        if (!this.selectedNews){
-            this.utils.loadNews()
-            .then((result)=>{
-                result.sort(function(set1, set2){
-                    return set1.ui_position - set2.ui_position;
+        this.storage.get('offline').then((val) => {
+            this.offline = val;
+
+            this.selectedNews = navParams.get('newsItem');
+            if (!this.offline && !this.selectedNews){
+                this.utils.loadNews()
+                .then((result)=>{
+                    result.sort(function(set1, set2){
+                        return set1.ui_position - set2.ui_position;
+                    });
+                    this.feeds_sets = result;
+                    this.loadSlide(0);
+                })
+                .catch((err)=>{
+                    console.log("Error when retrieving list of news.");
                 });
-                this.feeds_sets = result;
-                this.loadSlide(0);
-            })
-            .catch((err)=>{
-                console.log("Error when retrieving list of news.");
-            });
-        }
+            }
+        });
     }
 
 
@@ -56,7 +68,6 @@ export class NewsPage {
         } catch {
             slidesIndex = 0;
         }
-        // this.loadSlide(slidesIndex);
         this.loadSlide(slidesIndex);
     }
 
@@ -66,6 +77,9 @@ export class NewsPage {
     */
     loadSlide(index) {
         this.items = [];
+        if (this.offline) {
+            return;
+        }
         let tmpItems = [];
         let parser = new Parser();
         // Retrieves the RSS/ATOM feeds from the selected set
@@ -88,6 +102,25 @@ export class NewsPage {
         //     return item1.pubDate - item2.pubDate;
         // });
     }
+
+
+    /*
+    * Share a news with the system capacity (social networks, emails, SMS, etc.).
+    */
+    regularShare(item) {
+        let msg = this.translate.instant('I found an interesting article with the CASES mobile application (https://tacos.cases.lu):')
+                    + '\n\n' + item.link;
+        SocialSharing.share(msg, null, null, null);
+    }
+
+
+    /*
+    * Open the article in the default web browser of the device.
+    */
+    goToItem(item) {
+        this.iab.create(item.link, '_blank', 'location=yes');
+    }
+
 
     /*
     * Display the selected news.

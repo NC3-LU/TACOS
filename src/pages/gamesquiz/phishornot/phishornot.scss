@@ -1,0 +1,38 @@
+page-phishornot {
+// Style for the game
+  .email{
+    text-align: left;
+  }
+
+  .email [class^="explanation"]{ //class starting by explanation
+    color : red;
+  }
+
+  .correctAnswer{
+    background-color:#bdeb34;
+    color:black;
+  }
+
+  .badAnswer{
+    background-color:#eb3434;
+  }
+
+  .correctAnswer, .badAnswer{
+    padding: 10px;
+    border-radius: 25px;
+  }
+
+  ion-list{
+    z-index: 2;
+    position: absolute;
+    left: 0%;
+    top: 30%;
+    margin: auto;
+    ion-item {
+
+      button{
+
+      }
+    }
+  }
+}

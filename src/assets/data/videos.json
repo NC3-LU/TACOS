@@ -1,7 +1,61 @@
 [
   {
+    "url": "https://www.youtube.com/embed/qtOrJJ5cBKk",
+    "title": "La notion de risques [1/2]",
+    "language":"fr",
+    "keywords":["risque", "risque"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/JNOiACw0TkI",
+    "title": "La notion de risques [2/2]",
+    "language":"fr",
+    "keywords":["risques", "risques"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/pMN6GVa2wPg",
+    "title": "Papiers jetés, secrets trouvés",
+    "language":"fr",
+    "keywords":["mise au rebut", "bureau propre", "sécurité physique"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/BEEic3DZIho",
+    "title": "Pas vu pas pris, mais volé et vendu !",
+    "language":"fr",
+    "keywords":["virus", "malware"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/GBUiBEv-cM0",
+    "title": "Les risques des wi-fi publics",
+    "language":"fr",
+    "keywords":["virus", "malware"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/_fGJrHFrw4E",
+    "title": "Social engineering 1 - deviner un mot de passe",
+    "language":"fr",
+    "keywords":["social engineering"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/nba0IBtMAig",
+    "title": "Social engineering 2 - inciter quelqu'un à dévoiler son mot de passe",
+    "language":"fr",
+    "keywords":["social engineering"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/zy_WbDZtKuI",
+    "title": "Social engineering 3 - mot de passe volé via un logiciel malveillant",
+    "language":"fr",
+    "keywords":["social engineering"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/Obi2HBbMt-c",
+    "title": "Les vulnérabilités",
+    "language":"fr",
+    "keywords":["virus", "malware"]
+  },
+  {
     "url": "https://www.youtube.com/embed/cRK-u-kuL30",
-    "title": "Virus",
+    "title": "Les logiciels malveillants",
     "language":"fr",
     "keywords":["virus", "malware"]
   },
@@ -9,6 +63,6 @@
     "url": "https://www.youtube.com/embed/_iqoFbVLUHY",
     "title": "Phishing",
     "language":"fr",
-    "keywords":["phishing","hameçonnage" ]
+    "keywords":["phishing","hameçonnage","email" ]
   }
 ]

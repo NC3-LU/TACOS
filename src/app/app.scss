@@ -48,6 +48,15 @@ ion-navbar{
   color: #F8F8F8;
 }
 
+.offline{
+  display: block;
+  padding-top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background: none;
+  max-width: 50%;
+}
+
 
 .swiper-slide{
     overflow-y: scroll;
@@ -56,4 +65,8 @@ ion-navbar{
 
 ion-slide{
     height: auto;
+}
+
+.menu-inner, ion-item{
+  background-color: transparent !important;
 }

@@ -1,0 +1,42 @@
+page-cswl {
+  .item.item-block .item-inner{
+    padding:0;
+    border-bottom-color: #006FBA;
+  }
+
+  ion-item{
+    .label{
+      margin: 0;
+    }
+
+    h2{
+      &[class*="day"] {
+        color: black;
+        font-weight: bold;
+        background-color: #E0E0E0;
+        margin: 0;
+        padding-left: 8px;
+      }
+    }
+  }
+  ion-col{
+    font-size: 90%;
+     &[class*="timeEnd"] {
+       color: gray;
+     }
+    &[class*="location"] {
+      font-style: italic;
+      color: gray;
+      font-size: 70%;
+    }
+  }
+
+  ion-col:first-child{
+    max-width: 25%;
+    border-right: 2px solid #FFD500;
+  }
+
+  ion-col:nth-child(2){
+      padding-left: 10px;
+  }
+}

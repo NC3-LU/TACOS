@@ -1,46 +1,61 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>News</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{'News' | translate }}</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content>
-        <ion-slides *ngIf="!selectedNews" pager='true' effect='slide' initialSlide='0' (ionSlideDidChange)="onSlideDidChange($event)">
-            <ion-slide *ngFor="let set of feeds_sets">
-                <h2>{{ set.title }}</h2>
-                <ion-list>
-                  <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+    <div text-center text-wrap padding *ngIf="offline">
+        <h2>{{'No Internet connection' | translate}}</h2>
+        <ion-label>{{'Make sure that Wi-Fi or mobile data is turned on that try again' | translate}}</ion-label>
+    </div>
+    <ion-slides *ngIf="!selectedNews && !offline" pager='true' effect='slide' initialSlide='0' (ionSlideDidChange)="onSlideDidChange($event)">
+        <ion-slide *ngFor="let set of feeds_sets">
+            <h2>{{ set.title }}</h2>
+            <ion-list>
+                <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
                     <h2>{{ item.title }}</h2>
-                    <h3><span *ngIf="item.creator">Article from {{ item.creator }} </span>({{ item.link | extractHostname }})</h3>
+                    <h3><span *ngIf="item.creator">{{ 'Article from' | translate }} {{ item.creator }} </span>({{ item.link | extractHostname }})</h3>
                     <p>{{ item.pubDate | date:'medium' }}</p>
-                  </button>
-                </ion-list>
-            </ion-slide>
-        </ion-slides>
-        <ion-grid *ngIf="selectedNews">
-            <ion-row>
-                <ion-col>
-                    <h3 class="item-text-wrap" [innerHTML]="selectedNews.title"></h3>
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col>
-                    <div class="ion-text-justify">
-                        <span [innerHTML]="selectedNews.content"></span>
-                    </div>
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col>
-                    <hr />
-                    <a button [href]="selectedNews.link" class="text-on-bottom">
-                        <ion-icon ios="ios-globe" md="md-globe"></ion-icon><br/>
-                        <label>{{ selectedNews.link | extractHostname }}</label>
-                    </a>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
+                </button>
+            </ion-list>
+        </ion-slide>
+    </ion-slides>
+    <ion-grid *ngIf="selectedNews">
+        <ion-row>
+            <ion-col>
+                <h3 class="item-text-wrap" [innerHTML]="selectedNews.title"></h3>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <div class="ion-text-justify">
+                    <span [innerHTML]="selectedNews.content"></span>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <hr />
+            </ion-col>
+        </ion-row>
+        <ion-row justify-content-between>
+            <ion-col>
+                <button ion-button (click)="goToItem(selectedNews)">
+                    <ion-icon ios="ios-globe" md="md-globe"></ion-icon>&nbsp;
+                    <label>{{ selectedNews.link | extractHostname | uppercase }}</label>
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button (click)="regularShare(selectedNews)">
+                    <ion-icon name="share"></ion-icon>&nbsp;
+                    <label>{{ 'Share' | translate | extractHostname }}</label>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
 </ion-content>

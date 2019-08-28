@@ -9,6 +9,7 @@ import { Storage } from '@ionic/storage';
 import { loadJson } from '../../lib/utils';
 import { loadRightLanguage } from '../../lib/utils';
 import { findVulnerabilitiesPage } from './findvulnerabilities/findvulnerabilities';
+import { phishOrNotPage } from './phishornot/phishornot';
 
 
 @Component({
@@ -17,15 +18,19 @@ import { findVulnerabilitiesPage } from './findvulnerabilities/findvulnerabiliti
 })
 
 export class GamesQuizPage {
-  selectedQuiz: any;
-  article: any;
+  readonly INITIALJSON = '../assets/data/gamesquiz/gamesquiz.json'; //default json
+
+  selectedQuiz: any; //selected quiz when a quiz is selected
+
   //define the quiz stuff
-  quizs: Array<{title: string, url: any, article: any, score: number, icon: string}>; //array which display all available quiz
   quizScore=0; //score of the current quiz
-  quizNameArray=['Password', 'Physical Security','Web']; //the name of the quiz
   quizCorrection : any; //array which store the correction of the quiz
+  //define the game stuf
+
+  gamesList = []; //list of the games and their respectives pages;
 
   @ViewChild('quizSlides') quizSlides: any;
+  data: any;
 
   constructor(
     public navCtrl: NavController,
@@ -36,44 +41,53 @@ export class GamesQuizPage {
      ) {
        // If we navigated to this page, we will have an item available as a nav param
        this.quizCorrection = [];
+       if (typeof navParams.get('data') !== 'undefined') { //load the menu
+        this.data = navParams.get('data');
+      }
+      else
        this.selectedQuiz = navParams.get('quizItem');
-       if(this.selectedQuiz){
-         this.article = this.selectedQuiz.article;
-       }
-       this.getQuizScore(this.quizNameArray).then(arrayScore =>{
-         this.translate.stream(this.quizNameArray).subscribe(translations => {
-           this.quizs = [
-             { title: translations['Password'], url: '../assets/data/gamesquiz/password.json' , score:arrayScore['Password'],article: '', icon: 'url(../assets/imgs/t&t/6.png)'},
-             { title: translations['Physical Security'], url: '../assets/data/gamesquiz/physicalsecurity.json', score:arrayScore['Physical Security'], article: '', icon: 'url(../assets/imgs/t&t/23.png)'},
-             { title: translations['Web'], url: '../assets/data/gamesquiz/web.json' ,score:arrayScore['Web'], article: '', icon: 'url(../assets/imgs/t&t/4.png)'},
-           ];
-         })
-       });
-
   }
+  // init some var, this function is defined by ionic and called just after the constructor
+    ionViewDidLoad (){
+    this.gamesList['findVulnerabilitiesPage'] = findVulnerabilitiesPage; //init the list of the games
+    this.gamesList['phishOrNotPage'] = phishOrNotPage;
 
-  /*
-  * Load the result of all the quiz
-  * @key keys of the quiz sored in DB 'quiz'+key[i]
-  */
-     async getQuizScore(key) {
-      let arrayScore = [];
-     for (let i = 0; i < key.length; i++) {
-        let score = await this.storage.get('quiz'+key[i]).then((val)=>{
-          if(val!=null)
-           arrayScore[key[i]] = val
+    if (typeof this.navParams.get('data') !== 'undefined'){
+        for (let i = 0; i < this.data[0].quizs.length; i++) {
+            this.getQuizScore(this.data[0].quizs[i].storageKey).then(val => {
+              this.data[0].quizs[i].score = val;
+            });
+        }
+        for (let i = 0; i < this.data[0].games.length; i++) {
+          if(this.data[0].games[i].storageKey!=null)
+            this.getQuizScore(this.data[0].games[i].storageKey).then(val => {
+              this.data[0].games[i].score = val;
+            });
           else
-           arrayScore[key[i]] = -1
-         });
-     }
-     return arrayScore;
+            this.data[0].games[i].score = -1;            
+        }
+      }
     }
+
+    /*
+    * Load the result of a unique quiz
+    * @key  of the quiz sored in DB
+    */
+     async getQuizScore(storageKey) {
+      return await this.storage.get(storageKey).then((val)=>{
+            if(val!=null)
+             return val
+            else
+             return -1
+           });
+      }
 
   /*
   * Open a quiz (e.g password)
   */
     openQuiz(event, page) {
-      loadJson(page.url,this.domSanitizer).then(data => {
+      console.log(page);
+      loadJson(page.game,this.domSanitizer).then(data => {
         page.article = data;
         page.article = loadRightLanguage(page.article,this.translate.currentLang);
 
@@ -94,10 +108,8 @@ export class GamesQuizPage {
         }else{//false answer
             this.quizCorrection.push([question.title,  false, question.explanation]);
         }
-        if(this.article[0].questions.length -1 == index){ //last question
-          console.log('last question')
-          console.log(this.quizScore)
-          this.storage.set(this.article[0].storageKey,this.quizScore/(index+1)); // save the global score of the quiz
+        if(this.selectedQuiz.article[0].questions.length -1 == index){ //last question
+          this.storage.set(this.selectedQuiz.storageKey,this.quizScore/(index+1)); // save the global score of the quiz
         }
         console.log(this.quizCorrection);
         this.quizSlides.slideNext();
@@ -121,19 +133,27 @@ export class GamesQuizPage {
     * back to the menu of quiz and games
     */
     backToTheMenu(){
-      this.navCtrl.setRoot(GamesQuizPage); //set the root and don't pop to refresh and get score
+      loadJson(this.INITIALJSON,this.domSanitizer).then(data => { //load the data in advance
+        data = loadRightLanguage(data,this.translate.currentLang);
+        this.navCtrl.setRoot(GamesQuizPage, {data:data});
+      });
     }
 
     /*
-    * Load a page like a game
+    * Load a game
     */
-    openPage(page){
-      if(page=='findVulnerabilitiesPage'){
-        loadJson('../assets/data/gamesquiz/findvulnerabilities/findvulnerabilities.json',this.domSanitizer).then(data => { //load the data in advance
+    openGame($event, game){
+      if(game.page!=null && game.dataMenu !=null ){
+        loadJson(game.dataMenu,this.domSanitizer).then(data => { //load the data in advance
           data = loadRightLanguage(data,this.translate.currentLang);
-          this.navCtrl.push(findVulnerabilitiesPage, {dataMenu:data});
+          this.navCtrl.push(this.gamesList[game.page], {dataMenu:data});
         });
-      }
+      }else if (game.page!=null && game.dataGame !=null ){
+        loadJson(game.dataGame,this.domSanitizer).then(data => { //load the data in advance
+          data = loadRightLanguage(data,this.translate.currentLang);
+          this.navCtrl.push(this.gamesList[game.page], {dataGame:data});
+        });
     }
+  }
 
 }

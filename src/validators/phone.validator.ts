@@ -15,20 +15,20 @@ export class PhoneValidator {
         });
       }
       if(phoneControl.value !== ""){
-        try{
-          const phoneUtil = libphonenumber.PhoneNumberUtil.getInstance();
-          let phoneNumber = "" + phoneControl.value + "",
-              region = countryControl.value.iso,
-              number = phoneUtil.parse(phoneNumber, region),
-              isValidNumber = phoneUtil.isValidNumber(number);
-              console.log('phoneControl.value: ' + phoneControl.value);
-                console.log('Region: ' + region);
-                console.log('number: ' + number);
-                console.log('isValidNumber: ' + isValidNumber);
-          if(isValidNumber){
-            return null;
-          }
-        }catch(e){
+        try {
+            const phoneUtil = libphonenumber.PhoneNumberUtil.getInstance();
+            let phoneNumber = "" + phoneControl.value + "",
+                region = countryControl.value.iso,
+                number = phoneUtil.parse(phoneNumber, region),
+                isValidNumber = phoneUtil.isValidNumber(number);
+            // console.log('phoneControl.value: ' + phoneControl.value);
+            // console.log('Region: ' + region);
+            // console.log('number: ' + number);
+            // console.log('isValidNumber: ' + isValidNumber);
+            if(isValidNumber){
+                return null;
+            }
+        } catch(e) {
           return {
             validCountryPhone: true
           };

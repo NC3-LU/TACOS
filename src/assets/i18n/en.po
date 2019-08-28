@@ -14,14 +14,20 @@ msgstr ""
 msgid "About"
 msgstr "About"
 
+msgid "All day"
+msgstr "All day"
+
 msgid "Alphanumeric and Special Characters"
 msgstr "Alphanumeric and Special Characters"
 
 msgid "Article(s) found:"
 msgstr "Article(s) found:"
 
-msgid "Call history"
-msgstr "Call history"
+msgid "CSWL 2019 Agenda"
+msgstr "CSWL 2019 Agenda"
+
+msgid "Calendar"
+msgstr "Calendar"
 
 msgid "Cancel"
 msgstr "Cancel"
@@ -29,14 +35,29 @@ msgstr "Cancel"
 msgid "Card Name"
 msgstr "Card Name"
 
+msgid "Check"
+msgstr "Check"
+
+msgid "Check a phone number"
+msgstr "Check a phone number"
+
 msgid "Confirm delete this password card?"
 msgstr "Confirm delete this password card?"
+
+msgid "Confirm this number is a spam?"
+msgstr "Confirm this number is a spam?"
+
+msgid "Cybersecurity Week 2019"
+msgstr "Cybersecurity Week 2019"
 
 msgid "Delete confirmation"
 msgstr "Delete confirmation"
 
-msgid "E-mail"
-msgstr "E-mail"
+msgid "Do you want to exit the app?"
+msgstr "Do you want to exit the app?"
+
+msgid "Exit confirmation"
+msgstr "Exit confirmation"
 
 msgid "Final Score"
 msgstr "Final Score"
@@ -53,26 +74,51 @@ msgstr "Games and Quiz"
 msgid "Generate Card"
 msgstr "Generate Card"
 
+msgid "Help"
+msgstr "Help"
+
 msgid "Home"
 msgstr "Home"
 
 msgid "How to generate your passwords?"
 msgstr "How to generate your passwords?"
 
-msgid "Incoming calls reported as spam"
-msgstr "Incoming calls reported as spam"
+msgid ""
+"I found an interesting article with the CASES mobile application "
+"(https://tacos.cases.lu):"
+msgstr ""
+"I found an interesting article with the CASES mobile application "
+"(https://tacos.cases.lu):"
 
 msgid "Language"
 msgstr "Language"
 
+msgid "Legitimate"
+msgstr "Legitimate"
+
 msgid "List of Cards"
 msgstr "List of Cards"
+
+msgid "Make sure that Wi-Fi or mobile data is turned on that try again"
+msgstr "Make sure that Wi-Fi or mobile data is turned on that try again"
 
 msgid "New Card"
 msgstr "New Card"
 
-msgid "No spam detected"
-msgstr "No spam detected"
+msgid "News"
+msgstr "News"
+
+msgid "Next"
+msgstr "Next"
+
+msgid "No"
+msgstr "No"
+
+msgid "No Internet connection"
+msgstr "No Internet connection"
+
+msgid "Numbers reported as spam"
+msgstr "Numbers reported as spam"
 
 msgid "OK"
 msgstr "OK"
@@ -80,20 +126,26 @@ msgstr "OK"
 msgid "Only Alphanumeric"
 msgstr "Only Alphanumeric"
 
-msgid "Password"
-msgstr "Password"
-
 msgid "Password Card"
 msgstr "Password Card"
 
-msgid "Physical Security"
-msgstr "Physical Security"
+msgid "Phish or not ?"
+msgstr "Phish or not ?"
+
+msgid "Phishing"
+msgstr "Phishing"
+
+msgid "Phone number with country code"
+msgstr "Phone number with country code"
+
+msgid "Please wait..."
+msgstr "Please wait..."
+
+msgid "Previous"
+msgstr "Previous"
 
 msgid "Quiz"
 msgstr "Quiz"
-
-msgid "Recently reported"
-msgstr "Recently reported"
 
 msgid "Remember your choices"
 msgstr "Remember your choices"
@@ -104,6 +156,9 @@ msgstr "Report"
 msgid "Report a spam"
 msgstr "Report a spam"
 
+msgid "Report this number as a spam ?"
+msgstr "Report this number as a spam ?"
+
 msgid "Reported"
 msgstr "Reported"
 
@@ -113,8 +168,14 @@ msgstr "Restart"
 msgid "Return to the quiz Menu"
 msgstr "Return to the quiz Menu"
 
+msgid "Score"
+msgstr "Score"
+
 msgid "Search"
 msgstr "Search"
+
+msgid "Security in your smartphone"
+msgstr "Security in your smartphone"
 
 msgid "See the correction"
 msgstr "See the correction"
@@ -131,6 +192,12 @@ msgstr "Select direction"
 msgid "Settings"
 msgstr "Settings"
 
+msgid "Sorry, but it s legitimate"
+msgstr "Sorry, but it s legitimate"
+
+msgid "Spam confirmation"
+msgstr "Spam confirmation"
+
 msgid "Spam signal"
 msgstr "Spam signal"
 
@@ -146,17 +213,32 @@ msgstr "Step 3"
 msgid "Step 4"
 msgstr "Step 4"
 
+msgid "Thank you for your contribution."
+msgstr "Thank you for your contribution."
+
 msgid "Tips and Tricks"
 msgstr "Tips and Tricks"
+
+msgid "Type of spam"
+msgstr "Type of spam"
+
+msgid "Unfortunately, it s a phish"
+msgstr "Unfortunately, it s a phish"
 
 msgid "Videos"
 msgstr "Videos"
 
-msgid "Waste Management"
-msgstr "Waste Management"
+msgid "Yes"
+msgstr "Yes"
 
-msgid "Web"
-msgstr "Web"
+msgid "Yes, it s a phish"
+msgstr "Yes, it s a phish"
+
+msgid "Yes, it s legitimate"
+msgstr "Yes, it s legitimate"
+
+msgid "click on the red text to see the suspisious elements"
+msgstr "click on the red text to see the suspisious elements"
 
 msgid "times"
 msgstr "times"

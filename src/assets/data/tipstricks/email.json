@@ -2,7 +2,7 @@
   {
     "language":"fr",
     "title":"Email",
-    "keywords":["email","courrier electronique"],
+    "keywords":["email","courrier electronique","mail"],
     "parts":[
       {
         "title":"En quelques mots",
@@ -10,7 +10,7 @@
       },
       {
         "title":"Mesures comportementales :",
-        "content":"<ul><li>Faites attention à ne pas révéler des informations confidentielles en répondant à des courriers électroniques. Vérifiez la légitimité de la demande et faites attention de ne pas divulguer trop d’informations dans vos réponses;</li><li>a plupart des courriers électroniques contenant des fichiers joints sont annoncés par des discussions précédentes, respectivement s’inscrivent dans un contexte spécifique légitimant l’ajout de pièces jointes. Si cela n’est pas le cas, soyez très prudents lors de la réception de courrier avec fichier joint, car ceux-ci peuvent contenir des codes malicieux;</li><li>les personnes malintentionnées essayent souvent d’exploiter les vulnérabilités humaines, comme notamment la curiosité, la pitié, la peur, l’appât du gain ou encore la libido. Si le courrier électronique reçu contient de telles allusions, il est fortement probable qu’il s’agisse d’un courrier électronique malicieux;</li><li>vérifiez si le courrier électronique prétendant provenir d’une certaine personne ressemble aux courriers électroniques précédemment envoyés par cette personne. La langue utilisée, la façon d’écrire, l’orthographe, le style etc. peuvent être des indices. Si vous avez un doute, il s’agit probablement d’un courrier électronique malicieux;</li><li>ne cliquez jamais sur des liens dans des courriers électroniques dont vous ne connaissez pas l’expéditeur, respectivement le courrier électronique qui présente des indices de malice, il pourrait s’agir de phishing ou d’un lien vers une page web piégée;</li><li>ne répondez pas à des courriers électroniques suspects. Une réponse de votre part ne fait que confirmer que l’adresse utilisée est bien active.</li></ul>"
+        "content":"<ul><li>Faites attention à ne pas révéler des informations confidentielles en répondant à des courriers électroniques. Vérifiez la légitimité de la demande et faites attention de ne pas divulguer trop d’informations dans vos réponses;</li><li>la plupart des courriers électroniques contenant des fichiers joints sont annoncés par des discussions précédentes, respectivement s’inscrivent dans un contexte spécifique légitimant l’ajout de pièces jointes. Si cela n’est pas le cas, soyez très prudents lors de la réception de courrier avec fichier joint, car ceux-ci peuvent contenir des codes malicieux;</li><li>les personnes malintentionnées essayent souvent d’exploiter les vulnérabilités humaines, comme notamment la curiosité, la pitié, la peur, l’appât du gain ou encore la libido. Si le courrier électronique reçu contient de telles allusions, il est fortement probable qu’il s’agisse d’un courrier électronique malicieux;</li><li>vérifiez si le courrier électronique prétendant provenir d’une certaine personne ressemble aux courriers électroniques précédemment envoyés par cette personne. La langue utilisée, la façon d’écrire, l’orthographe, le style, etc. peuvent être des indices. Si vous avez un doute, il s’agit probablement d’un courrier électronique malicieux;</li><li>ne cliquez jamais sur des liens dans des courriers électroniques dont vous ne connaissez pas l’expéditeur, respectivement le courrier électronique qui présente des indices de malice, il pourrait s’agir de phishing ou d’un lien vers une page web piégée;</li><li>ne répondez pas à des courriers électroniques suspects. Une réponse de votre part ne fait que confirmer que l’adresse utilisée est bien active.</li></ul>"
       },
       {
         "title":"Mesures techniques :",
@@ -27,8 +27,8 @@
   },
   {
     "language":"en",
-    "title":["Email"],
-    "keywords":"email",
+    "title":"Email",
+    "keywords":["email"],
     "parts":[
       {
         "title":"In brief",

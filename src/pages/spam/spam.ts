@@ -5,38 +5,41 @@ import {
     LoadingController,
     AlertController,
     ToastController } from 'ionic-angular';
-import { CallLog, CallLogObject } from '@ionic-native/call-log';
 
-import jsSHA from 'jssha'
-import { arrayDistinct } from '../../lib/utils';
 import { UtilsService } from './utils';
+import { TranslateService } from '@ngx-translate/core';
 import { PhoneValidator } from '../../validators/phone.validator';
+
 
 @Component({
   selector: 'page-spam',
   templateUrl: 'spam.html'
 })
 export class SpamPage {
+    loading: Loading;
+
     categories: string;
     calls: any;
-    callsFiltered: any[];
-    loading: Loading;
-    formSpam: FormGroup;
-    country: FormControl;
+    spamNumbers: any[];
 
+    country: FormControl;
     phoneNumber: any;
     spamType: any;
+    formSpam: FormGroup;
+    formSearchSpam: FormGroup;
+
 
     constructor(
         public alertCtrl: AlertController,
         public loadingCtrl: LoadingController,
         public toastCtrl: ToastController,
         public utils: UtilsService,
+        private translate: TranslateService,
         private formBuilder: FormBuilder) {
 
         this.utils = utils;
-        this.categories = "reportedCallHistorySpam";
-        this.callsFiltered = [];
+        this.categories = "checkSpam";
+        this.spamNumbers = [];
 
         this.country = new FormControl('LU', Validators.required);
 
@@ -50,158 +53,126 @@ export class SpamPage {
             spamType: new FormControl('', Validators.required)
         });
 
-
-
-        // Initialization of the filters
-        let filters: CallLogObject[] = [
-            {
-                name:"type",
-                value: ["1", "3"], // INCOMING_TYPE and MISSED_TYPE
-                operator: "=="
-            }
-        ];
-
-        // retrive the list of spams from the back-end service
-        this.utils.loadSpamsLight()
-        .then((dataSpam)=>{
-            // data.sort(function(a, b){
-            //     return b.date - a.date;
-            // });
-
-            // filters.push({
-            //     name: "number",
-            //     value: dataSpam.map(spam => {return spam.number}),
-            //     operator: "=="
-            // })
-
-            let hashes: string[] = dataSpam.map(spam => {return spam.number_hash});
-
-            CallLog.requestReadPermission()
-            .then(()=>{
-                CallLog.getCallLog(filters)
-                .then((dataLog)=> {
-                    // filter the list of calls with the know spam hashes
-                    this.callsFiltered = dataLog.filter(function(log){
-                        let shaObj = new jsSHA("SHA-512", "TEXT");
-                        shaObj.update(log.number);
-                        return hashes.includes(shaObj.getHash("HEX"));
-                    })
-
-                    // make the list unique
-                    this.callsFiltered = arrayDistinct(this.callsFiltered,
-                                                        'number');
-
-                    // count the number of report for each spam number
-                    this.callsFiltered = this.callsFiltered.map(function(log) {
-                        let shaObj = new jsSHA("SHA-512", "TEXT");
-                        shaObj.update(log.number);
-                        log.occurences = hashes.filter(function(item){ return item === shaObj.getHash("HEX"); }).length;
-                        return log;
-                    });
-                })
-                .catch((err)=>{
-                    console.log("Error getCallLog");
-                });
-            })
-            .catch((err)=>{
-                console.log(err);
-            });
-
-        })
-        .catch((err)=>{
-            console.log("Error when retrieving list of spams.");
+        this.formSearchSpam = this.formBuilder.group({
+            country: this.country,
+            phoneNumber: new FormControl('', Validators.compose([
+                      PhoneValidator.validCountryPhone(this.country),
+                      // Validators.pattern('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$'),
+                      Validators.required
+                ]))
         });
     }
 
+
+    /*
+    * Fired by the form to submit new spam.
+    */
     onSpamSubmit() {
         let phoneNumber = this.formSpam.get('phoneNumber').value;
         let spamType = this.formSpam.get('spamType').value;
 
         let alert = this.alertCtrl.create({
-          title: 'Spam confirmation',
-          subTitle: `Report this number as a spam (${this.formSpam.get('spamType').value}) ?`,
+          title: this.translate.instant('Spam confirmation'),
+          subTitle: this.translate.instant('Report this number as a spam ?'),
           buttons: [
               {
                   text: 'OK',
                   role: 'ok',
-                  handler: data => {
+                  handler: () => {
                       const thankingToast = this.toastCtrl.create({
-                          message: 'Thank you for your contribution.',
+                          message: this.translate.instant('Thank you for your contribution.'),
                           duration: 3000
                       });
                       thankingToast.present();
-
                       this.utils.reportSpam(phoneNumber, spamType);
                     }
               },
               {
-                  text: 'Cancel',
+                  text: this.translate.instant('Cancel'),
                   role: 'cancel',
-                  handler: data => {
-                      console.log('Cancel clicked');
-                  }
+                  handler: () => {}
               },
           ]
         });
         alert.present();
     }
 
-    confirmSpam() {
+
+    /*
+    * If the user want to search for a spam manually.
+    */
+    onSearchSpamSubmit() {
+        let phoneNumber = this.formSearchSpam.get('phoneNumber').value;
+
+        if (phoneNumber != '') {
+            this.utils.searchSpam(phoneNumber)
+            .then((occurences)=>{
+                if (occurences != 0) {
+                    this.spamNumbers = [{
+                        'number': phoneNumber,
+                        'date': '',
+                        'occurences': occurences
+                    }];
+                } else {
+                    this.spamNumbers = [];
+                }
+            })
+        }
+
+    }
+
+
+    /*
+    * Confirm a spam.
+    */
+    confirmSpam(phoneNumber: string) {
         let alert = this.alertCtrl.create({
-          title: 'Spam confirmation',
-          subTitle: 'Confirm this number is a spam?',
+          title: this.translate.instant('Spam confirmation'),
+          subTitle: this.translate.instant('Confirm this number is a spam?'),
           buttons: [
               {
-                  text: 'OK',
+                  text: this.translate.instant('OK'),
                   role: 'ok',
-                  handler: data => {
+                  handler: () => {
                       const thankingToast = this.toastCtrl.create({
-                          message: 'Thank you for your contribution.',
+                          message: this.translate.instant('Thank you for your contribution.'),
                           duration: 3000
                       });
-                      thankingToast.present();
+                      this.utils.reportSpam(phoneNumber, 'other').then(()=>{
+                          thankingToast.present();
+                          this.onSearchSpamSubmit();
+                      });
                     }
               },
               {
-                  text: 'Cancel',
+                  text: this.translate.instant('Cancel'),
                   role: 'cancel',
-                  handler: data => {
-                      console.log('Cancel clicked');
-                  }
+                  handler: () => {}
               },
           ]
         });
         alert.present();
     }
 
-
-    // confirmHam() {
-    //     let alert = this.alertCtrl.create({
-    //       title: 'Ham confirmation',
-    //       subTitle: 'Confirm this number is not a spam?',
-    //       buttons: [
-    //           {
-    //               text: 'OK',
-    //               role: 'ok',
-    //               handler: data => {
-    //                   const thankingToast = this.toastCtrl.create({
-    //                       message: 'Thank you for your contribution.',
-    //                       duration: 3000
-    //                   });
-    //                   thankingToast.present();
-    //                 }
-    //           },
-    //           {
-    //               text: 'Cancel',
-    //               role: 'cancel',
-    //               handler: data => {
-    //                   console.log('Cancel clicked');
-    //               }
-    //           },
-    //       ]
-    //     });
-    //     alert.present();
-    // }
+    /*
+    * Display a help box in order to explain how to format a phone number.
+    */
+    onAskHelp() {
+        let alert = this.alertCtrl.create({
+          title: this.translate.instant('Help'),
+          subTitle: this.translate.instant('International phone number formatting (E.164):<hr />') +
+                    this.translate.instant('<code>[+][country code][area code][local phone number]</code><hr />') +
+                    this.translate.instant('Example:<hr />') +
+                    '<code>+352 6x1 xxx xxx</code>',
+          buttons: [
+              {
+                  text: this.translate.instant('OK'),
+                  role: 'ok'
+              }
+          ]
+        });
+        alert.present();
+    }
 
 
     /*
@@ -214,7 +185,7 @@ export class SpamPage {
 
     startIFrameLoadEvent(): void {
       this.loading = this.loadingCtrl.create({
-          content: 'Please wait...'
+          content: this.translate.instant('Please wait...')
       });
       this.loading.present();
     }

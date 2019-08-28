@@ -2,12 +2,14 @@ page-tipstricks {
   /*
   * Style for the title of the different parts
   */
-  .tipstrick-custom-level-title-0{
-    font-size: 2.0em;
-    color: white ;
-    background-color: #00426D;
-    text-align:center;
-  }
+  // .tipstrick-custom-level-title-0{
+  //   font-size: 2.0em;
+  //   color: white ;
+  //   background-color: #00426D;
+  //   text-align:center;
+  //   padding : 0.2em;
+  //   margin:0px;
+  // }
 
   .tipstrick-custom-level-title-1{
     font-size: 1.6em;
@@ -15,19 +17,24 @@ page-tipstricks {
     background-color: #d9ebfa;
     background-size: 100%;
     text-align:left;
+    padding : 0.1em;
+    margin:0px;
   }
 
   .tipstrick-custom-level-title-2{
     text-decoration: underline;
     font-size: 1.4em;
+    margin:0px;
   }
 
   .tipstrick-custom-level-title-3{
     font-size: 1.2em;
+    margin:0px;
   }
 
   .tipstrick-custom-level-title-4{
     font-size: 1.0em;
+    margin:0px;
   }
 
   .tipstrick-custom-level-title-0, .tipstrick-custom-level-title-1, .tipstrick-custom-level-title-2, .tipstrick-custom-level-title-3, .tipstrick-custom-level-title-4{

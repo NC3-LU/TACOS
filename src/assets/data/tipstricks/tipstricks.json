@@ -1,0 +1,88 @@
+[
+  {
+    "language":"fr",
+    "title":"Trucs et astuces",
+    "version":0.1,
+    "keywords":["Trucs et astuces"],
+    "tipstricks":[
+      {
+        "title":"Mot de Passe",
+        "icon":"url(../assets/imgs/t&t/8.png)",
+        "url":"../assets/data/tipstricks/password.json"
+      },
+      {
+        "title":"Courrier électronique",
+        "icon":"url(../assets/imgs/t&t/6.png)",
+        "url":"../assets/data/tipstricks/email.json"
+      },
+      {
+        "title":"Sécurité physique",
+        "icon":"url(../assets/imgs/t&t/23.png)",
+        "url":"../assets/data/tipstricks/physicalsecurity.json"
+      },
+      {
+        "title":"Web",
+        "icon":"url(../assets/imgs/t&t/4.png)",
+        "url":"../assets/data/tipstricks/web.json"
+      },
+      {
+        "title":"Logiciel malveillant",
+        "icon":"url(../assets/imgs/t&t/3.png)",
+        "url":"../assets/data/tipstricks/malware.json"
+      },
+      {
+        "title":"Ingéniérie sociale",
+        "icon":"url(../assets/imgs/t&t/7.png)",
+        "url":"../assets/data/tipstricks/socialengineering.json"
+      },
+      {
+        "title":"Mise au rebut",
+        "icon":"url(../assets/imgs/t&t/9.png)",
+        "url":"../assets/data/tipstricks/scrapping.json"
+      }
+    ]
+  },
+  {
+    "language":"en",
+    "title":"Tips and tricks !",
+    "version":0.1,
+    "keywords":["Tips and tricks"],
+    "tipstricks":[
+      {
+        "title":"Password",
+        "icon":"url(../assets/imgs/t&t/8.png)",
+        "url":"../assets/data/tipstricks/password.json"
+      },
+      {
+        "title":"Email",
+        "icon":"url(../assets/imgs/t&t/6.png)",
+        "url":"../assets/data/tipstricks/email.json"
+      },
+      {
+        "title":"Physical Security",
+        "icon":"url(../assets/imgs/t&t/23.png)",
+        "url":"../assets/data/tipstricks/physicalsecurity.json"
+      },
+      {
+        "title":"Web",
+        "icon":"url(../assets/imgs/t&t/4.png)",
+        "url":"../assets/data/tipstricks/web.json"
+      },
+      {
+        "title":"Malware",
+        "icon":"url(../assets/imgs/t&t/3.png)",
+        "url":"../assets/data/tipstricks/malware.json"
+      },
+      {
+        "title":"Social engineering",
+        "icon":"url(../assets/imgs/t&t/7.png)",
+        "url":"../assets/data/tipstricks/socialengineering.json"
+      },
+      {
+        "title":"Scrapping",
+        "icon":"url(../assets/imgs/t&t/9.png)",
+        "url":"../assets/data/tipstricks/scrapping.json"
+      }
+    ]
+  }
+]

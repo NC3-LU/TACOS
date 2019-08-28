@@ -25,7 +25,7 @@
   <ion-grid *ngIf="!searching" >
         <ion-button ion-button text-wrap class="home-button"
           [style.background-image]="page.img"
-          *ngFor="let page of pages" (click)="goPage(page.component)">
+          *ngFor="let page of pages" (click)="goPage(page)">
           {{page.title}}
         </ion-button>
   </ion-grid>

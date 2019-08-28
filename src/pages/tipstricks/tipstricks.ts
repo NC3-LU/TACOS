@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 import { TranslateService } from '@ngx-translate/core';
 
@@ -17,30 +18,63 @@ import { VideosPage } from '../videos/videos';
 export class TipsTricksPage {
   selectedTipsTricks: any;
   article: any;
+  data: any;
 
   //define the subpages
   pages: Array<{title: string, url: any, article: any, links: any,  icon: string}>;
+  videosList: any;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private translate: TranslateService,
     private domSanitizer: DomSanitizer,
+    private iab: InAppBrowser
      ) {
-    // If we navigated to this page, we will have an item available as a nav param
-    this.selectedTipsTricks = navParams.get('tipsTricksitem');
-    if(this.selectedTipsTricks){
-      this.article = this.selectedTipsTricks.article;
-    }
-    this.translate.stream(['Password', 'E-mail', 'Physical Security','Web', 'Waste Management']).subscribe(translations => {
-      this.pages = [
-        { title: translations['Password'], url: '../assets/data/tipstricks/password.json' , article: '', links:'', icon: 'url(../assets/imgs/t&t/8.png)'},
-        { title: translations['E-mail'], url: '../assets/data/tipstricks/email.json' , article: '', links:'', icon: 'url(../assets/imgs/t&t/6.png)'},
-        { title: translations['Physical Security'], url: '../assets/data/tipstricks/physicalsecurity.json' , article: '', links:'', icon: 'url(../assets/imgs/t&t/23.png)'},
-        { title: translations['Web'], url: '../assets/data/tipstricks/web.json' , article: '', links:'', icon: 'url(../assets/imgs/t&t/4.png)'},
-        //{ title: translations['Waste Management'], url: '../assets/data/tipstricks/wastemanagement.json' , article: '', links:'', icon: 'trash'}
-      ];
-    })
+    if (typeof navParams.get('data') !== 'undefined') { //load the menu
+     this.data = navParams.get('data');
+     this.pages = this.data[0].tipstricks;
+   }
+  }
+
+//init some variables
+  ionViewWillEnter   (){
+  var list = [];
+  var langue = this.translate.currentLang;
+  // If we navigated to this page, we will have an item available as a nav param
+  if(typeof this.navParams.get('videosList') == 'undefined'){
+    loadJson('../../assets/data/videos.json',this.domSanitizer).then(data => {
+    data.forEach(function(video){
+      if(video.language == langue){
+        list.push(video.title.toLowerCase());
+        video.keywords.forEach(function(keyword){
+          list.push(keyword.toLowerCase());
+          });
+        }
+      });
+      this.videosList = list;
+    });
+  }else{
+    this.videosList = this.navParams.get('videosList');
+  }
+  if(typeof this.navParams.get('tipsTricksitem') !== 'undefined'){
+    this.selectedTipsTricks = this.navParams.get('tipsTricksitem');
+    this.article = this.selectedTipsTricks.article;
+   }
+  }
+
+/*
+* Check if a video exist (search title and keywords in the list of videos)
+*/
+  checkVideo(haystack:Array<String>,keywords: Array<String>,title : String){
+    var find = false;
+    if(haystack.indexOf(title.toLowerCase())>-1)
+      find= true;
+    keywords.forEach(function (st){
+       if(haystack.indexOf(st.toLowerCase())>-1)
+         find= true;
+     });
+    return find;
   }
 
 
@@ -51,10 +85,16 @@ export class TipsTricksPage {
     loadJson(page.url,this.domSanitizer).then(data => {
       page.article = data;
       page.article = loadRightLanguage(page.article,this.translate.currentLang);
-      this.navCtrl.push(TipsTricksPage, {tipsTricksitem:page});
+      this.navCtrl.push(TipsTricksPage, {tipsTricksitem:page, videosList:this.videosList});
     });
   }
 
+  /*
+  * Open an external link
+  */
+  openExternalLink(item){
+    this.iab.create(item,'_blank','location=yes');
+  }
 
   /*
   * Open a tips trick item (e.g password)

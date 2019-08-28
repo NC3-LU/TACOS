@@ -1,0 +1,94 @@
+[
+  {
+    "language":"fr",
+    "title":"Quiz",
+    "version":0.1,
+    "keywords":["Quiz"],
+    "quizs":[
+      {
+        "title":"Mot de Passe",
+        "keywords":["mot de passe"],
+        "icon":"url(../assets/imgs/t&t/6.png)",
+        "game":"../assets/data/gamesquiz/password.json",
+        "storageKey":"quizPassword"
+      },
+      {
+        "title":"Sécurité Physique",
+        "keywords":["sécurité physique"],
+        "icon":"url(../assets/imgs/t&t/23.png)",
+        "game":"../assets/data/gamesquiz/physicalsecurity.json",
+        "storageKey":"quizPhysicalSecurity"
+      },
+      {
+        "title":"Internet",
+        "keywords":["internet"],
+        "icon":"url(../assets/imgs/t&t/4.png)",
+        "game":"../assets/data/gamesquiz/web.json",
+        "storageKey":"quizWeb"
+      }
+    ],
+    "games":[
+      {
+        "title":"Trouver les vulnérabilités",
+        "keywords":["vulnerabilities"],
+        "icon":"url(../assets/imgs/t&t/12.png)",
+        "dataMenu":"../assets/data/gamesquiz/findvulnerabilities/findvulnerabilities.json",
+        "page":"findVulnerabilitiesPage"
+      },
+      {
+        "title":"Phishing ?",
+        "keywords":["phishing"],
+        "icon":"url(../assets/imgs/t&t/12.png)",
+        "dataGame":"../assets/data/gamesquiz/phishornot/phishornot.json",
+        "page":"phishOrNotPage",
+        "storageKey":"gamePhishOrNot"
+      }
+    ]
+  },
+  {
+    "language":"en",
+    "title":"Quiz !",
+    "version":0.1,
+    "keywords":["Quiz"],
+    "quizs":[
+      {
+        "title":"Password",
+        "keywords":["password"],
+        "icon":"url(../assets/imgs/t&t/6.png)",
+        "game":"../assets/data/gamesquiz/password.json",
+        "storageKey":"quizPassword"
+      },
+      {
+        "title":"Physical Security",
+        "keywords":["Physical Security"],
+        "icon":"url(../assets/imgs/t&t/23.png)",
+        "game":"../assets/data/gamesquiz/physicalsecurity.json",
+        "storageKey":"quizPhysicalSecurity"
+      },
+      {
+        "title":"Web",
+        "keywords":["web"],
+        "icon":"url(../assets/imgs/t&t/4.png)",
+        "game":"../assets/data/gamesquiz/web.json",
+        "storageKey":"quizWeb"
+      }
+    ],
+    "games":[
+      {
+        "title":"Find security holes ",
+        "keywords":["vulnerabilities"],
+        "icon":"url(../assets/imgs/t&t/12.png)",
+        "game":"../assets/data/gamesquiz/findvulnerabilities/findvulnerabilities.json",
+        "page":"findVulnerabilitiesPage"
+      },
+      {
+        "title":"Phishing ?",
+        "keywords":["phishing"],
+        "icon":"url(../assets/imgs/t&t/12.png)",
+        "dataGame":"../assets/data/gamesquiz/phishornot/phishornot.json",
+        "page":"phishOrNotPage",
+        "storageKey":"gamePhishOrNot"
+      }
+    ]
+  }
+]

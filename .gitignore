@@ -11,6 +11,7 @@ log.txt
 *.sublime-workspace
 .vscode/
 npm-debug.log*
+src/assets/i18n/*.mo
 
 .idea/
 .ionic/
@@ -30,6 +31,4 @@ plugins/ios.json
 www/
 $RECYCLE.BIN/
 
-.DS_Store
-Thumbs.db
 UserInterfaceState.xcuserstate

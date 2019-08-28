@@ -9,69 +9,89 @@
 
 <ion-content>
     <ion-toolbar no-border-top color="primary">
-    <ion-segment [(ngModel)]="categories" color="light">
-        <ion-segment-button value="reportedCallHistorySpam">
-            {{ 'Call history' | translate }}
-        </ion-segment-button>
-        <ion-segment-button value="reportSpam">
-            {{ 'Report' | translate }}
-        </ion-segment-button>
-    </ion-segment>
+        <ion-segment [(ngModel)]="categories" color="light">
+            <ion-segment-button value="checkSpam">
+                {{ 'Check' | translate }}
+            </ion-segment-button>
+            <ion-segment-button value="reportSpam">
+                {{ 'Report' | translate }}
+            </ion-segment-button>
+        </ion-segment>
     </ion-toolbar>
 
     <div [ngSwitch]="categories" padding>
-        <ion-list *ngSwitchCase="'reportedCallHistorySpam'">
-            <div *ngIf="callsFiltered.length != 0">
-                <h2>{{ 'Incoming calls reported as spam' | translate }}</h2>
+        <ion-list *ngSwitchCase="'checkSpam'">
+            <div *ngIf="spamNumbers.length != 0">
+                <h2>{{ 'Numbers reported as spam' | translate }}</h2>
+                <ion-card *ngFor="let c of spamNumbers">
+                    <ion-card-header>
+                        <ion-card-title><ion-icon name="call"></ion-icon> {{ c.number | formatPhoneNumber}}</ion-card-title>
+                        <ion-card-subtitle *ngIf="c.date"><ion-icon name="calendar"></ion-icon> {{ c.date | date:'medium' }}</ion-card-subtitle>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-grid>
+                            <ion-row align-items-center>
+                                <ion-col>
+                                    <div>
+                                        {{ 'Reported' | translate }} {{c.occurences}} {{ 'times' | translate }}.
+                                    </div>
+                                </ion-col>
+                                <ion-col class="ion-align-self-end">
+                                    <div>
+                                        <!-- <button ion-button color="danger" (click)="confirmHam()" float-right><ion-icon name="thumbs-down"></ion-icon></button> -->
+                                        <button ion-button color="secondary" (click)="confirmSpam(c.number)" float-right><ion-icon name="thumbs-up"></ion-icon></button>
+                                    </div>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-card-content>
+                </ion-card>
+                <hr />
             </div>
-            <div *ngIf="callsFiltered.length == 0">
-                <h1>{{ 'No spam detected' | translate }} <ion-icon name="happy"></ion-icon></h1>
-            </div>
-
-            <ion-card *ngFor="let c of callsFiltered">
-                <ion-card-header>
-                    <ion-card-title><ion-icon name="call"></ion-icon> {{ c.number | formatPhoneNumber}}</ion-card-title>
-                    <ion-card-subtitle><ion-icon name="calendar"></ion-icon> {{ c.date | date:'medium' }}</ion-card-subtitle>
-                </ion-card-header>
-                <ion-card-content>
-                    <ion-grid>
-                        <ion-row align-items-center>
-                            <ion-col>
-                                <div>
-                                    {{ 'Reported' | translate }} {{c.occurences}} {{ 'times' | translate }}.
-                                </div>
-                            </ion-col>
-                            <ion-col class="ion-align-self-end">
-                                <div>
-                                    <!-- <button ion-button color="danger" (click)="confirmHam()" float-right><ion-icon name="thumbs-down"></ion-icon></button> -->
-                                    <button ion-button color="secondary" (click)="confirmSpam()" float-right><ion-icon name="thumbs-up"></ion-icon></button>
-                                </div>
-                            </ion-col>
-                        </ion-row>
-                    </ion-grid>
-                </ion-card-content>
-            </ion-card>
+            <h2>{{ 'Check a phone number' | translate }}</h2>
+            <form [formGroup]="formSearchSpam" (ngSubmit)="onSearchSpamSubmit()">
+                <ion-item>
+                    <ion-input inputmode="tel" formControlName="phoneNumber" type="text" placeholder="{{ 'Phone number with country code' | translate }}" required></ion-input>
+                    <button ion-button clear item-end (click)="onAskHelp()"><ion-icon name="help"></ion-icon></button>
+                </ion-item>
+                <ion-item>
+                    <button ion-button type="submit" [disabled]="!formSearchSpam.valid" block>{{ 'Search' | translate }}</button>
+                </ion-item>
+            </form>
         </ion-list>
 
         <ion-list *ngSwitchCase="'reportSpam'">
             <h2>{{ 'Report a spam' | translate }}</h2>
             <form [formGroup]="formSpam" (ngSubmit)="onSpamSubmit()">
                 <ion-item>
-                    <ion-input formControlName="phoneNumber" type="text" placeholder="Phone number with country code"></ion-input>
+                    <ion-input inputmode="tel" formControlName="phoneNumber" type="text" placeholder="{{ 'Phone number with country code' | translate }}" required></ion-input>
                 </ion-item>
                 <br />
                 <ion-item>
                     <ion-label>{{ 'Type of spam' | translate }}</ion-label>
-                    <ion-select formControlName="spamType">
+                    <ion-select formControlName="spamType" required>
                         <ion-option value="financial">Financial fraud</ion-option>
+                        <ion-option value="scam">Scam</ion-option>
+                        <ion-option value="telemarketer">Telemarketer</ion-option>
+                        <ion-option value="survey">Survey</ion-option>
                         <ion-option value="person">Person</ion-option>
                         <ion-option value="other">Other</ion-option>
                     </ion-select>
                 </ion-item>
                 <ion-item>
-                    <button ion-button>Report</button>
+                    <button ion-button type="submit" [disabled]="!formSpam.valid" block>{{ 'Report' | translate }}</button>
                 </ion-item>
             </form>
+
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <p class="text-justify">The reported phone number will be hashed (<i>encrypted</i>
+                            with a one way function) by your smartphone then sent to our collaborative database.<br />
+                            This means it is impossible for us to see the phone number.</p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
         </ion-list>
     </div>
 

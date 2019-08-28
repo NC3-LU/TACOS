@@ -1,0 +1,94 @@
+[
+  {
+    "language":"fr",
+    "version":0.1,
+    "storageKey":"gamePhishOrNot",
+    "items":[
+      {
+        "title":"Google log-in",
+        "type":"image",
+        "initial":"../../../assets/data/gamesquiz/phishornot/google_fr.png",
+        "explanation":"../../../assets/data/gamesquiz/phishornot/google_fr_explanation.png",
+        "explanations":[
+          ["1", "Le site n'a pas de https, il n'est donc pas sécurisé."],
+          ["2", "Le nom de domaine n'est pas le bon 'gooogle'."],
+          ["3", "Le logo n'est pas celui actuellement utilisé par Google."],
+          ["4", "Une faute d'orthographe s'est glisée dans la page."]
+        ],
+        "legit":0
+      },
+      {
+        "title":"Besoin d'aide",
+        "type":"email",
+        "initial":"<p><strong>from : </strong>Rémy Cases '&lt;r***@cases.lu&gt;'<br><strong>to : </strong>Tous les contacts<br><strong>Sujet : </strong>Help !!</p><br><p>Je vous écrit ce mail pour vous dire que je me suis blessé pendant mes vacances à Londres et ai besoin d'aide pour payer l'hôpital.</p><p>Svp, envoyez-moi 500$ au western union le plus proche de Big ben.</p><p>Je vous promets que je vous rembourserai avec intérêts dès que je serai rentré.</p><br>Rémi",
+        "explanation":"<p><strong>from : </strong>Rémy Cases '&lt;r***@cases.lu&gt;'<br><strong>to : </strong><span class='explanation1'>Tous les contacts</span><br><strong>Sujet : </strong>Help !!</p><br><p>Je vous écrit ce mail pour vous dire que je me suis blessé pendant mes vacances à Londres et <span class='explanation3'>ai besoin d'aide pour payé l'hôpital</span>.</p><p>Svp, <span class='explanation4'>envoyez-moi 500$ au western union</span> le plus proche de Big ben.</p><p>Je vous promets que je vous rembourserai avec intérêts dès que je serai rentré.</p><br><span class='explanation2'>Rémi</span>",
+        "explanations":{
+          "explanation1":"Dans ce genre de cas, la victime préfère envoyer le message à ses proches plutôt qu'à son carnet d'adresses complet.",
+          "explanation2":"Peu de gens se trompent en écrivant leur propre prénom.",
+          "explanation3":"Des fautes d'orthographe peuvent également mettre la puce à l'oreille.",
+          "explanation4":"L'escroc essaie de vous faire envoyer de l'argent là ou il n'est pas traçable."
+        },
+        "legit":0
+      },
+      {
+        "title":"Live log-in",
+        "type":"image",
+        "initial":"../../../assets/data/gamesquiz/phishornot/live_us.png",
+        "explanation":"../../../assets/data/gamesquiz/phishornot/live_us.png",
+        "explanations":[
+          ["1", "Un cadenas est présent dans la barre d'adresse donc le site est sécurisé."],
+          ["2", "Le nom de domaine correspond bien à celui de Microsoft."],
+          ["3", "Il n'y a pas de fautes d'orthographes"],
+          ["4", "La présentation du site est conforme "]
+        ],
+        "legit":1
+      }
+    ]
+  },
+  {
+    "language":"en",
+    "version":0.1,
+    "storageKey":"gamePhishOrNot",
+    "items":[
+      {
+        "title":"Google log-in",
+        "type":"image",
+        "initial":"../../../assets/data/gamesquiz/phishornot/google_us.png",
+        "explanation":"../../../assets/data/gamesquiz/phishornot/google_us_explanation.png",
+        "explanations":[
+          ["1", "No HTTPS on website, no security."],
+          ["2", "The domain name is not the right 'gooogle'."],
+          ["3", "The logo is not the one actually uses by Google."],
+          ["4", "A misspelling is in the page."]
+        ],
+        "legit":0
+      },
+      {
+      	"title": "Need help",
+      	"type": "email",
+      	"initial": "<p><strong>from : </strong>Rémy Cases '&lt;r***@cases.lu&gt;'<br><strong>to : </strong>Entire Address Book<br><strong>Subject : </strong>Help !!</p><br><p>I am writing this email to tell you that I hurt myself during my vacation in London and need help to pay for the hospital.</p><p>Please, send me $500 to the western union closest to Big Ben.</p><p>I promise I'll pay you back with interest as soon as I get back.</p><br>Rémi",
+      	"explanation": "<p><strong>from : </strong>Rémy Cases '&lt;r***@cases.lu&gt;'<br><strong>to : </strong><span class='explanation1'>Entire Address Book</span><br><strong>Subject : </strong>Help !!</p><br><p>I am writing this email to tell you that I hurt myself during my vacation in London and <span class='explanation3'>needed help to paid for the hospital.</span>.</p><p>Please, <span class='explanation4'>send me $500 to the western union</span> closest to Big Ben.</p><p>I promise I'll pay you back with interest as soon as I get back.</p><br><span class='explanation2'>Rémi</span>",
+      	"explanations": {
+      		"explanation1": "In such cases, the victim prefers to send the message to his or her family rather than to his or her complete address book.",
+      		"explanation2": "Few people misspell their own names.",
+      		"explanation3": "Spelling mistakes can also be clues.",
+      		"explanation4": "The scammer is trying to get you to send money to places where it can't be traceable."
+      	},
+      	"legit": 0
+      },
+      {
+        "title":"Live log-in",
+        "type":"image",
+        "initial":"../../../assets/data/gamesquiz/phishornot/live_us.png",
+        "explanation":"../../../assets/data/gamesquiz/phishornot/live_us.png",
+        "explanations":[
+          ["1", "A padlock is present in the address bar so the site is secure."],
+          ["2", "The domain name is correct"],
+          ["3", "There are no spelling mistakes"],
+          ["4", "The layout is the right one"]
+        ],
+        "legit":1
+      }
+    ]
+  }
+]

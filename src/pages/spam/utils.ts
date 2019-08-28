@@ -33,11 +33,11 @@ export class UtilsService {
         });
     }
 
+
     reportSpam(phoneNumber: string, spamType: string) {
         let shaObj = new jsSHA("SHA-512", "TEXT");
+        phoneNumber = phoneNumber.replace(/\s/g, '');
         shaObj.update(phoneNumber);
-        // console.log(shaObj.getHash("HEX"));
-        // HTTP post request
 
         let data = {
             'number_hash': shaObj.getHash("HEX"),
@@ -48,8 +48,32 @@ export class UtilsService {
         return new Promise<any>(resolve => {
             let http = new HTTP();
             http.post(environment.backendServicesURL + 'spams', data, {}).then((result : any) => {
-                console.log(result);
                 resolve(result);
+            }).catch((error : any) => {
+                console.log(error);
+                console.log(error.status);
+                console.log(error.error); // error message as string
+                console.log(error.headers);
+                resolve("ServiceError");
+            });
+        });
+    }
+
+
+    searchSpam(phoneNumber: string) {
+        let shaObj = new jsSHA("SHA-512", "TEXT");
+        phoneNumber = phoneNumber.replace(/\s/g, '');
+        shaObj.update(phoneNumber);
+
+        let data = {
+            'number_hash': shaObj.getHash("HEX")
+        }
+
+        return new Promise<any>(resolve => {
+            let http = new HTTP();
+            http.get(environment.backendServicesURL + 'spams', data, {}).then((result : any) => {
+                let jsonData = JSON.parse(result.data);
+                resolve(jsonData.nb_results);
             }).catch((error : any) => {
                 console.log(error);
                 console.log(error.status);

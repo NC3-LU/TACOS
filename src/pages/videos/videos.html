@@ -1,23 +1,29 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Awareness videos</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{ 'Awareness videos' | translate }}</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content>
-<ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
-  <ion-list>
-    <ion-item *ngFor="let p of videosFiltered">
-      <iframe  width="100%"
-              height="315"
-              [src]="p.url ? p.url : null"
-              frameborder="0"
-              allowfullscreen></iframe>
-      <h2>{{p.title}}</h2>
-    </ion-item>
-
-  </ion-list>
+    <div text-center text-wrap padding *ngIf="offline">
+        <h2>{{'No Internet connection' | translate}}</h2>
+        <ion-label>{{'Make sure that Wi-Fi or mobile data is turned on that try again' | translate}}</ion-label>
+    </div>
+    <div *ngIf="!offline">
+        <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()" placeholder="{{'Search' | translate }}"></ion-searchbar>
+        <ion-list>
+            <ion-item *ngFor="let p of videosFiltered | paginate: {id:'pageNumber', itemsPerPage: 5, currentPage: page }">
+                <iframe  width="100%"
+                height="315"
+                [src]="p.url ? p.url : null"
+                frameborder="0"
+                allowfullscreen></iframe>
+                <h2>{{p.title}}</h2>
+            </ion-item>
+        </ion-list>
+        <pagination-controls id='pageNumber' (pageChange)="page = $event" previousLabel="{{'Previous' | translate}}"  nextLabel="{{'Next' | translate}}"></pagination-controls>
+    </div>
 </ion-content>
