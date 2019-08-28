@@ -42,6 +42,20 @@
           ["4", "La présentation du site est conforme "]
         ],
         "legit":1
+      },
+      {
+        "title":"Photos de la soirée",
+        "type":"email",
+        "initial":"<p><strong>from : </strong>Rémy Cases '&lt;r***@cases.lu&gt;'<br><strong>to : </strong>Tous les contacts<br><strong>Sujet : </strong>Photo de la dernière soirée !</p><p>Salut,<br/><br/>Tu trouveras le lien dropbox des photos de la dernière soirée : </p><p><a class='hyperlink1' href='#'>Liens des photos</a></p><br>Rémi",
+        "hyperlinks":{
+          "hyperlink1 activated":"www.dropboox.ru"
+        },
+        "explanation":"<p><strong>from : </strong>Rémy Cases '&lt;r***@cases.lu&gt;'<br><strong>to : </strong>Tous les contacts<br><strong>Sujet : </strong>Photo de la dernière soirée !</p><p>Salut,<br/><br/>Tu trouveras le lien dropbox des photos de la dernière soirée : </p><p><span class='explanation1'>Liens des photos</span></p><br><br><span class='explanation2'>Rémi</span>",
+        "explanations":{
+          "explanation1":"www.dropboox.ru : l'adresse du lien ne renvoie pas vers le bon site !",
+          "explanation2":"Peu de gens se trompent en écrivant leur propre prénom."
+        },
+        "legit":0
       }
     ]
   },
@@ -88,6 +102,20 @@
           ["4", "The layout is the right one"]
         ],
         "legit":1
+      },
+      {
+        "title":"Photos of the party",
+        "type":"email",
+        "initial":"<p><strong>from : </strong>Rémy Cases '&lt;r***@cases.lu&gt;'<br><strong>to : </strong>Entire Address Book<br><strong>Subject : </strong>Photos of the party !</p><p>Hi,<br/><br/>You will find the dropbox link to the pictures from the last party: </p><p><a class='hyperlink1' href='#'>Link</a></p><br>Rémi",
+        "hyperlinks":{
+          "hyperlink1 activated":"www.dropboox.ru"
+        },
+        "explanation":"<p><strong>from : </strong>Rémy Cases '&lt;r***@cases.lu&gt;'<br><strong>to : </strong>Entire Address Book<br><strong>Subject : </strong>Photos of the party !</p><p>Hi,<br/><br/>You will find the dropbox link to the pictures from the last party: </p><p><span class='explanation1'>Link</span></p><br><br><span class='explanation2'>Rémi</span>",
+        "explanations":{
+          "explanation1":"www.dropboox.ru : The URL is not the right one !",
+          "explanation2":"Few people misspell their own names."
+        },
+        "legit":0
       }
     ]
   }

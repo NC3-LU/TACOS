@@ -132,10 +132,10 @@ msgid "Password Card"
 msgstr "Carte de mot de passe"
 
 msgid "Phish or not ?"
-msgstr ""
+msgstr "Phishing ou non ?"
 
 msgid "Phishing"
-msgstr ""
+msgstr "Phishing"
 
 msgid "Phone number with country code"
 msgstr "Numéro de téléphone avec indicatif de pays"
@@ -171,7 +171,7 @@ msgid "Return to the quiz Menu"
 msgstr "Retourner au menu Jeux et Quiz"
 
 msgid "Score"
-msgstr ""
+msgstr "Score"
 
 msgid "Search"
 msgstr "Rechercher"
@@ -195,7 +195,7 @@ msgid "Settings"
 msgstr "Paramètres"
 
 msgid "Sorry, but it s legitimate"
-msgstr ""
+msgstr "Désolé, mais c'était légitime"
 
 msgid "Spam confirmation"
 msgstr ""
@@ -225,7 +225,7 @@ msgid "Type of spam"
 msgstr "Type de spam"
 
 msgid "Unfortunately, it s a phish"
-msgstr ""
+msgstr "Malheureusement, c'est un cas de phishing"
 
 msgid "Videos"
 msgstr "Vidéos"
@@ -234,13 +234,13 @@ msgid "Yes"
 msgstr "Oui"
 
 msgid "Yes, it s a phish"
-msgstr ""
+msgstr "Oui, c'est bien un cas de phishing"
 
 msgid "Yes, it s legitimate"
-msgstr ""
+msgstr "Oui, c'est légitime"
 
 msgid "click on the red text to see the suspisious elements"
-msgstr ""
+msgstr "Cliquez sur le texte en rouge pour voir les éléments suspects"
 
 msgid "times"
 msgstr "fois"
