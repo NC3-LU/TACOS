@@ -11,8 +11,14 @@ msgstr ""
 "Language: fr\n"
 "X-Generator: Poedit 2.0.6\n"
 
+msgid "<code>[+][country code][area code][local phone number]</code><hr />"
+msgstr "<code>[+][code pays][indicatif régional][numéro de téléphone]</code><hr />"
+
 msgid "About"
 msgstr "À propos"
+
+msgid "Affero GPL license version 3"
+msgstr "Licence Affero GPL version 3"
 
 msgid "All day"
 msgstr "Toute la journée"
@@ -20,8 +26,21 @@ msgstr "Toute la journée"
 msgid "Alphanumeric and Special Characters"
 msgstr "Caractères alphanumériques et spéciaux"
 
+msgid "Article from"
+msgstr "Article de"
+
 msgid "Article(s) found:"
 msgstr "Article(s) trouvé(s) :"
+
+msgid "Awareness videos"
+msgstr "Vidéos de sensibilisation"
+
+msgid ""
+"By manual collection it is important to understand that you will always decide "
+"which phone number you want to report."
+msgstr ""
+"Par la collecte manuelle, il est important de comprendre que vous déciderez "
+"toujours quel numéro de téléphone vous voulez signaler."
 
 msgid "CSWL 2019 Agenda"
 msgstr "CSWL 2019 Agenda"
@@ -35,17 +54,29 @@ msgstr "Annuler"
 msgid "Card Name"
 msgstr "Nom de la carte"
 
+msgid "Changes to this privacy policy"
+msgstr "Modifications à cette politique de confidentialité"
+
 msgid "Check"
 msgstr "Vérifier"
 
 msgid "Check a phone number"
 msgstr "Vérifier un numéro de téléphone"
 
+msgid "Children’s privacy"
+msgstr "Protection de la vie privée des enfants"
+
 msgid "Confirm delete this password card?"
 msgstr "Confirmez l'effacement de cette carte de mot de passe ?"
 
 msgid "Confirm this number is a spam?"
 msgstr "Confirmer que ce numéro est un spam ?"
+
+msgid "Contact us"
+msgstr "Contactez-nous"
+
+msgid "Cookies"
+msgstr "Cookies"
 
 msgid "Cybersecurity Week 2019"
 msgstr "Cybersecurity Week 2019"
@@ -56,14 +87,23 @@ msgstr "Confirmation de suppression"
 msgid "Do you want to exit the app?"
 msgstr "Voulez-vous quitter l'app ?"
 
+msgid "Example:<hr />"
+msgstr "Exemple:<hr />"
+
 msgid "Exit confirmation"
 msgstr "Confirmation de sortie"
 
 msgid "Final Score"
 msgstr "Score Final"
 
+msgid "Financial fraud"
+msgstr "Fraude financière"
+
 msgid "Find the vulnerabilities"
 msgstr "Trouver les vulnérabilités"
+
+msgid "For any issue concerning security please contact"
+msgstr "Pour toute question concernant la sécurité, veuillez contacter"
 
 msgid "Games"
 msgstr "Jeux"
@@ -84,11 +124,34 @@ msgid "How to generate your passwords?"
 msgstr "Comment générer vos mots de passe ?"
 
 msgid ""
-"I found an interesting article with the CASES mobile application "
-"(https://tacos.cases.lu):"
+"I found an interesting article with the CASES mobile application (https://tacos."
+"cases.lu):"
 msgstr ""
-"J'ai trouvé un article intéressant avec l'application mobile CASES "
-"(https://tacos.cases.lu):"
+"J'ai trouvé un article intéressant avec l'application mobile CASES (https://"
+"tacos.cases.lu):"
+
+msgid ""
+"If you choose to use our service, then you agree to the manual collection and "
+"use of information in relation with this policy. The information that we collect "
+"(hashed value of phone number) will be used to improve this service."
+msgstr ""
+"Si vous choisissez d'utiliser notre service, vous acceptez la collecte manuelle "
+"et l'utilisation des informations en relation avec cette politique. Les "
+"informations que nous recueillons (valeur hachée du numéro de téléphone) seront "
+"utilisées pour améliorer ce service."
+
+msgid ""
+"If you have any questions or suggestions about our privacy policy, do not "
+"hesitate to"
+msgstr ""
+"Si vous avez des questions ou des suggestions concernant notre politique de "
+"confidentialité, n'hésitez pas à"
+
+msgid "Information collection and use"
+msgstr "Collecte et utilisation des informations"
+
+msgid "International phone number formatting (E.164):<hr />"
+msgstr "Mise en forme des numéros de téléphone internationaux (E.164):<hr />"
 
 msgid "Language"
 msgstr "Langue"
@@ -96,13 +159,17 @@ msgstr "Langue"
 msgid "Legitimate"
 msgstr "Légitime"
 
+msgid "Links to other sites"
+msgstr "Liens vers d'autres sites"
+
 msgid "List of Cards"
 msgstr "Liste des cartes"
 
+msgid "Log data"
+msgstr "Données de journalisation"
+
 msgid "Make sure that Wi-Fi or mobile data is turned on that try again"
-msgstr ""
-"Assurez-vous que le Wi-Fi ou les données mobiles sont activés et "
-"réessayez"
+msgstr "Assurez-vous que le Wi-Fi ou les données mobiles sont activés et réessayez"
 
 msgid "New Card"
 msgstr "Nouvelle carte"
@@ -128,8 +195,19 @@ msgstr "D'accord"
 msgid "Only Alphanumeric"
 msgstr "Uniquement alphanumérique"
 
+msgid "Other"
+msgstr "Autre"
+
+msgid "Our application and back-end services are not using cookies and sessions."
+msgstr ""
+"Notre application et nos services de back-end n'utilisent pas de cookies et de "
+"sessions."
+
 msgid "Password Card"
 msgstr "Carte de mot de passe"
+
+msgid "Person"
+msgstr "Personne"
 
 msgid "Phish or not ?"
 msgstr "Phishing ou non ?"
@@ -145,6 +223,9 @@ msgstr "Veuillez patienter...."
 
 msgid "Previous"
 msgstr "Précédent"
+
+msgid "Privacy policy"
+msgstr "Politique de confidentialité"
 
 msgid "Quiz"
 msgstr "Quiz"
@@ -170,14 +251,36 @@ msgstr "Recommencez"
 msgid "Return to the quiz Menu"
 msgstr "Retourner au menu Jeux et Quiz"
 
+msgid "Scam"
+msgstr "Arnaque"
+
 msgid "Score"
 msgstr "Score"
 
 msgid "Search"
 msgstr "Rechercher"
 
+msgid "Security"
+msgstr "Sécurité"
+
 msgid "Security in your smartphone"
+msgstr "Sécurité sur votre smartphone"
+
+msgid ""
+"Security made in Lëtzebuerg g.i.e. built the TACOS application as a open source "
+"software. This service is provided by Security made in Lëtzebuerg g.i.e. at no "
+"cost and is intended for use as is."
 msgstr ""
+"Security made in Lëtzebuerg g.i.e. a développé l'application TACOS en tant que "
+"logiciel libre. Ce service est fourni gratuitement par Security made in "
+"Lëtzebuerg g.i.e. et est destiné à être utilisé tel quel."
+
+msgid ""
+"Security made in Lëtzebuerg g.i.e. is not relying on third-party companies and "
+"individuals."
+msgstr ""
+"Security made in Lëtzebuerg g.i.e. ne fait pas appel à des entreprises ou des "
+"particuliers tiers."
 
 msgid "See the correction"
 msgstr "Voir la correction"
@@ -191,14 +294,23 @@ msgstr "Sélectionnez au moins 8 caractères"
 msgid "Select direction"
 msgstr "Sélectionnez une direction"
 
+msgid "Service providers"
+msgstr "Prestataires de services"
+
 msgid "Settings"
 msgstr "Paramètres"
+
+msgid "Share"
+msgstr "Partager"
+
+msgid "Software license"
+msgstr "Licence du logiciel"
 
 msgid "Sorry, but it s legitimate"
 msgstr "Désolé, mais c'était légitime"
 
 msgid "Spam confirmation"
-msgstr ""
+msgstr "Confirmation du spam"
 
 msgid "Spam signal"
 msgstr "Spam signal"
@@ -215,8 +327,74 @@ msgstr "Étape 3"
 msgid "Step 4"
 msgstr "Étape 4"
 
+msgid "Survey"
+msgstr "Sondage"
+
+msgid "Telemarketer"
+msgstr "Téléprospecteur"
+
 msgid "Thank you for your contribution."
+msgstr "Merci pour votre contribution."
+
+msgid "The reported phone number will be hashed"
+msgstr "Le numéro de téléphone indiqué sera haché"
+
+msgid "The source code of the back-end service of TACOS is licensed under"
+msgstr "Le code source du service back-end de TACOS est sous"
+
+msgid "The terms used in the privacy policy available at"
 msgstr ""
+"Les termes utilisés dans la politique de confidentialité sont disponibles sur"
+
+msgid "This means it is impossible for us to see the phone number."
+msgstr "Cela signifie qu'il nous est impossible de voir le numéro de téléphone."
+
+msgid ""
+"This page is used to inform website visitors regarding our policies with the "
+"collection, use, and disclosure of personal information if anyone decided to use "
+"our service."
+msgstr ""
+"Cette page est utilisée pour informer les utilisateurs de notre application au "
+"sujet de nos politiques en matière de collecte, d'utilisation et de divulgation "
+"de leurs données personnelles si vous décidez d'utiliser nos services."
+
+msgid ""
+"This service do not address anyone under the age of 16. We do not knowingly "
+"collect personal identifiable information from children under 16. In the case we "
+"discover that a child under 16 has provided us with personal information, we "
+"immediately delete this from our servers. If you are a parent or guardian and "
+"you are aware that your child has provided us with personal information, please "
+"contact us so that we will be able to do necessary actions."
+msgstr ""
+"Ce service ne s'adresse pas aux personnes de moins de 16 ans. Nous ne "
+"recueillons pas sciemment de données personnelles identifiables auprès d'enfants "
+"de moins de 16 ans. Si nous découvrons qu'un enfant de moins de 16 ans nous a "
+"fourni des informations personnelles, nous les supprimons immédiatement de nos "
+"serveurs. Si vous êtes un parent ou un tuteur et que vous savez que votre enfant "
+"nous a fourni des données personnelles, veuillez nous contacter pour que nous "
+"puissions prendre les mesures nécessaires."
+
+msgid ""
+"This service is not collecting any personally identifiable information. The main "
+"goal is to allow the user to detect spam phone numbers."
+msgstr ""
+"Ce service ne recueille aucune information personnelle identifiable. L'objectif "
+"principal est de permettre à l'utilisateur de détecter les numéros de téléphone "
+"indésirables."
+
+msgid ""
+"This service may contain links to other sites. If you click on a third-party "
+"link, you will be directed to that site. Note that these external sites are not "
+"operated by us. Therefore, we strongly advise you to review the privacy policy "
+"of these websites. We have no control over, and assume no responsibility for the "
+"content, privacy policies, or practices of any third-party sites or services."
+msgstr ""
+"Ce service peut contenir des liens vers d'autres sites. Si vous cliquez sur un "
+"lien tiers, vous serez dirigé vers ce site. Notez que ces sites externes ne sont "
+"pas gérés par nous. Par conséquent, nous vous conseillons fortement de consulter "
+"la politique de confidentialité de ces sites Web. Nous n'avons aucun contrôle "
+"sur le contenu, les politiques de confidentialité ou les pratiques des sites ou "
+"services de tiers et n'assumons aucune responsabilité à cet égard."
 
 msgid "Tips and Tricks"
 msgstr "Trucs et astuces"
@@ -230,6 +408,23 @@ msgstr "Malheureusement, c'est un cas de phishing"
 msgid "Videos"
 msgstr "Vidéos"
 
+msgid "We do not collect log data from the device."
+msgstr "Nous ne collectons pas de logs de l'appareil."
+
+msgid ""
+"We may update our privacy policy from time to time. Thus, you are advised to "
+"review this page periodically for any changes. We will notify you of any changes "
+"by posting the new privacy policy on this page and in the TACOS mobile "
+"application. These changes are effective immediately, after they are posted on "
+"this page."
+msgstr ""
+"Nous pouvons mettre à jour notre politique de confidentialité de temps à autre. "
+"Par conséquent, nous vous conseillons de consulter cette page périodiquement "
+"pour vous tenir au courant de tout changement. Nous vous informerons de tout "
+"changement en affichant la nouvelle politique de confidentialité sur cette page "
+"et dans l'application mobile TACOS. Ces modifications entrent en vigueur "
+"immédiatement, après leur affichage sur cette page."
+
 msgid "Yes"
 msgstr "Oui"
 
@@ -239,8 +434,39 @@ msgstr "Oui, c'est bien un cas de phishing"
 msgid "Yes, it s legitimate"
 msgstr "Oui, c'est légitime"
 
+msgid "You are welcome to copy, modify or redistribute the"
+msgstr "Vous êtes invité à copier, modifier ou redistribuer le"
+
+msgid "according to the GPL version 3 license."
+msgstr "conformément à la licence GPL version 3."
+
+msgid "and available"
+msgstr "et disponible"
+
+msgid "and in the mobile application have the same meanings."
+msgstr "et dans l'application mobile ont la même signification."
+
 msgid "click on the red text to see the suspisious elements"
-msgstr "Cliquez sur le texte en rouge pour voir les éléments suspects"
+msgstr "cliquez sur le texte en rouge pour voir les éléments suspects"
+
+msgid "contact us"
+msgstr "contactez-nous"
+
+msgid "encrypted"
+msgstr "chiffré"
+
+msgid "here"
+msgstr "ici"
+
+msgid "source code"
+msgstr "code source"
 
 msgid "times"
 msgstr "fois"
+
+msgid ""
+"with a one way function) by your smartphone then sent to our collaborative "
+"database."
+msgstr ""
+"avec une fonction impossible d'inverser) par votre smartphone puis envoyé à "
+"notre base de données collaborative."
