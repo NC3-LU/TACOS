@@ -17,20 +17,19 @@
 
 //define CASES stuff for all the application
 ion-icon {
-  &[class*="CASES-"] {
-    mask-size: contain;
-    mask-position: 50% 50%;
-    mask-repeat: no-repeat;
-    background: currentColor;
-    width: 1em;
-    height: 1em;
-  }
+    &[class*="CASES-"] {
+        mask-size: contain;
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        background: currentColor;
+        width: 1em;
+        height: 1em;
+    }
 
-//this logo doesn't render well
-  &[class*="CASES-logo"] {
-    mask-image: url(/assets/icon/favicon.png);
-  }
-
+    // this logo doesn't render well
+    &[class*="CASES-logo"] {
+        mask-image: url(/assets/icon/favicon.png);
+    }
 }
 
 ion-navbar{
@@ -42,22 +41,22 @@ ion-navbar{
 }
 
 .toolbar-background {
-  background-color: #006FBA;
-  // background-color: #000000;
+    background-color: #006FBA;
+    // background-color: #000000;
 }
+
 .toolbar-title {
-  color: #F8F8F8;
+    color: #F8F8F8;
 }
 
 .offline{
-  display: block;
-  padding-top: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  background: none;
-  max-width: 50%;
+    display: block;
+    padding-top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    max-width: 50%;
 }
-
 
 .swiper-slide{
     overflow-y: scroll;

@@ -46,7 +46,6 @@ export class SettingsPage {
 
 
     public themeChange() : void {
-        console.log(this.theme);
         this.themeService.setTheme(this.theme);
     }
 }
