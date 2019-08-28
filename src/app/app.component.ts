@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -35,6 +35,7 @@ export class TACOSApp {
 
   constructor(
     public platform: Platform,
+    public alert: AlertController,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
     private translate: TranslateService,
@@ -97,9 +98,37 @@ export class TACOSApp {
                 console.log('online');
             });
 
-        });
-    }
+            // watch system back button
+            this.platform.registerBackButtonAction(() => {
+              if (this.nav && this.nav.canGoBack()) {
+                this.nav.pop();
+              } else if (this.nav.getActive().component === HomePage) {
+                  let alert = this.alert.create({
+                  title: this.translate.instant('Exit confirmation'),
+                  subTitle: this.translate.instant('Do you want to exit the app?'),
+                  buttons: [
+                      {
+                          text: this.translate.instant('No'),
+                          role: 'cancel',
+                          handler: () => {}
+                      },
+                      {
+                          text: this.translate.instant('Yes'),
+                          role: 'ok',
+                          handler: () => {
+                              this.platform.exitApp();
+                              }
+                      }
 
+                  ]
+                });
+                alert.present();
+              }else{
+                this.nav.setRoot(HomePage);
+              }
+            });
+          });
+  }
 
     openPage(page) {
         // Reset the content nav to have just this page

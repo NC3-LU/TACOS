@@ -29,6 +29,19 @@
           "explanation4":"L'escroc essaie de vous faire envoyer de l'argent là ou il n'est pas traçable."
         },
         "legit":0
+      },
+      {
+        "title":"Live log-in",
+        "type":"image",
+        "initial":"../../../assets/data/gamesquiz/phishornot/live_us.png",
+        "explanation":"../../../assets/data/gamesquiz/phishornot/live_us.png",
+        "explanations":[
+          ["1", "Un cadenas est présent dans la barre d'adresse donc le site est sécurisé."],
+          ["2", "Le nom de domaine correspond bien à celui de Microsoft."],
+          ["3", "Il n'y a pas de fautes d'orthographes"],
+          ["4", "La présentation du site est conforme "]
+        ],
+        "legit":1
       }
     ]
   },
@@ -40,8 +53,8 @@
       {
         "title":"Google log-in",
         "type":"image",
-        "initial":"../../../assets/data/gamesquiz/phishornot/google_fr.png",
-        "explanation":"../../../assets/data/gamesquiz/phishornot/google_fr_explanation.png",
+        "initial":"../../../assets/data/gamesquiz/phishornot/google_us.png",
+        "explanation":"../../../assets/data/gamesquiz/phishornot/google_us_explanation.png",
         "explanations":[
           ["1", "No HTTPS on website, no security."],
           ["2", "The domain name is not the right 'gooogle'."],
@@ -62,6 +75,19 @@
       		"explanation4": "The scammer is trying to get you to send money to places where it can't be traceable."
       	},
       	"legit": 0
+      },
+      {
+        "title":"Live log-in",
+        "type":"image",
+        "initial":"../../../assets/data/gamesquiz/phishornot/live_us.png",
+        "explanation":"../../../assets/data/gamesquiz/phishornot/live_us.png",
+        "explanations":[
+          ["1", "A padlock is present in the address bar so the site is secure."],
+          ["2", "The domain name is correct"],
+          ["3", "There are no spelling mistakes"],
+          ["4", "The layout is the right one"]
+        ],
+        "legit":1
       }
     ]
   }

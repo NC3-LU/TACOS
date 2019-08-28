@@ -45,7 +45,16 @@
       <ion-slide *ngIf="item.legit==1"> <!-- Display solution if it's legit-->
         <p class="correctAnswer" *ngIf="answerCorrect">{{ 'Yes, it s legitimate'| translate }}</p>
         <p class="badAnswer" *ngIf="!answerCorrect">{{ 'Sorry, but it s legitimate'| translate }}</p>
-        <p [class]="item.type" [innerHTML] ="item.explanation" >
+        <p *ngIf="item.type=='email'" [class]="item.type" [innerHTML] ="item.explanation" (click)="showExplanation($event,j)" ></p>
+
+        <div *ngIf="item.type=='image'" class="swiper-zoom-container">
+          <ion-list no-lines>
+            <ion-item *ngFor="let expl of item.explanations">
+              <button ion-button round class="correctAnswer" (click)="showExplanationForImage($event,expl[1])" > {{ expl[0] }}</button>
+            </ion-item>
+          </ion-list>
+          <img [src]="item.explanation" >
+        </div>
         <p>
           <button ion-button round color="primary" (click)="nextSlide()">{{ 'Next' | translate}}</button>
         </p>
