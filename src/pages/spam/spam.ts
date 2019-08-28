@@ -160,9 +160,9 @@ export class SpamPage {
     onAskHelp() {
         let alert = this.alertCtrl.create({
           title: this.translate.instant('Help'),
-          subTitle: 'International phone number formatting (E.164):<hr />' +
-                    '<code>[+][country code][area code][local phone number]</code><hr />' +
-                    'Example:<hr />' +
+          subTitle: this.translate.instant('International phone number formatting (E.164):<hr />') +
+                    this.translate.instant('<code>[+][country code][area code][local phone number]</code><hr />') +
+                    this.translate.instant('Example:<hr />') +
                     '<code>+352 6x1 xxx xxx</code>',
           buttons: [
               {

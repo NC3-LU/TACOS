@@ -108,12 +108,9 @@ export class NewsPage {
     * Share a news with the system capacity (social networks, emails, SMS, etc.).
     */
     regularShare(item) {
-        this.translate.stream(['I found an interesting article with the CASES mobile application (https://tacos.cases.lu):'])
-        .subscribe(translations => {
-            let msg = translations['I found an interesting article with the CASES mobile application (https://tacos.cases.lu):']
-                        + '\n\n' + item.link;
-            SocialSharing.share(msg, null, null, null);
-        });
+        let msg = this.translate.instant('I found an interesting article with the CASES mobile application (https://tacos.cases.lu):')
+                    + '\n\n' + item.link;
+        SocialSharing.share(msg, null, null, null);
     }
 
 

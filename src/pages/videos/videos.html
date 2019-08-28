@@ -3,7 +3,7 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>Awareness videos</ion-title>
+        <ion-title>{{ 'Awareness videos' | translate }}</ion-title>
     </ion-navbar>
 </ion-header>
 
@@ -13,7 +13,7 @@
         <ion-label>{{'Make sure that Wi-Fi or mobile data is turned on that try again' | translate}}</ion-label>
     </div>
     <div *ngIf="!offline">
-        <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
+        <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()" placeholder="{{'Search' | translate }}"></ion-searchbar>
         <ion-list>
             <ion-item *ngFor="let p of videosFiltered | paginate: {id:'pageNumber', itemsPerPage: 5, currentPage: page }">
                 <iframe  width="100%"

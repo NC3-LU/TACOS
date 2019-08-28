@@ -3,7 +3,7 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>News</ion-title>
+        <ion-title>{{'News' | translate }}</ion-title>
     </ion-navbar>
 </ion-header>
 
@@ -18,7 +18,7 @@
             <ion-list>
                 <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
                     <h2>{{ item.title }}</h2>
-                    <h3><span *ngIf="item.creator">Article from {{ item.creator }} </span>({{ item.link | extractHostname }})</h3>
+                    <h3><span *ngIf="item.creator">{{ 'Article from' | translate }} {{ item.creator }} </span>({{ item.link | extractHostname }})</h3>
                     <p>{{ item.pubDate | date:'medium' }}</p>
                 </button>
             </ion-list>
@@ -52,7 +52,7 @@
             <ion-col>
                 <button ion-button (click)="regularShare(selectedNews)">
                     <ion-icon name="share"></ion-icon>&nbsp;
-                    <label>{{ 'Share' | extractHostname }}</label>
+                    <label>{{ 'Share' | translate | extractHostname }}</label>
                 </button>
             </ion-col>
         </ion-row>
