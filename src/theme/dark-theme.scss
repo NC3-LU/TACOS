@@ -2,7 +2,16 @@
 
 .dark-theme {
   .content {
-    background-color: #8d8d8d !important;
+    background-color: #000000 !important;
+    color: #ffffff;
+  }
+
+  .toolbar-md-primary .toolbar-background-md {
+      background-color: #000000 !important;
+      color: #ffffff;
+  }
+
+  page-home ion-grid .button[class*="home-button"] {
     color: #ffffff;
   }
 
@@ -12,7 +21,7 @@
 
   .header .toolbar-background {
     border-color: #ff0fff;
-    background-color: #000000 !important;
+    background-color: #454545 !important;
   }
 
   .ion-toolbar {
