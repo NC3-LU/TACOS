@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, AlertController  } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
 
 import { TranslateService } from '@ngx-translate/core';
@@ -28,7 +28,8 @@ export class phishOrNotPage {
     private translate: TranslateService,
     private storage: Storage,
     private domSanitizer: DomSanitizer,
-    private toastCtrl: ToastController
+    private toastCtrl: ToastController,
+    private alertCtrl: AlertController
      ) {
         if (typeof navParams.get('dataGame') !== 'undefined') { //load the game
          this.dataGame = navParams.get('dataGame');
@@ -77,7 +78,6 @@ export class phishOrNotPage {
     * index : index of the slide
     */
     showExplanation($event,index){
-      console.log($event)
       if($event.target.className.indexOf("explanation")==0){
         if (this.dataGame[0].items[index].explanations[$event.target.className] !=null )
           {
@@ -89,6 +89,32 @@ export class phishOrNotPage {
             closeButtonText : 'ok'
           });
           toast.present();
+        }
+      }
+    }
+
+    /*
+    * Show the hyperlink in an alert box (avoid to open malicious link)
+    * $event : the click prevent
+    * index : index of the slide
+    */
+    showURL($event,index){
+
+      if($event.target.className.indexOf("hyperlink")==0){
+        if (this.dataGame[0].items[index].hyperlinks[$event.target.className] !=null )
+          {
+            console.log(this.dataGame[0].items[index].hyperlinks)
+            let alert = this.alertCtrl.create({
+            message: this.dataGame[0].items[index].hyperlinks[$event.target.className],
+            buttons: [
+             {
+               text: 'Ok',
+               role: 'cancel',
+
+             }
+           ]
+          });
+          alert.present();
         }
       }
     }
