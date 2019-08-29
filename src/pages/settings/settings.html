@@ -19,7 +19,7 @@
 
     <ion-item>
         <ion-label>{{ 'Theme' | translate }}</ion-label>
-        <ion-select [(ngModel)]='theme' (ionChange)='themeChange()'>
+        <ion-select [selectOptions]="customAlertOptions"  [(ngModel)]='theme' (ionChange)='themeChange()'>
             <ion-option value="cases-theme">
                 CASES
             </ion-option>

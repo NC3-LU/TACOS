@@ -25,6 +25,7 @@ export class PasswordCardPage {
   creatingCard : any = false;
   checkingCard : any = false;
   headers : any = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N'];
+  theme:string = 'cases-theme';
 
   constructor(
     public navCtrl: NavController,
@@ -38,6 +39,12 @@ export class PasswordCardPage {
       this.storage.get(PWD_CARDS).then(val => {
         if (val) {
           this.cards = val;
+        }
+      });
+
+      this.storage.get('SELECTED_THEME').then(val => {
+        if (val) {
+          this.theme = val;
         }
       });
 
@@ -75,32 +82,27 @@ export class PasswordCardPage {
   }
 
   confirmDelete(indexCard) {
-      this.translate.stream(['Delete confirmation',
-                            'Confirm delete this password card?',
-                            'OK',
-                            'Cancel'])
-                    .subscribe(translation => {
-          let alert = this.alertCtrl.create({
-            title:  translation['Delete confirmation'],
-            subTitle: translation['Confirm delete this password card?'],
-            buttons: [
-                {
-                    text: translation['OK'],
-                    role: 'ok',
-                    handler: data => {
-                        this.deleteCard(indexCard);
-                      }
-                },
-                {
-                    text: translation['Cancel'],
-                    role: 'cancel',
-                    handler: data => {
-                    }
-                },
-            ]
-          });
-          alert.present();
-      });
+    let alert = this.alertCtrl.create({
+      cssClass: this.theme == 'dark-theme' ? 'alertDarkCss': null,
+      title:  this.translate.instant('Delete confirmation'),
+      subTitle: this.translate.instant('Confirm delete this password card?'),
+      buttons: [
+          {
+              text: this.translate.instant('OK'),
+              role: 'ok',
+              handler: data => {
+                  this.deleteCard(indexCard);
+                }
+          },
+          {
+              text: this.translate.instant('Cancel'),
+              role: 'cancel',
+              handler: data => {
+              }
+          },
+      ]
+    });
+    alert.present();
   }
 
   deleteCard(indexCard){

@@ -7,6 +7,7 @@ import {
     ToastController } from 'ionic-angular';
 
 import { UtilsService } from './utils';
+import { Storage } from '@ionic/storage';
 import { TranslateService } from '@ngx-translate/core';
 import { PhoneValidator } from '../../validators/phone.validator';
 
@@ -27,6 +28,8 @@ export class SpamPage {
     spamType: any;
     formSpam: FormGroup;
     formSearchSpam: FormGroup;
+    customAlertOptions: any = {ccsClass:null};
+    theme:string = 'cases-theme';
 
 
     constructor(
@@ -35,7 +38,8 @@ export class SpamPage {
         public toastCtrl: ToastController,
         public utils: UtilsService,
         private translate: TranslateService,
-        private formBuilder: FormBuilder) {
+        private formBuilder: FormBuilder,
+        private storage: Storage) {
 
         this.utils = utils;
         this.categories = "checkSpam";
@@ -61,6 +65,15 @@ export class SpamPage {
                       Validators.required
                 ]))
         });
+
+        this.storage.get('SELECTED_THEME').then(val => {
+          if(val){
+            this.customAlertOptions = {
+                cssClass: (val == 'dark-theme' ? 'alertDarkCss': null)
+            }
+            this.theme = val;
+          }
+        });
     }
 
 
@@ -70,8 +83,8 @@ export class SpamPage {
     onSpamSubmit() {
         let phoneNumber = this.formSpam.get('phoneNumber').value;
         let spamType = this.formSpam.get('spamType').value;
-
         let alert = this.alertCtrl.create({
+          cssClass: this.theme == 'dark-theme' ? 'alertDarkCss': null,
           title: this.translate.instant('Spam confirmation'),
           subTitle: this.translate.instant('Report this number as a spam ?'),
           buttons: [
@@ -127,6 +140,7 @@ export class SpamPage {
     */
     confirmSpam(phoneNumber: string) {
         let alert = this.alertCtrl.create({
+          cssClass: this.theme == 'dark-theme' ? 'alertDarkCss': null,
           title: this.translate.instant('Spam confirmation'),
           subTitle: this.translate.instant('Confirm this number is a spam?'),
           buttons: [
@@ -159,6 +173,7 @@ export class SpamPage {
     */
     onAskHelp() {
         let alert = this.alertCtrl.create({
+          cssClass: this.theme == 'dark-theme' ? 'alertDarkCss': null,
           title: this.translate.instant('Help'),
           subTitle: this.translate.instant('International phone number formatting (E.164):<hr />') +
                     this.translate.instant('<code>[+][country code][area code][local phone number]</code><hr />') +

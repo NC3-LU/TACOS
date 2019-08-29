@@ -17,6 +17,7 @@ export class SettingsPage {
     languages: any;
     themes: any;
     theme: any;
+    customAlertOptions: any = {ccsClass:null};
 
     constructor(
         public navCtrl: NavController,
@@ -32,11 +33,13 @@ export class SettingsPage {
         this.storage.get(LNG_THEME).then((val) => {
             if (val) {
                 this.theme =  this.themes.find(theme => theme.value === val).value;
+                this.customAlertOptions = {
+                    cssClass: (val == 'dark-theme' ? 'alertDarkCss': null)
+                }
             } else {
                 this.theme = 'cases-theme';
             }
         });
-
     }
 
 
@@ -47,5 +50,8 @@ export class SettingsPage {
 
     public themeChange() : void {
         this.themeService.setTheme(this.theme);
+        this.customAlertOptions = {
+            cssClass: (this.theme == 'dark-theme' ? 'alertDarkCss': null)
+        };
     }
 }

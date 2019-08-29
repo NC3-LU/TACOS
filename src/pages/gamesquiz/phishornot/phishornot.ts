@@ -18,6 +18,7 @@ export class phishOrNotPage {
   dataGame : any;
   answerCorrect : boolean;
   gameScore=0; //score of the current game
+  theme:string = 'cases-theme';
 
   @ViewChild('gameSlides') gameSlides: any;
   readonly PARENTJSON = '../../assets/data/gamesquiz/gamesquiz.json'; //default json
@@ -34,6 +35,12 @@ export class phishOrNotPage {
         if (typeof navParams.get('dataGame') !== 'undefined') { //load the game
          this.dataGame = navParams.get('dataGame');
        }
+
+       this.storage.get('SELECTED_THEME').then(val => {
+         if (val) {
+           this.theme = val;
+         }
+       });
 
   }
 
@@ -103,18 +110,17 @@ export class phishOrNotPage {
       if($event.target.className.indexOf("hyperlink")==0){
         if (this.dataGame[0].items[index].hyperlinks[$event.target.className] !=null )
           {
-            console.log(this.dataGame[0].items[index].hyperlinks)
             let alert = this.alertCtrl.create({
-            message: this.dataGame[0].items[index].hyperlinks[$event.target.className],
-            buttons: [
-             {
-               text: 'Ok',
-               role: 'cancel',
-
-             }
-           ]
-          });
-          alert.present();
+              cssClass: this.theme == 'dark-theme' ? 'alertDarkCss': null,
+              message: this.dataGame[0].items[index].hyperlinks[$event.target.className],
+              buttons: [
+                {
+                  text: 'Ok',
+                  role: 'cancel',
+                }
+              ]
+            });
+            alert.present();
         }
       }
     }

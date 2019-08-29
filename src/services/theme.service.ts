@@ -38,7 +38,7 @@ export class ThemeService {
 
 
     setTheme(theme) {
-        this.storage.set(LNG_THEME, theme).then(val => {
+        this.storage.set(LNG_THEME, theme).then(() => {
             this.event.publish('theme:change');
         });
     }
