@@ -31,7 +31,7 @@ export class SettingsPage {
         this.themes = this.themeService.getThemes();
         this.storage.get(LNG_THEME).then((val) => {
             if (val) {
-                this.theme =  this.themes.find(theme => theme.value === val);
+                this.theme =  this.themes.find(theme => theme.value === val).value;
             } else {
                 this.theme = 'cases-theme';
             }
