@@ -17,6 +17,7 @@ export class findVulnerabilitiesPage {
   dataMenu : any;
   answers : any; //answers and if they are found 1=found
   gameScore=0; //score of the current game
+  theme:string = 'cases-theme';
 
   constructor(
     public navCtrl: NavController,
@@ -35,6 +36,12 @@ export class findVulnerabilitiesPage {
          this.dataGame = navParams.get('dataGame');
          this.dataMenu = null;
        }
+
+       this.storage.get('SELECTED_THEME').then(val => {
+         if (val) {
+           this.theme = val;
+         }
+       });
   }
 
 // init some var, this function is defined by ionic and called just after the constructor
@@ -44,7 +51,6 @@ export class findVulnerabilitiesPage {
       for (let i = 0; i < this.dataGame[0].vulnerabilities.length; i++) {
           this.answers[this.dataGame[0].vulnerabilities[i]['title']] = 0;
       }
-      console.log(this.answers)
     }
   }
 
@@ -69,6 +75,7 @@ export class findVulnerabilitiesPage {
       this.storage.set(this.dataGame[0].storageKey,this.gameScore/(this.dataGame[0].vulnerabilities.length)); // save the global score of the quiz
     }
     let alert = this.alertController.create({
+      cssClass: this.theme == 'dark-theme' ? 'alertDarkCss': null,
       title: title,
       subTitle:explanation,
       buttons: [
