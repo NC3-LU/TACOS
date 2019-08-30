@@ -18,6 +18,20 @@
         "legit":0
       },
       {
+        "title":"Super article !",
+        "type":"email",
+        "initial":"<p><strong>from : </strong>Rémy Cases '&lt;r***@cases.lu&gt;'<br><strong>to : </strong>Moi <br><strong>Sujet : </strong>Super article !</p><p>Salut,<br/><br/>J'ai écrit un article sur le <a class='hyperlink1' href='#'>phishing</a>, j'espère que ça t'aidera à y voir plus clair</p><br>Rémy",
+        "hyperlinks":{
+          "hyperlink1 activated":"https://cases.lu/phishing/2019/03/29/Phishing_fr.html"
+        },
+        "explanation":"<p><strong>from : </strong><span class='explanation2'>Rémy Cases '&lt;r***@cases.lu&gt;'</span><br><strong>to : </strong>Moi <br><strong>Sujet : </strong>Super article !</p><p>Salut,<br/><br/>J'ai écrit un article sur le <span class='explanation1'>phishing</span>, j'espère que ça t'aidera à y voir plus clair</p><br>Rémy",
+        "explanations":{
+          "explanation1":"cases.lu : l'adresse du lien renvoie sur un site connu.",
+          "explanation2":"Le nom de domaine de l'adresse email et du site web est le même."
+        },
+        "legit":1
+      },
+      {
         "title":"Besoin d'aide",
         "type":"email",
         "initial":"<p><strong>from : </strong>Rémy Cases '&lt;r***@cases.lu&gt;'<br><strong>to : </strong>Tous les contacts<br><strong>Sujet : </strong>Help !!</p><br><p>Je vous écrit ce mail pour vous dire que je me suis blessé pendant mes vacances à Londres et ai besoin d'aide pour payer l'hôpital.</p><p>Svp, envoyez-moi 500$ au western union le plus proche de Big ben.</p><p>Je vous promets que je vous rembourserai avec intérêts dès que je serai rentré.</p><br>Rémi",
@@ -76,6 +90,20 @@
           ["4", "A misspelling is in the page."]
         ],
         "legit":0
+      },
+      {
+        "title":"Great article !",
+        "type":"email",
+        "initial":"<p><strong>from : </strong>Rémy Cases '&lt;r***@cases.lu&gt;'<br><strong>to : </strong>Me <br><strong>Subject : </strong>Great article !</p><p>Hello,<br/><br/>I wrote an article on <a class='hyperlink1' href='#'>phishing</a>, I hope it will help you to see things more clearly.</p><br>Rémy",
+        "hyperlinks":{
+          "hyperlink1 activated":"https://cases.lu/phishing/2019/03/29/Phishing_fr.html"
+        },
+        "explanation":"<p><strong>from : </strong><span class='explanation2'>Rémy Cases '&lt;r***@cases.lu&gt;'</span><br><strong>to : </strong>Me <br><strong>Subject : </strong>Great article !</p><p>Hello,<br/><br/>I wrote an article on <span class='explanation1'>phishing</span>, I hope it will help you to see things more clearly.</p><br>Rémy",
+        "explanations":{
+          "explanation1":"cases.lu : it's a well known website.",
+          "explanation2":"The domain name of the email address and the website is the same."
+        },
+        "legit":1
       },
       {
       	"title": "Need help",
