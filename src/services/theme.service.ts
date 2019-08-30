@@ -23,7 +23,7 @@ export class ThemeService {
             if (val) {
                 this.setTheme(val);
             } else {
-                this.setTheme('cases-theme');
+                this.setTheme('default-theme');
             }
         });
     }
@@ -31,7 +31,7 @@ export class ThemeService {
 
     getThemes() {
         return [
-            {text: 'CASES', value: 'cases-theme'},
+            {text: 'Default', value: 'default-theme'},
             {text: 'Dark', value: 'dark-theme'},
         ];
     }

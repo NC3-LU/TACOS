@@ -25,7 +25,7 @@ export class PasswordCardPage {
   creatingCard : any = false;
   checkingCard : any = false;
   headers : any = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N'];
-  theme:string = 'cases-theme';
+  theme:string = 'default-theme';
 
   constructor(
     public navCtrl: NavController,

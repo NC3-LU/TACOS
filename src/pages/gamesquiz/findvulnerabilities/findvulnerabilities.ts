@@ -17,7 +17,7 @@ export class findVulnerabilitiesPage {
   dataMenu : any;
   answers : any; //answers and if they are found 1=found
   gameScore=0; //score of the current game
-  theme:string = 'cases-theme';
+  theme:string = 'default-theme';
 
   constructor(
     public navCtrl: NavController,

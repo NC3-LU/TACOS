@@ -38,7 +38,7 @@ export class TACOSApp {
   dateEndCSWL: any = new Date(2019,11,26);
 
   selectedTheme: String;
-  theme:String = 'cases-theme';
+  theme:String = 'default-theme';
 
   constructor(
     public platform: Platform,

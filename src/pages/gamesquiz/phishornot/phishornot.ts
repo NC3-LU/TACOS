@@ -18,7 +18,7 @@ export class phishOrNotPage {
   dataGame : any;
   answerCorrect : boolean;
   gameScore=0; //score of the current game
-  theme:string = 'cases-theme';
+  theme:string = 'default-theme';
 
   @ViewChild('gameSlides') gameSlides: any;
   readonly PARENTJSON = '../../assets/data/gamesquiz/gamesquiz.json'; //default json

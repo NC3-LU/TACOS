@@ -29,7 +29,7 @@ export class SpamPage {
     formSpam: FormGroup;
     formSearchSpam: FormGroup;
     customAlertOptions: any = {ccsClass:null};
-    theme:string = 'cases-theme';
+    theme:string = 'default-theme';
 
 
     constructor(
