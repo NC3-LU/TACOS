@@ -111,7 +111,7 @@ export class phishOrNotPage {
         if (this.dataGame[0].items[index].hyperlinks[$event.target.className] !=null )
           {
             let alert = this.alertCtrl.create({
-              cssClass: this.theme == 'dark-theme' ? 'alertDarkCss': null,
+              cssClass: this.theme == 'dark-theme' ? 'alertDark': null,
               message: this.dataGame[0].items[index].hyperlinks[$event.target.className],
               buttons: [
                 {

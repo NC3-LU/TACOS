@@ -69,7 +69,7 @@ export class SpamPage {
         this.storage.get('SELECTED_THEME').then(val => {
           if(val){
             this.customAlertOptions = {
-                cssClass: (val == 'dark-theme' ? 'alertDarkCss': null)
+                cssClass: (val == 'dark-theme' ? 'alertDark': null)
             }
             this.theme = val;
           }
@@ -84,7 +84,7 @@ export class SpamPage {
         let phoneNumber = this.formSpam.get('phoneNumber').value;
         let spamType = this.formSpam.get('spamType').value;
         let alert = this.alertCtrl.create({
-          cssClass: this.theme == 'dark-theme' ? 'alertDarkCss': null,
+          cssClass: this.theme == 'dark-theme' ? 'alertDark': null,
           title: this.translate.instant('Spam confirmation'),
           subTitle: this.translate.instant('Report this number as a spam ?'),
           buttons: [
@@ -140,7 +140,7 @@ export class SpamPage {
     */
     confirmSpam(phoneNumber: string) {
         let alert = this.alertCtrl.create({
-          cssClass: this.theme == 'dark-theme' ? 'alertDarkCss': null,
+          cssClass: this.theme == 'dark-theme' ? 'alertDark': null,
           title: this.translate.instant('Spam confirmation'),
           subTitle: this.translate.instant('Confirm this number is a spam?'),
           buttons: [
@@ -173,7 +173,7 @@ export class SpamPage {
     */
     onAskHelp() {
         let alert = this.alertCtrl.create({
-          cssClass: this.theme == 'dark-theme' ? 'alertDarkCss': null,
+          cssClass: this.theme == 'dark-theme' ? 'alertDark': null,
           title: this.translate.instant('Help'),
           subTitle: this.translate.instant('International phone number formatting (E.164):<hr />') +
                     this.translate.instant('<code>[+][country code][area code][local phone number]</code><hr />') +

@@ -75,7 +75,7 @@ export class findVulnerabilitiesPage {
       this.storage.set(this.dataGame[0].storageKey,this.gameScore/(this.dataGame[0].vulnerabilities.length)); // save the global score of the quiz
     }
     let alert = this.alertController.create({
-      cssClass: this.theme == 'dark-theme' ? 'alertDarkCss': null,
+      cssClass: this.theme == 'dark-theme' ? 'alertDark': null,
       title: title,
       subTitle:explanation,
       buttons: [

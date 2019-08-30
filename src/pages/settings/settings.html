@@ -10,7 +10,7 @@
 <ion-content padding>
     <ion-item>
         <ion-label>{{ 'Language' | translate }}</ion-label>
-        <ion-select [class]="'CASES-flag-'+language.value" [(ngModel)]='language' (ionChange)='languageChange()'>
+        <ion-select [selectOptions]="customAlertOptionsWhitFlags" [class]="'CASES-flag-'+language.value" [(ngModel)]='language' (ionChange)='languageChange()'>
             <ion-option [class]="'CASES-flag-'+lang.value" *ngFor="let lang of languages" [value]=lang>
                 {{ lang.text }}
             </ion-option>

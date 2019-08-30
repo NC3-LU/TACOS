@@ -18,6 +18,7 @@ export class SettingsPage {
     themes: any;
     theme: any;
     customAlertOptions: any = {ccsClass:null};
+    customAlertOptionsWhitFlags : any = {ccsClass:'alertCountryFlags'};
 
     constructor(
         public navCtrl: NavController,
@@ -34,10 +35,13 @@ export class SettingsPage {
             if (val) {
                 this.theme =  this.themes.find(theme => theme.value === val).value;
                 this.customAlertOptions = {
-                    cssClass: (val == 'dark-theme' ? 'alertDarkCss': null)
+                    cssClass: (val == 'dark-theme' ? 'alertDark': null)
+                }
+                this.customAlertOptionsWhitFlags = {
+                    cssClass: (val == 'dark-theme' ? 'alertDarkAndFlags': 'alertCountryFlags')
                 }
             } else {
-                this.theme = 'cases-theme';
+                this.theme = 'default-theme';
             }
         });
     }
@@ -51,7 +55,10 @@ export class SettingsPage {
     public themeChange() : void {
         this.themeService.setTheme(this.theme);
         this.customAlertOptions = {
-            cssClass: (this.theme == 'dark-theme' ? 'alertDarkCss': null)
+            cssClass: (this.theme == 'dark-theme' ? 'alertDark': null)
         };
+        this.customAlertOptionsWhitFlags = {
+            cssClass: (this.theme == 'dark-theme' ? 'alertDarkAndFlags': 'alertCountryFlags')
+        }
     }
 }

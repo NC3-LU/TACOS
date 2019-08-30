@@ -83,7 +83,7 @@ export class PasswordCardPage {
 
   confirmDelete(indexCard) {
     let alert = this.alertCtrl.create({
-      cssClass: this.theme == 'dark-theme' ? 'alertDarkCss': null,
+      cssClass: this.theme == 'dark-theme' ? 'alertDark': null,
       title:  this.translate.instant('Delete confirmation'),
       subTitle: this.translate.instant('Confirm delete this password card?'),
       buttons: [
