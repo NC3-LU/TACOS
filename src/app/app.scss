@@ -70,3 +70,25 @@ ion-slide{
 .menu-inner, ion-item{
   background-color: transparent !important;
 }
+
+.alertCountryFlags {
+
+    .alert-radio-group button .alert-radio-label:before {
+      display: inline-block;
+      width: 1.33333333em;
+      line-height: 1em;
+      vertical-align:middle;
+    }
+
+    .alert-radio-group button:nth-child(1) .alert-radio-label:before {
+      content: url(../assets/flags/en.svg) !important;
+    }
+
+    .alert-radio-group button:nth-child(2) .alert-radio-label:before {
+        content: url(../assets/flags/fr.svg) !important;
+    }
+
+    .alert-radio-group button:nth-child(3) .alert-radio-label:before {
+      content: url(../assets/flags/de.svg) !important;
+    }
+}
