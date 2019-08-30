@@ -4,10 +4,8 @@
     ion-item h2[class*="day"],
     .toolbar-md-primary .toolbar-background-md,
     .ion-toolbar,
-    //ion-card,
     .card-title-md,
     .alert-wrapper,
-    page-about .card-header-md,
     ion-card p {
         background-color: #000000 !important;
         color: #ffffff;
@@ -22,9 +20,17 @@
     }
 
     ion-card,
-    page-passwordcard ion-img {
+    page-passwordcard ion-img,
+    page-about ion-card p,
+    page-about .card-header-md,
+    page-about .card-title-md {
       background-color: #404040 !important;
-        color: #ffffff;
+      color: #ffffff;
+    }
+
+    ion-card[class*="password-card"] {
+      background-color: #ffffff !important;
+      color: #000000;
     }
     .toolbar-title {
         color: #ffffff;
@@ -37,9 +43,39 @@
 
 
 }
-.alertDarkCss {
+.alertDark,
+.alertDarkAndFlags {
     .alert-wrapper {
       background-color: #404040 !important;
     }
+    .alert-radio-label{
+      color: #ffffff !important;
+    }
+    [aria-checked="true"] .alert-radio-label
+     {
+      color: #006FBA !important;
+    }
     color: #ffffff;
+}
+
+.alertDarkAndFlags {
+
+    .alert-radio-group button .alert-radio-label:before {
+      display: inline-block;
+      width: 1.33333333em;
+      line-height: 1em;
+      vertical-align:middle;
+    }
+
+    .alert-radio-group button:nth-child(1) .alert-radio-label:before {
+      content: url(../assets/flags/en.svg) !important;
+    }
+
+    .alert-radio-group button:nth-child(2) .alert-radio-label:before {
+        content: url(../assets/flags/fr.svg) !important;
+    }
+
+    .alert-radio-group button:nth-child(3) .alert-radio-label:before {
+      content: url(../assets/flags/de.svg) !important;
+    }
 }
