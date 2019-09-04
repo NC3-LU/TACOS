@@ -9,6 +9,13 @@
         "storageKey":"gameFindVulnerabilitiesCleanDesk",
         "image":"url(../../../assets/data/gamesquiz/findvulnerabilities/games/icon/cleanDesk.png)",
         "game":"../../../assets/data/gamesquiz/findvulnerabilities/games/cleanDesk.json"
+      },
+      {
+        "title":"Mot de passe",
+        "keywords":[],
+        "storageKey":"gameFindVulnerabilitiesPassword",
+        "image":"url(../../../assets/data/gamesquiz/findvulnerabilities/games/icon/cleanDesk.png)",
+        "game":"../../../assets/data/gamesquiz/findvulnerabilities/games/password.json"
       }
     ]
   },
@@ -22,6 +29,13 @@
         "storageKey":"gameFindVulnerabilitiesCleanDesk",
         "image":"url(../../../assets/data/gamesquiz/findvulnerabilities/games/icon/cleanDesk.png)",
         "game":"../../../assets/data/gamesquiz/findvulnerabilities/games/cleanDesk.json"
+      },
+      {
+        "title":"Password",
+        "keywords":[],
+        "storageKey":"gameFindVulnerabilitiesPassword",
+        "image":"url(../../../assets/data/gamesquiz/findvulnerabilities/games/icon/cleanDesk.png)",
+        "game":"../../../assets/data/gamesquiz/findvulnerabilities/games/password.json"
       }
     ]
   }

@@ -78,7 +78,7 @@
         "title":"Find security holes ",
         "keywords":["vulnerabilities"],
         "icon":"url(../assets/imgs/t&t/12.png)",
-        "game":"../assets/data/gamesquiz/findvulnerabilities/findvulnerabilities.json",
+        "dataMenu":"../assets/data/gamesquiz/findvulnerabilities/findvulnerabilities.json",
         "page":"findVulnerabilitiesPage"
       },
       {
