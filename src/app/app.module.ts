@@ -8,7 +8,6 @@ import { TranslatePoHttpLoader } from '@biesbjerg/ngx-translate-po-http-loader';
 import { LanguageService } from '../services/language.service';
 import { ThemeService } from '../services/theme.service';
 import { IonicStorageModule } from '@ionic/storage';
-import { SettingsProvider } from './../providers/settings/settings';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 import { TACOSApp } from './app.component';

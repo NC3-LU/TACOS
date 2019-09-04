@@ -11,8 +11,6 @@ import { Storage } from '@ionic/storage';
 import { CacheService } from "ionic-cache";
 import { Network } from '@ionic-native/network/ngx';
 
-import { SettingsProvider } from './../providers/settings/settings';
-
 import { HomePage } from '../pages/home/home';
 import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
 import { GamesQuizPage } from '../pages/gamesquiz/gamesquiz';
