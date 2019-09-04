@@ -1,6 +1,21 @@
 TACOS Changelog
 ===============
 
+## 0.0.18 (2019-09-04)
+
+### New
+
+- [core] a dark theme is now available for the interface.
+
+### Enhancement
+
+- [games-and-quiz] an new example of phishing game has been added;
+- [core] the application now detects when the internet connection is lost. The
+  management of the cache has been improved;
+- various improvements to the interface;
+- improvements to the translations.
+
+
 ## 0.0.17 (2019-08-08)
 
 ### New
