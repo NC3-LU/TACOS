@@ -2,6 +2,7 @@ import {Injectable} from "@angular/core";
 import { HTTP } from '@ionic-native/http/ngx';
 
 import jsSHA from 'jssha'
+import { SpamService } from '../../services/spam.service';
 import { environment } from '../../../environments/environment';
 
 
@@ -10,7 +11,8 @@ import { environment } from '../../../environments/environment';
 })
 export class UtilsService {
 
-    constructor() {
+    constructor(
+        private spamService: SpamService) {
     }
 
     /*
@@ -45,16 +47,23 @@ export class UtilsService {
             'source': 'TACOS-Android-App'
         }
 
-        return new Promise<any>(resolve => {
-            let http = new HTTP();
-            http.post(environment.backendServicesURL + 'spams', data, {}).then((result : any) => {
-                resolve(result);
-            }).catch((error : any) => {
-                console.log(error);
-                console.log(error.status);
-                console.log(error.error); // error message as string
-                console.log(error.headers);
-                resolve("ServiceError");
+        this.spamService.getSpamSendClear().then(sendInClear => {
+            if (sendInClear) {
+                data['number'] = phoneNumber;
+                console.log(data['number']);
+            }
+
+            return new Promise<any>(resolve => {
+                let http = new HTTP();
+                http.post(environment.backendServicesURL + 'spams', data, {}).then((result : any) => {
+                    resolve(result);
+                }).catch((error : any) => {
+                    console.log(error);
+                    console.log(error.status);
+                    console.log(error.error); // error message as string
+                    console.log(error.headers);
+                    resolve("ServiceError");
+                });
             });
         });
     }
