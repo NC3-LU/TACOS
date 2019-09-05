@@ -23,8 +23,19 @@ export class SpamService {
         });
     }
 
+
     /*
-    * Toggle the value of clear
+    * Returns the value of SPAM_SEND_CLEAR.
+    */
+    getSpamSendClear() {
+        this.storage.get(SPAM_SEND_CLEAR).then(val => {
+            return val;
+        });
+    }
+
+
+    /*
+    * Toggle the value of SPAM_SEND_CLEAR
     */
     setSpamSendClear() {
         this.storage.get(SPAM_SEND_CLEAR).then(val => {
