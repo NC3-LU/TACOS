@@ -44,6 +44,11 @@
         "title":"Réseaux sociaux",
         "icon":"url(../assets/imgs/t&t/social.png)",
         "url":"../assets/data/tipstricks/socialnetwork.json"
+      },
+      {
+        "title":"E-banking",
+        "icon":"url(../assets/imgs/t&t/ebanking.png)",
+        "url":"../assets/data/tipstricks/ebanking.json"
       }
     ]
   },
@@ -87,6 +92,16 @@
         "title":"Scrapping",
         "icon":"url(../assets/imgs/t&t/9.png)",
         "url":"../assets/data/tipstricks/scrapping.json"
+      },
+      {
+        "title":"Social networks",
+        "icon":"url(../assets/imgs/t&t/social.png)",
+        "url":"../assets/data/tipstricks/socialnetwork.json"
+      },
+      {
+        "title":"E-banking",
+        "icon":"url(../assets/imgs/t&t/ebanking.png)",
+        "url":"../assets/data/tipstricks/ebanking.json"
       }
     ]
   }
