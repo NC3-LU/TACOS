@@ -1,6 +1,13 @@
 page-findvulnerabilities {
 // Style for the game
   ion-grid {
+      &[class*="gridMenu"]{
+        display:grid;
+        grid-template-columns: 49% 49%;
+        grid-gap: 0px;
+        grid-column-gap: 2%;
+      }
+
       &[class*="game"] {
       height: 1300px;
       width:3100px;
@@ -35,18 +42,10 @@ page-findvulnerabilities {
       }
 
   }
-  .gridMenu {
-    display:grid;
-    grid-template-columns: 50% 50%;
-    grid-gap: 10px;
-  }
 
   .scroll_content{
         overflow-x: scroll!important;
         overflow-y: hidden;
         word-wrap: break-word;
   }
-//style for the menu
-
-
 }
