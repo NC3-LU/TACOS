@@ -1,6 +1,24 @@
 TACOS Changelog
 ===============
 
+## 0.0.20 (not yet released)
+
+### New
+
+- [spam-signal] the user has now possibility to report spam number in clear.
+  This behavior is configurable in the settings of the application.
+
+### Enhancement
+
+- more tips and tricks are now available;
+- improvements to the dark theme.
+
+
+## 0.0.19 (2019-09-04)
+
+- Android API level is now set to minimum 26 (android-minSdkVersion).
+
+
 ## 0.0.18 (2019-09-04)
 
 ### New
