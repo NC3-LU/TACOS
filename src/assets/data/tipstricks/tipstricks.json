@@ -39,6 +39,11 @@
         "title":"Mise au rebut",
         "icon":"url(../assets/imgs/t&t/9.png)",
         "url":"../assets/data/tipstricks/scrapping.json"
+      },
+      {
+        "title":"Réseaux sociaux",
+        "icon":"url(../assets/imgs/t&t/social.png)",
+        "url":"../assets/data/tipstricks/socialnetwork.json"
       }
     ]
   },

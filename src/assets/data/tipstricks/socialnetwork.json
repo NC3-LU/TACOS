@@ -1,0 +1,59 @@
+[
+  {
+    "language":"fr",
+    "title":"Réseaux sociaux",
+    "keywords":["réseau social"],
+    "parts":[
+      {
+        "title":"Risques ",
+        "content":"<ul><li>Des fausses notifications peuvent demander à la victime choisie de cliquer sur un lien infecté, par exemple pour visionner des photos sur lesquelles elle a été taguée.</li><li>Des liens vers des sites malveillants sont souvent camouflés dans le fil d‘actualité sous forme de vidéo ou de statut, afin d’inciter au clic.</li><li>Des escrocs adeptes du social engineering peuvent utiliser des données que vous aurez publiées sur les réseaux sociaux, pour tenter de manipuler vos collègues ou autres contacts professionnels.</li><li>Le piratage d’un profil qui gère une fan page ou une autre forme de présence sur les réseaux sociaux peut avoir de graves conséquences pour une entreprise.</li></ul>"
+      },
+      {
+        "title":"Astuces ",
+        "content":"<ul><li>Soigner scrupuleusement les paramètres de confidentialité. On n’a pas besoin de tout savoir sur vous.</li><li>N‘accepter que les « amis » réellement connus.</li><li>Ne pas se laisser entraîner par des « offres incroyables » ou des titres racoleurs.</li><li>Utiliser l'authentification forte pour gérer ses profils.</li><li>Protéger les applications tierces utilisées pour gérer les profils corporate par des mots de passe solides.</li><li>Vérifier les accès et les droits de ces applications sur vos comptes Facebook,Twitter, etc.</li></ul>"
+      }
+    ],
+    "medias":[
+      {
+      }
+    ]
+  },
+  {
+    "language":"en",
+    "title":"Social networks",
+    "keywords":["social network"],
+    "parts":[
+      {
+        "title":"Risks ",
+        "content":"<ul><li>False notifications may ask the chosen victim to click on an infected link, for example to view photos on which they have been tagged</li><li>Links to malicious sites are often hidden in the news feed in the form of video or status to encourage click-through.</li><li>Social engineering scammers may use data you have published on social networks to try to manipulate your colleagues or other business contacts.</li><li>Hacking into a profile that manages a fan page or other form of presence on social networks can have serious consequences for a company.</li></ul>"
+      },
+      {
+        "title":"Tricks ",
+        "content":"<ul><li>Carefully consider the privacy settings. We don't need to know everything about you.</li><li>Accept only those 'friends' who are really known.</li><li>Don't let yourself be carried away by incredible offers</li><li>Use strong authentication to manage your profiles.</li><li>Protect third-party applications used to manage corporate profiles with strong passwords. </li><li><li>Verify access and rights of these applications on your Facebook, Twitter, etc. accounts.</li></ul>"
+      }
+    ],
+    "medias":[
+      {
+      }
+    ]
+  },
+  {
+    "language":"de",
+    "title":"Soziale Netzwerke",
+    "keywords":[""],
+    "parts":[
+      {
+        "title":"Risiken ",
+        "content":"<ul><li>Gefälschte Benachrichtigungen verleiten zum Klicken auf einen infi zierten Link, um z.B. angebliche Fotos zu sehen, auf denen man markiert wurde.</li><li>Links zu schädlichen Webseiten werden als Video oder Status getarnt im Newsfeed angezeigt und verleiten zum Klicken.</li><li>Social Engineers können Informationen, die Sie in sozialen Netzwerken veröffentlichen, zur Manipulation Ihres professionellen Umfelds benutzen.</li><li>Wird ein Account kompromittiert, über den die Fanpage des Unternehmens bzw. die Firmenseite im sozialen Netzwerk verwaltet wird, kann dies gravierende Folgen haben.</li></ul>"
+      },
+      {
+        "title":"Tipps ",
+        "content":"<ul><li>Streng sein bei den Privatsphäre-Einstellungen – nicht jeder muss alles sehen.</li><li>Nur „Freunde“ annehmen, die man auch wirklich kennt.</li><li>Sich nicht von „super Angeboten“ oder Schock-Headlines zum Klicken verleiten lassen.</li><li>Zwei-Faktor-Authentifi zierung benutzen, um Profi le zu verwalten.</li><li>Auch Drittanwendungen, mit denen Corporate-Profi le verwaltet werden, durch starke Passwörter schützen.</li><li><li>Überprüfen, welche Zugriffsrechte diese Drittanwendungen auf Ihre Konten bei Facebook, Twitter usw. haben.</li></ul>"
+      }
+    ],
+    "medias":[
+      {
+      }
+    ]
+  }
+]
