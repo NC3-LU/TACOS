@@ -28,8 +28,13 @@ export class SpamService {
     * Returns the value of SPAM_SEND_CLEAR.
     */
     getSpamSendClear() {
-        this.storage.get(SPAM_SEND_CLEAR).then(val => {
-            return val;
+        return new Promise<any>((resolve, reject) => {
+            this.storage.get(SPAM_SEND_CLEAR).then(val => {
+                resolve(val);
+            }).catch((error : any) => {
+                // console.log(error);
+                reject("getSpamSendClear");
+            });
         });
     }
 
