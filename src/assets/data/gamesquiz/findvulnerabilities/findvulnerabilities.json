@@ -7,14 +7,14 @@
         "title":"Bureau Propre",
         "keywords":[],
         "storageKey":"gameFindVulnerabilitiesCleanDesk",
-        "image":"url(../../../assets/data/gamesquiz/findvulnerabilities/games/icon/cleanDesk.png)",
+        "image":"url(../../../assets/imgs/t&t/2.png)",
         "game":"../../../assets/data/gamesquiz/findvulnerabilities/games/cleanDesk.json"
       },
       {
         "title":"Mot de passe",
         "keywords":[],
         "storageKey":"gameFindVulnerabilitiesPassword",
-        "image":"url(../../../assets/data/gamesquiz/findvulnerabilities/games/icon/cleanDesk.png)",
+        "image":"url(../../../assets/imgs/t&t/8.png)",
         "game":"../../../assets/data/gamesquiz/findvulnerabilities/games/password.json"
       }
     ]
@@ -27,14 +27,14 @@
         "title":"Cleaned Desk",
         "keywords":[],
         "storageKey":"gameFindVulnerabilitiesCleanDesk",
-        "image":"url(../../../assets/data/gamesquiz/findvulnerabilities/games/icon/cleanDesk.png)",
+        "image":"url(../../../assets/imgs/t&t/2.png)",
         "game":"../../../assets/data/gamesquiz/findvulnerabilities/games/cleanDesk.json"
       },
       {
         "title":"Password",
         "keywords":[],
         "storageKey":"gameFindVulnerabilitiesPassword",
-        "image":"url(../../../assets/data/gamesquiz/findvulnerabilities/games/icon/cleanDesk.png)",
+        "image":"url(../../../assets/imgs/t&t/8.png)",
         "game":"../../../assets/data/gamesquiz/findvulnerabilities/games/password.json"
       }
     ]

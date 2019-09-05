@@ -38,7 +38,7 @@
       {
         "title":"Phishing ?",
         "keywords":["phishing"],
-        "icon":"url(../assets/imgs/t&t/12.png)",
+        "icon":"url(../assets/imgs/t&t/7.png)",
         "dataGame":"../assets/data/gamesquiz/phishornot/phishornot.json",
         "page":"phishOrNotPage",
         "storageKey":"gamePhishOrNot"
@@ -84,7 +84,7 @@
       {
         "title":"Phishing ?",
         "keywords":["phishing"],
-        "icon":"url(../assets/imgs/t&t/12.png)",
+        "icon":"url(../assets/imgs/t&t/7.png)",
         "dataGame":"../assets/data/gamesquiz/phishornot/phishornot.json",
         "page":"phishOrNotPage",
         "storageKey":"gamePhishOrNot"
