@@ -4,8 +4,10 @@ import { Storage } from '@ionic/storage';
 import { TranslateService } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language.service';
 import { ThemeService } from '../../services/theme.service';
+import { SpamService } from '../../services/spam.service';
 
 const LNG_THEME = 'SELECTED_THEME';
+const SPAM_SEND_CLEAR = 'SPAM_SEND_CLEAR';
 
 
 @Component({
@@ -17,6 +19,7 @@ export class SettingsPage {
     languages: any;
     themes: any;
     theme: any;
+    spamClear: boolean;
     customAlertOptions: any = {ccsClass:null};
     customAlertOptionsWhitFlags : any = {ccsClass:'alertCountryFlags'};
 
@@ -25,6 +28,7 @@ export class SettingsPage {
         private storage: Storage,
         private languageService: LanguageService,
         private themeService: ThemeService,
+        private spamService: SpamService,
         private translate: TranslateService) {
 
         this.languages = this.languageService.getLanguages();
@@ -44,6 +48,10 @@ export class SettingsPage {
                 this.theme = 'default-theme';
             }
         });
+
+        this.storage.get(SPAM_SEND_CLEAR).then(val => {
+            this.spamClear = val;
+        });
     }
 
 
@@ -60,5 +68,11 @@ export class SettingsPage {
         this.customAlertOptionsWhitFlags = {
             cssClass: (this.theme == 'dark-theme' ? 'alertDarkAndFlags': 'alertCountryFlags')
         }
+    }
+
+
+    public spamChange() : void {
+        this.spamClear = !this.spamClear;
+        this.spamService.setSpamSendClear();
     }
 }

@@ -1,15 +1,17 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform, AlertController, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Network } from '@ionic-native/network/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { DomSanitizer } from '@angular/platform-browser';
 
-import { LanguageService } from '../services/language.service';
-import { ThemeService } from '../services/theme.service';
-import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
 import { CacheService } from "ionic-cache";
-import { Network } from '@ionic-native/network/ngx';
+
+import { TranslateService } from '@ngx-translate/core';
+import { LanguageService } from '../services/language.service';
+import { ThemeService } from '../services/theme.service';
+import { SpamService } from '../services/spam.service';
 
 import { HomePage } from '../pages/home/home';
 import { TipsTricksPage } from '../pages/tipstricks/tipstricks';
@@ -21,6 +23,7 @@ import { SpamPage } from '../pages/spam/spam';
 import { NewsPage } from '../pages/news/news';
 import { SettingsPage } from '../pages/settings/settings';
 import { AboutPage } from '../pages/about/about';
+
 import { loadJson, loadRightLanguage } from '../lib/utils';
 
 
@@ -48,6 +51,7 @@ export class TACOSApp {
     private domSanitizer : DomSanitizer,
     private languageService: LanguageService,
     private themeService: ThemeService,
+    private spamService: SpamService,
     private storage: Storage,
     private cache: CacheService,
     private network: Network) {
@@ -95,6 +99,7 @@ export class TACOSApp {
             this.splashScreen.hide();
             this.languageService.setInitialAppLanguage();
             this.themeService.setInitialAppTheme();
+            this.spamService.setInitialSpamSettings();
 
             // watch network for a disconnection
             this.network.onDisconnect().subscribe(() => {

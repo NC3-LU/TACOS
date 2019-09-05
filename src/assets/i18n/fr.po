@@ -9,7 +9,7 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.1\n"
 
 msgid "<code>[+][country code][area code][local phone number]</code><hr />"
 msgstr "<code>[+][code pays][indicatif régional][numéro de téléphone]</code><hr />"
@@ -110,6 +110,9 @@ msgstr "Jeux"
 
 msgid "Games and Quiz"
 msgstr "Jeux et Quiz"
+
+msgid "General"
+msgstr "Général"
 
 msgid "Generate Card"
 msgstr "Générer la carte"
@@ -294,6 +297,9 @@ msgstr "Sélectionnez au moins 8 caractères"
 msgid "Select direction"
 msgstr "Sélectionnez une direction"
 
+msgid "Send the spam number in clear"
+msgstr "Envoyer le numéro de spam en clair"
+
 msgid "Service providers"
 msgstr "Prestataires de services"
 
@@ -346,8 +352,8 @@ msgid "The terms used in the privacy policy available at"
 msgstr ""
 "Les termes utilisés dans la politique de confidentialité sont disponibles sur"
 
-msgid "This means it is impossible for us to see the phone number."
-msgstr "Cela signifie qu'il nous est impossible de voir le numéro de téléphone."
+msgid "Theme"
+msgstr "Thème"
 
 msgid ""
 "This page is used to inform website visitors regarding our policies with the "

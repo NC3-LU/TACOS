@@ -46,10 +46,13 @@
         background-color: #454545 !important;
     }
 
-
+    hr {
+        border-top: 1px solid #ffffff;
+    }
 }
-.alertDark,
-.alertDarkAndFlags {
+
+
+.alertDark, .alertDarkAndFlags {
     .alert-wrapper {
       background-color: #404040 !important;
     }

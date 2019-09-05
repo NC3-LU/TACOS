@@ -8,24 +8,34 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-item>
-        <ion-label>{{ 'Language' | translate }}</ion-label>
-        <ion-select [selectOptions]="customAlertOptionsWhitFlags" [class]="'CASES-flag-'+language.value" [(ngModel)]='language' (ionChange)='languageChange()'>
-            <ion-option [class]="'CASES-flag-'+lang.value" *ngFor="let lang of languages" [value]=lang>
-                {{ lang.text }}
-            </ion-option>
-        </ion-select>
-    </ion-item>
+    <h2>{{ 'General' | translate }}</h2>
+    <ion-list>
+        <ion-item>
+            <ion-label>{{ 'Language' | translate }}</ion-label>
+            <ion-select [selectOptions]="customAlertOptionsWhitFlags" [class]="'CASES-flag-'+language.value" [(ngModel)]='language' (ionChange)='languageChange()'>
+                <ion-option [class]="'CASES-flag-'+lang.value" *ngFor="let lang of languages" [value]=lang>
+                    {{ lang.text }}
+                </ion-option>
+            </ion-select>
+        </ion-item>
 
-    <ion-item>
-        <ion-label>{{ 'Theme' | translate }}</ion-label>
-        <ion-select [selectOptions]="customAlertOptions"  [(ngModel)]='theme' (ionChange)='themeChange()'>
-            <ion-option value="default-theme">
-                Default
-            </ion-option>
-            <ion-option value="dark-theme">
-                Dark
-            </ion-option>
-        </ion-select>
-    </ion-item>
+        <ion-item>
+            <ion-label>{{ 'Theme' | translate }}</ion-label>
+            <ion-select [selectOptions]="customAlertOptions"  [(ngModel)]='theme' (ionChange)='themeChange()'>
+                <ion-option value="default-theme">
+                    Default
+                </ion-option>
+                <ion-option value="dark-theme">
+                    Dark
+                </ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+    <h2>{{ 'Spam signal' | translate }}</h2>
+    <ion-list>
+        <ion-item>
+            <ion-label>{{ 'Send the spam number in clear' | translate }}</ion-label>
+            <ion-toggle [(ngModel)]='spamClear' (ionChange)='spamChange()'></ion-toggle>
+        </ion-item>
+    </ion-list>
 </ion-content>
