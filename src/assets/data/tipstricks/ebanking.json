@@ -1,0 +1,59 @@
+[
+  {
+    "language":"fr",
+    "title":"E-banking",
+    "keywords":["banking"],
+    "parts":[
+      {
+        "title":"Risques ",
+        "content":"<ul><li>Les mails de phishing prétendent provenir d’une banque qu’utilise votre société, c’est en réalité une façon d’accéder à vos données et à votre argent.</li><li>Un logiciel malveillant peut enregistrer les données de connexion lors de la saisie</li></ul>"
+      },
+      {
+        "title":"Astuces ",
+        "content":"<ul><li>Ne pas transmettre de données bancaires suite à une demande par e-mail (les banques ne font jamais de telles demandes par mail).</li><li>Ne jamais se logger à son compte en banque à partir d‘un ordinateur étranger ou public.</li><li>Utiliser des authentifi cations fortes pour le web-banking.</li><li>Se déconnecter correctement de son accès web-banking : il ne suffi t pas de fermer la fenêtre du navigateur !</li><li>Garder son compte bancaire à l‘oeil pour signaler sans tarder des débits illégitimes.</li></ul>"
+      }
+    ],
+    "medias":[
+      {
+      }
+    ]
+  },
+  {
+    "language":"en",
+    "title":"E-banking",
+    "keywords":["banking"],
+    "parts":[
+      {
+        "title":"Risks ",
+        "content":"<ul><li>Phishing emails claim to come from a bank your company uses, it's actually a way to access your data and money.</li><li>Malware can record connection data when entering it</li></ul>"
+      },
+      {
+        "title":"Tricks ",
+        "content":"<ul><li>Do not transmit bank data following an e-mail request (banks never make such requests by e-mail).</li><li>Never log into your bank account from a foreign or public computer.</li><li>Use strong authentication for web banking.</li><li>Log out of your web-banking access correctly: it is not enough to close the browser window!</li><li>Keep an eye on your bank account to report illegitimate debits without delay.</li></ul>"
+      }
+    ],
+    "medias":[
+      {
+      }
+    ]
+  },
+  {
+    "language":"de",
+    "title":"E-banking",
+    "keywords":["banking"],
+    "parts":[
+      {
+        "title":"Risiken ",
+        "content":"<ul><li>Phishing-Mails, die vorgeben, von Ihrer Bank zu sein, um so an Ihre Daten und Ihr Geld zu gelangen.</li><li>UMalware, die Verbindungsdaten beim Eingeben mitliest.</li></ul>"
+      },
+      {
+        "title":"Tipps ",
+        "content":"<ul><li>Niemals Bankdaten aufgrund einer E-Mail preisgeben (Luxemburgische Banken schicken keine Mails mit der Aufforderung zur Dateneingabe)</li><li>Nicht von einem fremden (oder öffentlichen) Computer aus in eine Bankwebseite einloggen.</li><li>Für Web-Banking eine starke Authentifi zierung verwenden.</li><li>Aus Banking-Webseiten richtig ausloggen – nicht einfach nur das Browserfenster schließen.</li><li>Bankkonten im Auge behalten, um nicht legitime Abbuchungen schnellstmöglich zu bemerken.</li></ul>"
+      }
+    ],
+    "medias":[
+      {
+      }
+    ]
+  }
+]
