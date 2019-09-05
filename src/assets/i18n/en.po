@@ -104,6 +104,9 @@ msgstr "Games"
 msgid "Games and Quiz"
 msgstr "Games and Quiz"
 
+msgid "General"
+msgstr ""
+
 msgid "Generate Card"
 msgstr "Generate Card"
 
@@ -286,6 +289,9 @@ msgstr "Select at least 8 characters"
 msgid "Select direction"
 msgstr "Select direction"
 
+msgid "Send the spam number in clear"
+msgstr ""
+
 msgid "Service providers"
 msgstr "Service providers"
 
@@ -337,8 +343,8 @@ msgstr "The source code of the back-end service of TACOS is licensed under"
 msgid "The terms used in the privacy policy available at"
 msgstr "The terms used in the privacy policy available at"
 
-msgid "This means it is impossible for us to see the phone number."
-msgstr "This means it is impossible for us to see the phone number."
+msgid "Theme"
+msgstr ""
 
 msgid ""
 "This page is used to inform website visitors regarding our policies with "
