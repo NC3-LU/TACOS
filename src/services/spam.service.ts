@@ -35,7 +35,7 @@ export class SpamService {
 
 
     /*
-    * Toggle the value of SPAM_SEND_CLEAR
+    * Toggle the value of SPAM_SEND_CLEARq
     */
     setSpamSendClear() {
         this.storage.get(SPAM_SEND_CLEAR).then(val => {
