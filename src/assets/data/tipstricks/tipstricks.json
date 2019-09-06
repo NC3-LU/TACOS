@@ -49,6 +49,21 @@
         "title":"E-banking",
         "icon":"url(../assets/imgs/t&t/ebanking.png)",
         "url":"../assets/data/tipstricks/ebanking.json"
+      },
+      {
+        "title":"Téléchargements",
+        "icon":"url(../assets/imgs/t&t/download.png)",
+        "url":"../assets/data/tipstricks/download.json"
+      },
+      {
+        "title":"E-commerce",
+        "icon":"url(../assets/imgs/t&t/shop.png)",
+        "url":"../assets/data/tipstricks/ecommerce.json"
+      },
+      {
+        "title":"Smartphone",
+        "icon":"url(../assets/imgs/t&t/smartphone.png)",
+        "url":"../assets/data/tipstricks/smartphone.json"
       }
     ]
   },
@@ -102,6 +117,21 @@
         "title":"E-banking",
         "icon":"url(../assets/imgs/t&t/ebanking.png)",
         "url":"../assets/data/tipstricks/ebanking.json"
+      },
+      {
+        "title":"Downloads",
+        "icon":"url(../assets/imgs/t&t/download.png)",
+        "url":"../assets/data/tipstricks/download.json"
+      },
+      {
+        "title":"E-commerce",
+        "icon":"url(../assets/imgs/t&t/shop.png)",
+        "url":"../assets/data/tipstricks/ecommerce.json"
+      },
+      {
+        "title":"Smartphone",
+        "icon":"url(../assets/imgs/t&t/smartphone.png)",
+        "url":"../assets/data/tipstricks/smartphone.json"
       }
     ]
   }

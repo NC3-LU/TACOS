@@ -1,0 +1,59 @@
+[
+  {
+    "language":"fr",
+    "title":"Téléchargement",
+    "keywords":["download"],
+    "parts":[
+      {
+        "title":"Risques ",
+        "content":"<ul><li>Souvent, lors de téléchargements licites de logiciels, l’utilisateur est incité à installer des logiciels complémentaires qui ne sont pas réellement utiles et qui peuvent ralentir son ordinateur.</li><li>Les sites de téléchargement illégaux obligent à utiliser un lecteur spécifi que : un tel téléchargement infecte l’ordinateur.</li><li>De fausses alertes poussent l’utilisateur à télécharger un faux programme antivirus qui va infecter le PC avec des logiciels malveillants.</li><li>Certains téléchargements contiennent des logiciels malveillants qui peuvent paralyser un ordinateur et voler les données contenues. L’utilisateur peut même se faire rançonner pour récupérer ses données !</li></ul>"
+      },
+      {
+        "title":"Astuces ",
+        "content":"<ul><li>Ne pas accepter systématiquement toutes les options proposées lors d’un téléchargement.</li><li>Apprendre à distinguer les alertes légitimes de son propre antivirus, des faux messages.</li><li>Utiliser des outils de type « safe browsing » (par exemple Web of Trust ou bien le filtre proposé par l‘éditeur).</li><li>N‘utiliser que des portails de téléchargement et des sites dignes de confiance.</li></ul>"
+      }
+    ],
+    "medias":[
+      {
+      }
+    ]
+  },
+  {
+    "language":"en",
+    "title":"Download",
+    "keywords":["Download"],
+    "parts":[
+      {
+        "title":"Risks ",
+        "content":"<ul><li><ul><li>Often, during legal software downloads, the user is encouraged to install additional software that is not really useful and can slow down his computer.</li><li>Illegal download sites require the use of a reader specified that: such a download infects the computer.</li><li>False alerts cause the user to download a fake antivirus program that will infect the PC with malware.</li><li>Some downloads contain malware that can paralyze a computer and steal the data contained. The user can even be ransomed to recover his data!</li></ul>"
+      },
+      {
+        "title":"Tricks ",
+        "content":"<ul><li>Do not systematically accept all the options offered during a download.</li><li>Learn to distinguish legitimate alerts from your own antivirus, from false messages.</li><li>Use « safe browsing » tools (for example Web of Trust or the filter proposed by the publisher).</li><li>Use only download portals and trustworthy sites.</li></ul>"
+      }
+    ],
+    "medias":[
+      {
+      }
+    ]
+  },
+  {
+    "language":"de",
+    "title":"Downloads",
+    "keywords":["Download"],
+    "parts":[
+      {
+        "title":"Risiken ",
+        "content":"<ul><li>Oft wird der Benutzer beim Herunterladen eines legitimen Programms zur Installation einer Zusatzsoftware verleitet, die nicht wirklich nützlich ist und den Computer verlangsamen kann.</li><li>Illegale Download-Webseiten verpfl ichten zum Benutzen eines spezifischen Players; beim Herunterladen dieses Programms wird der Computer infiziert.</li><li>Falsche Warnmeldungen drängen zum Herunterladen eines angeblichen Antivirenprogramms, das den PC mit Malware infiziert.</li><li>In Downloads versteckte Schadprogramme können den Computer lahmlegen, Daten ausspionieren oder Ihren Computer blockieren und Geld für die Freischaltung erpressen.</li></ul>"
+      },
+      {
+        "title":"Tipps ",
+        "content":"<ul><li>Nicht systematisch alle Optionen akzeptieren, die beim Download vorgeschlagen werden.</li><li>Legitime Warnmeldungen des eigenen Antivirenprogramms von gefälschten Mitteilungen unterscheiden können.</li><li>'Safe Browsing'-Tools verwenden (z.B. Web of Trust oder Browser-Filter der Hersteller).</li><li>Vertrauenswürdige Download-Portale und Webseiten nutzen.</li></ul>"
+      }
+    ],
+    "medias":[
+      {
+      }
+    ]
+  }
+]

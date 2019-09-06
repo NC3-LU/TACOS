@@ -1,0 +1,59 @@
+[
+  {
+    "language":"fr",
+    "title":"Smartphone",
+    "keywords":["Smartphone"],
+    "parts":[
+      {
+        "title":"Risques ",
+        "content":"<ul><li>Divulgation de données suite au vol ou à la perte de l’appareil dont la mémoire n’est pas protégée.</li><li>Divulgation non intentionnelle de données suite à une utilisation imprudente par exemple de l’archivage dans le cloud (données non chiffrées).</li><li>Vol de données sur smartphone incorrectement « nettoyé » avant sa mise au rebut.</li><li>Les filtres de sécurité ne fonctionnent pas sur les smartphones – attention au phishing, aux fausses applications, aux faux messages.</li><li>Abonnements pièges, SMS Premium et numéros surtaxés.</li><li>Applications qui ouvrent l’accès aux données privées.</li><li>Applications qui envoient des SMS surtaxés en arrière-plan ou effectuent des appels coûteux non demandés.</li><li>QR-Codes qui mènent à des sites infectés.</li></ul>"
+      },
+      {
+        "title":"Astuces ",
+        "content":"<ul><li>Protéger son smartphone par un code de déverrouillage.</li><li>Activer un logiciel de tracking (antivol).</li><li>Lire attentivement le contrat avant de signer un abonnement à des SMS Premium.</li><li>Ne pas télécharger d‘applications hors des plateformes officielles.</li></ul>"
+      }
+    ],
+    "medias":[
+      {
+      }
+    ]
+  },
+  {
+    "language":"en",
+    "title":"Smartphone",
+    "keywords":["Smartphone"],
+    "parts":[
+      {
+        "title":"Risks ",
+        "content":"<ul><li>Disclosure of data following the theft or loss of the device whose memory is not protected.</li><li>Unintentional disclosure of data due to careless use, for example, of archiving in the cloud (unencrypted data).</li><li>Data theft on smartphones incorrectly 'cleaned' before disposal.</li><li>Security filters do not work on smartphones - be careful with phishing, fake applications, fake messages.</li><li>Trap subscriptions, Premium SMS and premium numbers.</li><li>Applications that provide access to private data.</li><li>Applications that send overtaxed SMS messages in the background or make expensive unsolicited calls.</li><li>QR-Codes that lead to infected sites.</li></ul>"
+      },
+      {
+        "title":"Tricks ",
+        "content":"<ul><li>Protect your smartphone with an unlock code.</li><li>Activate tracking software (anti-theft).</li><li>Read the contract carefully before signing a Premium SMS subscription.</li><li>Do not download applications outside the official platforms.</li></ul>"
+      }
+    ],
+    "medias":[
+      {
+      }
+    ]
+  },
+  {
+    "language":"de",
+    "title":"Smartphone",
+    "keywords":["Smartphone"],
+    "parts":[
+      {
+        "title":"Risiken ",
+        "content":"<ul><li>Datenverbreitung infolge von Diebstahl oder Verlust eines Geräts ohne gesicherten Speicher.</li><li>Unbeabsichtigte Verbreitung von Daten aufgrund mangelnder Vorsicht z.B. bei der Cloud-Archivierung (nicht verschlüsselte Daten).</li><li>Datenklau nach nicht korrekter „Säuberung“ eines zu entsorgenden Smartphones.</li><li>Sicherheitsfi lter funktionieren nicht bei Smartphones – Achtung vor Phishing, schädlichen Apps, infi zierten Nachrichten.</li><li>Abofallen, Premium-SMS und überteuerte Rufnummern, die zur Kostenfalle werden.</li><li>Apps, die Zugriff auf private Daten haben.</li><li>Apps, die im Hintergrund teure SMS verschicken oder unbemerkt teure Anrufe tätigen.</li><li>QR-Codes, die auf infi zierte Webseiten weiterleiten.</li></ul>"
+      },
+      {
+        "title":"Tipps ",
+        "content":"<ul><li>Das Smartphone durch eine Bildschirmsperre schützen.</li><li>Ein Tracking-Programm zum Diebstahlschutz aktivieren.</li><li>Vertrag vor Abschluss eines Premium-SMS-Abos genau lesen.</li><li>Keine Apps außerhalb der offi ziellen Stores herunterladen.</li></ul>"
+      }
+    ],
+    "medias":[
+      {
+      }
+    ]
+  }
+]
