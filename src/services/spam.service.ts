@@ -39,12 +39,17 @@ export class SpamService {
 
 
     /*
-    * Toggle the value of SPAM_SEND_CLEARq
+    * Toggle the value of SPAM_SEND_CLEAR.
     */
-    setSpamSendClear() {
-        this.storage.get(SPAM_SEND_CLEAR).then(val => {
-            // toggle the value
-            this.storage.set(SPAM_SEND_CLEAR, !val);
+    setSpamSendClear(): Promise<any> {
+        return new Promise<any>((resolve, reject) => {
+            this.storage.get(SPAM_SEND_CLEAR).then(val => {
+                // toggle the value
+                this.storage.set(SPAM_SEND_CLEAR, !val);
+                resolve(!val);
+            }).catch((error : any) => {
+                reject("setSpamSendClear");
+            });
         });
     }
 }

@@ -72,7 +72,8 @@ export class SettingsPage {
 
 
     public spamChange() : void {
-        this.spamClear = !this.spamClear;
-        this.spamService.setSpamSendClear();
+        this.spamService.setSpamSendClear().then(val => {
+            this.spamClear = val;
+        });
     }
 }
