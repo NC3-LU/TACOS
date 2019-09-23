@@ -15,6 +15,9 @@
     ],
     "medias":[
       {
+        "links":[
+          "https://www.cases.lu/knowhow/bestpractices/cleverclicks/ScamsThroughDownloads_fr.html"
+        ]
       }
     ]
   },
@@ -25,7 +28,7 @@
     "parts":[
       {
         "title":"Risks ",
-        "content":"<ul><li><ul><li>Often, during legal software downloads, the user is encouraged to install additional software that is not really useful and can slow down his computer.</li><li>Illegal download sites require the use of a reader specified that: such a download infects the computer.</li><li>False alerts cause the user to download a fake antivirus program that will infect the PC with malware.</li><li>Some downloads contain malware that can paralyze a computer and steal the data contained. The user can even be ransomed to recover his data!</li></ul>"
+        "content":"<ul><li>Often, during legal software downloads, the user is encouraged to install additional software that is not really useful and can slow down his computer.</li><li>Illegal download sites require the use of a reader specified that: such a download infects the computer.</li><li>False alerts cause the user to download a fake antivirus program that will infect the PC with malware.</li><li>Some downloads contain malware that can paralyze a computer and steal the data contained. The user can even be ransomed to recover his data!</li></ul>"
       },
       {
         "title":"Tricks ",
@@ -34,6 +37,9 @@
     ],
     "medias":[
       {
+        "links":[
+          "https://www.cases.lu/knowhow/bestpractices/cleverclicks/ScamsThroughDownloads.html"
+        ]
       }
     ]
   },

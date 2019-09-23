@@ -2,7 +2,7 @@
   {
     "language":"fr",
     "title":"Réseaux sociaux",
-    "keywords":["réseau social"],
+    "keywords":["réseau social","social engineering"],
     "parts":[
       {
         "title":"Risques ",
@@ -15,6 +15,9 @@
     ],
     "medias":[
       {
+        "links":[
+          "https://www.cases.lu/knowhow/bestpractices/cleverclicks/SocialNetworkScams_fr.html"
+        ]
       }
     ]
   },
@@ -34,6 +37,9 @@
     ],
     "medias":[
       {
+        "links":[
+          "https://www.cases.lu/knowhow/bestpractices/cleverclicks/SocialNetworkScams.html"
+        ]
       }
     ]
   },
