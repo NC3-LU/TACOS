@@ -25,6 +25,13 @@
         "icon":"url(../assets/imgs/t&t/4.png)",
         "game":"../assets/data/gamesquiz/web.json",
         "storageKey":"quizWeb"
+      },
+      {
+        "title":"WiFi",
+        "keywords":["wifi"],
+        "icon":"url(../assets/imgs/t&t/17.png)",
+        "game":"../assets/data/gamesquiz/wifi.json",
+        "storageKey":"quizWifi"
       }
     ],
     "games":[
@@ -71,6 +78,13 @@
         "icon":"url(../assets/imgs/t&t/4.png)",
         "game":"../assets/data/gamesquiz/web.json",
         "storageKey":"quizWeb"
+      },
+      {
+        "title":"WiFi",
+        "keywords":["wifi"],
+        "icon":"url(../assets/imgs/t&t/17.png)",
+        "game":"../assets/data/gamesquiz/wifi.json",
+        "storageKey":"quizWifi"
       }
     ],
     "games":[

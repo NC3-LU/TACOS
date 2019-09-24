@@ -1,0 +1,82 @@
+[
+  {
+    "language":"fr",
+    "version":0.1,
+    "questions":[
+      {
+        "title":"A la maison mon réseau Wifi est protégé par:",
+        "answers":[
+          ["false", "Une clé WEP."],
+          ["true", "Un mot de passe de minimum 16 caractères (WPA 2)."],
+          ["false", "Il n'est pas protégé."]
+        ],
+        "explanation":"WEP étant trop vulnérable, le WiFi devrait utilisé un chiffrement WPA 2 utilisant un mot de passe d'au moins 16 caractères combinant majuscules, minuscules, chiffres et caractères spéciaux."
+      },
+      {
+        "title":"Est-ce que le nom (SSID - normalement similaire à 'Fritzbox! 7460 Bond') par défaut a été changé ?",
+        "answers":[
+          ["true", "Oui"],
+          ["false", "Non"]        ],
+        "explanation":"Le SSID doit être modifié car il fournit des informations sur votre routeur qui peuvent être utilisées pour exploiter des vulnérabilités connues ou des mots de passe par défaut. Toutefois, le nouveau SSID ne doit contenir aucune information personnelle (par exemple, John Smiths House), qui peut également être utilisée lors de tentatives de piratage ciblées."
+      },
+      {
+        "title":"Est-ce que l'interface de gestion est protégée ou désactivée ?",
+        "answers":[
+          ["true", "Oui"],
+          ["false", "Non"],
+          ["false", "Je ne sais pas"]        ],
+        "explanation":"La désactivation ou la sécurisation de l'interface de configuration empêche toute personne sur le réseau de manipuler le point d'accès sans fil."
+      },
+      {
+        "title":"Est-ce que vous vous connecter au réseau WiFi gratuit et public ?",
+        "answers":[
+          ["false", "Oui tous le temps"],
+          ["false", "Oui, seulement s'il a un mot de passe"],
+          ["false", "Oui, seulement en cas d'urgence"],
+          ["true", "Oui, mais seulement en utilisant un VPN"]
+        ],
+        "explanation":"Les réseaux WiFi peuvent être facilement usurpés (une attaque par usurpation d'identité est une situation dans laquelle une personne ou un programme se fait passer pour un autre en falsifiant des données.). Sur un réseau public, connectez-vous seulement sur de sites offrants HTTPS. Utiliser un VPN peut également protéger votre vie privée sur ce type de réseau public. Révoquer l'accès après utilisation empêche vos appareils de se reconnecter automatiquement aux réseaux."
+      }
+    ]
+  },
+  {
+    "language":"en",
+    "version":0.1,
+    "questions":[
+      {
+        "title":"My Wifi is protected by:",
+        "answers":[
+          ["false", "WEP."],
+          ["true", "A password of at least 16 characters (WPA 2)"],
+          ["false", "No protection needed, I trust everyone"]
+        ],
+        "explanation":"WEP is too weak, the WiFi should use the WPA 2 encryption using a password with at least 16 characters and at best also include a variety of character types."
+      },
+      {
+        "title":"Has the default network name (SSID - usually similar to “Fritzbox! 7460 Bond”) been changed at home ?",
+        "answers":[
+          ["true", "Yes"],
+          ["false", "No"]        ],
+        "explanation":"The SSID should be changed as it gives away information about your router which can be used to exploit known vulnerabilities or default passwords. However the new SSID should not contain any personal information (eg. John Smiths House) either as this can also be used in targetted hacking attempts."
+      },
+      {
+        "title":"Is the configuration user interface of the wireless access point safe or disabled?",
+        "answers":[
+          ["true", "Yes"],
+          ["false", "No"],
+          ["false", "Hopefully – I don’t know and never tried it"]        ],
+        "explanation":"Disabling or securing the configuration interface prevents someone on the network being able to manipulate the wireless access point."
+      },
+      {
+        "title":"Do you connect to free public Wifi?",
+        "answers":[
+          ["false", "Yes, everywhere"],
+          ["false", "Yes, only if it has a password"],
+          ["false", "Yes, only for emergency"],
+          ["true", "Yes, only using a VPN"]
+        ],
+        "explanation":"WiFi networks are easily spoofed (a spoofing attack is a situation in which one person or program successfully masquerades as another by falsifying data). Connect only to HTTPS (not HTTP) websites if possible. Using a VPN (Virtual Private Network) can also protect your privacy when using public WiFi. Revoking access after use prevents your devices from automatically connecting to networks again."
+      }
+    ]
+  }
+]
