@@ -6,7 +6,7 @@
     "keywords":["ingéniérie sociale","Social engineering"],
     "parts":[
       {
-        "title":"Les bons réflexes :",
+        "title":"Les bons réflexes",
         "content":"<ul><li>Vérifier l’identité du demandeur et le bien-fondé de la requête, avant de partager des informations personnelles ou professionnelles en direct, par téléphone, e-mail ou via Internet. En cas de doute, répondre ultérieurement et procéder entretemps à une vérification. </li><li>Ne pas céder aux demandes « urgentes » ou menaçantes (par exemple d’un prétendu prestataire informatique qui doit « absolument » accéder à votre serveur). </li><li>Ne pas écouter un inconnu qui prétend vouloir vous aider. </li></ul>"
       }
     ],
@@ -25,7 +25,7 @@
     "keywords":["Social engineering"],
     "parts":[
       {
-        "title":"Security tips ",
+        "title":"Security tips",
         "content":"<ul><li>Verify the identity of the person requesting the information and the merits of the request before sharing personal or business information online, by phone, e-mail or via the Internet. If in doubt, do not respond immediately and carry out verification in the meantime. </li><li>Do not give in to “urgent” or threatening demands (i.e. an alleged IT provider that must “absolutely” have access to your server). </li><li>Do not listen to any stranger who claims to want to help you. </li></ul>"
       }
     ],

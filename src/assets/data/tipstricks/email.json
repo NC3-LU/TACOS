@@ -9,11 +9,11 @@
         "content":"Le courrier électronique est une des principales formes de communication privée et professionnelle. L’outil est convivial, rapide et peu coûteux. Malgré les avantages, son utilisation nécessite des précautions à prendre en compte, aussi bien au niveau de l’expédition que de la réception d’un message."
       },
       {
-        "title":"Mesures comportementales :",
+        "title":"Mesures comportementales",
         "content":"<ul><li>Faites attention à ne pas révéler des informations confidentielles en répondant à des courriers électroniques. Vérifiez la légitimité de la demande et faites attention de ne pas divulguer trop d’informations dans vos réponses;</li><li>la plupart des courriers électroniques contenant des fichiers joints sont annoncés par des discussions précédentes, respectivement s’inscrivent dans un contexte spécifique légitimant l’ajout de pièces jointes. Si cela n’est pas le cas, soyez très prudents lors de la réception de courrier avec fichier joint, car ceux-ci peuvent contenir des codes malicieux;</li><li>les personnes malintentionnées essayent souvent d’exploiter les vulnérabilités humaines, comme notamment la curiosité, la pitié, la peur, l’appât du gain ou encore la libido. Si le courrier électronique reçu contient de telles allusions, il est fortement probable qu’il s’agisse d’un courrier électronique malicieux;</li><li>vérifiez si le courrier électronique prétendant provenir d’une certaine personne ressemble aux courriers électroniques précédemment envoyés par cette personne. La langue utilisée, la façon d’écrire, l’orthographe, le style, etc. peuvent être des indices. Si vous avez un doute, il s’agit probablement d’un courrier électronique malicieux;</li><li>ne cliquez jamais sur des liens dans des courriers électroniques dont vous ne connaissez pas l’expéditeur, respectivement le courrier électronique qui présente des indices de malice, il pourrait s’agir de phishing ou d’un lien vers une page web piégée;</li><li>ne répondez pas à des courriers électroniques suspects. Une réponse de votre part ne fait que confirmer que l’adresse utilisée est bien active.</li></ul>"
       },
       {
-        "title":"Mesures techniques :",
+        "title":"Mesures techniques",
         "content":"<ul><li>Tenez constamment à jour votre logiciel antivirus. Normalement il télécharge les mises à jour automatiquement;</li><li>ne proposez que des connexions sécurisées par SSL pour vos solutions web-mail;</li><li>activez le filtre spam dans votre logiciel de courrier électronique.</li></ul>"
       }
     ],
@@ -35,11 +35,11 @@
         "content":"Email is one of the primary forms of private and professional communication. It’s a user-friendly, fast and inexpensive tool. Despite its advantages, there are still some precautions to be taken into consideration when both sending and receiving messages."
       },
       {
-        "title":"Behavioural measures:",
+        "title":"Behavioural measures",
         "content":"<ul><li>Make sure you don’t reveal any confidential information when replying to emails. Check the legitimacy of the request and be careful not to divulge too much information when you respond;</li><li>the majority of emails containing attachments are follow-ups to previous discussions, meaning that they fall within a special context in which the addition of attachments is to be expected. If this isn’t the case, be very careful when you receive an email with an attachment, as this attachment may contain malicious codes;</li><li>ill-intentioned people often try to exploit human vulnerability, such as curiosity, pity, fear, the lure of rewards, or even libido. If you receive an email that makes allusion to any of these things, it is highly likely it is a malicious email;</li><li>check if the email resembles those you have previously received from the supposed sender. The language used, way of writing, spelling, style, etc. may all be clues. If something seems odd, it’s probably a malicious email;</li><li>never click on links in emails where you don’t know the sender, or in particular, if there are signs the email may be malicious, as it could be a phishing email or a link towards a fake website;</li><li>never answer suspicious emails. By answering, you are confirming to the sender that the email address is active.</li></ul>"
       },
       {
-        "title":"Technical measures:",
+        "title":"Technical measures",
         "content":"<ul><li>Make sure your antivirus software is always up to date. Normally, updates are downloaded automatically;</li><li>activate the spam filter in your email software;</li><li>only use secure SSL log-ins for your webmail solutions.</li></ul>"
       }
     ],
