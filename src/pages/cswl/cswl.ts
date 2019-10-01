@@ -34,7 +34,9 @@ export class CSWLPage {
 
     getEvents() {
         return new Promise((resolve) => {
-            ical.fromURL('https://cors-anywhere.herokuapp.com/https://ics.teamup.com/feed/ksf4943mrx3wwqp199/6185192.ics', {}, (err, data) => {
+            var headerIcal = new Headers();
+            headerIcal.append('Content-Type', 'text/calendar');
+            ical.fromURL('https://cors-anywhere.herokuapp.com/ics.teamup.com/feed/ksf4943mrx3wwqp199/6185192.ics', {headers: headerIcal}, (err, data) => {
                 var list = [];
                 for (let k in data) {
                     if (data.hasOwnProperty(k)) {
