@@ -28,10 +28,16 @@
       color: #ffffff;
     }
 
-    page-phishornot .item-md {
+    page-phishornot .item-md, ion-list button {
       background-color: transparent !important;
       color: #ffffff;
     }
+
+    .ngx-pagination {
+      color: white !important;
+      background-color: #bababa !important;
+    }
+
 
     ion-card[class*="password-card"] {
       background-color: #ffffff !important;
