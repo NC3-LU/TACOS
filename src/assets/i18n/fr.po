@@ -73,7 +73,7 @@ msgid "Confirm this number is a spam?"
 msgstr "Confirmer que ce numéro est un spam ?"
 
 msgid "Contact us"
-msgstr "Contactez-nous"
+msgstr "Nous contacter"
 
 msgid "Cookies"
 msgstr "Cookies"
@@ -455,7 +455,7 @@ msgid "click on the red text to see the suspisious elements"
 msgstr "cliquez sur le texte en rouge pour voir les éléments suspects"
 
 msgid "contact us"
-msgstr "contactez-nous"
+msgstr "nous contacter"
 
 msgid "encrypted"
 msgstr "chiffré"

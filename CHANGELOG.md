@@ -1,17 +1,23 @@
 TACOS Changelog
 ===============
 
-## 0.0.20 (not yet released)
+## 0.0.20 (2019-10-01)
 
 ### New
 
 - [spam-signal] the user has now possibility to report spam number in clear.
   This behavior is configurable in the settings of the application.
+- [games-and-quiz] added new quiz about WiFi.
 
 ### Enhancement
 
 - more tips and tricks are now available;
 - improvements to the dark theme.
+
+### Fix
+
+- [settings] fixed a random bug when changing the value of SPAM_SEND_CLEAR (due
+  to a infinite loop triggered via (ionChange)).
 
 
 ## 0.0.19 (2019-09-04)
