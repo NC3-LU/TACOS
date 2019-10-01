@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="lu.cases.tacos" version="0.0.20" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="lu.cases.tacos" version="0.0.21" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>TACOS</name>
     <description>Detect spam phone numbers, security awareness.</description>
     <author email="info@cases.lu" href="https://www.cases.lu">CASES Luxembourg</author>
