@@ -27,8 +27,9 @@ page-home {
 
   .grid {
     display:grid;
-    grid-template-columns: 50% 50%;
-    grid-gap: 10px;
+    grid-template-columns: 49% 49%;
+    grid-gap: 0px;
+    grid-column-gap: 2%;
   }
 
   .toolbar .searchbar {
