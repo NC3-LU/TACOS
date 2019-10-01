@@ -1,6 +1,13 @@
 TACOS Changelog
 ===============
 
+## 0.0.22 (not yet released)
+
+### Enhancement
+
+- improvements to the dark mode.
+
+
 ## 0.0.21 (2019-10-01)
 
 ### New
