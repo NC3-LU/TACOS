@@ -20,7 +20,10 @@
                     <ion-grid *ngFor="let ev of event.value">
                         <ion-row >
                             <ion-col text-wrap> {{ ev.allDay  ?  ('All day' | translate) : ev.timeStart}}</ion-col>
-                            <ion-col class="summary" text-wrap><a button (click)=openExternalLink(ev.url) class="text-on-bottom">{{ ev.summary }}</a></ion-col>
+                            <ion-col class="summary" text-wrap>
+                                <a button *ngIf="ev.url != null" (click)=openExternalLink(ev.url) class="text-on-bottom">{{ ev.summary }}</a>
+                                <a button *ngIf="ev.url == null" class="text-on-bottom">{{ ev.summary }}</a>
+                            </ion-col>
                         </ion-row>
                         <ion-row>
                             <ion-col class="timeEnd"> {{ ev.allDay  ?  '' : ev.timeEnd }}</ion-col>
