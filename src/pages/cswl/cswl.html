@@ -22,7 +22,7 @@
                             <ion-col text-wrap> {{ ev.allDay  ?  ('All day' | translate) : ev.timeStart}}</ion-col>
                             <ion-col class="summary" text-wrap>
                                 <a button *ngIf="ev.url != null" (click)=openExternalLink(ev.url) class="text-on-bottom">{{ ev.summary }}</a>
-                                <a button *ngIf="ev.url == null" class="text-on-bottom">{{ ev.summary }}</a>
+                                <span *ngIf="ev.url == null" class="text-on-bottom text-secondary">{{ ev.summary }}</span>
                             </ion-col>
                         </ion-row>
                         <ion-row>

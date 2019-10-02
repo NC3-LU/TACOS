@@ -1,18 +1,21 @@
 TACOS Changelog
 ===============
 
-## 0.0.22 (not yet released)
+## 0.0.22 (2019-10-02)
 
 ### Enhancement
 
 - improvements to the dark mode;
-- improved display of the games and quiz section.
+- improved display of the games and quiz section;
+- android-targetSdkVersion is now set to 28 and android-minSdkVersion is set
+  to 19.
 
 ### Fix
 
 - fixed dark mode theme on iOS;
 - fixed an issue when the user wants to open a href:mailto link from the
-  application.
+  application;
+- fixed an issue the CSWL 2019 Agenda when no link is associated to an event.
 
 
 ## 0.0.21 (2019-10-01)
