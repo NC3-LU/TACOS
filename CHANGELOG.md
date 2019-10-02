@@ -15,7 +15,7 @@ TACOS Changelog
 - fixed dark mode theme on iOS;
 - fixed an issue when the user wants to open a href:mailto link from the
   application;
-- fixed an issue the CSWL 2019 Agenda when no link is associated to an event.
+- fixed an issue with the CSWL 2019 Agenda when no link is associated to an event.
 
 
 ## 0.0.21 (2019-10-01)
