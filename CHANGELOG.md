@@ -6,12 +6,12 @@ TACOS Changelog
 ### Enhancement
 
 - improvements to the dark mode;
-- improved display of the game and quiz section.
+- improved display of the games and quiz section.
 
 ### Fix
 
 - fixed dark mode theme on iOS;
-- fixed an issue when the user wants to open a heref:mailto link fron the
+- fixed an issue when the user wants to open a herf:mailto link from the
   application.
 
 
