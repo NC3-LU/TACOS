@@ -7,6 +7,7 @@ import {
     ToastController } from 'ionic-angular';
 
 import { UtilsService } from './utils';
+import { SpamService } from '../../services/spam.service';
 import { Storage } from '@ionic/storage';
 import { TranslateService } from '@ngx-translate/core';
 import { PhoneValidator } from '../../validators/phone.validator';
@@ -30,6 +31,7 @@ export class SpamPage {
     formSearchSpam: FormGroup;
     customAlertOptions: any = {ccsClass:null};
     theme:string = 'default-theme';
+    sendInClear:boolean;
 
 
     constructor(
@@ -37,6 +39,7 @@ export class SpamPage {
         public loadingCtrl: LoadingController,
         public toastCtrl: ToastController,
         public utils: UtilsService,
+        private spamService: SpamService,
         private translate: TranslateService,
         private formBuilder: FormBuilder,
         private storage: Storage) {
@@ -73,6 +76,12 @@ export class SpamPage {
             }
             this.theme = val;
           }
+        });
+
+        this.spamService.getSpamSendClear().then(sendInClear => {
+            if (sendInClear) {
+                this.sendInClear = sendInClear;
+            }
         });
     }
 

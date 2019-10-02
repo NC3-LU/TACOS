@@ -86,9 +86,12 @@
             <ion-grid>
                 <ion-row>
                     <ion-col>
-                        <p class="text-justify">{{ 'The reported phone number will be hashed' | translate}}
+                        <p class="text-justify" *ngIf="!sendInClear">{{ 'The reported phone number will be hashed' | translate }}
                             (<i>{{ 'encrypted' | translate }}</i>
-                            {{ 'with a one way function) by your smartphone then sent to our collaborative database.' | translate }}</p>
+                            {{ 'with a one way function) by your smartphone then sent to our collaborative database.' | translate }}
+                            {{ 'You can change this behavior in the settings.' | translate }}</p>
+                        <p class="text-justify" *ngIf="sendInClear">{{ 'The reported phone number will be sent in clear.' | translate}}
+                            {{ 'You can change this behavior in the settings.' | translate }}</p>
                     </ion-col>
                 </ion-row>
             </ion-grid>
