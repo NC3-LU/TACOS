@@ -344,6 +344,9 @@ msgstr "Merci pour votre contribution."
 msgid "The reported phone number will be hashed"
 msgstr "Le numéro de téléphone indiqué sera haché"
 
+msgid "The reported phone number will be sent in clear."
+msgstr "Le numéro de téléphone signalé sera envoyé en clair."
+
 msgid "The source code of the back-end service of TACOS is licensed under"
 msgstr "Le code source du service back-end de TACOS est sous"
 
@@ -442,6 +445,9 @@ msgstr "Oui, c'est légitime"
 msgid "You are welcome to copy, modify or redistribute the"
 msgstr "Vous êtes invité à copier, modifier ou redistribuer le"
 
+msgid "You can change this behavior in the settings."
+msgstr "Vous pouvez modifier ce comportement dans les paramètres."
+
 msgid "according to the GPL version 3 license."
 msgstr "conformément à la licence GPL version 3."
 
@@ -473,5 +479,5 @@ msgid ""
 "with a one way function) by your smartphone then sent to our collaborative "
 "database."
 msgstr ""
-"avec une fonction impossible d'inverser) par votre smartphone puis envoyé à "
-"notre base de données collaborative."
+"avec une fonction à sens unique) par votre smartphone puis envoyé à notre base "
+"de données collaborative."

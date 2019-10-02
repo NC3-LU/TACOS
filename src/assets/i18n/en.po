@@ -332,6 +332,9 @@ msgstr "Thank you for your contribution."
 msgid "The reported phone number will be hashed"
 msgstr "The reported phone number will be hashed"
 
+msgid "The reported phone number will be sent in clear."
+msgstr ""
+
 msgid "The source code of the back-end service of TACOS is licensed under"
 msgstr "The source code of the back-end service of TACOS is licensed under"
 
@@ -428,6 +431,9 @@ msgstr "Yes, it s legitimate"
 
 msgid "You are welcome to copy, modify or redistribute the"
 msgstr "You are welcome to copy, modify or redistribute the"
+
+msgid "You can change this behavior in the settings."
+msgstr ""
 
 msgid "according to the GPL version 3 license."
 msgstr "according to the GPL version 3 license."
