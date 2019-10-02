@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
-import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 import { TranslateService } from '@ngx-translate/core';
 
 import { loadJson } from '../../lib/utils';
 import { loadRightLanguage } from '../../lib/utils';
 import { VideosPage } from '../videos/videos';
+
+import { WindowRefService, ICustomWindow } from '../../app/window-ref.service';
 
 
 @Component({
@@ -23,14 +24,16 @@ export class TipsTricksPage {
   //define the subpages
   pages: Array<{title: string, url: any, article: any, links: any,  icon: string}>;
   videosList: any;
+  private _window: ICustomWindow;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private translate: TranslateService,
     private domSanitizer: DomSanitizer,
-    private iab: InAppBrowser
+    private windowRef: WindowRefService
      ) {
+    this._window = windowRef.nativeWindow;
     if (typeof navParams.get('data') !== 'undefined') { //load the menu
      this.data = navParams.get('data');
      this.pages = this.data[0].tipstricks;
@@ -99,7 +102,7 @@ export class TipsTricksPage {
   * Open an external link
   */
   openExternalLink(item){
-    this.iab.create(item,'_blank','location=yes');
+    this._window.open(item,'_blank','location=yes');
   }
 
   /*
