@@ -37,6 +37,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { ExtractHostname } from './pipes/extract-hostname';
 import { FormatPhoneNumber } from './pipes/format-phone-number';
 
+import { WindowRefService } from './window-ref.service';
+
 export function createTranslateLoader(http: HttpClient) {
 	return new TranslatePoHttpLoader(http, 'assets/i18n', '.po');
 }
@@ -100,6 +102,7 @@ export function createTranslateLoader(http: HttpClient) {
     AppVersion,
     SocialSharing,
     Network,
+		WindowRefService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA]
