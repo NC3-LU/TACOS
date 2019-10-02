@@ -357,6 +357,9 @@ msgstr ""
 msgid "Theme"
 msgstr "Thème"
 
+msgid "There are no videos in your language"
+msgstr "Il n'y a pas de vidéos dans votre langue"
+
 msgid ""
 "This page is used to inform website visitors regarding our policies with the "
 "collection, use, and disclosure of personal information if anyone decided to use "

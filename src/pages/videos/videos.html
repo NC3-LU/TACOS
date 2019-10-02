@@ -14,6 +14,7 @@
     </div>
     <div *ngIf="!offline">
         <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()" placeholder="{{'Search' | translate }}"></ion-searchbar>
+        <span *ngIf="videosFiltered != null && videosFiltered.length==0">{{'There are no videos in your language' | translate}}</span>
         <ion-list>
             <ion-item *ngFor="let p of videosFiltered | paginate: {id:'pageNumber', itemsPerPage: 5, currentPage: page }">
                 <iframe  width="100%"
