@@ -7,6 +7,7 @@
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <allow-intent href="mailto:*" />
     <preference name="ScrollEnabled" value="false" />
     <preference name="android-minSdkVersion" value="26" />
     <preference name="BackupWebStorage" value="none" />
