@@ -11,7 +11,7 @@ TACOS Changelog
 ### Fix
 
 - fixed dark mode theme on iOS;
-- fixed an issue when the user wants to open a herf:mailto link from the
+- fixed an issue when the user wants to open a href:mailto link from the
   application.
 
 
