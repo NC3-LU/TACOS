@@ -1,10 +1,11 @@
 .dark-theme {
     .content,
-    .item-md,
+    .item,
     ion-item h2[class*="day"],
-    .toolbar-md-primary .toolbar-background-md,
+    .toolbar-ios-primary .toolbar-background,
+    .toolbar-md-primary .toolbar-background,
     .ion-toolbar,
-    .card-title-md,
+    .card-title,
     .alert-wrapper,
     ion-card p {
         background-color: #000000 !important;
@@ -12,8 +13,7 @@
     }
 
     .button[class*="home-button"],
-    .button-ios,
-    .card-md {
+    .card {
             color: #ffffff;
             box-shadow: 0 2px 2px 0 rgba(255, 255, 255, 0.86), 0 3px 1px -2px rgba(255, 255, 255, 0.8), 0 1px 5px 0 rgba(255, 255, 255, 0.88);
 
@@ -22,13 +22,13 @@
     ion-card,
     page-passwordcard ion-img,
     page-about ion-card p,
-    page-about .card-header-md,
-    page-about .card-title-md {
+    page-about .card-header,
+    page-about .card-title {
       background-color: #404040 !important;
       color: #ffffff;
     }
 
-    page-phishornot .item-md, ion-list button {
+    page-phishornot .item {
       background-color: transparent !important;
       color: #ffffff;
     }
@@ -62,7 +62,7 @@
     .alert-wrapper {
       background-color: #404040 !important;
     }
-    .alert-radio-label{
+    .alert-radio-label, .alert-sub-title {
       color: #ffffff !important;
     }
     [aria-checked="true"] .alert-radio-label
