@@ -21,6 +21,12 @@ privacy awareness games.
 
 Check out the [website of TACOS](https://tacos.cases.lu).
 
+
+[Get it on Google Play](https://play.google.com/store/apps/details?id=lu.cases.tacos)
+
+[Get it on Apple Store](https://apps.apple.com/us/app/tacos/id1474084986)
+
+
 ### Features
 
 - Detect and report spam phone numbers
