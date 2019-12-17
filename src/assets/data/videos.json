@@ -1,68 +1,122 @@
 [
   {
-    "url": "https://www.youtube.com/embed/qtOrJJ5cBKk",
+    "url": "https://www.youtube.com/embed/YRAa_HPBSNM",
+    "title": "Les buts de la sécurité",
+    "language":"fr",
+    "keywords":["sécurité", "securite"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/yvWJBEBPBb0",
     "title": "La notion de risques [1/2]",
     "language":"fr",
-    "keywords":["risque", "risque"]
+    "keywords":["risque", "risques"]
   },
   {
-    "url": "https://www.youtube.com/embed/JNOiACw0TkI",
+    "url": "https://www.youtube.com/embed/R2LIxGkv-aQ",
     "title": "La notion de risques [2/2]",
     "language":"fr",
-    "keywords":["risques", "risques"]
+    "keywords":["risques", "risque"]
   },
   {
-    "url": "https://www.youtube.com/embed/pMN6GVa2wPg",
+    "url": "https://www.youtube.com/embed/ml5N2U1GDdI",
+    "title": "Les mots de passe",
+    "language":"fr",
+    "keywords":["mot de passe", "password", "mots de passe"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/Rw0ivsZa9CU",
     "title": "Papiers jetés, secrets trouvés",
     "language":"fr",
     "keywords":["mise au rebut", "bureau propre", "sécurité physique"]
   },
   {
-    "url": "https://www.youtube.com/embed/BEEic3DZIho",
+    "url": "https://www.youtube.com/embed/f17KI6nDMhw",
     "title": "Pas vu pas pris, mais volé et vendu !",
     "language":"fr",
-    "keywords":["virus", "malware"]
+    "keywords":["social engineering", "vol", "keylogger", "ingénierie sociale"]
   },
   {
-    "url": "https://www.youtube.com/embed/GBUiBEv-cM0",
-    "title": "Les risques des wi-fi publics",
+    "url": "https://www.youtube.com/embed/y3kGDSkcKzo",
+    "title": "WiFi publics",
     "language":"fr",
-    "keywords":["virus", "malware"]
+    "keywords":["wifi", "virus", "malware"]
   },
   {
-    "url": "https://www.youtube.com/embed/_fGJrHFrw4E",
-    "title": "Social engineering 1 - deviner un mot de passe",
+    "url": "https://www.youtube.com/embed/RpMOixANNLM",
+    "title": "La sauvegarde des données",
     "language":"fr",
-    "keywords":["social engineering"]
+    "keywords":["sauvegarde", "sauvegardes", "backup"]
   },
   {
-    "url": "https://www.youtube.com/embed/nba0IBtMAig",
-    "title": "Social engineering 2 - inciter quelqu'un à dévoiler son mot de passe",
+    "url": "https://www.youtube.com/embed/g9Ypgan4rmE",
+    "title": "Protégez vos données",
     "language":"fr",
-    "keywords":["social engineering"]
+    "keywords":["mot de passe", "password", "rebut", "recyclage"]
   },
   {
-    "url": "https://www.youtube.com/embed/zy_WbDZtKuI",
-    "title": "Social engineering 3 - mot de passe volé via un logiciel malveillant",
-    "language":"fr",
-    "keywords":["social engineering"]
-  },
-  {
-    "url": "https://www.youtube.com/embed/Obi2HBbMt-c",
-    "title": "Les vulnérabilités",
-    "language":"fr",
-    "keywords":["virus", "malware"]
-  },
-  {
-    "url": "https://www.youtube.com/embed/cRK-u-kuL30",
-    "title": "Les logiciels malveillants",
-    "language":"fr",
-    "keywords":["virus", "malware"]
-  },
-  {
-    "url": "https://www.youtube.com/embed/_iqoFbVLUHY",
+    "url": "https://www.youtube.com/embed/p6-7vQBqzkQ",
     "title": "Phishing",
     "language":"fr",
     "keywords":["phishing","hameçonnage","email" ]
+  },
+  {
+    "url": "https://www.youtube.com/embed/jtI2cNFPWHk",
+    "title": "The goals of security",
+    "language":"en",
+    "keywords":["Security"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/br3NeARK3xc",
+    "title": "The notion of risk [1/2]",
+    "language":"en",
+    "keywords":["risk", "risks"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/aV-79N8zZbM",
+    "title": "The notion of risk [2/2]",
+    "language":"en",
+    "keywords":["risk", "risks"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/PdWoqcidb4g",
+    "title": "Passwords",
+    "language":"en",
+    "keywords":["passwords", "password"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/xJiICYMHbMA",
+    "title": "Thrown papers, secrets found!",
+    "language":"en",
+    "keywords":["recycling", "cleaned desk", "physical security","scrapping"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/AGwkVawuK1E",
+    "title": "Not seen not caught But stolen and sold!",
+    "language":"en",
+    "keywords":["social engineering", "theft", "keylogger", "leak"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/SwnGMgPIblA",
+    "title": "Publics WiFi",
+    "language":"en",
+    "keywords":["wifi", "virus", "malware"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/LAwJAJI0I5w",
+    "title": "Data Backup",
+    "language":"en",
+    "keywords":["backup"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/RUx1cHbqIIM",
+    "title": "Protect your data",
+    "language":"en",
+    "keywords":["password", "recycling", "scrapping"]
+  },
+  {
+    "url": "https://www.youtube.com/embed/FhsnUiFVv0k",
+    "title": "Phishing",
+    "language":"en",
+    "keywords":["phishing","email" ]
   }
 ]
