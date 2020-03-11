@@ -41,4 +41,4 @@ Check out the [website of TACOS](https://tacos.cases.lu).
 This software is licensed under
 [GNU General Public License version 3](https://www.gnu.org/licenses/gpl-3.0.html)
 
-Copyright (C) 2019 SMILE gie securitymadein.lu
+Copyright (C) 2019-2020 SMILE gie securitymadein.lu
