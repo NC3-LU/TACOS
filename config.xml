@@ -9,8 +9,8 @@
     <allow-intent href="https://*/*" />
     <allow-intent href="mailto:*" />
     <preference name="ScrollEnabled" value="false" />
-    <preference name="android-targetSdkVersion" value="28" />
-    <preference name="android-minSdkVersion" value="19" />
+    <preference name="android-targetSdkVersion" value="29" />
+    <preference name="android-minSdkVersion" value="26" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="FadeSplashScreenDuration" value="300" />

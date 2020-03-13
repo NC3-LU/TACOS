@@ -6,7 +6,8 @@ TACOS Changelog
 ### New
 
 - we have updated the videos section with new videos from CASES.lu
-  (available in English and in French).
+  (available in English and in French);
+- target API level is now set to 29 - Android 10.0 (minimum is 26 - Android 8.0).
 
 
 ## 0.0.22 (2019-10-02)
