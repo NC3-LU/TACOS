@@ -1,6 +1,14 @@
 TACOS Changelog
 ===============
 
+## 0.0.23 (2020-03-12)
+
+### New
+
+- we have updated the videos section with new videos from CASES.lu
+  (available in English and in French).
+
+
 ## 0.0.22 (2019-10-02)
 
 ### Enhancement
