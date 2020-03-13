@@ -99,8 +99,6 @@ export function createTranslateLoader(http: HttpClient) {
 		File,
     LanguageService,
     ThemeService,
-    AppVersion,
-    SocialSharing,
     Network,
 		WindowRefService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
